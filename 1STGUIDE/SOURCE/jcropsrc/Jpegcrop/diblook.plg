@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: DibLook - Win32 Release--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOKUME~1\GUIDOV~1\LOKALE~1\Temp\RSP38.tmp" mit Inhalten
+[
+..\jpeg-9b\Release\jpeg.lib /nologo /subsystem:windows /incremental:no /pdb:".\Release/jpegcrop.pdb" /machine:I386 /out:".\Release/jpegcrop.exe" 
+.\Release\dibapi.obj
+.\Release\dibdoc.obj
+.\Release\diblook.obj
+.\Release\dibtran.obj
+.\Release\dibview.obj
+.\Release\docrop.obj
+.\Release\jpegdib.obj
+.\Release\mainfrm.obj
+.\Release\OXTabClientWnd.obj
+.\Release\stdafx.obj
+.\Release\transupp.obj
+.\Release\diblook.res
+]
+Erstellen der Befehlzeile "link.exe @C:\DOKUME~1\GUIDOV~1\LOKALE~1\Temp\RSP38.tmp"
+<h3>Ausgabefenster</h3>
+Linker-Vorgang läuft...
+
+
+
+<h3>Ergebnisse</h3>
+jpegcrop.exe - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>

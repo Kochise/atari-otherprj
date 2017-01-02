@@ -1,0 +1,605 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// Deutsch (Deutschland) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_DEU)
+#ifdef _WIN32
+LANGUAGE LANG_GERMAN, SUBLANG_GERMAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_TOOLBAR_DRAW        BITMAP  DISCARDABLE     "res\\ToolbarDraw.bmp"
+#endif    // Deutsch (Deutschland) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// Englisch (USA) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_PROGIMAGE           BITMAP  DISCARDABLE     "res\\Abendrot00-96pF.bmp"
+IDB_MAINFRAME           BITMAP  DISCARDABLE     "res\\Toolbar.bmp"
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.rc""\r\n"
+    "#include ""afxprint.rc""\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...",             ID_FILE_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Q",               ID_APP_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Endpoint Snap",              ID_OPTIONS_ENDPOINTSNAP
+        MENUITEM "&Transform Trim Edges",       ID_OPTIONS_TRIM
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "T&itle Bar",                  ID_VIEW_TITLEBAR
+        MENUITEM "T&ab Bar",                    ID_VIEW_TAB_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Block Grid",                 ID_VIEW_BLOCKGRID
+        MENUITEM "&Crop/Wipe Mask",             ID_VIEW_CROPMASK
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Jpegcrop...",          ID_APP_ABOUT
+    END
+END
+
+IDR_JPGTYPE MENU PRELOAD DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&Open...\tCtrl+O",            ID_FILE_OPEN
+        MENUITEM "&Close\tCtrl+W",              ID_FILE_CLOSE
+        MENUITEM "&Save Frame As...\tCtrl+S",   ID_FILE_SAVE_COPY_AS
+        MENUITEM SEPARATOR
+        MENUITEM "Pr&eferences...",             ID_FILE_PREFERENCES
+        MENUITEM SEPARATOR
+        MENUITEM "&Print...\tCtrl+P",           ID_FILE_PRINT
+        MENUITEM "Print Pre&view",              ID_FILE_PRINT_PREVIEW
+        MENUITEM "P&rint Setup...",             ID_FILE_PRINT_SETUP
+        MENUITEM SEPARATOR
+        MENUITEM "Recent File",                 ID_FILE_MRU_FILE1, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit\tCtrl+Q",               ID_APP_EXIT
+    END
+    POPUP "&Options"
+    BEGIN
+        MENUITEM "&Save With Zoom",             ID_OPTIONS_SAVEZOOM
+        MENUITEM "&Endpoint Snap",              ID_OPTIONS_ENDPOINTSNAP
+        MENUITEM "&Transform Trim Edges",       ID_OPTIONS_TRIM
+        MENUITEM "&Grayscale Reduction",        ID_OPTIONS_GRAYSCALE
+    END
+    POPUP "&Edit"
+    BEGIN
+        MENUITEM "&Undo\tCtrl+Z",               ID_EDIT_UNDO
+        MENUITEM SEPARATOR
+        MENUITEM "Select &All\tCtrl+A",         ID_EDIT_SELECT_ALL
+    END
+    POPUP "&Transform"
+    BEGIN
+        MENUITEM "Rotate 90° &Clockwise",       ID_TRANSFORM_ROT_90
+        MENUITEM "Rotate 90° Co&unterclockwise", ID_TRANSFORM_ROT_270
+        MENUITEM "Flip &Horizontal",            ID_TRANSFORM_FLIP_H
+        MENUITEM "Flip &Vertical",              ID_TRANSFORM_FLIP_V
+        MENUITEM "Rotate &180°",                ID_TRANSFORM_ROT_180
+        MENUITEM "&Transpose",                  ID_TRANSFORM_TRANSPOSE
+        MENUITEM "T&ransverse Transpose",       ID_TRANSFORM_TRANSVERSE
+        MENUITEM "Cr&op",                       ID_TRANSFORM_ORIGINAL
+        MENUITEM "&Wipe",                       ID_TRANSFORM_WIPE
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Toolbar",                    ID_VIEW_TOOLBAR
+        MENUITEM "&Status Bar",                 ID_VIEW_STATUS_BAR
+        MENUITEM "T&itle Bar",                  ID_VIEW_TITLEBAR
+        MENUITEM "T&ab Bar",                    ID_VIEW_TAB_BAR
+        MENUITEM SEPARATOR
+        MENUITEM "&Block Grid",                 ID_VIEW_BLOCKGRID
+        MENUITEM "&Crop/Wipe Mask",             ID_VIEW_CROPMASK
+    END
+    POPUP "&Zoom"
+    BEGIN
+        MENUITEM "12.5 %",                      ID_VIEW_ZOOM1
+        MENUITEM "25 %",                        ID_VIEW_ZOOM2
+        MENUITEM "37.5 %",                      ID_VIEW_ZOOM3
+        MENUITEM "50 %",                        ID_VIEW_ZOOM4
+        MENUITEM "62.5 %",                      ID_VIEW_ZOOM5
+        MENUITEM "75 %",                        ID_VIEW_ZOOM6
+        MENUITEM "87.5 %",                      ID_VIEW_ZOOM7
+        MENUITEM "100 %",                       ID_VIEW_ZOOM8
+        MENUITEM "112.5 %",                     ID_VIEW_ZOOM9
+        MENUITEM "125 %",                       ID_VIEW_ZOOM10
+        MENUITEM "137.5 %",                     ID_VIEW_ZOOM11
+        MENUITEM "150 %",                       ID_VIEW_ZOOM12
+        MENUITEM "162.5 %",                     ID_VIEW_ZOOM13
+        MENUITEM "175 %",                       ID_VIEW_ZOOM14
+        MENUITEM "187.5 %",                     ID_VIEW_ZOOM15
+        MENUITEM "200 %",                       ID_VIEW_ZOOM16
+    END
+    POPUP "&Window"
+    BEGIN
+        MENUITEM "&New Window",                 ID_WINDOW_NEW
+        MENUITEM "&Cascade",                    ID_WINDOW_CASCADE
+        MENUITEM "&Tile",                       ID_WINDOW_TILE_HORZ
+        MENUITEM "&Arrange Icons",              ID_WINDOW_ARRANGE
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About Jpegcrop...",          ID_APP_ABOUT
+    END
+END
+
+IDR_POPUP1 MENU DISCARDABLE 
+BEGIN
+    POPUP "POPUP1"
+    BEGIN
+        MENUITEM "&Move Frame",                 ID_POPUP1_MOVEFRAME
+        MENUITEM "&Define Frame",               ID_POPUP1_DEFINEFRAME
+        MENUITEM SEPARATOR
+        MENUITEM "&Save Frame As...",           ID_POPUP1_SAVEFRAMEAS
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS PRELOAD MOVEABLE PURE 
+BEGIN
+    "A",            ID_EDIT_SELECT_ALL,     VIRTKEY, CONTROL, NOINVERT
+    "C",            ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL, NOINVERT
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL, NOINVERT
+    "P",            ID_FILE_PRINT,          VIRTKEY, CONTROL, NOINVERT
+    "Q",            ID_APP_EXIT,            VIRTKEY, CONTROL, NOINVERT
+    "S",            ID_FILE_SAVE_COPY_AS,   VIRTKEY, CONTROL, NOINVERT
+    "V",            ID_EDIT_PASTE,          VIRTKEY, CONTROL, NOINVERT
+    VK_BACK,        ID_EDIT_UNDO,           VIRTKEY, ALT, NOINVERT
+    VK_DELETE,      ID_EDIT_CUT,            VIRTKEY, SHIFT, NOINVERT
+    VK_F6,          ID_NEXT_PANE,           VIRTKEY, NOINVERT
+    VK_F6,          ID_PREV_PANE,           VIRTKEY, SHIFT, NOINVERT
+    VK_INSERT,      ID_EDIT_COPY,           VIRTKEY, CONTROL, NOINVERT
+    VK_INSERT,      ID_EDIT_PASTE,          VIRTKEY, SHIFT, NOINVERT
+    "W",            ID_FILE_CLOSE,          VIRTKEY, CONTROL, NOINVERT
+    "X",            ID_EDIT_CUT,            VIRTKEY, CONTROL, NOINVERT
+    "Z",            ID_EDIT_UNDO,           VIRTKEY, CONTROL, NOINVERT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_PREFBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 285
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 130
+    END
+
+    IDD_FRAMEBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 192
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 140
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_PREFBOX DIALOG DISCARDABLE  0, 0, 292, 137
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Preferences"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,30,115,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,90,115,50,14
+    PUSHBUTTON      "&Save",IDC_BUTTON1,150,115,50,14
+    PUSHBUTTON      "&Load",IDC_BUTTON2,210,115,50,14
+    GROUPBOX        " Entropy Coding Method ",IDC_STATIC,5,10,90,75,WS_GROUP
+    CONTROL         "Huffman default",IDC_RADIO4,"Button",BS_AUTORADIOBUTTON,
+                    15,25,65,10
+    CONTROL         "Huffman optimized",IDC_RADIO5,"Button",
+                    BS_AUTORADIOBUTTON,15,45,71,10
+    CONTROL         "Arithmetic",IDC_RADIO6,"Button",BS_AUTORADIOBUTTON,15,
+                    65,45,10
+    GROUPBOX        " Marker Copy Option ",IDC_STATIC,105,10,80,75,WS_GROUP
+    CONTROL         "None",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,115,25,33,
+                    10
+    CONTROL         "Comments",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,115,45,
+                    48,10
+    CONTROL         "All",IDC_RADIO3,"Button",BS_AUTORADIOBUTTON,115,65,24,
+                    10
+    GROUPBOX        " Processing Mode ",IDC_STATIC,195,10,90,55,WS_GROUP
+    CONTROL         "Abort on warnings",IDC_RADIO7,"Button",
+                    BS_AUTORADIOBUTTON,205,25,70,10
+    CONTROL         "Ignore warnings",IDC_RADIO8,"Button",BS_AUTORADIOBUTTON,
+                    205,45,65,10
+    CONTROL         "16-Bit Dither (FixPix)",IDC_CHECK1,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,205,75,80,10
+    CONTROL         "Zoom Reload",IDC_CHECK3,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,205,95,80,10
+    CONTROL         "Copy File Time",IDC_CHECK2,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,115,95,70,10
+    CONTROL         "Progressive Coding",IDC_CHECK4,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,15,95,80,10
+END
+
+IDD_FRAMEBOX DIALOG DISCARDABLE  0, 0, 199, 147
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Define Frame Parameters"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "&OK",IDOK,39,126,50,14
+    PUSHBUTTON      "&Cancel",IDCANCEL,110,126,50,14
+    GROUPBOX        " Frame Parameters ",IDC_STATIC,7,7,185,108
+    CONTROL         "Preset",IDC_RADIO1,"Button",BS_AUTORADIOBUTTON,56,24,36,
+                    10
+    CONTROL         "Actual",IDC_RADIO2,"Button",BS_AUTORADIOBUTTON,108,24,
+                    35,10
+    LTEXT           "Width:",IDC_STATIC,17,47,24,8
+    EDITTEXT        IDC_EDIT1,49,45,40,12,ES_AUTOHSCROLL
+    LTEXT           "Height:",IDC_STATIC,110,47,26,8
+    EDITTEXT        IDC_EDIT2,142,45,40,12,ES_AUTOHSCROLL
+    LTEXT           "X-Offset:",IDC_STATIC,17,71,26,8
+    EDITTEXT        IDC_EDIT3,49,69,40,12,ES_AUTOHSCROLL
+    LTEXT           "Y-Offset:",IDC_STATIC,110,71,27,8
+    EDITTEXT        IDC_EDIT4,142,69,40,12,ES_AUTOHSCROLL
+    CONTROL         "Cropspec:",IDC_CHECK1,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,17,93,47,10
+    EDITTEXT        IDC_EDIT5,75,92,80,12,ES_AUTOHSCROLL
+END
+
+IDD_ABOUTBOX DIALOG DISCARDABLE  34, 22, 254, 146
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About Jpegcrop"
+FONT 10, "MS Sans Serif"
+BEGIN
+    CONTROL         123,IDC_STATIC,"Static",SS_BITMAP,10,10,74,74
+    ICON            IDR_MAINFRAME,IDC_STATIC,120,10,20,20
+    LTEXT           "Jpegcrop Application Version 2015.12",IDC_STATIC,110,40,
+                    140,8
+    LTEXT           "Developed 1999-2015 by Guido Vollbeding",IDC_STATIC,110,
+                    56,140,8
+    LTEXT           "This software utilizes actual development\ncode of the Independent JPEG Group (IJG)\nfor 'lossless' cropping, transforming, and\nrescaling of JPEG files.",
+                    IDC_STATIC,110,72,140,33
+    LTEXT           "Code base: IJG JPEG 9b develop version",IDC_STATIC,110,
+                    123,140,8
+    DEFPUSHBUTTON   "OK",IDOK,155,10,85,15,WS_GROUP
+    LTEXT           "(Image by Niko Lackovic)",IDC_STATIC,10,110,90,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON    DISCARDABLE     "res\\jpegcrop.ico"
+IDR_JPGTYPE             ICON    DISCARDABLE     "res\\jpegdoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// 24
+//
+
+MANIFEST_RESOURCE_ID    24      MOVEABLE PURE   "res\\jpegcrop.exe.manifest"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDB_MAINFRAME TOOLBAR DISCARDABLE  24, 24
+BEGIN
+    BUTTON      ID_BUTTON32826
+    BUTTON      ID_BUTTON32827
+    BUTTON      ID_BUTTON32828
+    BUTTON      ID_BUTTON32829
+    BUTTON      ID_BUTTON32830
+    BUTTON      ID_BUTTON32831
+    BUTTON      ID_BUTTON32832
+    BUTTON      ID_BUTTON32833
+    BUTTON      ID_BUTTON32834
+    BUTTON      ID_BUTTON32835
+    BUTTON      ID_BUTTON32836
+    BUTTON      ID_BUTTON32837
+    BUTTON      ID_BUTTON32838
+    BUTTON      ID_BUTTON32839
+    BUTTON      ID_BUTTON32840
+    BUTTON      ID_BUTTON32841
+    BUTTON      ID_BUTTON32842
+    BUTTON      ID_BUTTON32843
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    IDR_MAINFRAME           "Jpegcrop Windows Application"
+    IDR_JPGTYPE             "\nJPG\nJPEGCROP Document\nJPEG Files (*.jpg)\n.jpg\nJpegcropType\nJPEGCROP File Type\nJPEG \nJoint Photographic Experts Group\n"
+    IDS_DIB_TOO_BIG         "Image is too large"
+    IDS_CANNOT_LOAD_DIB     "Cannot load image"
+    IDS_CANNOT_SAVE_DIB     "Cannot save image"
+END
+
+STRINGTABLE PRELOAD DISCARDABLE 
+BEGIN
+    AFX_IDS_APP_TITLE       "Jpegcrop Application"
+    AFX_IDS_IDLEMESSAGE     "Ready"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+    ID_INDICATOR_POS        "WWWWxHHHH+XXXX+YYYY"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_NEW             "Create a new document"
+    ID_FILE_OPEN            "Open an existing document\nOpen File"
+    ID_FILE_CLOSE           "Close the active document\nClose Window"
+    ID_FILE_SAVE            "Save the active document"
+    ID_FILE_SAVE_AS         "Save the active document with a new name"
+    ID_FILE_PAGE_SETUP      "Change the printing options"
+    ID_FILE_PRINT_SETUP     "Change the printer and printing options"
+    ID_FILE_PRINT           "Print the active document\nPrint Image"
+    ID_FILE_PRINT_PREVIEW   "Display full pages"
+    ID_FILE_SAVE_COPY_AS    "Save active frame as new document\nSave Frame"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_DESKACCESSORY   "Opens the selected item"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_APP_ABOUT            "Display program and author information\nAbout Jpegcrop"
+    ID_APP_EXIT             "Quit the application"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_FILE_MRU_FILE1       "Open this document"
+    ID_FILE_MRU_FILE2       "Open this document"
+    ID_FILE_MRU_FILE3       "Open this document"
+    ID_FILE_MRU_FILE4       "Open this document"
+    ID_FILE_MRU_FILE5       "Open this document"
+    ID_FILE_MRU_FILE6       "Open this document"
+    ID_FILE_MRU_FILE7       "Open this document"
+    ID_FILE_MRU_FILE8       "Open this document"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_NEXT_PANE            "Switch to the next window pane"
+    ID_PREV_PANE            "Switch back to the previous window pane"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_WINDOW_NEW           "Open another window for the active document"
+    ID_WINDOW_ARRANGE       "Arrange icons at the bottom of the window"
+    ID_WINDOW_CASCADE       "Arrange windows so they overlap"
+    ID_WINDOW_TILE_HORZ     "Arrange windows as non-overlapping tiles"
+    ID_WINDOW_TILE_VERT     "Arrange windows as non-overlapping tiles"
+    ID_WINDOW_SPLIT         "Split the active window into panes"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_EDIT_CLEAR           "Erase the selection"
+    ID_EDIT_CLEAR_ALL       "Erase everything"
+    ID_EDIT_COPY            "Copy the selection and puts it on the Clipboard"
+    ID_EDIT_CUT             "Cut the selection and puts it on the Clipboard"
+    ID_EDIT_FIND            "Find the specified text"
+    ID_EDIT_PASTE           "Insert Clipboard contents"
+    ID_EDIT_REPEAT          "Repeat the last action"
+    ID_EDIT_REPLACE         "Replace specific text with different text"
+    ID_EDIT_SELECT_ALL      "Select the entire document"
+    ID_EDIT_UNDO            "Undo the last action"
+    ID_EDIT_REDO            "Redo the previously undone action"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_TOOLBAR         "Show or hide the toolbar"
+    ID_VIEW_STATUS_BAR      "Show or hide the status bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCSIZE          "Change the window size"
+    AFX_IDS_SCMOVE          "Change the window position"
+    AFX_IDS_SCMINIMIZE      "Reduce the window to an icon"
+    AFX_IDS_SCMAXIMIZE      "Enlarge the window to full size"
+    AFX_IDS_SCNEXTWINDOW    "Switch to the next document window"
+    AFX_IDS_SCPREVWINDOW    "Switch to the previous document window"
+    AFX_IDS_SCCLOSE         "Close the active window and prompts to save the documents"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_PREVIEW_CLOSE   "Close print preview mode"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    AFX_IDS_SCRESTORE       "Restore the window to normal size"
+    AFX_IDS_SCTASKLIST      "Activate Task List"
+    AFX_IDS_MDICHILD        "Activate this window"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ZOOM11          "Zoom image view 11\nZoom 11"
+    ID_POPUP1_MOVEFRAME     "Move Frame with Mouse"
+    ID_POPUP1_DEFINEFRAME   "Reduce to grayscale (omit color data)"
+    ID_POPUP1_SAVEFRAMEAS   "Save active frame as new document"
+    ID_FILE_PREFERENCES     "Select Preferences\nPreferences"
+    ID_OPTIONS_ENDPOINTSNAP "While dragging  the frame snap the endpoint on the block grid\nEndpoint Snap"
+    ID_VIEW_BLOCKGRID       "Show or hide the block grid (only with 8 or greater distances)\nBlock Grid"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_TRANSFORM_TRANSPOSE  "Transpose the image\nTranspose"
+    ID_TRANSFORM_TRANSVERSE "Transverse transpose the image\nTransverse Transpose"
+    ID_TRANSFORM_ORIGINAL   "Crop frame\nCrop"
+    ID_TRANSFORM_WIPE       "Wipe frame\nWipe"
+    ID_OPTIONS_TRIM         "Drop non-transformable edge blocks\nTransform Trim Edges"
+    ID_VIEW_TITLEBAR        "Show or hide the title bar"
+    ID_VIEW_CROPMASK        "Apply the crop/wipe mask\nCrop/Wipe Mask"
+    ID_VIEW_ZOOM12          "Zoom image view 12\nZoom 12"
+    ID_TOOLBAR_SCALE        "Zoom image scale\nZoom Scale"
+    ID_TOOLBAR_SLIDER       "Zoom image view slide\nZoom Slide"
+    ID_TOOLBAR_ZOOM         "Zoom image view set\nZoom Set"
+    ID_VIEW_ZOOM1           "Zoom image view 1\nZoom 1"
+    ID_VIEW_ZOOM8           "Zoom image view 8\nZoom 8"
+    ID_VIEW_ZOOM4           "Zoom image view 4\nZoom 4"
+    ID_VIEW_ZOOM2           "Zoom image view 2\nZoom 2"
+    ID_VIEW_ZOOM3           "Zoom image view 3\nZoom 3"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_GRAYSCALE    "Reduce to grayscale (omit color data)\nGrayscale Reduction"
+    ID_TRANSFORM_ROT_90     "Rotate the image 90° cw\nRotate 90° cw"
+    ID_TRANSFORM_ROT_270    "Rotate the image 90° ccw\nRotate 90° ccw"
+    ID_TRANSFORM_FLIP_H     "Flip the image horizontally\nFlip Horizontal"
+    ID_TRANSFORM_FLIP_V     "Flip the image vertically\nFlip Vertical"
+    ID_TRANSFORM_ROT_180    "Rotate the image 180°\nRotate 180°"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_VIEW_ZOOM5           "Zoom image view 5\nZoom 5"
+    ID_VIEW_ZOOM6           "Zoom image view 6\nZoom 6"
+    ID_VIEW_ZOOM7           "Zoom image view 7\nZoom 7"
+    ID_VIEW_ZOOM9           "Zoom image view 9\nZoom 9"
+    ID_VIEW_ZOOM10          "Zoom image view 10\nZoom 10"
+    ID_VIEW_ZOOM13          "Zoom image view 13\nZoom 13"
+    ID_VIEW_ZOOM14          "Zoom image view 14\nZoom 14"
+    ID_VIEW_ZOOM15          "Zoom image view 15\nZoom 15"
+    ID_VIEW_ZOOM16          "Zoom image view 16\nZoom 16"
+    ID_VIEW_TAB_BAR         "Show or hide the tab bar"
+END
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    ID_OPTIONS_SAVEZOOM     "When saving apply selected zoom setting\nSave With Zoom "
+END
+
+#endif    // Englisch (USA) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#include "afxres.rc"
+#include "afxprint.rc"
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
