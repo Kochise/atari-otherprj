@@ -1,0 +1,39 @@
+<html>
+<body>
+<pre>
+<h1>Erstellungsprotokoll</h1>
+<h3>
+--------------------Konfiguration: cjpeg - Win32--------------------
+</h3>
+<h3>Befehlszeilen</h3>
+Erstellen der temporären Datei  "C:\DOKUME~1\GUIDOV~1\LOKALE~1\Temp\RSP23.tmp" mit Inhalten
+[
+/nologo /G6 /MT /W3 /GX /Ox /Oa /Ob2 /D "WIN32" /D "NDEBUG" /D "_CONSOLE" /Fp".\cjpeg\Release/cjpeg.pch" /YX /Fo".\cjpeg\Release/" /Fd".\cjpeg\Release/" /FD /c 
+"C:\MyProjects\jpeg-9b\cjpeg.c"
+]
+Creating command line "cl.exe @C:\DOKUME~1\GUIDOV~1\LOKALE~1\Temp\RSP23.tmp" 
+Erstellen der temporären Datei  "C:\DOKUME~1\GUIDOV~1\LOKALE~1\Temp\RSP24.tmp" mit Inhalten
+[
+Release\jpeg.lib kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /nologo /subsystem:console /incremental:no /pdb:".\cjpeg\Release/cjpeg.pdb" /machine:I386 /out:".\cjpeg\Release/cjpeg.exe" 
+".\cjpeg\Release\cdjpeg.obj"
+".\cjpeg\Release\cjpeg.obj"
+".\cjpeg\Release\rdbmp.obj"
+".\cjpeg\Release\rdgif.obj"
+".\cjpeg\Release\rdppm.obj"
+".\cjpeg\Release\rdrle.obj"
+".\cjpeg\Release\rdswitch.obj"
+".\cjpeg\Release\rdtarga.obj"
+]
+Erstellen der Befehlzeile "link.exe @C:\DOKUME~1\GUIDOV~1\LOKALE~1\Temp\RSP24.tmp"
+<h3>Ausgabefenster</h3>
+Kompilierung läuft...
+cjpeg.c
+Linker-Vorgang läuft...
+
+
+
+<h3>Ergebnisse</h3>
+cjpeg.exe - 0 Fehler, 0 Warnung(en)
+</pre>
+</body>
+</html>
