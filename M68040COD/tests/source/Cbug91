@@ -1,0 +1,15 @@
+long	denorm[3] = {0,0,1};
+
+long	result[3];
+
+double	dresult;
+
+main()
+{
+	asm(" fmovm.x denorm,&0x10 # fp3");
+	asm(" fmov.x %fp3,%fp0");
+	asm(" fmovm.x &0x80,result # fp0");
+	asm(" fmov.d %fp0,dresult");
+	printf("%08x_%08x_%08x\n",result[0],result[1],result[2]);
+	printf("%g\n",dresult);
+}

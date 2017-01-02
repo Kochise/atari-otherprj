@@ -1,0 +1,55 @@
+#
+# b1384_exc 1.2 1/21/92
+#
+# This is a test program for verifying the mis -tag of a denorm
+# bug 1384 - before running this - All assembly program should be compiled
+# with object name same as the program name.
+#
+rm -f bug1384.out
+touch bug1384.out
+echo OUTPUT FROM aia.s >>bug1384.out
+aia >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM aza.s >> bug1384.out
+aza >> bug1384.out	
+echo ====================== >> bug1384.out
+echo OUTPUT FROM ana.s >> bug1384.out
+ana >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM aim.s >> bug1384.out
+aim >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM azm.s >> bug1384.out
+azm >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM anm.s >> bug1384.out
+anm >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM aid.s >> bug1384.out
+aid >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM azd.s >> bug1384.out
+azd >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM and.s >> bug1384.out
+and >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM bim.s >>bug1384.out
+bim >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM bnm.s >> bug1384.out
+bnm >> bug1384.out	
+echo ====================== >> bug1384.out
+echo OUTPUT FROM cim.s >> bug1384.out
+cim >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM cnm.s >> bug1384.out
+cnm >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM dim.s >> bug1384.out
+dim >> bug1384.out
+echo ====================== >> bug1384.out
+echo OUTPUT FROM eim.s >> bug1384.out
+eim >> bug1384.out
+echo ====================== >> bug1384.out
+echo THE END

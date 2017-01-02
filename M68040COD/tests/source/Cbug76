@@ -1,0 +1,6 @@
+main()
+{
+asm(" fmov.l &0x0200,%control");
+asm(" long 0xF23F5C00");
+asm(" fnop");
+}

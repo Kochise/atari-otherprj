@@ -1,0 +1,36 @@
+verbose
+#PURPOSE:  To generate dz exceptions.
+#	   See table 6.3 in 881/882 manual(second edition).
+#EXPECTED RESULT:  DZ bit is set in FPSR.
+
+#FATANH
+#fatanh of +1
+fatanh.x 3fff_0000_8000_0000_0000_0000
+#fatanh of -1
+fatanh.x bfff_0000_8000_0000_0000_0000
+
+#FLOG10
+#flog10 of 0
+flog10.x 0000_0000_0000_0000_0000_0000
+
+#FLOG2
+#flog2 of 0
+flog2.x 0000_0000_000_0000_0000_0000
+
+#FLOGN
+#flogn of 0
+flogn.x 0000_0000_0000_0000_0000_0000
+
+#FLOGNP1
+#flognp1 of -1
+flognp1.x bfff_0000_8000_0000_0000_0000
+#
+# White box tests for dz handler
+fdiv.s 3fff0000_80000000_00000000 00000000
+fdiv.s bfff0000_80000000_00000000 00000000 
+fdiv.s 3fff0000_80000000_00000000 80000000 
+fdiv.s bfff0000_80000000_00000000 80000000 
+fdiv.s 3fff0000_80000000_00000000 00000000 DZ 
+fdiv.s bfff0000_80000000_00000000 00000000 DZ 
+fdiv.s 3fff0000_80000000_00000000 80000000 DZ 
+fdiv.s bfff0000_80000000_00000000 80000000 DZ 

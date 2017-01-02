@@ -1,0 +1,1000 @@
+verbose
+fgetman.x 000000000aaaaaaaaaaaaaaa s rp
+fgetman.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fgetman.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fgetman.x 000000000aaaaaaaaaaaaaaa s rz
+fgetman.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fgetman.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fgetman.x 000000000aaaaaaaaaaaaaaa x rm
+fgetman.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fgetman.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fgetman.x 000000000aaaaaaaaaaaaaaa x rn
+fgetman.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fgetman.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fgetman.x 000000000aaaaaaaaaaaaaaa x rp
+fgetman.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fgetman.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fgetman.x 000000000aaaaaaaaaaaaaaa x rz
+fgetman.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fgetman.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fgetman.x 000000000fffffffffffffff d rm
+fgetman.x 000000000fffffffffffffff d rm inex2
+fgetman.x 000000000fffffffffffffff d rm unfl
+fgetman.x 000000000fffffffffffffff d rn
+fgetman.x 000000000fffffffffffffff d rn inex2
+fgetman.x 000000000fffffffffffffff d rn unfl
+fgetman.x 000000000fffffffffffffff d rp
+fgetman.x 000000000fffffffffffffff d rp inex2
+fgetman.x 000000000fffffffffffffff d rp unfl
+fgetman.x 000000000fffffffffffffff d rz
+fgetman.x 000000000fffffffffffffff d rz inex2
+fgetman.x 000000000fffffffffffffff d rz unfl
+fgetman.x 000000000fffffffffffffff s rm
+fgetman.x 000000000fffffffffffffff s rm inex2
+fgetman.x 000000000fffffffffffffff s rm unfl
+fgetman.x 000000000fffffffffffffff s rn
+fgetman.x 000000000fffffffffffffff s rn inex2
+fgetman.x 000000000fffffffffffffff s rn unfl
+fgetman.x 000000000fffffffffffffff s rp
+fgetman.x 000000000fffffffffffffff s rp inex2
+fgetman.x 000000000fffffffffffffff s rp unfl
+fgetman.x 000000000fffffffffffffff s rz
+fgetman.x 000000000fffffffffffffff s rz inex2
+fgetman.x 000000000fffffffffffffff s rz unfl
+fgetman.x 000000000fffffffffffffff x rm
+fgetman.x 000000000fffffffffffffff x rm inex2
+fgetman.x 000000000fffffffffffffff x rm unfl
+fgetman.x 000000000fffffffffffffff x rn
+fgetman.x 000000000fffffffffffffff x rn inex2
+fgetman.x 000000000fffffffffffffff x rn unfl
+fgetman.x 000000000fffffffffffffff x rp
+fgetman.x 000000000fffffffffffffff x rp inex2
+fgetman.x 000000000fffffffffffffff x rp unfl
+fgetman.x 000000000fffffffffffffff x rz
+fgetman.x 000000000fffffffffffffff x rz inex2
+fgetman.x 000000000fffffffffffffff x rz unfl
+fgetman.x 800000000000000000000001 d rm
+fgetman.x 800000000000000000000001 d rm inex2
+fgetman.x 800000000000000000000001 d rm unfl
+fgetman.x 800000000000000000000001 d rn
+fgetman.x 800000000000000000000001 d rn inex2
+fgetman.x 800000000000000000000001 d rn unfl
+fgetman.x 800000000000000000000001 d rp
+fgetman.x 800000000000000000000001 d rp inex2
+fgetman.x 800000000000000000000001 d rp unfl
+fgetman.x 800000000000000000000001 d rz
+fgetman.x 800000000000000000000001 d rz inex2
+fgetman.x 800000000000000000000001 d rz unfl
+fgetman.x 800000000000000000000001 s rm
+fgetman.x 800000000000000000000001 s rm inex2
+fgetman.x 800000000000000000000001 s rm unfl
+fgetman.x 800000000000000000000001 s rn
+fgetman.x 800000000000000000000001 s rn inex2
+fgetman.x 800000000000000000000001 s rn unfl
+fgetman.x 800000000000000000000001 s rp
+fgetman.x 800000000000000000000001 s rp inex2
+fgetman.x 800000000000000000000001 s rp unfl
+fgetman.x 800000000000000000000001 s rz
+fgetman.x 800000000000000000000001 s rz inex2
+fgetman.x 800000000000000000000001 s rz unfl
+fgetman.x 800000000000000000000001 x rm
+fgetman.x 800000000000000000000001 x rm inex2
+fgetman.x 800000000000000000000001 x rm unfl
+fgetman.x 800000000000000000000001 x rn
+fgetman.x 800000000000000000000001 x rn inex2
+fgetman.x 800000000000000000000001 x rn unfl
+fgetman.x 800000000000000000000001 x rp
+fgetman.x 800000000000000000000001 x rp inex2
+fgetman.x 800000000000000000000001 x rp unfl
+fgetman.x 800000000000000000000001 x rz
+fgetman.x 800000000000000000000001 x rz inex2
+fgetman.x 800000000000000000000001 x rz unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa d rm
+fgetman.x 800000000aaaaaaaaaaaaaaa d rm inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa d rm unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa d rn
+fgetman.x 800000000aaaaaaaaaaaaaaa d rn inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa d rn unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa d rp
+fgetman.x 800000000aaaaaaaaaaaaaaa d rp inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa d rp unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa d rz
+fgetman.x 800000000aaaaaaaaaaaaaaa d rz inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa d rz unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa s rm
+fgetman.x 800000000aaaaaaaaaaaaaaa s rm inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa s rm unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa s rn
+fgetman.x 800000000aaaaaaaaaaaaaaa s rn inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa s rn unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa s rp
+fgetman.x 800000000aaaaaaaaaaaaaaa s rp inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa s rp unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa s rz
+fgetman.x 800000000aaaaaaaaaaaaaaa s rz inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa s rz unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa x rm
+fgetman.x 800000000aaaaaaaaaaaaaaa x rm inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa x rm unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa x rn
+fgetman.x 800000000aaaaaaaaaaaaaaa x rn inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa x rn unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa x rp
+fgetman.x 800000000aaaaaaaaaaaaaaa x rp inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa x rp unfl
+fgetman.x 800000000aaaaaaaaaaaaaaa x rz
+fgetman.x 800000000aaaaaaaaaaaaaaa x rz inex2
+fgetman.x 800000000aaaaaaaaaaaaaaa x rz unfl
+fgetman.x 800000000fffffffffffffff d rm
+fgetman.x 800000000fffffffffffffff d rm inex2
+fgetman.x 800000000fffffffffffffff d rm unfl
+fgetman.x 800000000fffffffffffffff d rn
+fgetman.x 800000000fffffffffffffff d rn inex2
+fgetman.x 800000000fffffffffffffff d rn unfl
+fgetman.x 800000000fffffffffffffff d rp
+fgetman.x 800000000fffffffffffffff d rp inex2
+fgetman.x 800000000fffffffffffffff d rp unfl
+fgetman.x 800000000fffffffffffffff d rz
+fgetman.x 800000000fffffffffffffff d rz inex2
+fgetman.x 800000000fffffffffffffff d rz unfl
+fgetman.x 800000000fffffffffffffff s rm
+fgetman.x 800000000fffffffffffffff s rm inex2
+fgetman.x 800000000fffffffffffffff s rm unfl
+fgetman.x 800000000fffffffffffffff s rn
+fgetman.x 800000000fffffffffffffff s rn inex2
+fgetman.x 800000000fffffffffffffff s rn unfl
+fgetman.x 800000000fffffffffffffff s rp
+fgetman.x 800000000fffffffffffffff s rp inex2
+fgetman.x 800000000fffffffffffffff s rp unfl
+fgetman.x 800000000fffffffffffffff s rz
+fgetman.x 800000000fffffffffffffff s rz inex2
+fgetman.x 800000000fffffffffffffff s rz unfl
+fgetman.x 800000000fffffffffffffff x rm
+fgetman.x 800000000fffffffffffffff x rm inex2
+fgetman.x 800000000fffffffffffffff x rm unfl
+fgetman.x 800000000fffffffffffffff x rn
+fgetman.x 800000000fffffffffffffff x rn inex2
+fgetman.x 800000000fffffffffffffff x rn unfl
+fgetman.x 800000000fffffffffffffff x rp
+fgetman.x 800000000fffffffffffffff x rp inex2
+fgetman.x 800000000fffffffffffffff x rp unfl
+fgetman.x 800000000fffffffffffffff x rz
+fgetman.x 800000000fffffffffffffff x rz inex2
+fgetman.x 800000000fffffffffffffff x rz unfl
+fint.x 000000000000000000000001 d rm
+fint.x 000000000000000000000001 d rm inex2
+fint.x 000000000000000000000001 d rm unfl
+fint.x 000000000000000000000001 d rn
+fint.x 000000000000000000000001 d rn inex2
+fint.x 000000000000000000000001 d rn unfl
+fint.x 000000000000000000000001 d rp
+fint.x 000000000000000000000001 d rp inex2
+fint.x 000000000000000000000001 d rp unfl
+fint.x 000000000000000000000001 d rz
+fint.x 000000000000000000000001 d rz inex2
+fint.x 000000000000000000000001 d rz unfl
+fint.x 000000000000000000000001 s rm
+fint.x 000000000000000000000001 s rm inex2
+fint.x 000000000000000000000001 s rm unfl
+fint.x 000000000000000000000001 s rn
+fint.x 000000000000000000000001 s rn inex2
+fint.x 000000000000000000000001 s rn unfl
+fint.x 000000000000000000000001 s rp
+fint.x 000000000000000000000001 s rp inex2
+fint.x 000000000000000000000001 s rp unfl
+fint.x 000000000000000000000001 s rz
+fint.x 000000000000000000000001 s rz inex2
+fint.x 000000000000000000000001 s rz unfl
+fint.x 000000000000000000000001 x rm
+fint.x 000000000000000000000001 x rm inex2
+fint.x 000000000000000000000001 x rm unfl
+fint.x 000000000000000000000001 x rn
+fint.x 000000000000000000000001 x rn inex2
+fint.x 000000000000000000000001 x rn unfl
+fint.x 000000000000000000000001 x rp
+fint.x 000000000000000000000001 x rp inex2
+fint.x 000000000000000000000001 x rp unfl
+fint.x 000000000000000000000001 x rz
+fint.x 000000000000000000000001 x rz inex2
+fint.x 000000000000000000000001 x rz unfl
+fint.x 000000000aaaaaaaaaaaaaaa d rm
+fint.x 000000000aaaaaaaaaaaaaaa d rm inex2
+fint.x 000000000aaaaaaaaaaaaaaa d rm unfl
+fint.x 000000000aaaaaaaaaaaaaaa d rn
+fint.x 000000000aaaaaaaaaaaaaaa d rn inex2
+fint.x 000000000aaaaaaaaaaaaaaa d rn unfl
+fint.x 000000000aaaaaaaaaaaaaaa d rp
+fint.x 000000000aaaaaaaaaaaaaaa d rp inex2
+fint.x 000000000aaaaaaaaaaaaaaa d rp unfl
+fint.x 000000000aaaaaaaaaaaaaaa d rz
+fint.x 000000000aaaaaaaaaaaaaaa d rz inex2
+fint.x 000000000aaaaaaaaaaaaaaa d rz unfl
+fint.x 000000000aaaaaaaaaaaaaaa s rm
+fint.x 000000000aaaaaaaaaaaaaaa s rm inex2
+fint.x 000000000aaaaaaaaaaaaaaa s rm unfl
+fint.x 000000000aaaaaaaaaaaaaaa s rn
+fint.x 000000000aaaaaaaaaaaaaaa s rn inex2
+fint.x 000000000aaaaaaaaaaaaaaa s rn unfl
+fint.x 000000000aaaaaaaaaaaaaaa s rp
+fint.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fint.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fint.x 000000000aaaaaaaaaaaaaaa s rz
+fint.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fint.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fint.x 000000000aaaaaaaaaaaaaaa x rm
+fint.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fint.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fint.x 000000000aaaaaaaaaaaaaaa x rn
+fint.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fint.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fint.x 000000000aaaaaaaaaaaaaaa x rp
+fint.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fint.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fint.x 000000000aaaaaaaaaaaaaaa x rz
+fint.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fint.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fint.x 000000000fffffffffffffff d rm
+fint.x 000000000fffffffffffffff d rm inex2
+fint.x 000000000fffffffffffffff d rm unfl
+fint.x 000000000fffffffffffffff d rn
+fint.x 000000000fffffffffffffff d rn inex2
+fint.x 000000000fffffffffffffff d rn unfl
+fint.x 000000000fffffffffffffff d rp
+fint.x 000000000fffffffffffffff d rp inex2
+fint.x 000000000fffffffffffffff d rp unfl
+fint.x 000000000fffffffffffffff d rz
+fint.x 000000000fffffffffffffff d rz inex2
+fint.x 000000000fffffffffffffff d rz unfl
+fint.x 000000000fffffffffffffff s rm
+fint.x 000000000fffffffffffffff s rm inex2
+fint.x 000000000fffffffffffffff s rm unfl
+fint.x 000000000fffffffffffffff s rn
+fint.x 000000000fffffffffffffff s rn inex2
+fint.x 000000000fffffffffffffff s rn unfl
+fint.x 000000000fffffffffffffff s rp
+fint.x 000000000fffffffffffffff s rp inex2
+fint.x 000000000fffffffffffffff s rp unfl
+fint.x 000000000fffffffffffffff s rz
+fint.x 000000000fffffffffffffff s rz inex2
+fint.x 000000000fffffffffffffff s rz unfl
+fint.x 000000000fffffffffffffff x rm
+fint.x 000000000fffffffffffffff x rm inex2
+fint.x 000000000fffffffffffffff x rm unfl
+fint.x 000000000fffffffffffffff x rn
+fint.x 000000000fffffffffffffff x rn inex2
+fint.x 000000000fffffffffffffff x rn unfl
+fint.x 000000000fffffffffffffff x rp
+fint.x 000000000fffffffffffffff x rp inex2
+fint.x 000000000fffffffffffffff x rp unfl
+fint.x 000000000fffffffffffffff x rz
+fint.x 000000000fffffffffffffff x rz inex2
+fint.x 000000000fffffffffffffff x rz unfl
+fint.x 800000000000000000000001 d rm
+fint.x 800000000000000000000001 d rm inex2
+fint.x 800000000000000000000001 d rm unfl
+fint.x 800000000000000000000001 d rn
+fint.x 800000000000000000000001 d rn inex2
+fint.x 800000000000000000000001 d rn unfl
+fint.x 800000000000000000000001 d rp
+fint.x 800000000000000000000001 d rp inex2
+fint.x 800000000000000000000001 d rp unfl
+fint.x 800000000000000000000001 d rz
+fint.x 800000000000000000000001 d rz inex2
+fint.x 800000000000000000000001 d rz unfl
+fint.x 800000000000000000000001 s rm
+fint.x 800000000000000000000001 s rm inex2
+fint.x 800000000000000000000001 s rm unfl
+fint.x 800000000000000000000001 s rn
+fint.x 800000000000000000000001 s rn inex2
+fint.x 800000000000000000000001 s rn unfl
+fint.x 800000000000000000000001 s rp
+fint.x 800000000000000000000001 s rp inex2
+fint.x 800000000000000000000001 s rp unfl
+fint.x 800000000000000000000001 s rz
+fint.x 800000000000000000000001 s rz inex2
+fint.x 800000000000000000000001 s rz unfl
+fint.x 800000000000000000000001 x rm
+fint.x 800000000000000000000001 x rm inex2
+fint.x 800000000000000000000001 x rm unfl
+fint.x 800000000000000000000001 x rn
+fint.x 800000000000000000000001 x rn inex2
+fint.x 800000000000000000000001 x rn unfl
+fint.x 800000000000000000000001 x rp
+fint.x 800000000000000000000001 x rp inex2
+fint.x 800000000000000000000001 x rp unfl
+fint.x 800000000000000000000001 x rz
+fint.x 800000000000000000000001 x rz inex2
+fint.x 800000000000000000000001 x rz unfl
+fint.x 800000000aaaaaaaaaaaaaaa d rm
+fint.x 800000000aaaaaaaaaaaaaaa d rm inex2
+fint.x 800000000aaaaaaaaaaaaaaa d rm unfl
+fint.x 800000000aaaaaaaaaaaaaaa d rn
+fint.x 800000000aaaaaaaaaaaaaaa d rn inex2
+fint.x 800000000aaaaaaaaaaaaaaa d rn unfl
+fint.x 800000000aaaaaaaaaaaaaaa d rp
+fint.x 800000000aaaaaaaaaaaaaaa d rp inex2
+fint.x 800000000aaaaaaaaaaaaaaa d rp unfl
+fint.x 800000000aaaaaaaaaaaaaaa d rz
+fint.x 800000000aaaaaaaaaaaaaaa d rz inex2
+fint.x 800000000aaaaaaaaaaaaaaa d rz unfl
+fint.x 800000000aaaaaaaaaaaaaaa s rm
+fint.x 800000000aaaaaaaaaaaaaaa s rm inex2
+fint.x 800000000aaaaaaaaaaaaaaa s rm unfl
+fint.x 800000000aaaaaaaaaaaaaaa s rn
+fint.x 800000000aaaaaaaaaaaaaaa s rn inex2
+fint.x 800000000aaaaaaaaaaaaaaa s rn unfl
+fint.x 800000000aaaaaaaaaaaaaaa s rp
+fint.x 800000000aaaaaaaaaaaaaaa s rp inex2
+fint.x 800000000aaaaaaaaaaaaaaa s rp unfl
+fint.x 800000000aaaaaaaaaaaaaaa s rz
+fint.x 800000000aaaaaaaaaaaaaaa s rz inex2
+fint.x 800000000aaaaaaaaaaaaaaa s rz unfl
+fint.x 800000000aaaaaaaaaaaaaaa x rm
+fint.x 800000000aaaaaaaaaaaaaaa x rm inex2
+fint.x 800000000aaaaaaaaaaaaaaa x rm unfl
+fint.x 800000000aaaaaaaaaaaaaaa x rn
+fint.x 800000000aaaaaaaaaaaaaaa x rn inex2
+fint.x 800000000aaaaaaaaaaaaaaa x rn unfl
+fint.x 800000000aaaaaaaaaaaaaaa x rp
+fint.x 800000000aaaaaaaaaaaaaaa x rp inex2
+fint.x 800000000aaaaaaaaaaaaaaa x rp unfl
+fint.x 800000000aaaaaaaaaaaaaaa x rz
+fint.x 800000000aaaaaaaaaaaaaaa x rz inex2
+fint.x 800000000aaaaaaaaaaaaaaa x rz unfl
+fint.x 800000000fffffffffffffff d rm
+fint.x 800000000fffffffffffffff d rm inex2
+fint.x 800000000fffffffffffffff d rm unfl
+fint.x 800000000fffffffffffffff d rn
+fint.x 800000000fffffffffffffff d rn inex2
+fint.x 800000000fffffffffffffff d rn unfl
+fint.x 800000000fffffffffffffff d rp
+fint.x 800000000fffffffffffffff d rp inex2
+fint.x 800000000fffffffffffffff d rp unfl
+fint.x 800000000fffffffffffffff d rz
+fint.x 800000000fffffffffffffff d rz inex2
+fint.x 800000000fffffffffffffff d rz unfl
+fint.x 800000000fffffffffffffff s rm
+fint.x 800000000fffffffffffffff s rm inex2
+fint.x 800000000fffffffffffffff s rm unfl
+fint.x 800000000fffffffffffffff s rn
+fint.x 800000000fffffffffffffff s rn inex2
+fint.x 800000000fffffffffffffff s rn unfl
+fint.x 800000000fffffffffffffff s rp
+fint.x 800000000fffffffffffffff s rp inex2
+fint.x 800000000fffffffffffffff s rp unfl
+fint.x 800000000fffffffffffffff s rz
+fint.x 800000000fffffffffffffff s rz inex2
+fint.x 800000000fffffffffffffff s rz unfl
+fint.x 800000000fffffffffffffff x rm
+fint.x 800000000fffffffffffffff x rm inex2
+fint.x 800000000fffffffffffffff x rm unfl
+fint.x 800000000fffffffffffffff x rn
+fint.x 800000000fffffffffffffff x rn inex2
+fint.x 800000000fffffffffffffff x rn unfl
+fint.x 800000000fffffffffffffff x rp
+fint.x 800000000fffffffffffffff x rp inex2
+fint.x 800000000fffffffffffffff x rp unfl
+fint.x 800000000fffffffffffffff x rz
+fint.x 800000000fffffffffffffff x rz inex2
+fint.x 800000000fffffffffffffff x rz unfl
+fintrz.x 000000000000000000000001 d rm
+fintrz.x 000000000000000000000001 d rm inex2
+fintrz.x 000000000000000000000001 d rm unfl
+fintrz.x 000000000000000000000001 d rn
+fintrz.x 000000000000000000000001 d rn inex2
+fintrz.x 000000000000000000000001 d rn unfl
+fintrz.x 000000000000000000000001 d rp
+fintrz.x 000000000000000000000001 d rp inex2
+fintrz.x 000000000000000000000001 d rp unfl
+fintrz.x 000000000000000000000001 d rz
+fintrz.x 000000000000000000000001 d rz inex2
+fintrz.x 000000000000000000000001 d rz unfl
+fintrz.x 000000000000000000000001 s rm
+fintrz.x 000000000000000000000001 s rm inex2
+fintrz.x 000000000000000000000001 s rm unfl
+fintrz.x 000000000000000000000001 s rn
+fintrz.x 000000000000000000000001 s rn inex2
+fintrz.x 000000000000000000000001 s rn unfl
+fintrz.x 000000000000000000000001 s rp
+fintrz.x 000000000000000000000001 s rp inex2
+fintrz.x 000000000000000000000001 s rp unfl
+fintrz.x 000000000000000000000001 s rz
+fintrz.x 000000000000000000000001 s rz inex2
+fintrz.x 000000000000000000000001 s rz unfl
+fintrz.x 000000000000000000000001 x rm
+fintrz.x 000000000000000000000001 x rm inex2
+fintrz.x 000000000000000000000001 x rm unfl
+fintrz.x 000000000000000000000001 x rn
+fintrz.x 000000000000000000000001 x rn inex2
+fintrz.x 000000000000000000000001 x rn unfl
+fintrz.x 000000000000000000000001 x rp
+fintrz.x 000000000000000000000001 x rp inex2
+fintrz.x 000000000000000000000001 x rp unfl
+fintrz.x 000000000000000000000001 x rz
+fintrz.x 000000000000000000000001 x rz inex2
+fintrz.x 000000000000000000000001 x rz unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa d rm
+fintrz.x 000000000aaaaaaaaaaaaaaa d rm inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa d rm unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa d rn
+fintrz.x 000000000aaaaaaaaaaaaaaa d rn inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa d rn unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa d rp
+fintrz.x 000000000aaaaaaaaaaaaaaa d rp inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa d rp unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa d rz
+fintrz.x 000000000aaaaaaaaaaaaaaa d rz inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa d rz unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa s rm
+fintrz.x 000000000aaaaaaaaaaaaaaa s rm inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa s rm unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa s rn
+fintrz.x 000000000aaaaaaaaaaaaaaa s rn inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa s rn unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa s rp
+fintrz.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa s rz
+fintrz.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa x rm
+fintrz.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa x rn
+fintrz.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa x rp
+fintrz.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fintrz.x 000000000aaaaaaaaaaaaaaa x rz
+fintrz.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fintrz.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fintrz.x 000000000fffffffffffffff d rm
+fintrz.x 000000000fffffffffffffff d rm inex2
+fintrz.x 000000000fffffffffffffff d rm unfl
+fintrz.x 000000000fffffffffffffff d rn
+fintrz.x 000000000fffffffffffffff d rn inex2
+fintrz.x 000000000fffffffffffffff d rn unfl
+fintrz.x 000000000fffffffffffffff d rp
+fintrz.x 000000000fffffffffffffff d rp inex2
+fintrz.x 000000000fffffffffffffff d rp unfl
+fintrz.x 000000000fffffffffffffff d rz
+fintrz.x 000000000fffffffffffffff d rz inex2
+fintrz.x 000000000fffffffffffffff d rz unfl
+fintrz.x 000000000fffffffffffffff s rm
+fintrz.x 000000000fffffffffffffff s rm inex2
+fintrz.x 000000000fffffffffffffff s rm unfl
+fintrz.x 000000000fffffffffffffff s rn
+fintrz.x 000000000fffffffffffffff s rn inex2
+fintrz.x 000000000fffffffffffffff s rn unfl
+fintrz.x 000000000fffffffffffffff s rp
+fintrz.x 000000000fffffffffffffff s rp inex2
+fintrz.x 000000000fffffffffffffff s rp unfl
+fintrz.x 000000000fffffffffffffff s rz
+fintrz.x 000000000fffffffffffffff s rz inex2
+fintrz.x 000000000fffffffffffffff s rz unfl
+fintrz.x 000000000fffffffffffffff x rm
+fintrz.x 000000000fffffffffffffff x rm inex2
+fintrz.x 000000000fffffffffffffff x rm unfl
+fintrz.x 000000000fffffffffffffff x rn
+fintrz.x 000000000fffffffffffffff x rn inex2
+fintrz.x 000000000fffffffffffffff x rn unfl
+fintrz.x 000000000fffffffffffffff x rp
+fintrz.x 000000000fffffffffffffff x rp inex2
+fintrz.x 000000000fffffffffffffff x rp unfl
+fintrz.x 000000000fffffffffffffff x rz
+fintrz.x 000000000fffffffffffffff x rz inex2
+fintrz.x 000000000fffffffffffffff x rz unfl
+fintrz.x 800000000000000000000001 d rm
+fintrz.x 800000000000000000000001 d rm inex2
+fintrz.x 800000000000000000000001 d rm unfl
+fintrz.x 800000000000000000000001 d rn
+fintrz.x 800000000000000000000001 d rn inex2
+fintrz.x 800000000000000000000001 d rn unfl
+fintrz.x 800000000000000000000001 d rp
+fintrz.x 800000000000000000000001 d rp inex2
+fintrz.x 800000000000000000000001 d rp unfl
+fintrz.x 800000000000000000000001 d rz
+fintrz.x 800000000000000000000001 d rz inex2
+fintrz.x 800000000000000000000001 d rz unfl
+fintrz.x 800000000000000000000001 s rm
+fintrz.x 800000000000000000000001 s rm inex2
+fintrz.x 800000000000000000000001 s rm unfl
+fintrz.x 800000000000000000000001 s rn
+fintrz.x 800000000000000000000001 s rn inex2
+fintrz.x 800000000000000000000001 s rn unfl
+fintrz.x 800000000000000000000001 s rp
+fintrz.x 800000000000000000000001 s rp inex2
+fintrz.x 800000000000000000000001 s rp unfl
+fintrz.x 800000000000000000000001 s rz
+fintrz.x 800000000000000000000001 s rz inex2
+fintrz.x 800000000000000000000001 s rz unfl
+fintrz.x 800000000000000000000001 x rm
+fintrz.x 800000000000000000000001 x rm inex2
+fintrz.x 800000000000000000000001 x rm unfl
+fintrz.x 800000000000000000000001 x rn
+fintrz.x 800000000000000000000001 x rn inex2
+fintrz.x 800000000000000000000001 x rn unfl
+fintrz.x 800000000000000000000001 x rp
+fintrz.x 800000000000000000000001 x rp inex2
+fintrz.x 800000000000000000000001 x rp unfl
+fintrz.x 800000000000000000000001 x rz
+fintrz.x 800000000000000000000001 x rz inex2
+fintrz.x 800000000000000000000001 x rz unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa d rm
+fintrz.x 800000000aaaaaaaaaaaaaaa d rm inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa d rm unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa d rn
+fintrz.x 800000000aaaaaaaaaaaaaaa d rn inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa d rn unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa d rp
+fintrz.x 800000000aaaaaaaaaaaaaaa d rp inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa d rp unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa d rz
+fintrz.x 800000000aaaaaaaaaaaaaaa d rz inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa d rz unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa s rm
+fintrz.x 800000000aaaaaaaaaaaaaaa s rm inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa s rm unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa s rn
+fintrz.x 800000000aaaaaaaaaaaaaaa s rn inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa s rn unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa s rp
+fintrz.x 800000000aaaaaaaaaaaaaaa s rp inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa s rp unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa s rz
+fintrz.x 800000000aaaaaaaaaaaaaaa s rz inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa s rz unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa x rm
+fintrz.x 800000000aaaaaaaaaaaaaaa x rm inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa x rm unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa x rn
+fintrz.x 800000000aaaaaaaaaaaaaaa x rn inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa x rn unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa x rp
+fintrz.x 800000000aaaaaaaaaaaaaaa x rp inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa x rp unfl
+fintrz.x 800000000aaaaaaaaaaaaaaa x rz
+fintrz.x 800000000aaaaaaaaaaaaaaa x rz inex2
+fintrz.x 800000000aaaaaaaaaaaaaaa x rz unfl
+fintrz.x 800000000fffffffffffffff d rm
+fintrz.x 800000000fffffffffffffff d rm inex2
+fintrz.x 800000000fffffffffffffff d rm unfl
+fintrz.x 800000000fffffffffffffff d rn
+fintrz.x 800000000fffffffffffffff d rn inex2
+fintrz.x 800000000fffffffffffffff d rn unfl
+fintrz.x 800000000fffffffffffffff d rp
+fintrz.x 800000000fffffffffffffff d rp inex2
+fintrz.x 800000000fffffffffffffff d rp unfl
+fintrz.x 800000000fffffffffffffff d rz
+fintrz.x 800000000fffffffffffffff d rz inex2
+fintrz.x 800000000fffffffffffffff d rz unfl
+fintrz.x 800000000fffffffffffffff s rm
+fintrz.x 800000000fffffffffffffff s rm inex2
+fintrz.x 800000000fffffffffffffff s rm unfl
+fintrz.x 800000000fffffffffffffff s rn
+fintrz.x 800000000fffffffffffffff s rn inex2
+fintrz.x 800000000fffffffffffffff s rn unfl
+fintrz.x 800000000fffffffffffffff s rp
+fintrz.x 800000000fffffffffffffff s rp inex2
+fintrz.x 800000000fffffffffffffff s rp unfl
+fintrz.x 800000000fffffffffffffff s rz
+fintrz.x 800000000fffffffffffffff s rz inex2
+fintrz.x 800000000fffffffffffffff s rz unfl
+fintrz.x 800000000fffffffffffffff x rm
+fintrz.x 800000000fffffffffffffff x rm inex2
+fintrz.x 800000000fffffffffffffff x rm unfl
+fintrz.x 800000000fffffffffffffff x rn
+fintrz.x 800000000fffffffffffffff x rn inex2
+fintrz.x 800000000fffffffffffffff x rn unfl
+fintrz.x 800000000fffffffffffffff x rp
+fintrz.x 800000000fffffffffffffff x rp inex2
+fintrz.x 800000000fffffffffffffff x rp unfl
+fintrz.x 800000000fffffffffffffff x rz
+fintrz.x 800000000fffffffffffffff x rz inex2
+fintrz.x 800000000fffffffffffffff x rz unfl
+flog10.x 000000000000000000000001 d rm
+flog10.x 000000000000000000000001 d rm inex2
+flog10.x 000000000000000000000001 d rm unfl
+flog10.x 000000000000000000000001 d rn
+flog10.x 000000000000000000000001 d rn inex2
+flog10.x 000000000000000000000001 d rn unfl
+flog10.x 000000000000000000000001 d rp
+flog10.x 000000000000000000000001 d rp inex2
+flog10.x 000000000000000000000001 d rp unfl
+flog10.x 000000000000000000000001 d rz
+flog10.x 000000000000000000000001 d rz inex2
+flog10.x 000000000000000000000001 d rz unfl
+flog10.x 000000000000000000000001 s rm
+flog10.x 000000000000000000000001 s rm inex2
+flog10.x 000000000000000000000001 s rm unfl
+flog10.x 000000000000000000000001 s rn
+flog10.x 000000000000000000000001 s rn inex2
+flog10.x 000000000000000000000001 s rn unfl
+flog10.x 000000000000000000000001 s rp
+flog10.x 000000000000000000000001 s rp inex2
+flog10.x 000000000000000000000001 s rp unfl
+flog10.x 000000000000000000000001 s rz
+flog10.x 000000000000000000000001 s rz inex2
+flog10.x 000000000000000000000001 s rz unfl
+flog10.x 000000000000000000000001 x rm
+flog10.x 000000000000000000000001 x rm inex2
+flog10.x 000000000000000000000001 x rm unfl
+flog10.x 000000000000000000000001 x rn
+flog10.x 000000000000000000000001 x rn inex2
+flog10.x 000000000000000000000001 x rn unfl
+flog10.x 000000000000000000000001 x rp
+flog10.x 000000000000000000000001 x rp inex2
+flog10.x 000000000000000000000001 x rp unfl
+flog10.x 000000000000000000000001 x rz
+flog10.x 000000000000000000000001 x rz inex2
+flog10.x 000000000000000000000001 x rz unfl
+flog10.x 000000000aaaaaaaaaaaaaaa d rm
+flog10.x 000000000aaaaaaaaaaaaaaa d rm inex2
+flog10.x 000000000aaaaaaaaaaaaaaa d rm unfl
+flog10.x 000000000aaaaaaaaaaaaaaa d rn
+flog10.x 000000000aaaaaaaaaaaaaaa d rn inex2
+flog10.x 000000000aaaaaaaaaaaaaaa d rn unfl
+flog10.x 000000000aaaaaaaaaaaaaaa d rp
+flog10.x 000000000aaaaaaaaaaaaaaa d rp inex2
+flog10.x 000000000aaaaaaaaaaaaaaa d rp unfl
+flog10.x 000000000aaaaaaaaaaaaaaa d rz
+flog10.x 000000000aaaaaaaaaaaaaaa d rz inex2
+flog10.x 000000000aaaaaaaaaaaaaaa d rz unfl
+flog10.x 000000000aaaaaaaaaaaaaaa s rm
+flog10.x 000000000aaaaaaaaaaaaaaa s rm inex2
+flog10.x 000000000aaaaaaaaaaaaaaa s rm unfl
+flog10.x 000000000aaaaaaaaaaaaaaa s rn
+flog10.x 000000000aaaaaaaaaaaaaaa s rn inex2
+flog10.x 000000000aaaaaaaaaaaaaaa s rn unfl
+flog10.x 000000000aaaaaaaaaaaaaaa s rp
+flog10.x 000000000aaaaaaaaaaaaaaa s rp inex2
+flog10.x 000000000aaaaaaaaaaaaaaa s rp unfl
+flog10.x 000000000aaaaaaaaaaaaaaa s rz
+flog10.x 000000000aaaaaaaaaaaaaaa s rz inex2
+flog10.x 000000000aaaaaaaaaaaaaaa s rz unfl
+flog10.x 000000000aaaaaaaaaaaaaaa x rm
+flog10.x 000000000aaaaaaaaaaaaaaa x rm inex2
+flog10.x 000000000aaaaaaaaaaaaaaa x rm unfl
+flog10.x 000000000aaaaaaaaaaaaaaa x rn
+flog10.x 000000000aaaaaaaaaaaaaaa x rn inex2
+flog10.x 000000000aaaaaaaaaaaaaaa x rn unfl
+flog10.x 000000000aaaaaaaaaaaaaaa x rp
+flog10.x 000000000aaaaaaaaaaaaaaa x rp inex2
+flog10.x 000000000aaaaaaaaaaaaaaa x rp unfl
+flog10.x 000000000aaaaaaaaaaaaaaa x rz
+flog10.x 000000000aaaaaaaaaaaaaaa x rz inex2
+flog10.x 000000000aaaaaaaaaaaaaaa x rz unfl
+flog10.x 000000000fffffffffffffff d rm
+flog10.x 000000000fffffffffffffff d rm inex2
+flog10.x 000000000fffffffffffffff d rm unfl
+flog10.x 000000000fffffffffffffff d rn
+flog10.x 000000000fffffffffffffff d rn inex2
+flog10.x 000000000fffffffffffffff d rn unfl
+flog10.x 000000000fffffffffffffff d rp
+flog10.x 000000000fffffffffffffff d rp inex2
+flog10.x 000000000fffffffffffffff d rp unfl
+flog10.x 000000000fffffffffffffff d rz
+flog10.x 000000000fffffffffffffff d rz inex2
+flog10.x 000000000fffffffffffffff d rz unfl
+flog10.x 000000000fffffffffffffff s rm
+flog10.x 000000000fffffffffffffff s rm inex2
+flog10.x 000000000fffffffffffffff s rm unfl
+flog10.x 000000000fffffffffffffff s rn
+flog10.x 000000000fffffffffffffff s rn inex2
+flog10.x 000000000fffffffffffffff s rn unfl
+flog10.x 000000000fffffffffffffff s rp
+flog10.x 000000000fffffffffffffff s rp inex2
+flog10.x 000000000fffffffffffffff s rp unfl
+flog10.x 000000000fffffffffffffff s rz
+flog10.x 000000000fffffffffffffff s rz inex2
+flog10.x 000000000fffffffffffffff s rz unfl
+flog10.x 000000000fffffffffffffff x rm
+flog10.x 000000000fffffffffffffff x rm inex2
+flog10.x 000000000fffffffffffffff x rm unfl
+flog10.x 000000000fffffffffffffff x rn
+flog10.x 000000000fffffffffffffff x rn inex2
+flog10.x 000000000fffffffffffffff x rn unfl
+flog10.x 000000000fffffffffffffff x rp
+flog10.x 000000000fffffffffffffff x rp inex2
+flog10.x 000000000fffffffffffffff x rp unfl
+flog10.x 000000000fffffffffffffff x rz
+flog10.x 000000000fffffffffffffff x rz inex2
+flog10.x 000000000fffffffffffffff x rz unfl
+flog10.x 800000000000000000000001 d rm
+flog10.x 800000000000000000000001 d rm inex2
+flog10.x 800000000000000000000001 d rm unfl
+flog10.x 800000000000000000000001 d rn
+flog10.x 800000000000000000000001 d rn inex2
+flog10.x 800000000000000000000001 d rn unfl
+flog10.x 800000000000000000000001 d rp
+flog10.x 800000000000000000000001 d rp inex2
+flog10.x 800000000000000000000001 d rp unfl
+flog10.x 800000000000000000000001 d rz
+flog10.x 800000000000000000000001 d rz inex2
+flog10.x 800000000000000000000001 d rz unfl
+flog10.x 800000000000000000000001 s rm
+flog10.x 800000000000000000000001 s rm inex2
+flog10.x 800000000000000000000001 s rm unfl
+flog10.x 800000000000000000000001 s rn
+flog10.x 800000000000000000000001 s rn inex2
+flog10.x 800000000000000000000001 s rn unfl
+flog10.x 800000000000000000000001 s rp
+flog10.x 800000000000000000000001 s rp inex2
+flog10.x 800000000000000000000001 s rp unfl
+flog10.x 800000000000000000000001 s rz
+flog10.x 800000000000000000000001 s rz inex2
+flog10.x 800000000000000000000001 s rz unfl
+flog10.x 800000000000000000000001 x rm
+flog10.x 800000000000000000000001 x rm inex2
+flog10.x 800000000000000000000001 x rm unfl
+flog10.x 800000000000000000000001 x rn
+flog10.x 800000000000000000000001 x rn inex2
+flog10.x 800000000000000000000001 x rn unfl
+flog10.x 800000000000000000000001 x rp
+flog10.x 800000000000000000000001 x rp inex2
+flog10.x 800000000000000000000001 x rp unfl
+flog10.x 800000000000000000000001 x rz
+flog10.x 800000000000000000000001 x rz inex2
+flog10.x 800000000000000000000001 x rz unfl
+flog10.x 800000000aaaaaaaaaaaaaaa d rm
+flog10.x 800000000aaaaaaaaaaaaaaa d rm inex2
+flog10.x 800000000aaaaaaaaaaaaaaa d rm unfl
+flog10.x 800000000aaaaaaaaaaaaaaa d rn
+flog10.x 800000000aaaaaaaaaaaaaaa d rn inex2
+flog10.x 800000000aaaaaaaaaaaaaaa d rn unfl
+flog10.x 800000000aaaaaaaaaaaaaaa d rp
+flog10.x 800000000aaaaaaaaaaaaaaa d rp inex2
+flog10.x 800000000aaaaaaaaaaaaaaa d rp unfl
+flog10.x 800000000aaaaaaaaaaaaaaa d rz
+flog10.x 800000000aaaaaaaaaaaaaaa d rz inex2
+flog10.x 800000000aaaaaaaaaaaaaaa d rz unfl
+flog10.x 800000000aaaaaaaaaaaaaaa s rm
+flog10.x 800000000aaaaaaaaaaaaaaa s rm inex2
+flog10.x 800000000aaaaaaaaaaaaaaa s rm unfl
+flog10.x 800000000aaaaaaaaaaaaaaa s rn
+flog10.x 800000000aaaaaaaaaaaaaaa s rn inex2
+flog10.x 800000000aaaaaaaaaaaaaaa s rn unfl
+flog10.x 800000000aaaaaaaaaaaaaaa s rp
+flog10.x 800000000aaaaaaaaaaaaaaa s rp inex2
+flog10.x 800000000aaaaaaaaaaaaaaa s rp unfl
+flog10.x 800000000aaaaaaaaaaaaaaa s rz
+flog10.x 800000000aaaaaaaaaaaaaaa s rz inex2
+flog10.x 800000000aaaaaaaaaaaaaaa s rz unfl
+flog10.x 800000000aaaaaaaaaaaaaaa x rm
+flog10.x 800000000aaaaaaaaaaaaaaa x rm inex2
+flog10.x 800000000aaaaaaaaaaaaaaa x rm unfl
+flog10.x 800000000aaaaaaaaaaaaaaa x rn
+flog10.x 800000000aaaaaaaaaaaaaaa x rn inex2
+flog10.x 800000000aaaaaaaaaaaaaaa x rn unfl
+flog10.x 800000000aaaaaaaaaaaaaaa x rp
+flog10.x 800000000aaaaaaaaaaaaaaa x rp inex2
+flog10.x 800000000aaaaaaaaaaaaaaa x rp unfl
+flog10.x 800000000aaaaaaaaaaaaaaa x rz
+flog10.x 800000000aaaaaaaaaaaaaaa x rz inex2
+flog10.x 800000000aaaaaaaaaaaaaaa x rz unfl
+flog10.x 800000000fffffffffffffff d rm
+flog10.x 800000000fffffffffffffff d rm inex2
+flog10.x 800000000fffffffffffffff d rm unfl
+flog10.x 800000000fffffffffffffff d rn
+flog10.x 800000000fffffffffffffff d rn inex2
+flog10.x 800000000fffffffffffffff d rn unfl
+flog10.x 800000000fffffffffffffff d rp
+flog10.x 800000000fffffffffffffff d rp inex2
+flog10.x 800000000fffffffffffffff d rp unfl
+flog10.x 800000000fffffffffffffff d rz
+flog10.x 800000000fffffffffffffff d rz inex2
+flog10.x 800000000fffffffffffffff d rz unfl
+flog10.x 800000000fffffffffffffff s rm
+flog10.x 800000000fffffffffffffff s rm inex2
+flog10.x 800000000fffffffffffffff s rm unfl
+flog10.x 800000000fffffffffffffff s rn
+flog10.x 800000000fffffffffffffff s rn inex2
+flog10.x 800000000fffffffffffffff s rn unfl
+flog10.x 800000000fffffffffffffff s rp
+flog10.x 800000000fffffffffffffff s rp inex2
+flog10.x 800000000fffffffffffffff s rp unfl
+flog10.x 800000000fffffffffffffff s rz
+flog10.x 800000000fffffffffffffff s rz inex2
+flog10.x 800000000fffffffffffffff s rz unfl
+flog10.x 800000000fffffffffffffff x rm
+flog10.x 800000000fffffffffffffff x rm inex2
+flog10.x 800000000fffffffffffffff x rm unfl
+flog10.x 800000000fffffffffffffff x rn
+flog10.x 800000000fffffffffffffff x rn inex2
+flog10.x 800000000fffffffffffffff x rn unfl
+flog10.x 800000000fffffffffffffff x rp
+flog10.x 800000000fffffffffffffff x rp inex2
+flog10.x 800000000fffffffffffffff x rp unfl
+flog10.x 800000000fffffffffffffff x rz
+flog10.x 800000000fffffffffffffff x rz inex2
+flog10.x 800000000fffffffffffffff x rz unfl
+flog2.x 000000000000000000000001 d rm
+flog2.x 000000000000000000000001 d rm inex2
+flog2.x 000000000000000000000001 d rm unfl
+flog2.x 000000000000000000000001 d rn
+flog2.x 000000000000000000000001 d rn inex2
+flog2.x 000000000000000000000001 d rn unfl
+flog2.x 000000000000000000000001 d rp
+flog2.x 000000000000000000000001 d rp inex2
+flog2.x 000000000000000000000001 d rp unfl
+flog2.x 000000000000000000000001 d rz
+flog2.x 000000000000000000000001 d rz inex2
+flog2.x 000000000000000000000001 d rz unfl
+flog2.x 000000000000000000000001 s rm
+flog2.x 000000000000000000000001 s rm inex2
+flog2.x 000000000000000000000001 s rm unfl
+flog2.x 000000000000000000000001 s rn
+flog2.x 000000000000000000000001 s rn inex2
+flog2.x 000000000000000000000001 s rn unfl
+flog2.x 000000000000000000000001 s rp
+flog2.x 000000000000000000000001 s rp inex2
+flog2.x 000000000000000000000001 s rp unfl
+flog2.x 000000000000000000000001 s rz
+flog2.x 000000000000000000000001 s rz inex2
+flog2.x 000000000000000000000001 s rz unfl
+flog2.x 000000000000000000000001 x rm
+flog2.x 000000000000000000000001 x rm inex2
+flog2.x 000000000000000000000001 x rm unfl
+flog2.x 000000000000000000000001 x rn
+flog2.x 000000000000000000000001 x rn inex2
+flog2.x 000000000000000000000001 x rn unfl
+flog2.x 000000000000000000000001 x rp
+flog2.x 000000000000000000000001 x rp inex2
+flog2.x 000000000000000000000001 x rp unfl
+flog2.x 000000000000000000000001 x rz
+flog2.x 000000000000000000000001 x rz inex2
+flog2.x 000000000000000000000001 x rz unfl
+flog2.x 000000000aaaaaaaaaaaaaaa d rm
+flog2.x 000000000aaaaaaaaaaaaaaa d rm inex2
+flog2.x 000000000aaaaaaaaaaaaaaa d rm unfl
+flog2.x 000000000aaaaaaaaaaaaaaa d rn
+flog2.x 000000000aaaaaaaaaaaaaaa d rn inex2
+flog2.x 000000000aaaaaaaaaaaaaaa d rn unfl
+flog2.x 000000000aaaaaaaaaaaaaaa d rp
+flog2.x 000000000aaaaaaaaaaaaaaa d rp inex2
+flog2.x 000000000aaaaaaaaaaaaaaa d rp unfl
+flog2.x 000000000aaaaaaaaaaaaaaa d rz
+flog2.x 000000000aaaaaaaaaaaaaaa d rz inex2
+flog2.x 000000000aaaaaaaaaaaaaaa d rz unfl
+flog2.x 000000000aaaaaaaaaaaaaaa s rm
+flog2.x 000000000aaaaaaaaaaaaaaa s rm inex2
+flog2.x 000000000aaaaaaaaaaaaaaa s rm unfl
+flog2.x 000000000aaaaaaaaaaaaaaa s rn
+flog2.x 000000000aaaaaaaaaaaaaaa s rn inex2
+flog2.x 000000000aaaaaaaaaaaaaaa s rn unfl
+flog2.x 000000000aaaaaaaaaaaaaaa s rp
+flog2.x 000000000aaaaaaaaaaaaaaa s rp inex2
+flog2.x 000000000aaaaaaaaaaaaaaa s rp unfl
+flog2.x 000000000aaaaaaaaaaaaaaa s rz
+flog2.x 000000000aaaaaaaaaaaaaaa s rz inex2
+flog2.x 000000000aaaaaaaaaaaaaaa s rz unfl
+flog2.x 000000000aaaaaaaaaaaaaaa x rm
+flog2.x 000000000aaaaaaaaaaaaaaa x rm inex2
+flog2.x 000000000aaaaaaaaaaaaaaa x rm unfl
+flog2.x 000000000aaaaaaaaaaaaaaa x rn
+flog2.x 000000000aaaaaaaaaaaaaaa x rn inex2
+flog2.x 000000000aaaaaaaaaaaaaaa x rn unfl
+flog2.x 000000000aaaaaaaaaaaaaaa x rp
+flog2.x 000000000aaaaaaaaaaaaaaa x rp inex2
+flog2.x 000000000aaaaaaaaaaaaaaa x rp unfl
+flog2.x 000000000aaaaaaaaaaaaaaa x rz
+flog2.x 000000000aaaaaaaaaaaaaaa x rz inex2
+flog2.x 000000000aaaaaaaaaaaaaaa x rz unfl
+flog2.x 000000000fffffffffffffff d rm
+flog2.x 000000000fffffffffffffff d rm inex2
+flog2.x 000000000fffffffffffffff d rm unfl
+flog2.x 000000000fffffffffffffff d rn
+flog2.x 000000000fffffffffffffff d rn inex2
+flog2.x 000000000fffffffffffffff d rn unfl
+flog2.x 000000000fffffffffffffff d rp
+flog2.x 000000000fffffffffffffff d rp inex2
+flog2.x 000000000fffffffffffffff d rp unfl
+flog2.x 000000000fffffffffffffff d rz
+flog2.x 000000000fffffffffffffff d rz inex2
+flog2.x 000000000fffffffffffffff d rz unfl
+flog2.x 000000000fffffffffffffff s rm
+flog2.x 000000000fffffffffffffff s rm inex2
+flog2.x 000000000fffffffffffffff s rm unfl
+flog2.x 000000000fffffffffffffff s rn
+flog2.x 000000000fffffffffffffff s rn inex2
+flog2.x 000000000fffffffffffffff s rn unfl
+flog2.x 000000000fffffffffffffff s rp
+flog2.x 000000000fffffffffffffff s rp inex2
+flog2.x 000000000fffffffffffffff s rp unfl
+flog2.x 000000000fffffffffffffff s rz
+flog2.x 000000000fffffffffffffff s rz inex2
+flog2.x 000000000fffffffffffffff s rz unfl
+flog2.x 000000000fffffffffffffff x rm
+flog2.x 000000000fffffffffffffff x rm inex2
+flog2.x 000000000fffffffffffffff x rm unfl
+flog2.x 000000000fffffffffffffff x rn
+flog2.x 000000000fffffffffffffff x rn inex2
+flog2.x 000000000fffffffffffffff x rn unfl
+flog2.x 000000000fffffffffffffff x rp
+flog2.x 000000000fffffffffffffff x rp inex2
+flog2.x 000000000fffffffffffffff x rp unfl
+flog2.x 000000000fffffffffffffff x rz
+flog2.x 000000000fffffffffffffff x rz inex2
+flog2.x 000000000fffffffffffffff x rz unfl
+flog2.x 800000000000000000000001 d rm
+flog2.x 800000000000000000000001 d rm inex2
+flog2.x 800000000000000000000001 d rm unfl
+flog2.x 800000000000000000000001 d rn
+flog2.x 800000000000000000000001 d rn inex2
+flog2.x 800000000000000000000001 d rn unfl
+flog2.x 800000000000000000000001 d rp
+flog2.x 800000000000000000000001 d rp inex2
+flog2.x 800000000000000000000001 d rp unfl
+flog2.x 800000000000000000000001 d rz
+flog2.x 800000000000000000000001 d rz inex2
+flog2.x 800000000000000000000001 d rz unfl
+flog2.x 800000000000000000000001 s rm
+flog2.x 800000000000000000000001 s rm inex2
+flog2.x 800000000000000000000001 s rm unfl
+flog2.x 800000000000000000000001 s rn
+flog2.x 800000000000000000000001 s rn inex2
+flog2.x 800000000000000000000001 s rn unfl
+flog2.x 800000000000000000000001 s rp
+flog2.x 800000000000000000000001 s rp inex2
+flog2.x 800000000000000000000001 s rp unfl
+flog2.x 800000000000000000000001 s rz
+flog2.x 800000000000000000000001 s rz inex2
+flog2.x 800000000000000000000001 s rz unfl
+flog2.x 800000000000000000000001 x rm
+flog2.x 800000000000000000000001 x rm inex2
+flog2.x 800000000000000000000001 x rm unfl
+flog2.x 800000000000000000000001 x rn
+flog2.x 800000000000000000000001 x rn inex2
+flog2.x 800000000000000000000001 x rn unfl
+flog2.x 800000000000000000000001 x rp
+flog2.x 800000000000000000000001 x rp inex2
+flog2.x 800000000000000000000001 x rp unfl
+flog2.x 800000000000000000000001 x rz
+flog2.x 800000000000000000000001 x rz inex2
+flog2.x 800000000000000000000001 x rz unfl
+flog2.x 800000000aaaaaaaaaaaaaaa d rm
+flog2.x 800000000aaaaaaaaaaaaaaa d rm inex2
+flog2.x 800000000aaaaaaaaaaaaaaa d rm unfl
+flog2.x 800000000aaaaaaaaaaaaaaa d rn
+flog2.x 800000000aaaaaaaaaaaaaaa d rn inex2
+flog2.x 800000000aaaaaaaaaaaaaaa d rn unfl
+flog2.x 800000000aaaaaaaaaaaaaaa d rp
+flog2.x 800000000aaaaaaaaaaaaaaa d rp inex2
+flog2.x 800000000aaaaaaaaaaaaaaa d rp unfl
+flog2.x 800000000aaaaaaaaaaaaaaa d rz
+flog2.x 800000000aaaaaaaaaaaaaaa d rz inex2
+flog2.x 800000000aaaaaaaaaaaaaaa d rz unfl
+flog2.x 800000000aaaaaaaaaaaaaaa s rm
+flog2.x 800000000aaaaaaaaaaaaaaa s rm inex2
+flog2.x 800000000aaaaaaaaaaaaaaa s rm unfl
+flog2.x 800000000aaaaaaaaaaaaaaa s rn
+flog2.x 800000000aaaaaaaaaaaaaaa s rn inex2
+flog2.x 800000000aaaaaaaaaaaaaaa s rn unfl
+flog2.x 800000000aaaaaaaaaaaaaaa s rp
+flog2.x 800000000aaaaaaaaaaaaaaa s rp inex2
+flog2.x 800000000aaaaaaaaaaaaaaa s rp unfl
+flog2.x 800000000aaaaaaaaaaaaaaa s rz
+flog2.x 800000000aaaaaaaaaaaaaaa s rz inex2
+flog2.x 800000000aaaaaaaaaaaaaaa s rz unfl
+flog2.x 800000000aaaaaaaaaaaaaaa x rm
+flog2.x 800000000aaaaaaaaaaaaaaa x rm inex2
+flog2.x 800000000aaaaaaaaaaaaaaa x rm unfl
+flog2.x 800000000aaaaaaaaaaaaaaa x rn
+flog2.x 800000000aaaaaaaaaaaaaaa x rn inex2
+flog2.x 800000000aaaaaaaaaaaaaaa x rn unfl
+flog2.x 800000000aaaaaaaaaaaaaaa x rp
+flog2.x 800000000aaaaaaaaaaaaaaa x rp inex2
+flog2.x 800000000aaaaaaaaaaaaaaa x rp unfl
+flog2.x 800000000aaaaaaaaaaaaaaa x rz
+flog2.x 800000000aaaaaaaaaaaaaaa x rz inex2
+flog2.x 800000000aaaaaaaaaaaaaaa x rz unfl
+flog2.x 800000000fffffffffffffff d rm
+flog2.x 800000000fffffffffffffff d rm inex2
+flog2.x 800000000fffffffffffffff d rm unfl
+flog2.x 800000000fffffffffffffff d rn
+flog2.x 800000000fffffffffffffff d rn inex2
+flog2.x 800000000fffffffffffffff d rn unfl
+flog2.x 800000000fffffffffffffff d rp
+flog2.x 800000000fffffffffffffff d rp inex2
+flog2.x 800000000fffffffffffffff d rp unfl

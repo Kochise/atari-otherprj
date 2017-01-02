@@ -1,0 +1,22 @@
+/*
+This is the test case for bug #113
+*/
+main()
+{
+fpbug();
+}
+
+first:
+	long            0x4039ffff,0x583a53b9
+second:
+	long            0x00000003,0x45600000,0x0
+	global          fpbug
+fpbug:
+	fmov.l          &0xff00,%control
+	lea.l           first,%a0
+	fmov.d          (%a0),%fp0
+	nop
+	fnop
+	lea.l           second,%a1
+	frem.p          (%a1),%fp0
+	rts

@@ -1,0 +1,1025 @@
+verbose
+fbge.w 
+fbge.w  n
+fbge.w  z
+fbge.w  n z
+fbge.w  i
+fbge.w  n i
+fbge.w  z i
+fbge.w  n z i
+fbge.w  nan
+fbge.w  n nan
+fbge.w  z nan
+fbge.w  n z nan
+fbge.w  i nan
+fbge.w  n i nan
+fbge.w  z i nan
+fbge.w  n z i nan
+fbge.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbge.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w 
+fboge.w  n
+fboge.w  z
+fboge.w  n z
+fboge.w  i
+fboge.w  n i
+fboge.w  z i
+fboge.w  n z i
+fboge.w  nan
+fboge.w  n nan
+fboge.w  z nan
+fboge.w  n z nan
+fboge.w  i nan
+fboge.w  n i nan
+fboge.w  z i nan
+fboge.w  n z i nan
+fboge.w  bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fboge.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w 
+fbgl.w  n
+fbgl.w  z
+fbgl.w  n z
+fbgl.w  i
+fbgl.w  n i
+fbgl.w  z i
+fbgl.w  n z i
+fbgl.w  nan
+fbgl.w  n nan
+fbgl.w  z nan
+fbgl.w  n z nan
+fbgl.w  i nan
+fbgl.w  n i nan
+fbgl.w  z i nan
+fbgl.w  n z i nan
+fbgl.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgl.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w 
+fbogl.w  n
+fbogl.w  z
+fbogl.w  n z
+fbogl.w  i
+fbogl.w  n i
+fbogl.w  z i
+fbogl.w  n z i
+fbogl.w  nan
+fbogl.w  n nan
+fbogl.w  z nan
+fbogl.w  n z nan
+fbogl.w  i nan
+fbogl.w  n i nan
+fbogl.w  z i nan
+fbogl.w  n z i nan
+fbogl.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogl.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w 
+fbgle.w  n
+fbgle.w  z
+fbgle.w  n z
+fbgle.w  i
+fbgle.w  n i
+fbgle.w  z i
+fbgle.w  n z i
+fbgle.w  nan
+fbgle.w  n nan
+fbgle.w  z nan
+fbgle.w  n z nan
+fbgle.w  i nan
+fbgle.w  n i nan
+fbgle.w  z i nan
+fbgle.w  n z i nan
+fbgle.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgle.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w 
+fbor.w  n
+fbor.w  z
+fbor.w  n z
+fbor.w  i
+fbor.w  n i
+fbor.w  z i
+fbor.w  n z i
+fbor.w  nan
+fbor.w  n nan
+fbor.w  z nan
+fbor.w  n z nan
+fbor.w  i nan
+fbor.w  n i nan
+fbor.w  z i nan
+fbor.w  n z i nan
+fbor.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbor.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w 
+fbgt.w  n
+fbgt.w  z
+fbgt.w  n z
+fbgt.w  i
+fbgt.w  n i
+fbgt.w  z i
+fbgt.w  n z i
+fbgt.w  nan
+fbgt.w  n nan
+fbgt.w  z nan
+fbgt.w  n z nan
+fbgt.w  i nan
+fbgt.w  n i nan
+fbgt.w  z i nan
+fbgt.w  n z i nan
+fbgt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbgt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w 
+fbogt.w  n
+fbogt.w  z
+fbogt.w  n z
+fbogt.w  i
+fbogt.w  n i
+fbogt.w  z i
+fbogt.w  n z i
+fbogt.w  nan
+fbogt.w  n nan
+fbogt.w  z nan
+fbogt.w  n z nan
+fbogt.w  i nan
+fbogt.w  n i nan
+fbogt.w  z i nan
+fbogt.w  n z i nan
+fbogt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbogt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w 
+fble.w  n
+fble.w  z
+fble.w  n z
+fble.w  i
+fble.w  n i
+fble.w  z i
+fble.w  n z i
+fble.w  nan
+fble.w  n nan
+fble.w  z nan
+fble.w  n z nan
+fble.w  i nan
+fble.w  n i nan
+fble.w  z i nan
+fble.w  n z i nan
+fble.w  bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fble.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w 
+fbole.w  n
+fbole.w  z
+fbole.w  n z
+fbole.w  i
+fbole.w  n i
+fbole.w  z i
+fbole.w  n z i
+fbole.w  nan
+fbole.w  n nan
+fbole.w  z nan
+fbole.w  n z nan
+fbole.w  i nan
+fbole.w  n i nan
+fbole.w  z i nan
+fbole.w  n z i nan
+fbole.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbole.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w 
+fblt.w  n
+fblt.w  z
+fblt.w  n z
+fblt.w  i
+fblt.w  n i
+fblt.w  z i
+fblt.w  n z i
+fblt.w  nan
+fblt.w  n nan
+fblt.w  z nan
+fblt.w  n z nan
+fblt.w  i nan
+fblt.w  n i nan
+fblt.w  z i nan
+fblt.w  n z i nan
+fblt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fblt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w 
+fbolt.w  n
+fbolt.w  z
+fbolt.w  n z
+fbolt.w  i
+fbolt.w  n i
+fbolt.w  z i
+fbolt.w  n z i
+fbolt.w  nan
+fbolt.w  n nan
+fbolt.w  z nan
+fbolt.w  n z nan
+fbolt.w  i nan
+fbolt.w  n i nan
+fbolt.w  z i nan
+fbolt.w  n z i nan
+fbolt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbolt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w 
+fbnge.w  n
+fbnge.w  z
+fbnge.w  n z
+fbnge.w  i
+fbnge.w  n i
+fbnge.w  z i
+fbnge.w  n z i
+fbnge.w  nan
+fbnge.w  n nan
+fbnge.w  z nan
+fbnge.w  n z nan
+fbnge.w  i nan
+fbnge.w  n i nan
+fbnge.w  z i nan
+fbnge.w  n z i nan
+fbnge.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnge.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w 
+fbuge.w  n
+fbuge.w  z
+fbuge.w  n z
+fbuge.w  i
+fbuge.w  n i
+fbuge.w  z i
+fbuge.w  n z i
+fbuge.w  nan
+fbuge.w  n nan
+fbuge.w  z nan
+fbuge.w  n z nan
+fbuge.w  i nan
+fbuge.w  n i nan
+fbuge.w  z i nan
+fbuge.w  n z i nan
+fbuge.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbuge.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w 
+fbngl.w  n
+fbngl.w  z
+fbngl.w  n z
+fbngl.w  i
+fbngl.w  n i
+fbngl.w  z i
+fbngl.w  n z i
+fbngl.w  nan
+fbngl.w  n nan
+fbngl.w  z nan
+fbngl.w  n z nan
+fbngl.w  i nan
+fbngl.w  n i nan
+fbngl.w  z i nan
+fbngl.w  n z i nan
+fbngl.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngl.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w 
+fbueq.w  n
+fbueq.w  z
+fbueq.w  n z
+fbueq.w  i
+fbueq.w  n i
+fbueq.w  z i
+fbueq.w  n z i
+fbueq.w  nan
+fbueq.w  n nan
+fbueq.w  z nan
+fbueq.w  n z nan
+fbueq.w  i nan
+fbueq.w  n i nan
+fbueq.w  z i nan
+fbueq.w  n z i nan
+fbueq.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbueq.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w 
+fbngle.w  n
+fbngle.w  z
+fbngle.w  n z
+fbngle.w  i
+fbngle.w  n i
+fbngle.w  z i
+fbngle.w  n z i
+fbngle.w  nan
+fbngle.w  n nan
+fbngle.w  z nan
+fbngle.w  n z nan
+fbngle.w  i nan
+fbngle.w  n i nan
+fbngle.w  z i nan
+fbngle.w  n z i nan
+fbngle.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngle.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w 
+fbun.w  n
+fbun.w  z
+fbun.w  n z
+fbun.w  i
+fbun.w  n i
+fbun.w  z i
+fbun.w  n z i
+fbun.w  nan
+fbun.w  n nan
+fbun.w  z nan
+fbun.w  n z nan
+fbun.w  i nan
+fbun.w  n i nan
+fbun.w  z i nan
+fbun.w  n z i nan
+fbun.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbun.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w 
+fbngt.w  n
+fbngt.w  z
+fbngt.w  n z
+fbngt.w  i
+fbngt.w  n i
+fbngt.w  z i
+fbngt.w  n z i
+fbngt.w  nan
+fbngt.w  n nan
+fbngt.w  z nan
+fbngt.w  n z nan
+fbngt.w  i nan
+fbngt.w  n i nan
+fbngt.w  z i nan
+fbngt.w  n z i nan
+fbngt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbngt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w 
+fbugt.w  n
+fbugt.w  z
+fbugt.w  n z
+fbugt.w  i
+fbugt.w  n i
+fbugt.w  z i
+fbugt.w  n z i
+fbugt.w  nan
+fbugt.w  n nan
+fbugt.w  z nan
+fbugt.w  n z nan
+fbugt.w  i nan
+fbugt.w  n i nan
+fbugt.w  z i nan
+fbugt.w  n z i nan
+fbugt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbugt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w 
+fbnle.w  n
+fbnle.w  z
+fbnle.w  n z
+fbnle.w  i
+fbnle.w  n i
+fbnle.w  z i
+fbnle.w  n z i
+fbnle.w  nan
+fbnle.w  n nan
+fbnle.w  z nan
+fbnle.w  n z nan
+fbnle.w  i nan
+fbnle.w  n i nan
+fbnle.w  z i nan
+fbnle.w  n z i nan
+fbnle.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnle.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w 
+fbule.w  n
+fbule.w  z
+fbule.w  n z
+fbule.w  i
+fbule.w  n i
+fbule.w  z i
+fbule.w  n z i
+fbule.w  nan
+fbule.w  n nan
+fbule.w  z nan
+fbule.w  n z nan
+fbule.w  i nan
+fbule.w  n i nan
+fbule.w  z i nan
+fbule.w  n z i nan
+fbule.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbule.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w 
+fbnlt.w  n
+fbnlt.w  z
+fbnlt.w  n z
+fbnlt.w  i
+fbnlt.w  n i
+fbnlt.w  z i
+fbnlt.w  n z i
+fbnlt.w  nan
+fbnlt.w  n nan
+fbnlt.w  z nan
+fbnlt.w  n z nan
+fbnlt.w  i nan
+fbnlt.w  n i nan
+fbnlt.w  z i nan
+fbnlt.w  n z i nan
+fbnlt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbnlt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w 
+fbult.w  n
+fbult.w  z
+fbult.w  n z
+fbult.w  i
+fbult.w  n i
+fbult.w  z i
+fbult.w  n z i
+fbult.w  nan
+fbult.w  n nan
+fbult.w  z nan
+fbult.w  n z nan
+fbult.w  i nan
+fbult.w  n i nan
+fbult.w  z i nan
+fbult.w  n z i nan
+fbult.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbult.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w 
+fbseq.w  n
+fbseq.w  z
+fbseq.w  n z
+fbseq.w  i
+fbseq.w  n i
+fbseq.w  z i
+fbseq.w  n z i
+fbseq.w  nan
+fbseq.w  n nan
+fbseq.w  z nan
+fbseq.w  n z nan
+fbseq.w  i nan
+fbseq.w  n i nan
+fbseq.w  z i nan
+fbseq.w  n z i nan
+fbseq.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbseq.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w 
+fbeq.w  n
+fbeq.w  z
+fbeq.w  n z
+fbeq.w  i
+fbeq.w  n i
+fbeq.w  z i
+fbeq.w  n z i
+fbeq.w  nan
+fbeq.w  n nan
+fbeq.w  z nan
+fbeq.w  n z nan
+fbeq.w  i nan
+fbeq.w  n i nan
+fbeq.w  z i nan
+fbeq.w  n z i nan
+fbeq.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbeq.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w 
+fbsne.w  n
+fbsne.w  z
+fbsne.w  n z
+fbsne.w  i
+fbsne.w  n i
+fbsne.w  z i
+fbsne.w  n z i
+fbsne.w  nan
+fbsne.w  n nan
+fbsne.w  z nan
+fbsne.w  n z nan
+fbsne.w  i nan
+fbsne.w  n i nan
+fbsne.w  z i nan
+fbsne.w  n z i nan
+fbsne.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsne.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w 
+fbne.w  n
+fbne.w  z
+fbne.w  n z
+fbne.w  i
+fbne.w  n i
+fbne.w  z i
+fbne.w  n z i
+fbne.w  nan
+fbne.w  n nan
+fbne.w  z nan
+fbne.w  n z nan
+fbne.w  i nan
+fbne.w  n i nan
+fbne.w  z i nan
+fbne.w  n z i nan
+fbne.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbne.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w 
+fbsf.w  n
+fbsf.w  z
+fbsf.w  n z
+fbsf.w  i
+fbsf.w  n i
+fbsf.w  z i
+fbsf.w  n z i
+fbsf.w  nan
+fbsf.w  n nan
+fbsf.w  z nan
+fbsf.w  n z nan
+fbsf.w  i nan
+fbsf.w  n i nan
+fbsf.w  z i nan
+fbsf.w  n z i nan
+fbsf.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbsf.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w 
+fbf.w  n
+fbf.w  z
+fbf.w  n z
+fbf.w  i
+fbf.w  n i
+fbf.w  z i
+fbf.w  n z i
+fbf.w  nan
+fbf.w  n nan
+fbf.w  z nan
+fbf.w  n z nan
+fbf.w  i nan
+fbf.w  n i nan
+fbf.w  z i nan
+fbf.w  n z i nan
+fbf.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbf.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w 
+fbst.w  n
+fbst.w  z
+fbst.w  n z
+fbst.w  i
+fbst.w  n i
+fbst.w  z i
+fbst.w  n z i
+fbst.w  nan
+fbst.w  n nan
+fbst.w  z nan
+fbst.w  n z nan
+fbst.w  i nan
+fbst.w  n i nan
+fbst.w  z i nan
+fbst.w  n z i nan
+fbst.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbst.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w 
+fbt.w  n
+fbt.w  z
+fbt.w  n z
+fbt.w  i
+fbt.w  n i
+fbt.w  z i
+fbt.w  n z i
+fbt.w  nan
+fbt.w  n nan
+fbt.w  z nan
+fbt.w  n z nan
+fbt.w  i nan
+fbt.w  n i nan
+fbt.w  z i nan
+fbt.w  n z i nan
+fbt.w  bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  z bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n z bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  i bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n i bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  z i bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n z i bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n z nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  z i nan bsun snan operr ovfl unfl dz inex2 inex1
+fbt.w  n z i nan bsun snan operr ovfl unfl dz inex2 inex1

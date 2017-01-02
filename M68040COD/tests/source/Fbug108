@@ -1,0 +1,21 @@
+verbose
+# Try fsin
+fsin.x 7ffe_0000_ffff_fffc_0000_0000
+fsin.x 7ffe_0000_ffff_fffd_0000_0000
+fsin.x 7ffe_0000_ffff_fffe_0000_0000
+fsin.x 7ffe_0000_ffff_ffff_0000_0000
+# Try fcos
+fcos.x 7ffe_0000_ffff_fffc_0000_0000
+fcos.x 7ffe_0000_ffff_fffd_0000_0000
+fcos.x 7ffe_0000_ffff_fffe_0000_0000
+fcos.x 7ffe_0000_ffff_ffff_0000_0000
+# Try ftan
+ftan.x 7ffe_0000_ffff_fffc_0000_0000
+ftan.x 7ffe_0000_ffff_fffd_0000_0000
+ftan.x 7ffe_0000_ffff_fffe_0000_0000
+ftan.x 7ffe_0000_ffff_ffff_0000_0000
+# Try fsincos
+fsincos.x 7ffe_0000_ffff_fffc_0000_0000
+fsincos.x 7ffe_0000_ffff_fffd_0000_0000
+fsincos.x 7ffe_0000_ffff_fffe_0000_0000
+fsincos.x 7ffe_0000_ffff_ffff_0000_0000

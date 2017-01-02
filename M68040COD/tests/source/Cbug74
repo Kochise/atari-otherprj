@@ -1,0 +1,4 @@
+main()
+{
+asm(" long 0xF23F5C00");
+}

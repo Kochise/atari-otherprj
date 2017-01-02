@@ -1,0 +1,515 @@
+#verbose
+#fmove in denorm x
+fmove.x in 1 rn
+fmove.x in 1 rz
+fmove.x in 1 rm
+fmove.x in 1 rp
+fmove.x in 1 rn d
+fmove.x in 1 rz d
+fmove.x in 1 rm d
+fmove.x in 1 rp d
+fmove.x in 1 rn s
+fmove.x in 1 rz s
+fmove.x in 1 rm s
+fmove.x in 1 rp s
+fmove.x in 800000000000000000000001 rn
+fmove.x in 800000000000000000000001 rz
+fmove.x in 800000000000000000000001 rm
+fmove.x in 800000000000000000000001 rp
+fmove.x in 800000000000000000000001 rn d
+fmove.x in 800000000000000000000001 rz d
+fmove.x in 800000000000000000000001 rm d
+fmove.x in 800000000000000000000001 rp d
+fmove.x in 800000000000000000000001 rn s
+fmove.x in 800000000000000000000001 rz s
+fmove.x in 800000000000000000000001 rm s
+fmove.x in 800000000000000000000001 rp s
+#fabs denorm
+fabs.x in 1 rn
+fabs.x in 1 rz
+fabs.x in 1 rm
+fabs.x in 1 rp
+fabs.x in 1 rn d
+fabs.x in 1 rz d
+fabs.x in 1 rm d
+fabs.x in 1 rp d
+fabs.x in 1 rn s
+fabs.x in 1 rz s
+fabs.x in 1 rm s
+fabs.x in 1 rp s
+fabs.x in 800000000000000000000001 rn
+fabs.x in 800000000000000000000001 rz
+fabs.x in 800000000000000000000001 rm
+fabs.x in 800000000000000000000001 rp
+fabs.x in 800000000000000000000001 rn d
+fabs.x in 800000000000000000000001 rz d
+fabs.x in 800000000000000000000001 rm d
+fabs.x in 800000000000000000000001 rp d
+fabs.x in 800000000000000000000001 rn s
+fabs.x in 800000000000000000000001 rz s
+fabs.x in 800000000000000000000001 rm s
+fabs.x in 800000000000000000000001 rp s
+#fneg denorm
+fneg.x in 1 rn
+fneg.x in 1 rz
+fneg.x in 1 rm
+fneg.x in 1 rp
+fneg.x in 1 rn d
+fneg.x in 1 rz d
+fneg.x in 1 rm d
+fneg.x in 1 rp d
+fneg.x in 1 rn s
+fneg.x in 1 rz s
+fneg.x in 1 rm s
+fneg.x in 1 rp s
+fneg.x in 800000000000000000000001 rn
+fneg.x in 800000000000000000000001 rz
+fneg.x in 800000000000000000000001 rm
+fneg.x in 800000000000000000000001 rp
+fneg.x in 800000000000000000000001 rn d
+fneg.x in 800000000000000000000001 rz d
+fneg.x in 800000000000000000000001 rm d
+fneg.x in 800000000000000000000001 rp d
+fneg.x in 800000000000000000000001 rn s
+fneg.x in 800000000000000000000001 rz s
+fneg.x in 800000000000000000000001 rm s
+fneg.x in 800000000000000000000001 rp s
+ftst.x in 1 rn
+ftst.x in 1 rz
+ftst.x in 1 rm
+ftst.x in 1 rp
+ftst.x in 1 rn d
+ftst.x in 1 rz d
+ftst.x in 1 rm d
+ftst.x in 1 rp d
+ftst.x in 1 rn s
+ftst.x in 1 rz s
+ftst.x in 1 rm s
+ftst.x in 1 rp s
+ftst.x in 800000000000000000000001 rn
+ftst.x in 800000000000000000000001 rz
+ftst.x in 800000000000000000000001 rm
+ftst.x in 800000000000000000000001 rp
+ftst.x in 800000000000000000000001 rn d
+ftst.x in 800000000000000000000001 rz d
+ftst.x in 800000000000000000000001 rm d
+ftst.x in 800000000000000000000001 rp d
+ftst.x in 800000000000000000000001 rn s
+ftst.x in 800000000000000000000001 rz s
+ftst.x in 800000000000000000000001 rm s
+ftst.x in 800000000000000000000001 rp s
+#fmove in denorm d
+fmove.d in 1 rn
+fmove.d in 1 rz
+fmove.d in 1 rm
+fmove.d in 1 rp
+fmove.d in 1 rn d
+fmove.d in 1 rz d
+fmove.d in 1 rm d
+fmove.d in 1 rp d
+fmove.d in 1 rn s
+fmove.d in 1 rz s
+fmove.d in 1 rm s
+fmove.d in 1 rp s
+fmove.d in 8000000000000001 rn
+fmove.d in 8000000000000001 rz
+fmove.d in 8000000000000001 rm
+fmove.d in 8000000000000001 rp
+fmove.d in 8000000000000001 rn d
+fmove.d in 8000000000000001 rz d
+fmove.d in 8000000000000001 rm d
+fmove.d in 8000000000000001 rp d
+fmove.d in 8000000000000001 rn s
+fmove.d in 8000000000000001 rz s
+fmove.d in 8000000000000001 rm s
+fmove.d in 8000000000000001 rp s
+#fabs denorm
+fabs.d in 1 rn
+fabs.d in 1 rz
+fabs.d in 1 rm
+fabs.d in 1 rp
+fabs.d in 1 rn d
+fabs.d in 1 rz d
+fabs.d in 1 rm d
+fabs.d in 1 rp d
+fabs.d in 1 rn s
+fabs.d in 1 rz s
+fabs.d in 1 rm s
+fabs.d in 1 rp s
+fabs.d in 8000000000000001 rn
+fabs.d in 8000000000000001 rz
+fabs.d in 8000000000000001 rm
+fabs.d in 8000000000000001 rp
+fabs.d in 8000000000000001 rn d
+fabs.d in 8000000000000001 rz d
+fabs.d in 8000000000000001 rm d
+fabs.d in 8000000000000001 rp d
+fabs.d in 8000000000000001 rn s
+fabs.d in 8000000000000001 rz s
+fabs.d in 8000000000000001 rm s
+fabs.d in 8000000000000001 rp s
+#fneg denorm
+fneg.d in 1 rn
+fneg.d in 1 rz
+fneg.d in 1 rm
+fneg.d in 1 rp
+fneg.d in 1 rn d
+fneg.d in 1 rz d
+fneg.d in 1 rm d
+fneg.d in 1 rp d
+fneg.d in 1 rn s
+fneg.d in 1 rz s
+fneg.d in 1 rm s
+fneg.d in 1 rp s
+fneg.d in 8000000000000001 rn
+fneg.d in 8000000000000001 rz
+fneg.d in 8000000000000001 rm
+fneg.d in 8000000000000001 rp
+fneg.d in 8000000000000001 rn d
+fneg.d in 8000000000000001 rz d
+fneg.d in 8000000000000001 rm d
+fneg.d in 8000000000000001 rp d
+fneg.d in 8000000000000001 rn s
+fneg.d in 8000000000000001 rz s
+fneg.d in 8000000000000001 rm s
+fneg.d in 8000000000000001 rp s
+ftst.d in 1 rn
+ftst.d in 1 rz
+ftst.d in 1 rm
+ftst.d in 1 rp
+ftst.d in 1 rn d
+ftst.d in 1 rz d
+ftst.d in 1 rm d
+ftst.d in 1 rp d
+ftst.d in 1 rn s
+ftst.d in 1 rz s
+ftst.d in 1 rm s
+ftst.d in 1 rp s
+ftst.d in 8000000000000001 rn
+ftst.d in 8000000000000001 rz
+ftst.d in 8000000000000001 rm
+ftst.d in 8000000000000001 rp
+ftst.d in 8000000000000001 rn d
+ftst.d in 8000000000000001 rz d
+ftst.d in 8000000000000001 rm d
+ftst.d in 8000000000000001 rp d
+ftst.d in 8000000000000001 rn s
+ftst.d in 8000000000000001 rz s
+ftst.d in 8000000000000001 rm s
+ftst.d in 8000000000000001 rp s
+#fmove in denorm s
+fmove.s in 1 rn
+fmove.s in 1 rz
+fmove.s in 1 rm
+fmove.s in 1 rp
+fmove.s in 1 rn d
+fmove.s in 1 rz d
+fmove.s in 1 rm d
+fmove.s in 1 rp d
+fmove.s in 1 rn s
+fmove.s in 1 rz s
+fmove.s in 1 rm s
+fmove.s in 1 rp s
+fmove.s in 80000001 rn
+fmove.s in 80000001 rz
+fmove.s in 80000001 rm
+fmove.s in 80000001 rp
+fmove.s in 80000001 rn d
+fmove.s in 80000001 rz d
+fmove.s in 80000001 rm d
+fmove.s in 80000001 rp d
+fmove.s in 80000001 rn s
+fmove.s in 80000001 rz s
+fmove.s in 80000001 rm s
+fmove.s in 80000001 rp s
+#fabs denorm
+fabs.s in 1 rn
+fabs.s in 1 rz
+fabs.s in 1 rm
+fabs.s in 1 rp
+fabs.s in 1 rn d
+fabs.s in 1 rz d
+fabs.s in 1 rm d
+fabs.s in 1 rp d
+fabs.s in 1 rn s
+fabs.s in 1 rz s
+fabs.s in 1 rm s
+fabs.s in 1 rp s
+fabs.s in 80000001 rn
+fabs.s in 80000001 rz
+fabs.s in 80000001 rm
+fabs.s in 80000001 rp
+fabs.s in 80000001 rn d
+fabs.s in 80000001 rz d
+fabs.s in 80000001 rm d
+fabs.s in 80000001 rp d
+fabs.s in 80000001 rn s
+fabs.s in 80000001 rz s
+fabs.s in 80000001 rm s
+fabs.s in 80000001 rp s
+#fneg denorm
+fneg.s in 1 rn
+fneg.s in 1 rz
+fneg.s in 1 rm
+fneg.s in 1 rp
+fneg.s in 1 rn d
+fneg.s in 1 rz d
+fneg.s in 1 rm d
+fneg.s in 1 rp d
+fneg.s in 1 rn s
+fneg.s in 1 rz s
+fneg.s in 1 rm s
+fneg.s in 1 rp s
+fneg.s in 80000001 rn
+fneg.s in 80000001 rz
+fneg.s in 80000001 rm
+fneg.s in 80000001 rp
+fneg.s in 80000001 rn d
+fneg.s in 80000001 rz d
+fneg.s in 80000001 rm d
+fneg.s in 80000001 rp d
+fneg.s in 80000001 rn s
+fneg.s in 80000001 rz s
+fneg.s in 80000001 rm s
+fneg.s in 80000001 rp s
+ftst.s in 1 rn
+ftst.s in 1 rz
+ftst.s in 1 rm
+ftst.s in 1 rp
+ftst.s in 1 rn d
+ftst.s in 1 rz d
+ftst.s in 1 rm d
+ftst.s in 1 rp d
+ftst.s in 1 rn s
+ftst.s in 1 rz s
+ftst.s in 1 rm s
+ftst.s in 1 rp s
+ftst.s in 80000001 rn
+ftst.s in 80000001 rz
+ftst.s in 80000001 rm
+ftst.s in 80000001 rp
+ftst.s in 80000001 rn d
+ftst.s in 80000001 rz d
+ftst.s in 80000001 rm d
+ftst.s in 80000001 rp d
+ftst.s in 80000001 rn s
+ftst.s in 80000001 rz s
+ftst.s in 80000001 rm s
+ftst.s in 80000001 rp s
+#a subset of the above tests with unfl/inex2 set
+fmove.x in 1 rn unfl
+fmove.x in 1 rn d unfl
+fmove.x in 1 rn s unfl
+fmove.x in 800000000000000000000001 rn unfl
+fmove.x in 800000000000000000000001 rn d unfl
+fmove.x in 800000000000000000000001 rn s unfl
+fabs.x in 1 rn unfl
+fabs.x in 1 rn d unfl
+fabs.x in 1 rn s unfl
+fabs.x in 800000000000000000000001 rn unfl
+fabs.x in 800000000000000000000001 rn d unfl
+fabs.x in 800000000000000000000001 rn s unfl
+fneg.x in 1 rn unfl
+fneg.x in 1 rn d unfl
+fneg.x in 1 rn s unfl
+fneg.x in 800000000000000000000001 rn unfl
+fneg.x in 800000000000000000000001 rn d unfl
+fneg.x in 800000000000000000000001 rn s unfl
+ftst.x in 1 rn unfl
+ftst.x in 1 rn d unfl
+ftst.x in 1 rn s unfl
+ftst.x in 800000000000000000000001 rn unfl
+ftst.x in 800000000000000000000001 rn d unfl
+ftst.x in 800000000000000000000001 rn s unfl
+fmove.d in 1 rn unfl
+fmove.d in 1 rn d unfl
+fmove.d in 1 rn s unfl
+fmove.d in 8000000000000001 rn unfl
+fmove.d in 8000000000000001 rn d unfl
+fmove.d in 8000000000000001 rn s unfl
+fabs.d in 1 rn unfl
+fabs.d in 1 rn d unfl
+fabs.d in 1 rn s unfl
+fabs.d in 8000000000000001 rn unfl
+fabs.d in 8000000000000001 rn d unfl
+fabs.d in 8000000000000001 rn s unfl
+fneg.d in 1 rn unfl
+fneg.d in 1 rn d unfl
+fneg.d in 1 rn s unfl
+fneg.d in 8000000000000001 rn unfl
+fneg.d in 8000000000000001 rn d unfl
+fneg.d in 8000000000000001 rn s unfl
+ftst.d in 1 rn unfl
+ftst.d in 1 rn d unfl
+ftst.d in 1 rn s unfl
+ftst.d in 8000000000000001 rn unfl
+ftst.d in 8000000000000001 rn d unfl
+ftst.d in 8000000000000001 rn s unfl
+fmove.s in 1 rn unfl
+fmove.s in 1 rn d unfl
+fmove.s in 1 rn s unfl
+fmove.s in 80000001 rn unfl
+fmove.s in 80000001 rn d unfl
+fmove.s in 80000001 rn s unfl
+fabs.s in 1 rn unfl
+fabs.s in 1 rn d unfl
+fabs.s in 1 rn s unfl
+fabs.s in 80000001 rn unfl
+fabs.s in 80000001 rn d unfl
+fabs.s in 80000001 rn s unfl
+fneg.s in 1 rn unfl
+fneg.s in 1 rn d unfl
+fneg.s in 1 rn s unfl
+fneg.s in 80000001 rn unfl
+fneg.s in 80000001 rn d unfl
+fneg.s in 80000001 rn s unfl
+ftst.s in 1 rn unfl
+ftst.s in 1 rn d unfl
+ftst.s in 1 rn s unfl
+ftst.s in 80000001 rn unfl
+ftst.s in 80000001 rn d unfl
+ftst.s in 80000001 rn s unfl
+fmove.x in 1 rn inex2
+fmove.x in 1 rn d inex2
+fmove.x in 1 rn s inex2
+fmove.x in 800000000000000000000001 rn inex2
+fmove.x in 800000000000000000000001 rn d inex2
+fmove.x in 800000000000000000000001 rn s inex2
+fabs.x in 1 rn inex2
+fabs.x in 1 rn d inex2
+fabs.x in 1 rn s inex2
+fabs.x in 800000000000000000000001 rn inex2
+fabs.x in 800000000000000000000001 rn d inex2
+fabs.x in 800000000000000000000001 rn s inex2
+fneg.x in 1 rn inex2
+fneg.x in 1 rn d inex2
+fneg.x in 1 rn s inex2
+fneg.x in 800000000000000000000001 rn inex2
+fneg.x in 800000000000000000000001 rn d inex2
+fneg.x in 800000000000000000000001 rn s inex2
+ftst.x in 1 rn inex2
+ftst.x in 1 rn d inex2
+ftst.x in 1 rn s inex2
+ftst.x in 800000000000000000000001 rn inex2
+ftst.x in 800000000000000000000001 rn d inex2
+ftst.x in 800000000000000000000001 rn s inex2
+fmove.d in 1 rn inex2
+fmove.d in 1 rn d inex2
+fmove.d in 1 rn s inex2
+fmove.d in 8000000000000001 rn inex2
+fmove.d in 8000000000000001 rn d inex2
+fmove.d in 8000000000000001 rn s inex2
+fabs.d in 1 rn inex2
+fabs.d in 1 rn d inex2
+fabs.d in 1 rn s inex2
+fabs.d in 8000000000000001 rn inex2
+fabs.d in 8000000000000001 rn d inex2
+fabs.d in 8000000000000001 rn s inex2
+fneg.d in 1 rn inex2
+fneg.d in 1 rn d inex2
+fneg.d in 1 rn s inex2
+fneg.d in 8000000000000001 rn inex2
+fneg.d in 8000000000000001 rn d inex2
+fneg.d in 8000000000000001 rn s inex2
+ftst.d in 1 rn inex2
+ftst.d in 1 rn d inex2
+ftst.d in 1 rn s inex2
+ftst.d in 8000000000000001 rn inex2
+ftst.d in 8000000000000001 rn d inex2
+ftst.d in 8000000000000001 rn s inex2
+fmove.s in 1 rn inex2
+fmove.s in 1 rn d inex2
+fmove.s in 1 rn s inex2
+fmove.s in 80000001 rn inex2
+fmove.s in 80000001 rn d inex2
+fmove.s in 80000001 rn s inex2
+fabs.s in 1 rn inex2
+fabs.s in 1 rn d inex2
+fabs.s in 1 rn s inex2
+fabs.s in 80000001 rn inex2
+fabs.s in 80000001 rn d inex2
+fabs.s in 80000001 rn s inex2
+fneg.s in 1 rn inex2
+fneg.s in 1 rn d inex2
+fneg.s in 1 rn s inex2
+fneg.s in 80000001 rn inex2
+fneg.s in 80000001 rn d inex2
+fneg.s in 80000001 rn s inex2
+ftst.s in 1 rn inex2
+ftst.s in 1 rn d inex2
+ftst.s in 1 rn s inex2
+ftst.s in 80000001 rn inex2
+ftst.s in 80000001 rn d inex2
+ftst.s in 80000001 rn s inex2
+fmove.x in 1 rn unfl inex2
+fmove.x in 1 rn d unfl inex2
+fmove.x in 1 rn s unfl inex2
+fmove.x in 800000000000000000000001 rn unfl inex2
+fmove.x in 800000000000000000000001 rn d unfl inex2
+fmove.x in 800000000000000000000001 rn s unfl inex2
+fabs.x in 1 rn unfl inex2
+fabs.x in 1 rn d unfl inex2
+fabs.x in 1 rn s unfl inex2
+fabs.x in 800000000000000000000001 rn unfl inex2
+fabs.x in 800000000000000000000001 rn d unfl inex2
+fabs.x in 800000000000000000000001 rn s unfl inex2
+fneg.x in 1 rn unfl inex2
+fneg.x in 1 rn d unfl inex2
+fneg.x in 1 rn s unfl inex2
+fneg.x in 800000000000000000000001 rn unfl inex2
+fneg.x in 800000000000000000000001 rn d unfl inex2
+fneg.x in 800000000000000000000001 rn s unfl inex2
+ftst.x in 1 rn unfl inex2
+ftst.x in 1 rn d unfl inex2
+ftst.x in 1 rn s unfl inex2
+ftst.x in 800000000000000000000001 rn unfl inex2
+ftst.x in 800000000000000000000001 rn d unfl inex2
+ftst.x in 800000000000000000000001 rn s unfl inex2
+fmove.d in 1 rn unfl inex2
+fmove.d in 1 rn d unfl inex2
+fmove.d in 1 rn s unfl inex2
+fmove.d in 8000000000000001 rn unfl inex2
+fmove.d in 8000000000000001 rn d unfl inex2
+fmove.d in 8000000000000001 rn s unfl inex2
+fabs.d in 1 rn unfl inex2
+fabs.d in 1 rn d unfl inex2
+fabs.d in 1 rn s unfl inex2
+fabs.d in 8000000000000001 rn unfl inex2
+fabs.d in 8000000000000001 rn d unfl inex2
+fabs.d in 8000000000000001 rn s unfl inex2
+fneg.d in 1 rn unfl inex2
+fneg.d in 1 rn d unfl inex2
+fneg.d in 1 rn s unfl inex2
+fneg.d in 8000000000000001 rn unfl inex2
+fneg.d in 8000000000000001 rn d unfl inex2
+fneg.d in 8000000000000001 rn s unfl inex2
+ftst.d in 1 rn unfl inex2
+ftst.d in 1 rn d unfl inex2
+ftst.d in 1 rn s unfl inex2
+ftst.d in 8000000000000001 rn unfl inex2
+ftst.d in 8000000000000001 rn d unfl inex2
+ftst.d in 8000000000000001 rn s unfl inex2
+fmove.s in 1 rn unfl inex2
+fmove.s in 1 rn d unfl inex2
+fmove.s in 1 rn s unfl inex2
+fmove.s in 80000001 rn unfl inex2
+fmove.s in 80000001 rn d unfl inex2
+fmove.s in 80000001 rn s unfl inex2
+fabs.s in 1 rn unfl inex2
+fabs.s in 1 rn d unfl inex2
+fabs.s in 1 rn s unfl inex2
+fabs.s in 80000001 rn unfl inex2
+fabs.s in 80000001 rn d unfl inex2
+fabs.s in 80000001 rn s unfl inex2
+fneg.s in 1 rn unfl inex2
+fneg.s in 1 rn d unfl inex2
+fneg.s in 1 rn s unfl inex2
+fneg.s in 80000001 rn unfl inex2
+fneg.s in 80000001 rn d unfl inex2
+fneg.s in 80000001 rn s unfl inex2
+ftst.s in 1 rn unfl inex2
+ftst.s in 1 rn d unfl inex2
+ftst.s in 1 rn s unfl inex2
+ftst.s in 80000001 rn unfl inex2
+ftst.s in 80000001 rn d unfl inex2
+ftst.s in 80000001 rn s unfl inex2

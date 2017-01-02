@@ -1,0 +1,102 @@
+verbose
+# This file has all the bugs reported by our customers since Release 1.0 and
+# fixes have been incorporated into the code.  
+#
+# Bug number 73 in the database.
+fcos.x 401c0000_8c199930_d348199a
+#
+# Bug number 72 in the database.
+fmove.b out c0050000_ffffffff_ffffffff
+fmove.b out c0050000_ff000000_00000000
+fmove.b out c0050000_ffffffff_ffffffff rm
+fmove.b out c0050000_fe000000_00000001 rm
+#
+fmove.w out c00d0000_ffffffff_ffffffff 
+fmove.w out c00d0000_ffff0000_00000000
+fmove.w out c00d0000_ffffffff_ffffffff rm
+fmove.w out c00d0000_fffe0000_00000001 rm
+#
+fmove.l out c01d0000_ffffffff_ffffffff
+fmove.l out c01d0000_ffffffff_00000000
+fmove.l out c01d0000_ffffffff_ffffffff rm
+fmove.l out c01d0000_fffffffe_00000001 rm
+# Bug number 72 in the database.
+fmove.b out 40050000_ffffffff_ffffffff
+fmove.b out 40050000_ff000000_00000000
+fmove.b out 40050000_ffffffff_ffffffff rm
+fmove.b out 40050000_fe000000_00000001 rm
+#
+fmove.w out 400d0000_ffffffff_ffffffff 
+fmove.w out 400d0000_ffff0000_00000000
+fmove.w out 400d0000_ffffffff_ffffffff rm
+fmove.w out 400d0000_fffe0000_00000001 rm
+#
+fmove.l out 401d0000_ffffffff_ffffffff
+fmove.l out 401d0000_ffffffff_00000000
+fmove.l out 401d0000_ffffffff_ffffffff rm
+fmove.l out 401d0000_fffffffe_00000001 rm
+# Bug #75   from TI
+# 
+fmove.x 00050008_00000000_00000001
+fmove.x 80050008_00000000_00000001
+# Bug #79 from Apple
+# fadd a denormalized number and a NAN.
+fadd.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+# fdiv a denormalized number and a NAN.
+fdiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+# fsub a denormalized number and a NAN.
+fsub.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+# fmul a denormalized number and a NAN
+fmul.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+#
+# fadd a denormalized number and a inf.
+fadd.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+# fdiv a denormalized number and a inf.
+fdiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+# fsub a denormalized number and a inf.
+fsub.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+# fmul a denormalized number and a inf.
+fmul.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+#
+# fadd a denormalized number and a zero
+fadd.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+# fdiv a denormalized number and a zero
+fdiv.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+# fsub a denormalized number and a zero
+fsub.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+# fmul a denormalized number and a zero
+fmul.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+#Bug #77 in database
+fdiv.x 0000_0000_4000_0000_0000_0000 7ffe_0000_ffff_ffff_ffff_ffff
+#Bug #78 in database
+fmul.x 7ffe_0000_ffff_ffff_ffff_ffff [b]2 inex2
+#Bug #80 in the database
+fmul.x 0000_0000_7fff_ffff_ffff_fffe 3fff_0000_8000_0000_0000_0001
+fmul.x 0000_0000_0000_0000_0000_0003 3ffc_0000_8000_0000_0000_0000
+#Bug #81 in database
+fscale.x 0000_0000_ffff_ffff_ffff_ffff c000_0000_8000_0000_0000_0000
+
+#Bug #82 in the database
+fscale.x 0000_0000_4000_0000_0000_0000 3fff_0000_8000_0000_0000_0000
+#Bug #83 in the database
+frem.x 0000_0000_0000_0000_0000_0001 7fff_0000_0000_0000_0000_0000
+fmod.x 0000_0000_0000_0000_0000_0001 7fff_0000_0000_0000_0000_0000
+
+#Bug #87 in the database
+fsmul.x 4040_0000_8000_0000_0000_0000 4040_0000_8000_0000_0000_0000 x rz
+fmul.x 4040_0000_8000_0000_0000_0000 4040_0000_8000_0000_0000_0000 s rz
+#
+#Bug #88 in the database
+fsmul.x [s]00b33333 3ffc_0000_8000_0000_0000_0000  x rn
+fmul.x [s]00b33333 3ffc_0000_8000_0000_0000_0000 s rn
+#Bug #94 in the database
+fsmove.d in 1 rp d
+fsmul.x 1 1
+#
+#Bug 100 in the database
+fmove.x in 1 rn unfl
+#
+#Bug 99 in the database
+fmove.x in 1 d rn inex2
+#Bug #101
+fmove.p out 400d_0000_8000_0000_0000_0000 K#:4 rn x

@@ -1,0 +1,246 @@
+verbose
+# Unnorm extended to packed move-out tests.
+
+fmove.p out 3fff00004000000000000000 k#:-64
+fmove.p out 3fff00004000000000000000 k#:-32
+fmove.p out 3fff00004000000000000000 k#:-1
+fmove.p out 3fff00004000000000000000 k#:5
+fmove.p out 3fff00004000000000000000 k#:17
+fmove.p out 3fff00002000000000000000 k#:-64
+fmove.p out 3fff00002000000000000000 k#:-32
+fmove.p out 3fff00002000000000000000 k#:-1
+fmove.p out 3fff00002000000000000000 k#:5
+fmove.p out 3fff00002000000000000000 k#:17
+fmove.p out 3fff000001234567890abcde k#:-64
+fmove.p out 3fff000001234567890abcde k#:-32
+fmove.p out 3fff000001234567890abcde k#:-1
+fmove.p out 3fff000001234567890abcde k#:5
+fmove.p out 3fff000001234567890abcde k#:17
+fmove.p out 3fff00000000800000000000 k#:-64
+fmove.p out 3fff00000000800000000000 k#:-32
+fmove.p out 3fff00000000800000000000 k#:-1
+fmove.p out 3fff00000000800000000000 k#:5
+fmove.p out 3fff00000000800000000000 k#:17
+fmove.p out bfff00004000000000000000 k#:-64
+fmove.p out bfff00004000000000000000 k#:-32
+fmove.p out bfff00004000000000000000 k#:-1
+fmove.p out bfff00004000000000000000 k#:5
+fmove.p out bfff00004000000000000000 k#:17
+fmove.p out bfff00002000000000000000 k#:-64
+fmove.p out bfff00002000000000000000 k#:-32
+fmove.p out bfff00002000000000000000 k#:-1
+fmove.p out bfff00002000000000000000 k#:5
+fmove.p out bfff00002000000000000000 k#:17
+fmove.p out bfff000001234567890abcde k#:-64
+fmove.p out bfff000001234567890abcde k#:-32
+fmove.p out bfff000001234567890abcde k#:-1
+fmove.p out bfff000001234567890abcde k#:5
+fmove.p out bfff000001234567890abcde k#:17
+fmove.p out bfff00000000800000000000 k#:-64
+fmove.p out bfff00000000800000000000 k#:-32
+fmove.p out bfff00000000800000000000 k#:-1
+fmove.p out bfff00000000800000000000 k#:5
+fmove.p out bfff00000000800000000000 k#:17
+fmove.p out 3fff00007fffffffffffffff k#:-64
+fmove.p out 3fff00007fffffffffffffff k#:-32
+fmove.p out 3fff00007fffffffffffffff k#:-1
+fmove.p out 3fff00007fffffffffffffff k#:5
+fmove.p out 3fff00007fffffffffffffff k#:17
+fmove.p out bfff00007fffffffffffffff k#:-64
+fmove.p out bfff00007fffffffffffffff k#:-32
+fmove.p out bfff00007fffffffffffffff k#:-1
+fmove.p out bfff00007fffffffffffffff k#:5
+fmove.p out bfff00007fffffffffffffff k#:17
+fmove.p out 000100000080000000000000 k#:-64
+fmove.p out 000100000080000000000000 k#:-32
+fmove.p out 000100000080000000000000 k#:-1
+fmove.p out 000100000080000000000000 k#:5
+fmove.p out 000100000080000000000000 k#:17
+fmove.p out 800100000080000000000000 k#:-64
+fmove.p out 800100000080000000000000 k#:-32
+fmove.p out 800100000080000000000000 k#:-1
+fmove.p out 800100000080000000000000 k#:5
+fmove.p out 800100000080000000000000 k#:17
+# Use RZ
+fmove.p out 3fff00004000000000000000 k#:-64 RZ
+fmove.p out 3fff00004000000000000000 k#:-32 RZ
+fmove.p out 3fff00004000000000000000 k#:-1 RZ
+fmove.p out 3fff00004000000000000000 k#:5 RZ
+fmove.p out 3fff00004000000000000000 k#:17 RZ
+fmove.p out 3fff00002000000000000000 k#:-64 RZ
+fmove.p out 3fff00002000000000000000 k#:-32 RZ
+fmove.p out 3fff00002000000000000000 k#:-1 RZ
+fmove.p out 3fff00002000000000000000 k#:5 RZ
+fmove.p out 3fff00002000000000000000 k#:17 RZ
+fmove.p out 3fff000001234567890abcde k#:-64 RZ
+fmove.p out 3fff000001234567890abcde k#:-32 RZ
+fmove.p out 3fff000001234567890abcde k#:-1 RZ
+fmove.p out 3fff000001234567890abcde k#:5 RZ
+fmove.p out 3fff000001234567890abcde k#:17 RZ
+fmove.p out 3fff00000000800000000000 k#:-64 RZ
+fmove.p out 3fff00000000800000000000 k#:-32 RZ
+fmove.p out 3fff00000000800000000000 k#:-1 RZ
+fmove.p out 3fff00000000800000000000 k#:5 RZ
+fmove.p out 3fff00000000800000000000 k#:17 RZ
+fmove.p out bfff00004000000000000000 k#:-64 RZ
+fmove.p out bfff00004000000000000000 k#:-32 RZ
+fmove.p out bfff00004000000000000000 k#:-1 RZ
+fmove.p out bfff00004000000000000000 k#:5 RZ
+fmove.p out bfff00004000000000000000 k#:17 RZ
+fmove.p out bfff00002000000000000000 k#:-64 RZ
+fmove.p out bfff00002000000000000000 k#:-32 RZ
+fmove.p out bfff00002000000000000000 k#:-1 RZ
+fmove.p out bfff00002000000000000000 k#:5 RZ
+fmove.p out bfff00002000000000000000 k#:17 RZ
+fmove.p out bfff000001234567890abcde k#:-64 RZ
+fmove.p out bfff000001234567890abcde k#:-32 RZ
+fmove.p out bfff000001234567890abcde k#:-1 RZ
+fmove.p out bfff000001234567890abcde k#:5 RZ
+fmove.p out bfff000001234567890abcde k#:17 RZ
+fmove.p out bfff00000000800000000000 k#:-64 RZ
+fmove.p out bfff00000000800000000000 k#:-32 RZ
+fmove.p out bfff00000000800000000000 k#:-1 RZ
+fmove.p out bfff00000000800000000000 k#:5 RZ
+fmove.p out bfff00000000800000000000 k#:17 RZ
+fmove.p out 3fff00007fffffffffffffff k#:-64 RZ
+fmove.p out 3fff00007fffffffffffffff k#:-32 RZ
+fmove.p out 3fff00007fffffffffffffff k#:-1 RZ
+fmove.p out 3fff00007fffffffffffffff k#:5 RZ
+fmove.p out 3fff00007fffffffffffffff k#:17 RZ
+fmove.p out bfff00007fffffffffffffff k#:-64 RZ
+fmove.p out bfff00007fffffffffffffff k#:-32 RZ
+fmove.p out bfff00007fffffffffffffff k#:-1 RZ
+fmove.p out bfff00007fffffffffffffff k#:5 RZ
+fmove.p out bfff00007fffffffffffffff k#:17 RZ
+fmove.p out 000100000080000000000000 k#:-64 RZ
+fmove.p out 000100000080000000000000 k#:-32 RZ
+fmove.p out 000100000080000000000000 k#:-1 RZ
+fmove.p out 000100000080000000000000 k#:5 RZ
+fmove.p out 000100000080000000000000 k#:17 RZ
+fmove.p out 800100000080000000000000 k#:-64 RZ
+fmove.p out 800100000080000000000000 k#:-32 RZ
+fmove.p out 800100000080000000000000 k#:-1 RZ
+fmove.p out 800100000080000000000000 k#:5 RZ
+fmove.p out 800100000080000000000000 k#:17 RZ
+# Use RM
+fmove.p out 3fff00004000000000000000 k#:-64 RM
+fmove.p out 3fff00004000000000000000 k#:-32 RM
+fmove.p out 3fff00004000000000000000 k#:-1 RM
+fmove.p out 3fff00004000000000000000 k#:5 RM
+fmove.p out 3fff00004000000000000000 k#:17 RM
+fmove.p out 3fff00002000000000000000 k#:-64 RM
+fmove.p out 3fff00002000000000000000 k#:-32 RM
+fmove.p out 3fff00002000000000000000 k#:-1 RM
+fmove.p out 3fff00002000000000000000 k#:5 RM
+fmove.p out 3fff00002000000000000000 k#:17 RM
+fmove.p out 3fff000001234567890abcde k#:-64 RM
+fmove.p out 3fff000001234567890abcde k#:-32 RM
+fmove.p out 3fff000001234567890abcde k#:-1 RM
+fmove.p out 3fff000001234567890abcde k#:5 RM
+fmove.p out 3fff000001234567890abcde k#:17 RM
+fmove.p out 3fff00000000800000000000 k#:-64 RM
+fmove.p out 3fff00000000800000000000 k#:-32 RM
+fmove.p out 3fff00000000800000000000 k#:-1 RM
+fmove.p out 3fff00000000800000000000 k#:5 RM
+fmove.p out 3fff00000000800000000000 k#:17 RM
+fmove.p out bfff00004000000000000000 k#:-64 RM
+fmove.p out bfff00004000000000000000 k#:-32 RM
+fmove.p out bfff00004000000000000000 k#:-1 RM
+fmove.p out bfff00004000000000000000 k#:5 RM
+fmove.p out bfff00004000000000000000 k#:17 RM
+fmove.p out bfff00002000000000000000 k#:-64 RM
+fmove.p out bfff00002000000000000000 k#:-32 RM
+fmove.p out bfff00002000000000000000 k#:-1 RM
+fmove.p out bfff00002000000000000000 k#:5 RM
+fmove.p out bfff00002000000000000000 k#:17 RM
+fmove.p out bfff000001234567890abcde k#:-64 RM
+fmove.p out bfff000001234567890abcde k#:-32 RM
+fmove.p out bfff000001234567890abcde k#:-1 RM
+fmove.p out bfff000001234567890abcde k#:5 RM
+fmove.p out bfff000001234567890abcde k#:17 RM
+fmove.p out bfff00000000800000000000 k#:-64 RM
+fmove.p out bfff00000000800000000000 k#:-32 RM
+fmove.p out bfff00000000800000000000 k#:-1 RM
+fmove.p out bfff00000000800000000000 k#:5 RM
+fmove.p out bfff00000000800000000000 k#:17 RM
+fmove.p out 3fff00007fffffffffffffff k#:-64 RM
+fmove.p out 3fff00007fffffffffffffff k#:-32 RM
+fmove.p out 3fff00007fffffffffffffff k#:-1 RM
+fmove.p out 3fff00007fffffffffffffff k#:5 RM
+fmove.p out 3fff00007fffffffffffffff k#:17 RM
+fmove.p out bfff00007fffffffffffffff k#:-64 RM
+fmove.p out bfff00007fffffffffffffff k#:-32 RM
+fmove.p out bfff00007fffffffffffffff k#:-1 RM
+fmove.p out bfff00007fffffffffffffff k#:5 RM
+fmove.p out bfff00007fffffffffffffff k#:17 RM
+fmove.p out 000100000080000000000000 k#:-64 RM
+fmove.p out 000100000080000000000000 k#:-32 RM
+fmove.p out 000100000080000000000000 k#:-1 RM
+fmove.p out 000100000080000000000000 k#:5 RM
+fmove.p out 000100000080000000000000 k#:17 RM
+fmove.p out 800100000080000000000000 k#:-64 RM
+fmove.p out 800100000080000000000000 k#:-32 RM
+fmove.p out 800100000080000000000000 k#:-1 RM
+fmove.p out 800100000080000000000000 k#:5 RM
+fmove.p out 800100000080000000000000 k#:17 RM
+# Use RP
+fmove.p out 3fff00004000000000000000 k#:-64 RP
+fmove.p out 3fff00004000000000000000 k#:-32 RP
+fmove.p out 3fff00004000000000000000 k#:-1 RP
+fmove.p out 3fff00004000000000000000 k#:5 RP
+fmove.p out 3fff00004000000000000000 k#:17 RP
+fmove.p out 3fff00002000000000000000 k#:-64 RP
+fmove.p out 3fff00002000000000000000 k#:-32 RP
+fmove.p out 3fff00002000000000000000 k#:-1 RP
+fmove.p out 3fff00002000000000000000 k#:5 RP
+fmove.p out 3fff00002000000000000000 k#:17 RP
+fmove.p out 3fff000001234567890abcde k#:-64 RP
+fmove.p out 3fff000001234567890abcde k#:-32 RP
+fmove.p out 3fff000001234567890abcde k#:-1 RP
+fmove.p out 3fff000001234567890abcde k#:5 RP
+fmove.p out 3fff000001234567890abcde k#:17 RP
+fmove.p out 3fff00000000800000000000 k#:-64 RP
+fmove.p out 3fff00000000800000000000 k#:-32 RP
+fmove.p out 3fff00000000800000000000 k#:-1 RP
+fmove.p out 3fff00000000800000000000 k#:5 RP
+fmove.p out 3fff00000000800000000000 k#:17 RP
+fmove.p out bfff00004000000000000000 k#:-64 RP
+fmove.p out bfff00004000000000000000 k#:-32 RP
+fmove.p out bfff00004000000000000000 k#:-1 RP
+fmove.p out bfff00004000000000000000 k#:5 RP
+fmove.p out bfff00004000000000000000 k#:17 RP
+fmove.p out bfff00002000000000000000 k#:-64 RP
+fmove.p out bfff00002000000000000000 k#:-32 RP
+fmove.p out bfff00002000000000000000 k#:-1 RP
+fmove.p out bfff00002000000000000000 k#:5 RP
+fmove.p out bfff00002000000000000000 k#:17 RP
+fmove.p out bfff000001234567890abcde k#:-64 RP
+fmove.p out bfff000001234567890abcde k#:-32 RP
+fmove.p out bfff000001234567890abcde k#:-1 RP
+fmove.p out bfff000001234567890abcde k#:5 RP
+fmove.p out bfff000001234567890abcde k#:17 RP
+fmove.p out bfff00000000800000000000 k#:-64 RP
+fmove.p out bfff00000000800000000000 k#:-32 RP
+fmove.p out bfff00000000800000000000 k#:-1 RP
+fmove.p out bfff00000000800000000000 k#:5 RP
+fmove.p out bfff00000000800000000000 k#:17 RP
+fmove.p out 3fff00007fffffffffffffff k#:-64 RP
+fmove.p out 3fff00007fffffffffffffff k#:-32 RP
+fmove.p out 3fff00007fffffffffffffff k#:-1 RP
+fmove.p out 3fff00007fffffffffffffff k#:5 RP
+fmove.p out 3fff00007fffffffffffffff k#:17 RP
+fmove.p out bfff00007fffffffffffffff k#:-64 RP
+fmove.p out bfff00007fffffffffffffff k#:-32 RP
+fmove.p out bfff00007fffffffffffffff k#:-1 RP
+fmove.p out bfff00007fffffffffffffff k#:5 RP
+fmove.p out bfff00007fffffffffffffff k#:17 RP
+fmove.p out 000100000080000000000000 k#:-64 RP
+fmove.p out 000100000080000000000000 k#:-32 RP
+fmove.p out 000100000080000000000000 k#:-1 RP
+fmove.p out 000100000080000000000000 k#:5 RP
+fmove.p out 000100000080000000000000 k#:17 RP
+fmove.p out 800100000080000000000000 k#:-64 RP
+fmove.p out 800100000080000000000000 k#:-32 RP
+fmove.p out 800100000080000000000000 k#:-1 RP
+fmove.p out 800100000080000000000000 k#:5 RP
+fmove.p out 800100000080000000000000 k#:17 RP
