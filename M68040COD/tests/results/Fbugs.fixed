@@ -1,0 +1,43 @@
+fmove.b out 40050000_ffffffff_ffffffff = 7f(127) ~n ~z ~i ~nan ~bsun ~snan operr ~ovfl ~unfl ~dz inex2 ~inex1 aiop ~aovfl ~aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 7f(127) ~N ~Z ~I ~NAN ~BSUN ~SNAN OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+	*** Check failed: AINEX
+
+fmove.b out 40050000_ff000000_00000000 = 7f(127) ~n ~z ~i ~nan ~bsun ~snan operr ~ovfl ~unfl ~dz inex2 ~inex1 aiop ~aovfl ~aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 7f(127) ~N ~Z ~I ~NAN ~BSUN ~SNAN OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+	*** Check failed: AINEX
+
+fmove.w out 400d0000_ffffffff_ffffffff  = 7fff(32767) ~n ~z ~i ~nan ~bsun ~snan operr ~ovfl ~unfl ~dz inex2 ~inex1 aiop ~aovfl ~aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 7fff(32767) ~N ~Z ~I ~NAN ~BSUN ~SNAN OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+	*** Check failed: AINEX
+
+fmove.w out 400d0000_ffff0000_00000000 = 7fff(32767) ~n ~z ~i ~nan ~bsun ~snan operr ~ovfl ~unfl ~dz inex2 ~inex1 aiop ~aovfl ~aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 7fff(32767) ~N ~Z ~I ~NAN ~BSUN ~SNAN OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+	*** Check failed: AINEX
+
+fmove.l out 401d0000_ffffffff_ffffffff = 7fffffff(2147483647) ~n ~z ~i ~nan ~bsun ~snan operr ~ovfl ~unfl ~dz inex2 ~inex1 aiop ~aovfl ~aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 7fffffff(2147483647) ~N ~Z ~I ~NAN ~BSUN ~SNAN OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+	*** Check failed: AINEX
+
+fmove.l out 401d0000_ffffffff_00000000 = 7fffffff(2147483647) ~n ~z ~i ~nan ~bsun ~snan operr ~ovfl ~unfl ~dz inex2 ~inex1 aiop ~aovfl ~aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 7fffffff(2147483647) ~N ~Z ~I ~NAN ~BSUN ~SNAN OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+	*** Check failed: AINEX
+
+fdiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000 = 000000000000000000000000(0) ~n z ~i ~nan ~bsun ~snan ~operr ~ovfl ~unfl ~dz ~inex2 ~inex1 ~aiop ~aovfl ~aunfl ~adz ~ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 000000008000000000000000(0) ~N Z ~I ~NAN ~BSUN ~SNAN ~OPERR ~OVFL ~UNFL ~DZ ~INEX2 ~INEX1 ~AIOP ~AOVFL ~AUNFL ~ADZ ~AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: Result
+		000000000000100000000000(0) (Input)
+		7fff00008000000000000000(inf) (Input2)
+		000000000000000000000000(0) (Expected)
+		000000008000000000000000(0) (Actual)
+		2147483647 (Diff)
+
+fscale.x 0000_0000_ffff_ffff_ffff_ffff c000_0000_8000_0000_0000_0000 = 000000004000000000000000(0) ~n ~z ~i ~nan ~bsun ~snan ~operr ~ovfl unfl ~dz inex2 ~inex1 ~aiop ~aovfl aunfl ~adz ainex q:00 ~t ~sigfpe ~tbsun ~tinex ~tdz ~tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 000000003fffffffffffffff(0) ~N ~Z ~I ~NAN ~BSUN ~SNAN ~OPERR ~OVFL UNFL ~DZ ~INEX2 ~INEX1 ~AIOP ~AOVFL AUNFL ~ADZ AINEX Q:00 ~T ~SIGFPE ~TBSUN ~TINEX ~TDZ ~TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+

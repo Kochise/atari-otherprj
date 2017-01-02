@@ -1,0 +1,4 @@
+fscale.w 1d94_69e2_f564_69f1_a2ab_2eef d253 rz x bsun snan unfl = 000000000000000000000000(0) ~n z ~i ~nan ~bsun ~snan ~operr ~ovfl unfl ~dz inex2 ~inex1 ~aiop ~aovfl aunfl ~adz ainex q:00 ~t sigfpe ~tbsun ~tinex ~tdz tunfl ~toperr ~tovfl ~tnan ~tunimp ~tunsup
+	= 000000000000000000000000(0) ~N Z ~I ~NAN ~BSUN ~SNAN ~OPERR ~OVFL UNFL ~DZ ~INEX2 ~INEX1 ~AIOP ~AOVFL AUNFL ~ADZ AINEX Q:00 ~T SIGFPE ~TBSUN ~TINEX ~TDZ TUNFL ~TOPERR ~TOVFL ~TNAN ~TUNIMP ~TUNSUP
+	*** Check failed: INEX2
+
