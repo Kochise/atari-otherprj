@@ -1,0 +1,255 @@
+;****************************************************************
+;		Calcul d'une FFT de 1024 points.
+;****************************************************************
+		opt		-oE:\PROGRAMS\ANALYSIS\ANALYSIS.LOD,+noch,+nopi,+w
+		include		'E:\DSP56001\EQUS\IO.S56'
+		include		'E:\DSP56001\MACROS\TRANSFER.S56'
+
+;****************************************************************
+;		DATAS et EQUS
+;****************************************************************
+power		equ		10
+point_nb	equ		1024
+facteur		equ		0
+
+Internal_buf	equ		0
+Input_dat	equ		$400
+Output_dat	equ		$400
+Sincos_tbl	equ		$2000
+
+;****************************************************************
+;		Programme principal.
+;****************************************************************
+		org		p:$0
+		jmp		Start
+
+		org		p:$40
+Start		movep		#16,x:HCR ; Initialisation du port HOST
+		ori		#3,mr ; Interruptions non autorisees
+		andi		#0,omr
+		move		#-1,m0
+		move		m0,m1
+		move		m0,m2
+		move		m0,m3
+		move		m0,m4
+		move		m0,m5
+		move		m0,m6
+		move		m0,m7
+
+;----------------------------------------------------------------
+;		Boucle principale.
+;----------------------------------------------------------------
+Repeat
+; Si a=0, r‚ception de la table des sinus/cosinus.
+; Si a=1, calcule de la FFT.
+		receive_host	a
+		tst		a	#>1,x0
+		jeq		Receive_tbl
+		cmp		x0,a
+		jeq		Calc_FFT
+		jmp		Repeat
+;****************************************************************
+
+
+;****************************************************************
+;		Routines pour la FFT.
+;****************************************************************
+;----------------------------------------------------------------
+;		R‚ception de la table des sinus et cosinus sur 180 degres.
+;----------------------------------------------------------------
+Receive_tbl	movec		#-1,m0
+		move		#Sincos_tbl,r0
+
+;		Reception de la table.
+		move		#point_nb/2,n0
+		do		n0,Receive_tbl_lp
+		receive_host	x:(r0)
+		receive_host	y:(r0)+
+Receive_tbl_lp
+
+		jmp		Repeat
+
+;----------------------------------------------------------------
+;		R‚ception des donn‚es, calcul de la FFT et envoie du spectre.
+;----------------------------------------------------------------
+Calc_FFT	movec		#-1,m0
+		move		#Input_dat,r0
+		do		#point_nb,Receive_dat_lp
+		receive_host	x:(r0)
+		receive_host	y:(r0)+
+Receive_dat_lp
+
+		jsr		FFT
+
+; On ne renvoie que la moitie du spectre car ce dernier est sym‚trique avec
+;un signal reel.
+		move		#Output_dat,r0
+		movec		#0,m0 ; Bit reversed.
+		move		#point_nb/2,n0
+		do		#point_nb/2,Send_dat_lp
+		send_host	x:(r0)
+		send_host	y:(r0)+n0
+Send_dat_lp
+
+		jmp		Repeat
+
+;----------------------------------------------------------------
+;		Calcul de la FFT.
+;----------------------------------------------------------------
+;
+; This program originally available on the Motorola DSP bulletin board.
+; It is provided under a DISCLAMER OF WARRANTY available from
+; Motorola DSP Operation, 6501 Wm. Cannon Drive W., Austin, Tx., 78735.
+; 
+; Radix 2, In-Place, Decimation-In-Time FFT (fast).
+; 
+; Last Update 18-Aug-88   Version 1.0
+;
+;
+; Radix 2 Decimation in Time In-Place Fast Fourier Transform Routine
+;
+;	Complex input and output data
+;		Real data in X memory
+;		Imaginary data in Y memory
+;	Normally ordered input data
+;	Bit reversed output data
+;	Coefficient lookup table
+; 		-Cosine values in X memory
+;		-Sine values in Y memory
+;
+;       point_nb	number of points (16-32768, power of 2)
+;       Inout_data	start of data buffer
+;       Sincos_tbl	start of sine/cosine table
+;
+; Alters Data ALU Registers
+;       x1      x0      y1      y0
+;       a2      a1      a0      a
+;       b2      b1      b0      b
+;
+; Alters Address Registers
+;       r0      n0      m0
+;       r1      n1      m1
+;               n2
+;
+;       r4      n4      m4
+;       r5      n5      m5
+;       r6      n6      m6
+;
+; Alters Program Control Registers
+;       pc      sr
+;
+; Uses 6 locations on System Stack
+;----------------------------------------------------------------
+FFT		move	#Input_dat,r0 ; Initialize input pointer.
+		move	#point_nb/4,n0 ; Initialize input and output pointers offset.
+		move	n0,n4 ;
+		move	n0,n6 ; Initialize coefficient offset.
+		move	#point_nb-1,m0 ; Initialize address modifiers
+		move	m0,m1 ; for modulo addressing.
+		move	m0,m4
+		move	m0,m5
+
+;		Do first and second Radix 2 FFT passes, combined as
+;4-point butterflies.
+		move	x:(r0)+n0,x0
+		tfr	x0,a	x:(r0)+n0,y1   
+
+		do	n0,FFT_twopass
+		tfr	y1,b	x:(r0)+n0,y0
+		add	y0,a	x:(r0),x1 			; ar+cr
+		add	x1,b	r0,r4 ; br+dr
+		add	a,b	(r0)+n0 ; ar'=(ar+cr)+(br+dr)
+		subl	b,a	b,x:(r0)+n0 ; br'=(ar+cr)-(br+dr)
+		tfr	x0,a	a,x0		y:(r0),b
+		sub	y0,a			y:(r4)+n4,y0	; ar-cr
+		sub	y0,b	x0,x:(r0) ; bi-di
+		add	a,b			y:(r0)+n0,x0	; cr'=(ar-cr)+(bi-di)
+		subl	b,a	b,x:(r0)			; dr'=(ar-cr)-(bi-di)
+		tfr	x0,a	a,x0		y:(r4),b
+		add	y0,a			y:(r0)+n0,y0	; bi+di
+		add	y0,b	x0,x:(r0)+n0			; ai+ci
+		add	b,a			y:(r0)+,x0	; ai'=(ai+ci)+(bi+di)
+		subl	a,b			a,y:(r4)+n4	; bi'=(ai+ci)-(bi+di)
+		tfr	x0,a			b,y:(r4)+n4
+		sub	y0,a	x1,b				; ai-ci
+		sub	y1,b	x:(r0)+n0,x0			; dr-br
+		add	a,b	x:(r0)+n0,y1			; ci'=(ai-ci)+(dr-br)
+		subl	b,a			b,y:(r4)+n4	; di'=(ai-ci)-(dr-br)
+		tfr	x0,a			a,y:(r4)+
+FFT_twopass
+
+;		Perform all next FFT passes except last pass with
+;triple nested DO loop.
+		move	#point_nb/8,n1 ; Initialize butterflies per group.
+		move	#4,n2 ; Initialize groups per pass.
+		move	#-1,m2 ; Linear addressing for r2.
+		move	#0,m6 ; Initialize C address modifier for reverse carry (bit-reversed) addressing.
+
+		do	#7,FFT_end_pass ; Example: 7 passes for 1024 pt. FFT
+		move	#Input_dat,r0 ; Initialize A input pointer.
+		move	r0,r1
+		move	n1,r2
+		move	r0,r4 ; Initialize A output pointer.
+		move	(r1)+n1 ; Initialize B input pointer.
+		move	r1,r5 ; Initialize B output pointer.
+		move	#Sincos_tbl,r6 ; Initialize C input pointer.
+		lua	(r2)+,n0 ; Initialize pointer offsets.
+		move	n0,n4
+		move	n0,n5
+		move	(r2)- ; Butterfly loop count.
+		move    	x:(r1),x1      y:(r6),y0 ; Lookup -sine and -cosine values.
+		move		x:(r6)+n6,x0   y:(r0),b ; Update C pointer, preload data.
+		mac	x1,y0,b                  y:(r1)+,y1
+		macr	-x0,y1,b                 y:(r0),a
+
+		do	n2,FFT_end_grp
+
+		do	r2,FFT_end_bfy
+		subl	b,a       x:(r0),b       b,y:(r4) ; Radix 2 DIT butterfly kernel
+		mac	-x1,x0,b  x:(r0)+,a      a,y:(r5)
+		macr	-y1,y0,b  x:(r1),x1
+		subl	b,a       b,x:(r4)+      y:(r0),b
+		mac	x1,y0,b                  y:(r1)+,y1
+		macr	-x0,y1,b  a,x:(r5)+      y:(r0),a
+FFT_end_bfy
+		move	(r1)+n1
+		subl	b,a       x:(r0),b       b,y:(r4)
+		mac	-x1,x0,b  x:(r0)+n0,a    a,y:(r5)
+		macr	-y1,y0,b  x:(r1),x1      y:(r6),y0
+		subl	b,a       b,x:(r4)+n4    y:(r0),b
+		mac	x1,y0,b   x:(r6)+n6,x0   y:(r1)+,y1
+		macr	-x0,y1,b  a,x:(r5)+n5    y:(r0),a
+FFT_end_grp
+
+		move	n1,b1
+		lsr	b    n2,a1 ; Divide butterflies per group by two.
+		lsl	a    b1,n1 ; Multiply groups per pass by two.
+		move	a1,n2
+FFT_end_pass
+
+;		Do last FFT pass.
+		move    #2,n0 ; Correct input pointer A offset for last pass.
+		move    n0,n1 ; Correct input pointer B offset for last pass.
+		move    n0,n4 ; Correct output pointer A offset for last pass.
+		move    n0,n5 ; Correct output pointer B offset for last pass.
+		move    #Input_dat,r0 ; Initialize A input pointer.
+		move    r0,r4 ; Initialize A output pointer.
+		lua     (r0)+,r1 ; Initialize B input pointer.
+		move    #Sincos_tbl,r6 ; Initialize C input pointer.
+		lua     (r1)-n1,r5 ; Initialize B output pointer.
+		move    x:(r1),x1       y:(r6),y0
+		move    x:(r5),a        y:(r0),b
+
+		do      n2,FFT_lastpass ; Radix 2 DIT butterfly kernel with one.
+		mac     x1,y0,b x:(r6)+n6,x0    y:(r1)+n1,y1 ; Butterfly per group.
+		macr    -x0,y1,b        a,x:(r5)+n5     y:(r0),a
+		subl    b,a     x:(r0),b        b,y:(r4)
+		mac     -x1,x0,b        x:(r0)+n0,a     a,y:(r5)
+		macr    -y1,y0,b        x:(r1),x1       y:(r6),y0
+		subl    b,a             b,x:(r4)+n4     y:(r0),b
+FFT_lastpass
+
+		move    a,x:(r5)+n5
+		rts
+;****************************************************************
+		end

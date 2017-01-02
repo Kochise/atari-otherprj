@@ -1,0 +1,24 @@
+1stguide.zip
+
+- Multi-File-Viewer for all Atari-ST/TT/Falcon compatible systems.
+- New since 29.Aug.95: Full PNG support for display in all graphic
+  resolutions including High-Color/True-Color-Modes.
+- Full-feature shareware version (details see description).
+- Shows standard file types like ASCII, IMG, GEM, IFF, JPEG, MPEG, and PNG
+  in multiple GEM-windows (runs as accessory or application).
+- Small and fast, though full GEM-integrated.
+Update 10.Jan.96:
+- Fixed minor bugs in PNG and MPEG code.
+- Full progressive JPEG support.
+- Full TIMG support (TrueColor/Gray/Alpha IMG Extension).
+Update 20.Apr.96:
+- Optimized PNG-Code: 10 - 20 % faster loading.
+- JPEG: Improved behavior in case of 'corrupted' or 'truncated' files
+  (shouldn't crash anymore, I hope).
+Update 08.Dec.96:
+- Problem with Grayscale Progressive JPEG solved.
+Update 16.Jan.97:
+- Improved MPEG parsing, prepared for coming MPEG-2 support.
+
+Author: Guido Vollbeding <guido@jpegclub.org>
+http://sylvana.net/1stguide/

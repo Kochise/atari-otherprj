@@ -1,0 +1,2523 @@
+ON ERROR GOSUB end
+ON BREAK GOSUB end
+RESERVE 500000
+$C+ ! Option indispensable pour ‚viter les plantages.
+'
+' TRON manage_trace
+'
+@init_all
+'
+DO
+  @keyboard
+  IF view_fg!
+    @view
+  ENDIF
+LOOP
+'
+' *************************************************************
+'                       Routines principales.
+' *************************************************************
+PROCEDURE init_all ! Initialisation.
+  OPTION BASE 0
+  MAT BASE 0
+  '
+  '
+  ' Pr‚paration de l'‚cran.
+  IF (XBIOS(88,W:-1) AND &HF)<>&H8
+    ALERT 1,"Sorry,|work only in monochrome|640*400 or 640*480",0,"Yes, sir",button%
+    @end
+  ENDIF
+  '
+  use_scr!=FALSE
+  HIDEM
+  scr_inited!=FALSE
+  @save_scr
+  IF XBIOS(89)=2 ! Vgetmonitor().
+    scr_mode&=4+16+256 ! TC+VGA+40 columns.
+  ELSE
+    scr_mode&=4 ! TC+40 columns.
+  ENDIF
+  @init_scr
+  max_ln&=25 ! Nombre de lignes maximum pour le texte.
+  '
+  '
+  ' Variables et paramŠtres disque.
+  ' Chemin d'accŠs … ANALYSIS.BIN et ANALYSIS.LOD.
+  '  prg_path$="E:\PROGRAMS\ANALYSIS\"
+  prg_path$=""
+  CHDIR prg_path$
+  spl_path$=""
+  spl_default_name$=""
+  disk_buf_lgt%=65536 ! M‚moire tampon pour les chargements.
+  disk_buf%=MALLOC(disk_buf_lgt%)
+  IF disk_buf%=<0
+    @end
+  ENDIF
+  '
+  '
+  ' Variables pour les paramŠtres globaux.
+  max_spl_nb&=64 ! Nombre maximum de samples.
+  DIM spl_addr%(max_spl_nb&-1),spl_lgt%(max_spl_nb&-1),spl_name$(max_spl_nb&-1)
+  DIM spl_frq%(max_spl_nb&-1)
+  DIM snd_ptr%(3)
+  DIM realt_fg!(1)
+  FOR i&=0 TO max_spl_nb&-1
+    spl_addr%(i&)=0
+  NEXT i&
+  calc_mode&=1 ! Mode de calcul.
+  curr_spl&=0
+  view_fg!=FALSE ! Flag indiquant si l'on doit voir les graphiques.
+  sync_fg!=FALSE ! Flag de synchronisation avec l'‚cran.
+  realt_fg!(0)=FALSE ! Flag de calcul de la FFT en temps r‚el.
+  realt_fg!(1)=FALSE
+  realt_pause_fg!=FALSE
+  realt_frq%=12292
+  '
+  '
+  ' Variables pour le calcul.
+  power&=10 ! Puissance de 2 pour le nombre de points de la FFT.
+  point_nb&=2^power& ! Nombre de points.
+  DIM xr(point_nb&),xi(point_nb&) ! Tableaux pour le calcul de la FFT en GFABASIC.
+  DIM dsp_x%(2*point_nb&) ! Tableau pour le calcul de la FFT par le DSP.
+  DIM px%(point_nb&/2,1) ! Tableau pour le spectre (puissance).
+  '
+  '
+  ' Initialisation des paramŠtres pour l'affichage du spectre et du signal.
+  DIM shown_spl&(1),signal_wind_y&(1),spec_wind_y&(1)
+  DIM signal_zoom&(1),signal_accuracy&(1),spec_zoom&(1)
+  DIM signal_ln_x&(1),spec_ln_x&(1)
+  DIM signal_pos%(1),signal_shown_pos%(1),signal_curr_pos%(1)
+  DIM fft_marker_l%(1),fft_marker_r%(1)
+  DIM ptot%(1)
+  view_mode&=0 ! Type de visualisation.
+  shown_spl&(0)=0 ! Sample courant 1.
+  shown_spl&(1)=1 ! Sample courant 2.
+  signal_zoom&(0)=1
+  signal_zoom&(1)=1
+  signal_accuracy&(0)=1
+  signal_accuracy&(1)=1
+  spec_zoom&(0)=2
+  spec_zoom&(1)=2
+  @set_view_mode
+  '
+  '
+  ' Initialisation des paramŠtres pour la liste des samples.
+  spl_lst_col&=1 ! Colonne actuelle.
+  spl_lst_y&=7 ! Ligne de d‚but.
+  spl_lst_col_nb&=2 ! Nombre de colonnes.
+  spl_lst_ln_nb&=16 ! Nombre de lignes.
+  '
+  '
+  ' Son.
+  speaker_fg!=FALSE
+  repeat_fg!=FALSE
+  play_fg!=FALSE
+  atten&=0
+  gain&=8
+  @init_snd
+  '
+  '
+  @menu
+  @init_sincos_tbl
+  @init_dsp
+  @init_asm
+  @init_vox
+  '
+  '
+  ' R‚servation de la m‚moire pour les samples.
+  max_mem%=MALLOC(-1)
+  realt_buf_lgt%=point_nb& ! Longueur du buffer pour le temps r‚el.
+  IF max_mem%-(100000+4*(point_nb&+2*realt_buf_lgt%))>0 ! Au moins assez pour la FFT et le temps r‚el.
+    spl_buf_lgt%=(max_mem%-(100000+4*2*realt_buf_lgt%))/4 ! Longueur en samples du buffer des samples.
+    spl_buf%=MALLOC(4*(spl_buf_lgt%+2*realt_buf_lgt%)) ! Longueur en octets du buffer des samples + le buffer pour le temps r‚el.
+    realt_buf1%=spl_buf%+4*spl_buf_lgt% ! Adresse du premier buffer pour le temps r‚el.
+    realt_buf2%=spl_buf%+4*(spl_buf_lgt%+realt_buf_lgt%) ! Adresse du deuxiŠme buffer pour le temps r‚el.
+    spl_lgt_tot%=0
+    IF spl_buf%=<0
+      @show_info("Not enough memory !")
+      ~INP(2)
+      @end
+    ENDIF
+  ELSE
+    @show_info("Not enough memory !")
+    ~INP(2)
+    @end
+  ENDIF
+  '
+  @menu
+RETURN
+> PROCEDURE end ! Fin.
+  @free_scr
+  @free_snd
+  @free_dsp
+  @free_asm
+  @free_vox
+  '
+  ~MFREE(disk_buf%)
+  ~MFREE(spl_buf%)
+  '
+  OUT 4,8
+  SHOWM
+  RESERVE
+  '  ERROR ERR
+  EDIT
+RETURN
+> PROCEDURE manage_trace
+  '  PRINT AT(1,1);TRACE$;CHR$(27)+"K";
+  '  ~INP(2)
+RETURN
+'
+' *************************************************************
+'                       Routines de calcul.
+' *************************************************************
+> PROCEDURE calc_fft(cspl&) ! Gestion du calcul de la FFT.
+  LOCAL time0%
+  '
+  time0%=TIMER
+  '
+  IF spl_addr%(shown_spl&(cspl&))>0
+    IF dsp_fg!
+      @fft_dsp(spl_addr%(shown_spl&(cspl&))+4*fft_marker_l%(cspl&),cspl&)
+    ELSE
+      @fft_gfa(spl_addr%(shown_spl&(cspl&))+4*fft_marker_l%(cspl&),cspl&)
+    ENDIF
+  ENDIF
+  '
+  time=(TIMER-time0%)/200
+  '
+RETURN
+> PROCEDURE calc_fft_realt ! Gestion du temps r‚el.
+  IF realt_fg!(0) OR realt_fg!(1)
+    '
+    IF BTST(@buffoper(-1),2)=FALSE
+      SWAP realt_buf1%,realt_buf2%
+      @record(realt_frq%,realt_buf2%,realt_buf_lgt%,FALSE)
+      '
+      IF realt_fg!(0)
+        @fft_dsp(realt_buf1%,0)
+        @draw_spec_ln(0)
+        @draw_spec(0)
+        @draw_spec_ln(0)
+      ENDIF
+      IF realt_fg!(1)
+        @fft_dsp(realt_buf1%+2,1)
+        @draw_spec_ln(1)
+        @draw_spec(1)
+        @draw_spec_ln(1)
+      ENDIF
+      @show_spec_inf(curr_spl&)
+    ENDIF
+    '
+  ENDIF
+RETURN
+> PROCEDURE init_sincos_tbl ! Initialisation de la table des sinus/cosinus.
+  LOCAL a,p
+  ERASE wr(),wi()
+  DIM wr(point_nb&),wi(point_nb&)
+  '
+  @show_info("Calculating sin/cos table...")
+  p=2*PI/point_nb&
+  FOR i&=0 TO point_nb&-1
+    a=i&*p
+    wr(i&)=COS(a)
+    wi(i&)=-SIN(a)
+  NEXT i&
+RETURN
+> PROCEDURE clip_calc_pos(cspl&) ! Clipping des limites.
+  LOCAL w%
+  '
+  '
+  ' V‚rifie que fft_marker_l%(cspl&)<fft_marker_r%(cspl&)
+  IF fft_marker_l%(cspl&)>fft_marker_r%(cspl&)
+    SWAP fft_marker_l%(cspl&),fft_marker_r%(cspl&)
+  ENDIF
+  '
+  w%=fft_marker_r%(cspl&)-fft_marker_l%(cspl&)
+  '
+  ' V‚rifie que w%<spl_lgt%(shown_spl&(cspl&))
+  IF w%>=spl_lgt%(shown_spl&(cspl&))
+    fft_marker_l%(cspl&)=0
+    fft_marker_r%(cspl&)=spl_lgt%(shown_spl&(cspl&))-1
+  ENDIF
+  '
+  ' V‚rifie que la largeur est au moins ‚gale … point_nb&.
+  IF w%<(point_nb&-1)
+    w%=point_nb&-1
+    fft_marker_r%(cspl&)=fft_marker_l%(cspl&)+w%
+  ENDIF
+  '
+  ' Recadrage.
+  IF fft_marker_r%(cspl&)>=spl_lgt%(shown_spl&(cspl&))
+    fft_marker_r%(cspl&)=spl_lgt%(shown_spl&(cspl&))-1
+    fft_marker_l%(cspl&)=fft_marker_r%(cspl&)-w%
+  ENDIF
+  IF fft_marker_l%(cspl&)<0
+    fft_marker_l%(cspl&)=0
+    fft_marker_r%(cspl&)=fft_marker_l%(cspl&)+w%
+  ENDIF
+  '
+RETURN
+> PROCEDURE fft_gfa(src_addr%,spl&) ! Calcul de la FFT en GFABASIC.
+  LOCAL i&,j&,k&,l&,n1&,n2&,ie&,ia&
+  LOCAL c,s,tr,ti
+  '
+  '
+  ' Remplissage du tableau avec le signal.
+  c=1/4
+  n&=0
+  FOR i&=0 TO point_nb&-1
+    xr(i&)=WORD{src_addr%+n&}*c
+    xi(i&)=0
+    ADD n&,4
+  NEXT i&
+  '
+  '
+  ' Calcul de la FFT.
+  n2&=point_nb&
+  FOR k&=0 TO power&-1
+    n1&=n2&
+    n2&=n2&/2
+    '
+    ie&=point_nb&/n1&
+    ia&=0
+    FOR j&=0 TO n2&-1
+      c=wr(ia&)
+      s=wi(ia&)
+      i&=j&
+      WHILE i&<point_nb&
+        l&=i&+n2&
+        tr=xr(i&)-xr(l&)
+        ti=xi(i&)-xi(l&)
+        xr(i&)=xr(i&)+xr(l&)
+        xi(i&)=xi(i&)+xi(l&)
+        xr(l&)=c*tr+s*ti
+        xi(l&)=c*ti-s*tr
+        i&=i&+n1&
+      WEND
+      ia&=ia&+ie&
+    NEXT j&
+    '
+  NEXT k&
+  '
+  '
+  ' Permutation: remise en ordre du spectre.
+  j&=0
+  FOR i&=0 TO point_nb&-2
+    IF i&<j&
+      t=xr(i&)
+      xr(i&)=xr(j&)
+      xr(j&)=t
+      t=xi(i&)
+      xi(i&)=xi(j&)
+      xi(j&)=t
+    ENDIF
+    '
+    k&=point_nb&/2
+    WHILE k&=<j&
+      j&=j&-k&
+      k&=k&/2
+    WEND
+    '
+    j&=j&+k&
+  NEXT i&
+  '
+  '
+  ' Ecriture du spectre dans le bon buffer
+  c2=1/2^12 ! .
+  ptot%(cspl&)=0
+  FOR j&=0 TO point_nb&/2-1
+    px%(j&,cspl&)=SQR((xr(j&)^2+xi(j&)^2))*c2
+    ADD ptot%(cspl&),px%(j&,cspl&)
+  NEXT j&
+  '
+RETURN
+> PROCEDURE fft_dsp(src_addr%,spl&) ! Calcul de la FFT avec le DSP.
+  LOCAL j&,i%,n%,c1,c2
+  '
+  IF dsp_fg!
+    '
+    IF asm_fg!
+      @asm_calc_fft(src_addr%,spl&)
+    ELSE
+      '
+      ' Signal: ‚criture du signal sur 14 bits pour ‚viter les d‚bordements.
+      c1=1/(2^8*point_nb&)
+      n%=0
+      FOR j&=0 TO 2*point_nb&-1 STEP 2
+        dsp_x%(j&)=SWAP(WORD{src_addr%+n%})*c1
+        dsp_x%(j&+1)=0
+        ADD n%,4
+      NEXT j&
+      '
+      ' Calcul de la FFT: envoie du signal et r‚ception de la moiti‚ du spectre.
+      ' On a en effet: x(n)=x(1024-n) (1024 et non pas 1023 car il y a
+      ' un d‚calage) car le spectre d'un signal r‚el est sym‚trique. Il est
+      ' donc inutile de prendre l'autre moiti‚ du spectre.
+      @call_dsp(1) ! Appel le DSP.
+      ~@dsp_blkunpacked(V:dsp_x%(0),point_nb&*2,V:dsp_x%(0),point_nb&)
+      '
+      ' Spectre.
+      ' Normalement, pour obtenir la puissance d'une fr‚quence F=n*Fe/1024, ou
+      ' Fe est la fr‚quence d'‚chantillonnage, on a:
+      ' P(n)=x(n)+x(1024-n)
+      ' Mais comme x(n)=x(1024-n), il suffit de prendre P(n)=2*x(n).
+      c2=1/2^20 ! .
+      ptot%(cspl&)=0
+      FOR j&=0 TO point_nb&/2-1
+        px%(j&,cspl&)=SQR(SHL(dsp_x%(2*j&),8)^2+SHL(dsp_x%(2*j&+1),8)^2)*c2
+        ADD ptot%(cspl&),px%(j&,cspl&)
+      NEXT j&
+      '
+    ENDIF
+    '
+  ENDIF
+RETURN
+> PROCEDURE send_sincos_tbl ! Envoie de la table des sinus et cosinus au DSP.
+  LOCAL sincos_tbl%,dst_addr%
+  '
+  @show_info("Sending sin/cos table to DSP...")
+  sincos_tbl%=MALLOC(2*4*point_nb&/2)
+  dst_addr%=sincos_tbl%
+  FOR i&=0 TO point_nb&/2-1
+    LONG{dst_addr%}=-wr(i&)*&H800000
+    LONG{dst_addr%+4}=wi(i&)*&H800000
+    ADD dst_addr%,8
+  NEXT i&
+  '
+  @call_dsp(0) ! Envoie de la table.
+  ~@dsp_blkunpacked(sincos_tbl%,2*point_nb&/2,0,0)
+  '
+  ~MFREE(sincos_tbl%)
+RETURN
+'
+' *************************************************************
+'                       Routines pour la visualisation.
+' *************************************************************
+> PROCEDURE view ! Visualisation des graphiques.
+  LOCAL mx0&,my0&,mx1&,my1&
+  LOCAL w%
+  LOCAL curr_wind!
+  '
+  '
+  ' Affiche le signal et le spectre.
+  CLS
+  mx1&=MOUSEX
+  my1&=MOUSEY
+  spec_ln_x&(0)=spec_x&
+  spec_ln_x&(1)=spec_x&
+  signal_ln_x&(0)=signal_x&
+  signal_ln_x&(1)=signal_x&
+  @show_all
+  '
+  '
+  ' Boucle.
+  REPEAT
+    '
+    ' *************************************************************
+    ' Gestion de la souris.
+    ' *************************************************************
+    mx0&=MOUSEX
+    my0&=MOUSEY
+    IF mx0&<>mx1& OR my1&<>my0&
+      mx1&=mx0&
+      my1&=my0&
+      '
+      ' S‚lection de la fenetre.
+      SELECT my0&
+      CASE 0 TO 99
+        curr_spl&=0
+        curr_wind!=FALSE ! Signal.
+      CASE 100 TO 199
+        curr_spl&=0
+        curr_wind!=TRUE ! Spectre.
+      CASE 200 TO 299
+        curr_spl&=1
+        curr_wind!=FALSE ! Signal.
+      CASE 300 TO 399
+        curr_spl&=1
+        curr_wind!=TRUE ! Spectre.
+      DEFAULT
+        curr_spl&=1
+        curr_wind!=TRUE ! Spectre.
+      ENDSELECT
+      '
+      '
+      IF curr_wind!=TRUE
+        ' ------------------------------------------------------------------
+        ' Gestion du spectre … la souris.
+        ' ------------------------------------------------------------------
+        ' Clipping de la ligne.
+        @draw_spec_ln(curr_spl&) ! Efface la ligne.
+        spec_ln_x&(curr_spl&)=mx1&
+        IF spec_ln_x&(curr_spl&)<spec_x&
+          spec_ln_x&(curr_spl&)=spec_x&
+        ENDIF
+        IF spec_ln_x&(curr_spl&)>=spec_x&+spec_w&
+          spec_ln_x&(curr_spl&)=spec_x&+spec_w&-1
+        ENDIF
+        @draw_spec_ln(curr_spl&) ! R‚affiche la ligne … la nouvelle position.
+        @show_spec_inf(curr_spl&)
+        '
+      ELSE
+        ' ------------------------------------------------------------------
+        ' Gestion du signal … la souris.
+        ' ------------------------------------------------------------------
+        ' Clipping de la ligne.
+        @draw_signal_ln(curr_spl&) ! Efface la ligne.
+        signal_ln_x&(curr_spl&)=mx1&
+        IF signal_ln_x&(curr_spl&)<signal_x&
+          signal_ln_x&(curr_spl&)=signal_x&
+        ENDIF
+        IF signal_ln_x&(curr_spl&)>=signal_x&+signal_w&
+          signal_ln_x&(curr_spl&)=signal_x&+signal_w&-1
+        ENDIF
+        '
+        ' Modifications.
+        IF spl_addr%(shown_spl&(curr_spl&))>0
+          '
+          signal_curr_pos%(curr_spl&)=signal_shown_pos%(curr_spl&)+(signal_ln_x&(curr_spl&)-signal_x&)*spl_lgt%(shown_spl&(curr_spl&))/(signal_zoom&(curr_spl&)*signal_w&)
+          '
+          SELECT MOUSEK
+          CASE 1
+            @draw_signal_marker(curr_spl&)
+            w%=fft_marker_r%(curr_spl&)-fft_marker_l%(curr_spl&)
+            fft_marker_l%(curr_spl&)=signal_curr_pos%(curr_spl&)-w%/2
+            fft_marker_r%(curr_spl&)=fft_marker_l%(curr_spl&)+w%
+            @clip_calc_pos(curr_spl&)
+            @draw_signal_marker(curr_spl&)
+            '
+          CASE 2
+            @draw_signal_marker(curr_spl&)
+            mx1&=signal_x&+signal_w&/2
+            my1&=MOUSEY
+            SETMOUSE mx1&,my1&
+            REPEAT
+              mx0&=MOUSEX
+              IF mx0&<>mx1&
+                ADD signal_pos%(curr_spl&),spl_lgt%(shown_spl&(curr_spl&))*(mx0&-mx1&)/(signal_w&-2)
+                @clip_signal_pos(curr_spl&)
+                @draw_signal(curr_spl&)
+                @draw_signal_cursor(curr_spl&)
+                SETMOUSE mx1&,my1&
+              ENDIF
+            UNTIL MOUSEK=0
+            @clip_signal_pos(curr_spl&)
+            @draw_signal_marker(curr_spl&)
+            '
+          CASE 3
+            @draw_signal_marker(curr_spl&)
+            w%=fft_marker_r%(curr_spl&)-fft_marker_l%(curr_spl&)
+            fft_marker_l%(curr_spl&)=signal_curr_pos%(curr_spl&)-w%/2
+            fft_marker_r%(curr_spl&)=fft_marker_l%(curr_spl&)+w%
+            @clip_calc_pos(curr_spl&)
+            @draw_signal_marker(curr_spl&)
+            '
+            IF realt_fg!(curr_spl&)=FALSE
+              @calc_fft(curr_spl&)
+              @draw_spec_ln(curr_spl&)
+              @draw_spec(curr_spl&)
+              @draw_spec_ln(curr_spl&)
+              @show_spec_inf(curr_spl&)
+            ENDIF
+            '
+          ENDSELECT
+          '
+        ENDIF
+        '
+        @draw_signal_ln(curr_spl&) ! R‚affiche la ligne … la nouvelle position.
+        @show_signal_inf(curr_spl&)
+        '
+      ENDIF
+      '
+    ENDIF
+    '
+    '
+    ' *************************************************************
+    ' Divers.
+    ' *************************************************************
+    ' Synchronisation avec l'‚cran.
+    IF sync_fg!
+      VSYNC
+    ENDIF
+    '
+    ' Temps r‚el.
+    IF realt_pause_fg!=FALSE
+      @calc_fft_realt
+    ENDIF
+    '
+    ' Joue la partie du sample entre les bornes.
+    IF (BIOS(11,W:-1) AND &H4)<>0 AND realt_fg!(0)=FALSE AND realt_fg!(1)=FALSE ! Kbshift().
+      @play(spl_frq%(shown_spl&(curr_spl&)),spl_addr%(shown_spl&(curr_spl&))+4*fft_marker_l%(curr_spl&),fft_marker_r%(curr_spl&)-fft_marker_l%(curr_spl&),FALSE)
+    ENDIF
+    '
+    @keyboard
+  UNTIL view_fg!=FALSE
+RETURN
+> PROCEDURE keyboard_view ! Touches lors de la visualisation.
+  '
+  SELECT key$
+    '
+    ' Touches concernant le signal.
+  CASE "+","-",203,205,"0"
+    @draw_signal_ln(curr_spl&)
+    @draw_signal_marker(curr_spl&)
+    SELECT key$
+    CASE "+" ! Zoom in du signal.
+      INC signal_zoom&(curr_spl&)
+      signal_pos%(curr_spl&)=signal_curr_pos%(curr_spl&)-(signal_w&/2)*spl_lgt%(shown_spl&(curr_spl&))/(signal_w&*signal_zoom&(curr_spl&))
+    CASE "-" ! Zoom out du signal.
+      DEC signal_zoom&(curr_spl&)
+      IF signal_zoom&(curr_spl&)<1
+        signal_zoom&(curr_spl&)=1
+      ENDIF
+      signal_pos%(curr_spl&)=signal_curr_pos%(curr_spl&)-(signal_w&/2)*spl_lgt%(shown_spl&(curr_spl&))/(signal_w&*signal_zoom&(curr_spl&))
+    CASE 203 ! Fleche gauche: diminue la pr‚cision d'affichage du signal.
+      DEC signal_accuracy&(curr_spl&)
+      IF signal_accuracy&(curr_spl&)<1
+        signal_accuracy&(curr_spl&)=1
+      ENDIF
+    CASE 205 ! Fleche droite: augmente la pr‚cision d'affichage du signal.
+      INC signal_accuracy&(curr_spl&)
+      IF signal_accuracy&(curr_spl&)>8
+        signal_accuracy&(curr_spl&)=8
+      ENDIF
+    CASE "0" ! Centrage autour de la partie … calculer.
+      signal_pos%(curr_spl&)=fft_marker_l%(curr_spl&)+(fft_marker_r%(curr_spl&)-fft_marker_l%(curr_spl&))/2-(signal_w&/2)*spl_lgt%(shown_spl&(curr_spl&))/(signal_w&*signal_zoom&(curr_spl&))
+    ENDSELECT
+    @draw_signal(curr_spl&)
+    @draw_signal_ln(curr_spl&)
+    @draw_signal_marker(curr_spl&)
+    @draw_signal_cursor(curr_spl&)
+  CASE "("
+    @draw_signal_marker(curr_spl&)
+    fft_marker_l%(curr_spl&)=signal_curr_pos%(curr_spl&)
+    @clip_calc_pos(curr_spl&)
+    @draw_signal_marker(curr_spl&)
+  CASE ")"
+    @draw_signal_marker(curr_spl&)
+    fft_marker_r%(curr_spl&)=signal_curr_pos%(curr_spl&)
+    @clip_calc_pos(curr_spl&)
+    @draw_signal_marker(curr_spl&)
+    '
+    '
+    ' Touches concernant le spectre.
+  CASE "W"
+    IF realt_fg!(curr_spl&)
+      @calc_fft(curr_spl&)
+      @draw_spec_ln(curr_spl&)
+      @draw_spec(curr_spl&)
+      @draw_spec_ln(curr_spl&)
+      @show_spec_inf(curr_spl&)
+    ENDIF
+  CASE "<",">"
+    SELECT key$
+    CASE "<"
+      INC spec_zoom&(curr_spl&)
+    CASE ">"
+      DEC spec_zoom&(curr_spl&)
+      IF spec_zoom&(curr_spl&)=<0
+        spec_zoom&(curr_spl&)=1
+      ENDIF
+    ENDSELECT
+    @show_spec(curr_spl&)
+    '
+    '
+    ' Touches diverses.
+  CASE "X" ! Reset view.
+    IF realt_fg!(0)=FALSE OR realt_fg!(1)=FALSE
+      signal_zoom&(0)=1
+      signal_zoom&(1)=1
+      spec_zoom&(0)=2
+      spec_zoom&(1)=2
+      @show_all
+    ENDIF
+    '
+    '
+  DEFAULT
+  ENDSELECT
+  '
+  @show_signal_inf(curr_spl&)
+  @show_spec_inf(curr_spl&)
+RETURN
+> PROCEDURE set_view_mode ! Mode d'affichage.
+  SELECT view_mode&
+  CASE 0 ! Mode 4 fenetres.
+    '
+    ' G‚n‚ral.
+    wind_x&=0 ! Abscisse d'une fenetre.
+    wind_w&=640 ! Largeur d'une fenetre.
+    wind_h&=100 ! Hauteur d'une fenetre.
+    title_x&=3 ! Abscisse de la barre de titre dans la fenetre.
+    title_y&=3 ! Ordonn‚e de la barre de titre dans la fenetre.
+    title_w&=634 ! Largeur de la barre de titre.
+    title_h&=7 ! Hauteur de la barre de titre.
+    title_txt_x&=15
+    title_txt_y&=8 ! Ordonn‚e du texte du titre dans la fenetre.
+    title_fnt&=4 ! Fonte pour le titre.
+    '
+    ' Signal.
+    signal_wind_y&(0)=0
+    signal_wind_y&(1)=200
+    signal_x&=3 ! Position x du signal dans la fenetre.
+    signal_y&=44 ! Positon y du signal dans le fenetre.
+    signal_w&=634 ! Largeur de la partie visualis‚e du signal.
+    signal_h&=32 ! Amplitude maximale du signal.
+    signal_h_shift&=10 ! .
+    '
+    ' Spectre.
+    spec_wind_y&(0)=100
+    spec_wind_y&(1)=300
+    spec_x&=35 ! Position x du spectre dans la fenetre.
+    spec_y&=16 ! Position y du spectre dans la fentre.
+    spec_w&=point_nb&/2 ! Largeur du spectre sur l'‚cran.
+    spec_h&=70 ! Hauteur du spectre sur l'‚cran.
+    '
+    ' Curseur pour le signal.
+    cursor_x&=3 ! Position x du curseur sur l'‚cran.
+    cursor_y&=79 ! Position y.
+    cursor_w&=634 ! Largeur.
+    cursor_h&=8 ! Hauteur.
+    '
+    '
+  ENDSELECT
+RETURN
+> PROCEDURE draw_wind(y&,title$) ! Affichage d'une fenetre.
+  '
+  ' Fenetre.
+  DEFFILL 0 ! Vide.
+  PBOX wind_x&,y&,wind_x&+wind_w&-1,y&+wind_h&-1 ! Efface la fenetre.
+  BOX wind_x&+1,y&+1,wind_x&+wind_w&-2,y&+wind_h&-2 ! Affiche le contour.
+  '
+  ' Barre du titre.
+  DEFFILL 1 ! Plein.
+  PBOX title_x&,y&+title_y&,title_x&+title_w&-1,y&+title_y&+title_h&-1
+  '
+  ' Texte du titre.
+  DEFTEXT ,0,,title_fnt&,
+  GRAPHMODE 3
+  TEXT title_txt_x&,y&+title_txt_y&,title$
+  GRAPHMODE 1
+RETURN
+> PROCEDURE show_all
+  @show_signal(0)
+  @show_spec(0)
+  @show_signal(1)
+  @show_spec(1)
+RETURN
+'
+' Pour l'affichage du signal.
+> PROCEDURE show_signal(cspl&) ! Visualisation du signal dans sa fenetre.
+  '
+  IF view_fg!=TRUE
+    @draw_wind(signal_wind_y&(cspl&),"#"+STR$(cspl&+1)+": SIGNAL: "+spl_name$(shown_spl&(cspl&)))
+    @draw_signal(cspl&)
+    @draw_signal_ln(cspl&)
+    @draw_signal_marker(cspl&)
+    @draw_signal_cursor(cspl&)
+    @show_signal_inf(cspl&)
+  ENDIF
+RETURN
+> PROCEDURE draw_signal(cspl&) ! Affichage du signal.
+  LOCAL c,stp,offset
+  LOCAL dst_addr%
+  LOCAL n&,x1&,x2&,y1&,y2&,i&,j&
+  '
+  ' Efface le signal.
+  DEFFILL 0
+  x1&=wind_x&+signal_x&
+  x2&=x1&+signal_w&-1
+  y1&=signal_wind_y&(cspl&)+signal_y&-signal_h&
+  y2&=signal_wind_y&(cspl&)+signal_y&+signal_h&-1
+  PBOX x1&,y1&,x2&,y2&
+  '
+  IF spl_addr%(shown_spl&(cspl&))>0
+    '
+    @clip_signal_pos(cspl&)
+    '
+    IF asm_fg!
+      @asm_draw_signal(cspl&)
+    ELSE
+      '
+      ' Affichage du signal en GFA.
+      c=signal_h&/32768 ! 32768=amplitude maximale d'un sample.
+      stp=spl_lgt%(shown_spl&(cspl&))/(signal_zoom&(cspl&)*signal_w&*signal_accuracy&(cspl&)*16)
+      offset=0
+      dst_addr%=spl_addr%(shown_spl&(cspl&))+4*signal_shown_pos%(cspl&)
+      n&=16*signal_accuracy&(cspl&)-1
+      FOR j&=0 TO signal_w&-1
+        FOR i&=0 TO n&
+          PLOT signal_x&+j&,signal_y&+WORD{dst_addr%+4*TRUNC(offset)}*c
+          offset=offset+stp
+        NEXT i&
+      NEXT j&
+      '
+    ENDIF
+    '
+  ENDIF
+RETURN
+> PROCEDURE draw_signal_ln(cspl&) ! Affichage de la ligne de repŠre du signal.
+  LOCAL y&
+  '
+  IF view_fg!
+    y&=signal_wind_y&(cspl&)+signal_y&
+    GRAPHMODE 3
+    LINE signal_ln_x&(cspl&),y&-signal_h&,signal_ln_x&(cspl&),y&+signal_h&
+    GRAPHMODE 1
+  ENDIF
+RETURN
+> PROCEDURE draw_signal_marker(cspl&) ! Affichage des bornes de l'intervalle de la FFT.
+  LOCAL x&,y&
+  '
+  IF view_fg! AND spl_addr%(shown_spl&(cspl&))>0
+    GRAPHMODE 3
+    y&=signal_wind_y&(cspl&)+signal_y&
+    '
+    ' Limite gauche.
+    IF fft_marker_l%(cspl&)>=signal_shown_pos%(cspl&) AND fft_marker_l%(cspl&)=<(signal_shown_pos%(cspl&)+spl_lgt%(shown_spl&(cspl&))/signal_zoom&(cspl&))
+      x&=signal_x&+(fft_marker_l%(cspl&)-signal_shown_pos%(cspl&))/spl_lgt%(shown_spl&(cspl&))*(signal_w&*signal_zoom&(cspl&))
+      LINE x&,y&-signal_h&,x&,y&+signal_h& ! ligne verticale.
+      LINE x&,y&+signal_h&+1,x&+2,y&+signal_h&+1 ! Ligne horizontale.
+      LINE x&,y&-signal_h&-1,x&+2,y&-signal_h&-1 ! Ligne horizontale.
+    ENDIF
+    '
+    ' Limite droite.
+    IF fft_marker_r%(cspl&)>=signal_shown_pos%(cspl&) AND fft_marker_r%(cspl&)=<(signal_shown_pos%(cspl&)+spl_lgt%(shown_spl&(cspl&))/signal_zoom&(cspl&))
+      x&=signal_x&+(fft_marker_r%(cspl&)-signal_shown_pos%(cspl&))/spl_lgt%(shown_spl&(cspl&))*(signal_w&*signal_zoom&(cspl&))
+      LINE x&,y&-signal_h&,x&,y&+signal_h& ! Ligne veticale.
+      LINE x&,y&+signal_h&+1,x&-2,y&+signal_h&+1 ! Ligne horizontale.
+      LINE x&,y&-signal_h&-1,x&-2,y&-signal_h&-1 ! Ligne horizontale.
+    ENDIF
+    '
+    GRAPHMODE 1
+  ENDIF
+RETURN
+> PROCEDURE draw_signal_cursor(cspl&) ! Affichage du curseur.
+  LOCAL x&,y&,w&
+  '
+  IF view_fg!
+    y&=signal_wind_y&(cspl&)+cursor_y&
+    DEFFILL 0
+    PBOX cursor_x&,y&,cursor_x&+cursor_w&-1,y&+cursor_h&-1
+    BOX cursor_x&,y&,cursor_x&+cursor_w&-1,y&+cursor_h&-1
+    '
+    IF spl_addr%(shown_spl&(cspl&))>0
+      DEFFILL 2
+      w&=(cursor_w&-2)/signal_zoom&(cspl&)
+      x&=cursor_x&+(cursor_w&-2)*signal_shown_pos%(cspl&)/spl_lgt%(shown_spl&(cspl&)) ! .
+      PBOX x&+1,y&+1,x&+w&,y&+cursor_h&-2 ! .
+    ENDIF
+  ENDIF
+RETURN
+> PROCEDURE clip_signal_pos(cspl&) ! Clipping de la position du signal.
+  LOCAL spl&
+  '
+  spl&=shown_spl&(cspl&) ! Pour plus de clart‚.
+  '
+  IF spl_addr%(spl&)>0
+    '
+    ' Position sur le sample.
+    IF signal_pos%(cspl&)>=spl_lgt%(spl&)
+      signal_pos%(cspl&)=spl_lgt%(spl&)-1
+    ENDIF
+    IF signal_pos%(cspl&)<0
+      signal_pos%(cspl&)=0
+    ENDIF
+    '
+    ' Position … partir de laquelle on affiche.
+    IF signal_pos%(cspl&)>(spl_lgt%(spl&)-spl_lgt%(spl&)/signal_zoom&(cspl&))
+      signal_shown_pos%(cspl&)=spl_lgt%(spl&)-spl_lgt%(spl&)/signal_zoom&(cspl&)
+    ELSE
+      signal_shown_pos%(cspl&)=signal_pos%(cspl&)
+    ENDIF
+    '
+    ' Position courante de la ligne de repŠre.
+    IF signal_curr_pos%(cspl&)<signal_shown_pos%(cspl&)
+      signal_curr_pos%(cspl&)=signal_shown_pos%(cspl&)
+    ELSE IF signal_curr_pos%(cspl&)>(signal_shown_pos%(cspl&)+spl_lgt%(spl&)/signal_zoom&(cspl&)-1)
+      signal_curr_pos%(cspl&)=signal_shown_pos%(cspl&)+spl_lgt%(spl&)/signal_zoom&(cspl&)-1
+    ENDIF
+    signal_ln_x&(cspl&)=signal_x&+signal_w&*signal_zoom&(cspl&)*(signal_curr_pos%(cspl&)-signal_shown_pos%(cspl&))/spl_lgt%(spl&)
+    SETMOUSE signal_ln_x&(cspl&),MOUSEY
+    '
+  ENDIF
+RETURN
+> PROCEDURE show_signal_inf(cspl&) ! Affichage des infos sur le signal.
+  LOCAL y&
+  '
+  IF view_fg!
+    y&=signal_wind_y&(cspl&)+94
+    DEFTEXT ,,,4,
+    TEXT 3,y&,"O="+STR$(signal_curr_pos%(cspl&),9)
+    TEXT 8*13,y&,"|L="+STR$(fft_marker_l%(cspl&),9)
+    TEXT 8*26,y&,"|R="+STR$(fft_marker_r%(cspl&),9)
+    TEXT 8*39,y&,"|W="+STR$(fft_marker_r%(cspl&)-fft_marker_l%(cspl&)+1,9)
+    TEXT 8*52,y&,"|Zoom="+STR$(signal_zoom&(cspl&),7)
+    TEXT 8*65,y&,"|Accuracy="+STR$(signal_accuracy&(cspl&),2)
+  ENDIF
+RETURN
+'
+' Pour l'affichage du spectre.
+> PROCEDURE show_spec(cspl&) ! Visualisation du spectre dans sa fenetre.
+  LOCAL i&,x&,y&,ay&,c,f%
+  '
+  IF view_fg!
+    '
+    @draw_wind(spec_wind_y&(cspl&),"#"+STR$(cspl&+1)+": SPECTRUM: "+spl_name$(shown_spl&(cspl&)))
+    '
+    ' Quelques informations.
+    DEFTEXT ,,,4,
+    x&=548
+    y&=spec_wind_y&(cspl&)
+    TEXT x&,y&+15,"Zoom="+STR$(spec_zoom&(cspl&),2) ! .
+    '
+    ' Affichage de l'‚chelle horizontale du spectre.
+    y&=spec_wind_y&(cspl&)+spec_y&+spec_h&
+    LINE spec_x&,y&,spec_x&+spec_w&,y&
+    IF realt_fg!(cspl&)
+      f%=realt_frq%
+    ELSE
+      f%=spl_frq%(shown_spl&(cspl&))
+    ENDIF
+    FOR i&=0 TO 8
+      x&=spec_x&+i&*(point_nb&/16)
+      LINE x&,y&+1,x&,y&+4 ! Graduation horizontale.
+      TEXT x&,y&+10,INT(f%*i&/16) ! 10=6+4.
+    NEXT i&
+    '
+    ' Affichage de l'‚chelle verticale du spectre.
+    x&=spec_x&-32
+    y&=spec_wind_y&(cspl&)+spec_y&
+    LINE spec_x&-1,y&-1,spec_x&-1,y&+spec_h&
+    FOR i&=0 TO 8
+      ay&=y&+spec_h&-1-spec_h&/8*i&
+      LINE spec_x&-4,ay&,spec_x&-1,ay&
+      TEXT x&,ay&,INT(point_nb&*i&/(8*spec_zoom&(cspl&)))
+    NEXT i&
+    '
+    @draw_spec(cspl&)
+    @draw_spec_ln(cspl&)
+    @show_spec_inf(cspl&)
+  ENDIF
+RETURN
+> PROCEDURE draw_spec(cspl&) ! Affichage du spectre.
+  LOCAL i&,y&,v&
+  '
+  ' Efface le spectre.
+  y&=spec_wind_y&(cspl&)+spec_y&
+  DEFFILL 0
+  PBOX spec_x&,y&,spec_x&+spec_w&-1,y&+spec_h&-1
+  '
+  ' Affichage du spectre.
+  IF asm_fg!
+    @asm_draw_spec(cspl&)
+  ELSE
+    y&=spec_wind_y&(cspl&)+spec_y&+spec_h&-1
+    FOR i&=0 TO spec_w&-1
+      v&=px%(i&)/1024*spec_h&*spec_zoom&(cspl&)
+      IF v&>spec_h&
+        v&=spec_h&
+      ENDIF
+      IF v&>0
+        LINE spec_x&+i&,y&,spec_x&+i&,y&-v&+1
+      ENDIF
+    NEXT i&
+  ENDIF
+RETURN
+> PROCEDURE draw_spec_ln(cspl&) ! Affichage de la ligne de repŠre du spectre.
+  LOCAL y&
+  '
+  IF view_fg!
+    y&=spec_wind_y&(cspl&)+spec_y&
+    GRAPHMODE 3
+    LINE spec_ln_x&(cspl&),y&,spec_ln_x&(cspl&),y&+spec_h&+4
+    GRAPHMODE 1
+  ENDIF
+RETURN
+> PROCEDURE show_spec_inf(cspl&) ! Affiche des infos sur le spectre.
+  LOCAL k&,x&,y&
+  '
+  IF view_fg!
+    k&=spec_ln_x&(cspl&)-spec_x&
+    x&=548
+    y&=spec_wind_y&(cspl&)
+    DEFTEXT ,,,4,
+    TEXT x&,y&+21,"T="+STR$(ptot%(cspl&),5)+" W"
+    IF realt_fg!(cspl&)
+      TEXT x&,y&+27,"F="+STR$(INT(k&/point_nb&*realt_frq%),5)+" Hz"
+    ELSE
+      TEXT x&,y&+27,"F="+STR$(INT(k&/point_nb&*spl_frq%(shown_spl&(cspl&))),5)+" Hz"
+    ENDIF
+    TEXT x&,y&+33,"P="+STR$(px%(k&,cspl&),5)+" W"
+  ENDIF
+RETURN
+> PROCEDURE clr_spec(cspl&) ! Efface le spectre.
+  LOCAL i&
+  '
+  FOR i&=0 TO point_nb&/2-1
+    px%(i&,cspl&)=0
+  NEXT i&
+RETURN
+'
+> PROCEDURE set_view
+  IF view_fg!=TRUE
+    @set_scr
+  ELSE
+    @restore_scr
+  ENDIF
+RETURN
+'
+' *************************************************************
+'                       Communication avec l'utilisateur.
+' *************************************************************
+> PROCEDURE keyboard ! Gestion du clavier.
+  LOCAL key$,fg!
+  '
+  IF INP?(2)
+    key$=UPPER$(CHR$(INP(2)))
+    SELECT key$
+      '
+      '
+      '  Touches diverses.
+    CASE "Q" ! Quitte.
+      IF view_fg!=TRUE
+        view_fg!=FALSE
+        @set_view
+        @menu
+      ENDIF
+      @show_info("Are you sure? (Y/N)")
+      IF UPPER$(CHR$(INP(2)))="Y"
+        @end
+      ENDIF
+    CASE "C" ! Choix d'un sample.
+      shown_spl&(curr_spl&)=@select_spl(shown_spl&(curr_spl&))
+      @show_all
+    CASE "L" ! Chargement direct d'un sample.
+      @load_spl(shown_spl&(curr_spl&))
+      @show_all
+    CASE "S" ! Sauvegarde directe d'un sample.
+      @save_spl(shown_spl&(curr_spl&))
+      @show_all
+    CASE 127 ! Delete.
+      @delete_spl(shown_spl&(curr_spl&))
+      @show_signal(shown_spl&(curr_spl&))
+      @show_spec(shown_spl&(curr_spl&))
+    CASE "1"
+      curr_spl&=0
+    CASE "2"
+      curr_spl&=1
+    CASE "'" ! Pause real time.
+      realt_pause_fg!=NOT realt_pause_fg!
+      '
+      '
+      ' Gestion du son hardware.
+    CASE " " ! Joue le sample en entier.
+      IF NOT realt_fg!(curr_spl&)
+        IF repeat_fg!=TRUE
+          IF play_fg!=FALSE
+            @play(spl_frq%(shown_spl&(curr_spl&)),spl_addr%(shown_spl&(curr_spl&)),spl_lgt%(shown_spl&(curr_spl&)),repeat_fg!)
+          ELSE
+            @stop
+          ENDIF
+        ELSE
+          @play(spl_frq%(shown_spl&(curr_spl&)),spl_addr%(shown_spl&(curr_spl&)),spl_lgt%(shown_spl&(curr_spl&)),repeat_fg!)
+        ENDIF
+      ENDIF
+    CASE "R"
+      IF repeat_fg!=TRUE
+        repeat_fg!=FALSE
+        play_fg!=FALSE
+      ELSE
+        repeat_fg!=TRUE
+        play_fg!=FALSE
+      ENDIF
+      @stop
+    CASE "/" ! Diminue l'attenution.
+      DEC atten&
+      IF atten&<0
+        atten&=0
+      ENDIF
+      @set_atten
+    CASE "*" ! Augmente l'attenuation.
+      INC atten&
+      IF atten&>15
+        atten&=15
+      ENDIF
+      @set_atten
+    CASE "8" ! Diminue le gain.
+      DEC gain&
+      IF gain&<0
+        gain&=0
+      ENDIF
+      @set_gain
+    CASE "9" ! Augmente le gain.
+      INC gain&
+      IF gain&>15
+        gain&=15
+      ENDIF
+      @set_gain
+    CASE "." ! Activation et d‚sactivation du speaker interne.
+      speaker_fg!=NOT speaker_fg!
+      @set_speaker
+    CASE "&" ! Synchronisation.
+      sync_fg!=NOT sync_fg!
+    CASE "D" ! Real time.
+      realt_fg!(curr_spl&)=NOT realt_fg!(curr_spl&)
+      IF realt_fg!(curr_spl&)
+        realt_frq%=@set_frq(realt_frq%)
+      ELSE
+        @clr_spec(curr_spl&)
+      ENDIF
+      @show_spec(curr_spl&)
+    CASE "="
+      realt_frq%=@enter("Real time freq(8195,9834,12292,16390,19668,24585,32780,49170)=")
+      IF realt_fg!(curr_spl&)
+        realt_frq%=@set_frq(realt_frq%)
+      ENDIF
+      @show_spec(curr_spl&)
+      '
+      '
+      ' VOX.
+    CASE "E","H","A","F","M","T","V","4","5","6"
+      IF view_fg!=FALSE
+        SELECT key$
+        CASE "E" ! Entr‚e d'un texte et conversion en phonŠmes.
+          @clr_info
+          FORM INPUT 255,vox_sentence$
+          vox_txt_cv!=FALSE
+          @speak
+        CASE "H" ! Entr‚e de phonŠmes.
+          @clr_info
+          FORM INPUT 255,vox_phon_txt$
+          vox_sentence$=""
+          vox_txt_cv!=TRUE
+          @speak
+        CASE "A" ! Calcul.
+          @speak
+        CASE "F" ! Fr‚quence de la voix.
+          vox_voice_frq%=@enter("Voice frequence=")
+        CASE "M" ! Vitesse de la parole.
+          vox_rate%=@enter("Rate=")
+        CASE "T" ! Ton.
+          vox_tone%=@enter("Tone=")
+        CASE "V"
+          vox_voice_frq%=@enter("Voice freq=")
+        CASE "4"
+          vox_c1=@enter("Coef 1=")
+          @set_form_coef
+        CASE "5"
+          vox_c2=@enter("Coef 2=")
+          @set_form_coef
+        CASE "6"
+          vox_c3=@enter("Coef 3=")
+          @set_form_coef
+        ENDSELECT
+      ENDIF
+      '
+      '
+    CASE 27 ! Escape: visualisation.
+      view_fg!=NOT view_fg!
+      @set_view
+    DEFAULT
+      IF view_fg!
+        @keyboard_view
+      ENDIF
+    ENDSELECT
+    @menu
+    '
+  ELSE
+    key$=""
+  ENDIF
+RETURN
+> PROCEDURE menu ! Affichage du menu.
+  LOCAL i&,spl&
+  '
+  IF chg_scr!=FALSE AND view_fg!=FALSE
+    '
+    PRINT CHR$(27)+"E"+CHR$(27)+"w"; ! D‚bordement de ligne automatique d‚sactiv‚.
+    PRINT AT(1,max_ln&-24);STRING$(80,"*");
+    '
+    '
+    ' Titre.
+    PRINT AT(1,max_ln&-23);CHR$(27)+"p";SPACE$(80);
+    PRINT AT(26,max_ln&-23);"S O U N D    A N A L Y S I S";CHR$(27)+"q";
+    PRINT AT(1,max_ln&-22);"Version 1.00";AT(40,max_ln&-22);"by M.L. 1996";
+    '
+    '
+    ' Fonctions globales.
+    PRINT AT(1,max_ln&-21);STRING$(80,"-");
+    PRINT AT(32,max_ln&-21);"Global functions";
+    '
+    PRINT AT(1,max_ln&-20);"(Q)Quit";AT(21,max_ln&-20);"(C)Choose SPL";
+    PRINT AT(41,max_ln&-20);"(L)Load";AT(61,max_ln&-20);"(S)Save";
+    '
+    PRINT AT(1,max_ln&-19);"(/&*)Atten=";atten&;
+    PRINT AT(21,max_ln&-19);"(8&9)Gain=";gain&;
+    IF speaker_fg!
+      PRINT AT(41,max_ln&-19);"(.)Speaker on";
+    ELSE
+      PRINT AT(41,max_ln&-19);"(.)Speaker off";
+    ENDIF
+    IF repeat_fg!
+      PRINT AT(61,max_ln&-19);"(R)Play repeat";
+    ELSE
+      PRINT AT(61,max_ln&-19);"(R)Play once";
+    ENDIF
+    '
+    PRINT AT(1,max_ln&-18);"(SPACE)Play all";
+    IF sync_fg!
+      PRINT AT(21,max_ln&-18);"(&)Sync on";
+    ELSE
+      PRINT AT(21,max_ln&-18);"(&)Sync off";
+    ENDIF
+    PRINT AT(41,max_ln&-18);"(D)Real time"
+    PRINT AT(61,max_ln&-18);"(=)Realt frq=";realt_frq%;
+    '
+    '
+    ' Touches pour la visualisation.
+    PRINT AT(1,max_ln&-17);STRING$(80,"-");
+    PRINT AT(28,max_ln&-17);"Visualization functions";
+    PRINT AT(1,max_ln&-16);"(ESC)View           (X)Reset";
+    PRINT AT(41,max_ln&-16);"(0)Go to FFT center (<-/->)Accuracy";
+    PRINT AT(1,max_ln&-15);"(L mbut)Move limits (R mbut)Move";
+    PRINT AT(41,max_ln&-15);"((/))Set limits     (+/-)Zoom signal";
+    PRINT AT(1,max_ln&-14);"(</>)Zoom spectrum  (W or L&R mbut)Calc";
+    PRINT AT(41,max_ln&-14);"(CONTROL)Play       (')Pause real time";
+    '
+    '
+    ' ParamŠtres de VOX.
+    PRINT AT(1,max_ln&-13);STRING$(80,"-");
+    PRINT AT(33,max_ln&-13);"VOX parameters";
+    PRINT AT(1,max_ln&-12);"(V)Voice freq=";vox_voice_frq%;
+    PRINT AT(21,max_ln&-12);"(M)Rate=";vox_rate%;
+    PRINT AT(41,max_ln&-12);"(T)Tone=";vox_tone%;
+    PRINT AT(1,max_ln&-11);"(E)Enter text";
+    PRINT AT(21,max_ln&-11);"(H)Enter phoneme";
+    PRINT AT(41,max_ln&-11);"(A)Calc";
+    PRINT AT(1,max_ln&-10);"Text: ";vox_sentence$;
+    PRINT AT(1,max_ln&-9);"Phoneme: ";vox_phon_txt$;
+    PRINT AT(1,max_ln&-8);"Last error: ";vox_err$;
+    '
+    '
+    ' Informations.
+    PRINT AT(1,max_ln&-7);STRING$(80,"-");
+    PRINT AT(34,max_ln&-7);"Informations";
+    '
+    FOR i&=0 TO 1
+      spl&=shown_spl&(i&)
+      '
+      IF realt_fg!(i&)
+        IF realt_pause_fg!=FALSE
+          PRINT CHR$(27)+"p"; ! Active inverse video.
+        ENDIF
+        PRINT AT(79,max_ln&-6+i&);"RT";
+        IF realt_pause_fg!=FALSE
+          PRINT CHR$(27)+"q"; ! Active inverse video.
+        ENDIF
+      ENDIF
+      '
+      IF spl_addr%(spl&)>0
+        IF curr_spl&=i&
+          PRINT AT(1,max_ln&-6+i&);"*#";i&+1;": Name: ";spl_name$(spl&);
+        ELSE
+          PRINT AT(1,max_ln&-6+i&);" #";i&+1;": Name: ";spl_name$(spl&);
+        ENDIF
+        PRINT AT(21,max_ln&-6+i&);"Length=";spl_lgt%(spl&);
+        PRINT AT(41,max_ln&-6+i&);"Frequence=";spl_frq%(spl&);
+        PRINT AT(61,max_ln&-6+i&);"Duration=";ROUND(spl_lgt%(spl&)/spl_frq%(spl&),5);
+      ELSE
+        IF curr_spl&=i&
+          PRINT AT(1,max_ln&-6+i&);"*#";i&+1;": Name: none";
+        ELSE
+          PRINT AT(1,max_ln&-6+i&);" #";i&+1;": Name: none";
+        ENDIF
+        PRINT AT(21,max_ln&-6+i&);"Length=0";
+        PRINT AT(41,max_ln&-6+i&);"Frequence=0";
+        PRINT AT(61,max_ln&-6+i&);"Duration=0";
+      ENDIF
+    NEXT i&
+    '
+    PRINT AT(1,max_ln&-4);"FFT width=";point_nb&;
+    PRINT AT(21,max_ln&-4);"Free mem=";4*(spl_buf_lgt%-spl_tot_lgt%);
+    PRINT AT(41,max_ln&-4);"Used mem=";4*spl_tot_lgt%;
+    '
+    IF vox_fg!
+      PRINT AT(61,max_ln&-4);"VOX available";
+    ELSE
+      PRINT AT(61,max_ln&-4);"VOX not available";
+    ENDIF
+    PRINT AT(1,max_ln&-3);"VOX version: ";vox_ver$;
+    PRINT AT(21,max_ln&-3);"VOX comp: ";vox_comp$;
+    '
+    IF dsp_fg!
+      PRINT AT(41,max_ln&-3);"DSP available";
+    ELSE
+      PRINT AT(41,max_ln&-3);"DSP not available";
+    ENDIF
+    IF asm_fg!
+      PRINT AT(61,max_ln&-3);"ASM available";
+    ELSE
+      PRINT AT(61,max_ln&-3);"ASM not available";
+    ENDIF
+    '
+    '
+    ' Ligne de commandes.
+    PRINT AT(1,max_ln&-2);STRING$(80,"-");
+    PRINT AT(32,max_ln&-2);"Command line";
+    @clr_info
+    '
+    '
+    PRINT AT(1,max_ln&);STRING$(80,"*");
+  ENDIF
+RETURN
+'
+' Selection des samples.
+> FUNCTION select_spl(default&)
+sav_fg!=view_fg!
+view_fg!=FALSE
+'
+IF default&>=max_spl_nb&
+  spl&=max_spl_nb&-1
+ELSE
+  spl&=default&
+ENDIF
+'
+'
+' Affichage des informations.
+CLS
+PRINT AT(1,max_ln&-24);STRING$(80,"*");
+PRINT CHR$(27)+"p";
+PRINT AT(1,max_ln&-23);SPACE$(25)+"S A M P L E   S E L E C T O R"+SPACE$(26);
+PRINT CHR$(27)+"q";
+PRINT AT(1,max_ln&-22);"(ESC)Cancel     (RETURN)Select  (ARROWS)Choose  ";
+PRINT "(L)Load         (S)Save         ";
+PRINT AT(1,max_ln&-21);"(F)Change freq  (N)Change name  (SPACE)Play     ";
+PRINT "(DEL)Delete     (C)Copy         ";
+'
+PRINT AT(1,max_ln&-20);STRING$(34,"-");"Samples list";STRING$(34,"-");
+PRINT CHR$(27)+"p";
+PRINT AT(1,max_ln&-19);"Nø |  Name   | Length  |Duration |Freq |";
+PRINT "Nø |  Name   | Length  |Duration |Freq  ";
+PRINT CHR$(27)+"q";
+'
+PRINT AT(1,max_ln&-2);STRING$(34,"-");"Command line";STRING$(34,"-");
+PRINT AT(1,max_ln&);STRING$(80,"*");
+'
+@show_spl_lst(spl&) ! Affichage des infos sur les samples.
+'
+'
+' Boucle clavier.
+DO
+  key$=UPPER$(CHR$(INP(2)))
+  @show_spl_inf(spl&,FALSE)
+  SELECT key$
+    '
+  CASE 13 ! Return: selection.
+    view_fg!=sav_fg!
+    RETURN spl&
+  CASE 27 ! ESC: cancel.
+    view_fg!=sav_fg!
+    RETURN default&
+    '
+  CASE " " ! Joue le sample.
+    @play(spl_frq%(spl&),spl_addr%(spl&),spl_lgt%(spl&),FALSE)
+  CASE "L" ! Charge un sample.
+    @load_spl(spl&)
+  CASE "S" ! Sauve un sample.
+    @save_spl(spl&)
+  CASE 127 ! Delete.
+    @delete_spl(spl&)
+  CASE "F"
+    '
+  CASE 203,205,208,200
+    SELECT key$
+    CASE 203 ! Fleche de gauche.
+      SUB spl&,spl_lst_ln_nb&
+    CASE 205 ! Fleche de droite.
+      ADD spl&,spl_lst_ln_nb&
+    CASE 208 ! Fleche du bas.
+      INC spl&
+    CASE 200 ! Fleche du haut.
+      DEC spl&
+    ENDSELECT
+    '
+    IF spl&<0
+      spl&=0
+    ENDIF
+    IF spl&>=max_spl_nb&
+      spl&=max_spl_nb&-1
+    ENDIF
+    '
+    c&=spl& DIV spl_lst_ln_nb&+1
+    IF c&<spl_lst_col&
+      DEC spl_lst_col&
+      @show_spl_lst(spl&)
+    ELSE IF c&>(spl_lst_col&+1)
+      INC spl_lst_col&
+      @show_spl_lst(spl&)
+    ENDIF
+    '
+  ENDSELECT
+  @show_spl_inf(spl&,TRUE)
+LOOP
+ENDFUNC
+> PROCEDURE show_spl_lst(spl&)
+LOCAL i&,first&,last&
+'
+' Liste des samples.
+first&=(spl_lst_col&-1)*spl_lst_ln_nb&
+last&=first&+spl_lst_col_nb&*spl_lst_ln_nb&-1
+FOR i&=first& TO last&
+  IF i&=spl&
+    @show_spl_inf(i&,TRUE)
+  ELSE
+    @show_spl_inf(i&,FALSE)
+  ENDIF
+NEXT i&
+RETURN
+> PROCEDURE show_spl_inf(spl&,fg!)
+LOCAL c&,col&,ln&
+'
+c&=spl&/spl_lst_ln_nb& ! Num‚ro de la colonne.
+'
+IF (c&+1=spl_lst_col&) OR (c&+1=spl_lst_col&+1) ! Le sample doit se trouver sur l'une des 2 colonnes affich‚es.
+  col&=40*(c&+1-spl_lst_col&)+1 ! Num‚ro de la colonne d'affichage.
+  ln&=spl_lst_y&+(spl& MOD spl_lst_ln_nb&) ! Num‚ro de la ligne.
+  '
+  '
+  IF fg!
+    PRINT CHR$(27)+"p"; ! Active inverse video.
+  ENDIF
+  '
+  PRINT AT(col&,ln&);STRING$(40," ");
+  IF spl&<max_spl_nb&
+    PRINT AT(col&,ln&);spl&; ! Affiche le num‚ro sample.
+    IF spl_addr%(spl&)>0
+      PRINT AT(col&+4,ln&);spl_name$(spl&); ! Nom.
+      PRINT AT(col&+14,ln&);spl_lgt%(spl&); ! Longueur.
+      PRINT AT(col&+24,ln&);ROUND(spl_lgt%(spl&)/spl_frq%(spl&),3); ! Dur‚e.
+      PRINT AT(col&+34,ln&);spl_frq%(spl&); ! Fr‚quence.
+    ENDIF
+  ENDIF
+  '
+  IF fg!
+    PRINT CHR$(27)+"q"; ! Desactive inverse video.
+  ENDIF
+  '
+  '
+ENDIF
+RETURN
+'
+> PROCEDURE show_info(a$) ! Affichage d'un texte sur la ligne d'information.
+IF view_fg!=FALSE
+  PRINT AT(1,max_ln&-1);CHR$(27)+"l>"+a$;
+ENDIF
+RETURN
+> PROCEDURE clr_info ! Efface la ligne d'information.
+PRINT AT(1,max_ln&-1);CHR$(27)+"l";">";
+RETURN
+> FUNCTION enter(a$) ! Entr‚e d'une donn‚e au clavier.
+fg!=view_fg!
+'
+IF fg!=TRUE
+view_fg!=FALSE
+@set_view
+@menu
+ENDIF
+'
+PRINT AT(1,max_ln&-1);CHR$(27)+"l";">";a$;
+INPUT n
+'
+IF fg!=TRUE
+view_fg!=TRUE
+@set_view
+@show_all
+ENDIF
+'
+RETURN n
+ENDFUNC
+'
+' *************************************************************
+'                       Routines disques.
+' *************************************************************
+> PROCEDURE load_spl(spl&) ! Chargement d'un sample au format AVR.
+LOCAL flgt%,fname$,src_addr%,dst_addr%,lgt%,f%,rest%,stereo!,rez&
+LOCAL sname$,slgt%,sfrq%
+'
+@restore_scr
+SHOWM
+fname$=@fileselect$("Choose sample name",spl_path$+"*.*",spl_default_name$)
+HIDEM
+@set_scr
+'
+IF EXIST(fname$)
+'
+OPEN "i",#1,fname$ ! Ouvre le fichier
+flgt%=LOF(#1)
+'
+' Chargement d'un ‚ventuel header AVR.
+header%=MALLOC(128)
+BGET #1,header%,128
+'
+IF MKL$(LONG{header%})="2BIT" AND (flgt%-128)>4 ! S'il n'y a pas ce texte, ce n'est pas un fichier AVR.
+  '
+  ' -------------------------------------------------------------------
+  '                           Cas d'un fichier AVR
+  ' -------------------------------------------------------------------
+  flgt%=flgt%-128
+  '
+  ' R‚solution en bits par sample.
+  IF CARD{header%+14}=16
+    rez&=16
+  ELSE
+    rez&=8
+  ENDIF
+  '
+  ' Longueur, en samples, du sample donn‚e dans le header.
+  slgt%=CARD{header%+26}
+  '
+  ' Calcul de la longueur en octets du sample avec les donn‚es du header.
+  IF CARD{header%+12}=0 ! NumVoices.
+    bps&=rez&/8 ! Nombre d'octets par sample.
+    lgt%=bps&*slgt%
+    stereo!=FALSE
+  ELSE
+    bps&=2*rez&/8 ! Nombre d'octets par sample.
+    lgt%=bps&*slgt%
+    stereo!=TRUE
+  ENDIF
+  '
+  ' V‚rifie que la longueur du fichier correspond … celle calcul‚e avec le header.
+  IF lgt%<>flgt%
+    slgt%=flgt%/bps&
+  ENDIF
+  '
+  ' D‚termination de la fr‚quence.
+  f%=LONG{header%+22}
+  IF (f% AND &HFFFFFF)=0
+    SELECT BYTE{header%+22}
+    CASE 0
+      sfrq%=5485
+    CASE 1
+      sfrq%=8084
+    CASE 2
+      sfrq%=10971
+    CASE 3
+      sfrq%=16168
+    CASE 4
+      sfrq%=21942
+    CASE 5
+      sfrq%=32336
+    CASE 6
+      sfrq%=43884
+    CASE 7
+      sfrq%=47261
+    ENDSELECT
+  ELSE
+    sfrq%=f% AND &HFFFFFF
+  ENDIF
+  '
+ELSE
+  ' -------------------------------------------------------------------
+  '                           Cas d'un fichier sans format.
+  ' -------------------------------------------------------------------
+  SEEK #1,0 ! On se remet au d‚but du fichier.
+  stereo!=FALSE ! C'est par d‚faut un sample mono,
+  rez&=8 ! et 8 bits.
+  bps&=1 ! 1 octet par sample.
+  sfrq%=12500
+  slgt%=flgt%/bps&
+ENDIF
+'
+'
+' -------------------------------------------------------------------
+' Fixe certains paramŠtres.
+' -------------------------------------------------------------------
+~MFREE(header%)
+'
+spl_default_name$=MID$(fname$,RINSTR(fname$,"\")+1)
+spl_path$=LEFT$(fname$,RINSTR(fname$,"\"))
+sname$=LEFT$(spl_default_name$,RINSTR(spl_default_name$,".")-1)
+'
+'
+' -------------------------------------------------------------------
+' Chargement du sample et conversion au format 16 bits st‚r‚o.
+' -------------------------------------------------------------------
+@create_spl(spl&,sname$,slgt%,sfrq%) ! Cr‚ation du sample.
+'
+' Si le sample a pu etre cr‚‚, on charge ses donn‚es.
+IF spl_addr%(spl&)>0 ! Est-ce que le sample a pu etre cr‚‚?
+  '
+  IF flgt%>bps&*spl_lgt%(spl&)
+    flgt%=bps&*spl_lgt%(spl&) ! Longueur … charger.
+  ENDIF
+  n&=(flgt%+disk_buf_lgt%-1)/disk_buf_lgt% ! Par excŠs.
+  rest%=flgt%
+  dst_addr%=spl_addr%(spl&)
+  '
+  FOR i&=1 TO n&
+    @show_info("Loading sample: "+STR$(100-100*rest%/flgt%,2)+"%...")
+    IF rest%>=disk_buf_lgt%
+      lgt%=disk_buf_lgt%
+    ELSE
+      lgt%=rest%
+    ENDIF
+    BGET #1,disk_buf%,lgt%
+    '
+    ' Conversion au format 16 bits stereo.
+    IF rez&=16
+      IF stereo!
+        BMOVE disk_buf%,dst_addr%,lgt%
+        dst_addr%=dst_addr%+disk_buf_lgt% ! *4/4=*1.
+      ELSE
+        @cv_16m_2_16s(disk_buf%,dst_addr%,lgt%)
+        dst_addr%=dst_addr%+2*disk_buf_lgt% ! *4/2=*2.
+      ENDIF
+    ELSE
+      IF stereo!
+        @cv_8s_2_16s(disk_buf%,dst_addr%,lgt%)
+        dst_addr%=dst_addr%+2*disk_buf_lgt% ! *4/2=*2.
+      ELSE
+        @cv_8m_2_16s(disk_buf%,dst_addr%,lgt%)
+        dst_addr%=dst_addr%+4*disk_buf_lgt% ! *4/1=*4.
+      ENDIF
+    ENDIF
+    '
+    rest%=rest%-disk_buf_lgt%
+  NEXT i&
+  '
+ENDIF
+'
+'
+CLOSE #1
+'
+ENDIF
+@clr_info
+RETURN
+> PROCEDURE save_spl(spl&) ! Sauvegarde du sample.
+LOCAL fname$,flgt%
+'
+IF spl_addr%(spl&)>0 AND spl_lgt%(spl&)>0
+'
+@restore_scr
+SHOWM
+fname$=@fileselect$("Choose sample name",spl_path$+mask$,spl_default_name$)
+HIDEM
+@set_scr
+'
+IF fname$<>""
+  @show_info("Saving sample...")
+  OPEN "O",#1,fname$
+  BPUT #1,spl_addr%(spl&),4*spl_lgt%(spl&)
+  CLOSE #1
+ENDIF
+'
+ENDIF
+@clr_info
+RETURN
+> FUNCTION fileselect$(a$,pfad$,file$)
+LOCAL f&,b&
+'
+~WIND_UPDATE(1)                           ! BEG_UPDATE
+'
+IF INT{ADD({ADD(GB,4)},0)}<&H140          ! Altes GEM/TOS...
+f&=FSEL_INPUT(pfad$,file$,b&)
+'
+ELSE                                      ! Sonst mit Titelzeile...
+f&=@fsel_exinput(a$,pfad$,file$,b&)
+ENDIF
+'
+~WIND_UPDATE(0)                           ! END_UPDATE
+'
+IF f&=0 OR b&=0                           ! Abbruch oder Error...
+RETURN ""
+ENDIF
+'
+RETURN LEFT$(pfad$,RINSTR(pfad$,"\"))+file$
+ENDFUNC
+> FUNCTION fsel_exinput(a$,VAR pfad$,file$,b&)
+$F%
+'
+a$=a$+CHR$(0)         ! Titel
+pfad$=pfad$+CHR$(0)+SPACE$(400)
+file$=file$+CHR$(0)+SPACE$(150)
+'
+GCONTRL(0)=91
+GCONTRL(1)=0
+GCONTRL(2)=2
+GCONTRL(3)=3
+GCONTRL(4)=0
+'
+ADDRIN(0)=V:pfad$     ! Pfad
+ADDRIN(1)=V:file$     ! Datei
+ADDRIN(2)=V:a$        ! Titel
+'
+GEMSYS
+'
+pfad$=CHAR{V:pfad$}   ! Pfad
+file$=CHAR{V:file$}   ! Dateiname
+'
+b&=GINTOUT(1)         ! Abbruch=0, OK=1
+'
+RETURN GINTOUT(0)     ! Fehlercode
+ENDFUNC
+'
+> PROCEDURE delete_spl(spl&) ! Efface un sample.
+LOCAL src%,dst%,lgt%
+'
+IF spl_addr%(spl&)>0 ! Seulement s'il existe d‚j… un sample.
+src%=spl_addr%(spl&)+4*spl_lgt%(spl&)
+dst%=spl_addr%(spl&)
+lgt%=4*spl_tot_lgt%-(spl_addr%(spl&)-spl_buf%+4*spl_lgt%(spl&))
+BMOVE src%,dst%,lgt%
+spl_tot_lgt%=spl_tot_lgt%-spl_lgt%(spl&)
+FOR i&=0 TO max_spl_nb&-1
+IF spl_addr%(i&)>spl_addr%(spl&)
+spl_addr%(i&)=spl_addr%(i&)-4*spl_lgt%(spl&)
+ENDIF
+NEXT i&
+ENDIF
+'
+IF spl_tot_lgt%<0 ! Si la longueur totale est inf‚rieure … 0, il y a 1 erreur.
+@end
+ENDIF
+'
+spl_name$(spl&)=""
+spl_addr%(spl&)=0
+spl_lgt%(spl&)=0
+spl_frq%(spl&)=0
+'
+FOR i&=0 TO 1
+IF spl&=shown_spl&(i&)
+fft_marker_l%(i&)=0 ! Borne gauche sur le signal pour le calcul.
+fft_marker_r%(i&)=point_nb&-1 ! Borne droite.
+signal_pos%(i&)=0 ! Position de la visualisation.
+signal_shown_pos%(i&)=0 ! Position affich‚e.
+@clr_spec(i&)
+ENDIF
+NEXT i&
+RETURN
+> PROCEDURE create_spl(spl&,name$,lgt%,frq%)
+@delete_spl(spl&)
+'
+IF lgt%<point_nb&
+lgt%=point_nb&
+ENDIF
+'
+' V‚rifie s'il reste assez de m‚moire.
+IF lgt%>(spl_buf_lgt%-spl_tot_lgt%)
+spl_lgt%(spl&)=spl_buf_lgt%-spl_tot_lgt%
+ELSE
+spl_lgt%(spl&)=lgt%
+ENDIF
+'
+IF spl_lgt%(spl&)>=point_nb&
+spl_name$(spl&)=name$
+spl_addr%(spl&)=spl_buf%+4*spl_tot_lgt%
+spl_frq%(spl&)=frq%
+spl_tot_lgt%=spl_tot_lgt%+spl_lgt%(spl&)
+ELSE
+spl_name$(spl&)=""
+spl_addr%(spl&)=0
+spl_lgt%(spl&)=0
+spl_frq%(spl&)=0
+ENDIF
+RETURN
+> PROCEDURE cv_8m_2_16s(src_addr%,dst_addr%,lgt%) ! Conversion d'un sample 8 bits mono en sample 16 bits st‚r‚o.
+LOCAL a&,i%,n%
+'
+IF asm_fg!
+@asm_cv_8m_2_16s(src_addr%,dst_addr%,lgt%)
+ELSE
+n%=0
+FOR i%=0 TO lgt%-1
+a&=SHL&(BYTE{src_addr%+i%},8)
+CARD{dst_addr%+n%}=a&
+CARD{dst_addr%+n%+2}=a&
+ADD n%,4
+NEXT i%
+ENDIF
+RETURN
+> PROCEDURE cv_8s_2_16s(src_addr%,dst_addr%,lgt%) ! Conversion d'un sample 8 bits st‚r‚o en sample 16 bits st‚r‚o.
+LOCAL a&,i%,m%,n%
+'
+IF asm_fg!
+@asm_cv_8s_2_16s(src_addr%,dst_addr%,lgt%)
+ELSE
+m%=0
+n%=0
+FOR i%=0 TO lgt%-1
+CARD{dst_addr%+n%}=SHL&(BYTE{src_addr%+m%},8)
+CARD{dst_addr%+n%+2}=SHL&(BYTE{src_addr%+m%+1},8)
+ADD m%,2
+ADD n%,4
+NEXT i%
+ENDIF
+RETURN
+> PROCEDURE cv_16m_2_16s(src_addr%,dst_addr%,lgt%) ! Conversion d'un sample 8 bits st‚r‚o en sample 16 bits st‚r‚o.
+LOCAL a&,i%,m%,n%
+'
+IF asm_fg!
+@asm_cv_16m_2_16s(src_addr%,dst_addr%,lgt%)
+ELSE
+m%=0
+n%=0
+FOR i%=0 TO lgt%-1
+a&=CARD{src_addr%+m%}
+CARD{dst_addr%+n%}=a&
+CARD{dst_addr%+n%+2}=a&
+ADD m%,2
+ADD n%,4
+NEXT i%
+ENDIF
+RETURN
+'
+' *************************************************************
+'                       Routines ‚cran.
+' *************************************************************
+> PROCEDURE save_scr
+IF use_scr!=TRUE
+ERASE sav_st_pal&(),sav_falc_pal%()
+DIM sav_st_pal&(15),sav_falc_pal%(255)
+sav_physic_scr%=XBIOS(2)
+sav_logic_scr%=XBIOS(3)
+sav_scr_mode%=XBIOS(88,-1) ! On sauve l'ancien mode
+stack%=GEMDOS(32,L:0)
+BMOVE &HFF8240,V:sav_st_pal&(0),16*2
+BMOVE &HFF9800,V:sav_falc_pal%(0),256*4
+~GEMDOS(32,L:stack%)
+ENDIF
+RETURN
+> PROCEDURE set_scr
+IF use_scr!=TRUE AND chg_scr!=FALSE
+chg_scr!=TRUE
+~XBIOS(5,L:logic_scr%,L:physic_scr%,-1)
+~XBIOS(88,scr_mode&)
+SPOKE &HFF8201,SHR(physic_scr%,16) AND &HFF
+SPOKE &HFF8203,SHR(physic_scr%,8) AND &HFF
+SPOKE &HFF820D,physic_scr% AND &HFF
+SLPOKE &HFF9800,0 ! Borders noirs.
+ENDIF
+RETURN
+> PROCEDURE restore_scr
+IF use_scr!=TRUE AND chg_scr!=TRUE
+chg_scr!=FALSE
+~XBIOS(5,L:sav_logic_scr%,L:sav_physic_scr%,-1)
+~XBIOS(88,sav_scr_mode%)
+stack%=GEMDOS(32,L:0)
+POKE &HFF8201,SHR(sav_physic_scr%,16) AND &HFF
+POKE &HFF8203,SHR(sav_physic_scr%,8) AND &HFF
+POKE &HFF820D,sav_physic_scr% AND &HFF
+BMOVE V:sav_st_pal&(0),&HFF8240,16*2
+BMOVE V:sav_falc_pal%(0),&HFF9800,256*4
+~GEMDOS(32,L:stack%)
+ENDIF
+RETURN
+> PROCEDURE init_scr
+LOCAL bps&,col80!,vga!,pal!,overscan!,stmodes!,vertflag!
+'
+IF use_scr!=TRUE
+'
+' LibŠre l'‚cran si cela n'a pas ‚t‚ fait.
+IF scr_inited!=TRUE
+@free_scr
+ELSE
+chg_scr!=FALSE
+ENDIF
+scr_inited!=TRUE
+'
+' Recherche de la r‚solution donn‚e par scr_mode&.
+bps&=2^(scr_mode& AND &H7) ! Nombre de bits par pixel.
+col80!=BTST(scr_mode&,3)
+vga!=BTST(scr_mode&,4)
+pal!=BTST(scr_mode&,5)
+overscan!=BTST(scr_mode&,6)
+stmodes!=BTST(scr_mode&,7)
+vertflag!=BTST(scr_mode&,8)
+monitor&=XBIOS(89) ! VgetMonitor().
+'
+normal_xrez&=320
+'
+IF col80!=TRUE
+normal_xrez&=640 ! 80 columns.
+ENDIF
+'
+IF vga!=TRUE
+' Mode VGA.
+IF stmodes!=TRUE OR overscan!=TRUE OR monitor&<>2
+ERROR 7
+ENDIF
+IF vertflag!=TRUE
+normal_yrez&=240 ! Line doubling.
+ELSE
+normal_yrez&=480
+ENDIF
+ELSE
+' Mode t‚l‚vision/moniteur.
+IF vertflag!=TRUE
+normal_yrez&=200
+ELSE
+normal_yrez&=400
+ENDIF
+'
+' Modes compatibles.
+IF stmodes!=TRUE
+SELECT scr_mode& AND &X111011111
+CASE &X110001000 ! ST high (monochrome).
+CASE &X10001001 ! ST medium.
+CASE &X10000010 ! ST low.
+DEFAULT
+  ERROR 7
+ENDSELECT
+ELSE
+IF overscan!=TRUE ! Mode overscan.
+  MUL normal_xrez&,1.2
+  MUL normal_yrez&,1.2
+ENDIF
+ENDIF
+'
+ENDIF
+'
+xrez&=normal_xrez&
+yrez&=normal_yrez&
+'
+scr_ln_size%=xrez&*bps&/8 ! Taille d'une ligne en octets.
+scr_size%=scr_ln_size%*yrez& ! Taille d'un ‚cran en octets.
+screens%=MALLOC(scr_size%*2) ! R‚serve m‚moire pour 2 ‚crans.
+physic_scr%=screens%
+'  logic_scr%=screens%+scr_size%
+logic_scr%=screens%
+ENDIF
+RETURN
+> PROCEDURE free_scr
+IF use_scr!=TRUE AND scr_inited!=TRUE
+@restore_scr
+~MFREE(screens%)
+scr_inited!=FALSE
+ENDIF
+RETURN
+> PROCEDURE clr_scr
+LOCAL addr%,i&,j&
+addr%=physic_scr%
+FOR j&=0 TO xrez&-1
+FOR i&=0 TO scr_ln_size% STEP 4
+LONG{addr%}=0
+ADD addr%,4
+NEXT i&
+NEXT j&
+RETURN
+'
+' *************************************************************
+'                       Routines assembleur.
+' *************************************************************
+> PROCEDURE init_asm
+LOCAL flgt%
+'
+asm_filename$=prg_path$+"ANALYSIS.BIN" ! Nom du fichier assembleur.
+asm_fg!=FALSE
+'
+' R‚servation de la m‚moire.
+IF EXIST(asm_filename$)
+@show_info("Loading "+asm_filename$+"...")
+OPEN "i",#1,asm_filename$
+flgt%=LOF(#1)
+asm_buf%=MALLOC(flgt%)
+IF asm_buf%=<0
+@show_info("Not enough memory: assembler routine not available.")
+~INP(2)
+ELSE
+BGET #1,asm_buf%,flgt%
+asm_fg!=TRUE ! OK.
+ENDIF
+CLOSE #1
+ELSE
+@show_info("Can't load "+asm_filename$+": assembler routine not available.")
+~INP(2)
+ENDIF
+'
+RETURN
+> PROCEDURE free_asm
+'
+~MFREE(asm_buf%)
+RETURN
+> PROCEDURE asm_calc_fft(signal_addr%,cspl&)
+LOCAL spec_addr%,window_addr%,fg!,stack%
+IF asm_fg!
+spec_addr%=VARPTR(px%(0,cspl&))
+window_addr%=0
+fg!=FALSE
+stack%=GEMDOS(32,L:0)
+ptot%(cspl&)=C:asm_buf%(W:0,L:signal_addr%,L:spec_addr%,L:window_addr%,W:fg!)
+~GEMDOS(32,L:stack%)
+ENDIF
+RETURN
+> PROCEDURE asm_draw_signal(cspl&)
+LOCAL scr_addr%,signal_addr%,l_limit%,r_limit%
+LOCAL disp_x&,disp_y&,disp_w&,zoom_v&,accuracy&
+'
+IF asm_fg!
+scr_addr%=XBIOS(2)
+signal_addr%=spl_addr%(shown_spl&(cspl&))
+l_limit%=signal_shown_pos%(cspl&)
+r_limit%=signal_shown_pos%(cspl&)+spl_lgt%(shown_spl&(cspl&))/signal_zoom&(cspl&)-1
+disp_x&=signal_x&
+disp_y&=signal_wind_y&(cspl&)+signal_y&
+disp_w&=signal_w&
+zoom_v&=10 ! Amplitude/1024 (2^10=1024).
+accuracy&=signal_accuracy&(cspl&) ! Nombre de point par colonne=2^accuracy&.
+~C:asm_buf%(W:1,L:scr_addr%,L:signal_addr%,L:l_limit%,L:r_limit%,W:disp_x&,W:disp_y&,W:disp_w&,W:zoom_v&,W:accuracy&)
+ENDIF
+RETURN
+> PROCEDURE asm_draw_spec(cspl&)
+LOCAL scr_addr%,spec_addr%
+LOCAL disp_x&,disp_y&,disp_h&,zoom&
+IF asm_fg!
+scr_addr%=XBIOS(2)
+spec_addr%=VARPTR(px%(0,cspl&))
+disp_x&=spec_x&
+disp_y&=spec_wind_y&(cspl&)+spec_y&
+disp_h&=spec_h&
+zoom&=spec_zoom&(cspl&)
+~C:asm_buf%(W:2,L:scr_addr%,L:spec_addr%,W:disp_x&,W:disp_y&,W:disp_h&,W:zoom&)
+ENDIF
+RETURN
+> PROCEDURE asm_cls
+LOCAL scr_addr%,col%
+IF asm_fg!
+scr_addr%=XBIOS(2)
+col%=0
+~C:asm_buf%(W:3,L:scr_addr%,L:col%)
+ENDIF
+RETURN
+> PROCEDURE asm_fill_area(x1&,y1&,x2&,y2&)
+LOCAL scr_addr%,col%
+IF asm_fg!
+scr_addr%=XBIOS(2)
+col%=0
+~C:asm_buf%(W:4,L:scr_addr%,W:x1&,W:y1&,W:x2&,W:y2&,L:col%)
+ENDIF
+RETURN
+> PROCEDURE asm_line(x1&,y1&,x2&,y2&)
+LOCAL scr_addr%
+LOCAL col&,clip_xmin&,clip_xmax&,clip_ymin&,clip_ymax&
+IF asm_fg!
+scr_addr%=XBIOS(2)
+xmin_clip&=0
+~C:asm_buf%(W:5,L:scr_addr%,W:x1&,W:y1&,W:x2&,W:y2&,W:col&,W:clip_xmin&,W:clip_xmax&,W:clip_ymin&,W:clip_ymax&)
+ENDIF
+RETURN
+> PROCEDURE asm_cv_8m_2_16s(src_addr%,dst_addr%,lgt%)
+IF asm_fg!
+~C:asm_buf%(W:6,L:src_addr%,L:dst_addr%,L:lgt%)
+ENDIF
+RETURN
+> PROCEDURE asm_cv_8s_2_16s(src_addr%,dst_addr%,lgt%)
+IF asm_fg!
+~C:asm_buf%(W:7,L:src_addr%,L:dst_addr%,L:lgt%)
+ENDIF
+RETURN
+> PROCEDURE asm_cv_16m_2_16s(src_addr%,dst_addr%,lgt%)
+IF asm_fg!
+~C:asm_buf%(W:8,L:src_addr%,L:dst_addr%,L:lgt%)
+ENDIF
+RETURN
+'
+' *************************************************************
+'                       Routines VOX.
+' *************************************************************
+> PROCEDURE speak
+LOCAL a$,sname$,slgt%,spl&
+'
+IF vox_fg!
+'
+spl&=shown_spl&(curr_spl&) ! Pour plus de clart‚.
+'
+@show_info("Processing...")
+CARD{vox_pb%+vox_pb_frq&}=vox_voice_frq%
+CARD{vox_pb%+vox_pb_voice_frq&}=vox_voice_frq%
+CARD{vox_pb%+vox_pb_rate&}=vox_rate%
+CARD{vox_pb%+vox_pb_tone&}=vox_tone%
+'
+IF vox_txt_cv!=FALSE
+a$=" "+vox_sentence$+CHR$(0)
+LONG{vox_pb%+vox_pb_txt_addr&}=VARPTR(a$) ! Adresse du texte.
+IF @vox_call(0)=0 ! Conversion du texte en phonŠmes.
+vox_txt_cv!=TRUE
+ENDIF
+vox_phon_txt$=CHAR{vox_phon_txt_addr%}
+ELSE
+CHAR{vox_phon_txt_addr%}=vox_phon_txt$
+ENDIF
+'
+@delete_spl(spl&)
+IF (vox_txt_cv!=TRUE) AND (LEN(vox_phon_txt$)>0)
+'
+IF @vox_call(1)=0
+'
+IF @vox_call(2)=0
+  sname$=UPPER$(LEFT$(vox_sentence$,8)) ! Nom du sample.
+  slgt%=LONG{vox_inf%+vox_inf_spl_lgt&} ! Longueur du sample.
+  @create_spl(spl&,sname$,slgt%,vox_voice_frq%)
+  IF spl_addr%(spl&)>0
+    LONG{vox_pb%+vox_pb_spl_addr&}=spl_addr%(spl&)
+    ~@vox_call(3) ! SynthŠse de la voix.
+  ENDIF
+ENDIF
+'
+ENDIF
+'
+ENDIF
+'
+ENDIF
+RETURN
+> PROCEDURE set_form_coef
+IF vox_fg!
+LONG{vox_pb%+vox_pb_form1&}=&H10000*vox_c1 ! Coef 1.
+LONG{vox_pb%+vox_pb_form2&}=&H10000*vox_c2 ! Coef 2.
+LONG{vox_pb%+vox_pb_form3&}=&H10000*vox_c3 ! Coef 3.
+~@vox_call(4)
+ENDIF
+RETURN
+> FUNCTION vox_call(n&) ! Appel une routine de VOX.
+LOCAL verr%
+'
+IF vox_fg!
+verr%=C:vox_call_addr%(W:n&,L:vox_pb%)
+SELECT verr%
+CASE 0
+vox_err$="None."
+CASE 1
+vox_err$="Unknown routine."
+CASE 2
+vox_err$="Phoneme data buffer too small."
+CASE 3
+vox_err$="Bad phoneme text."
+CASE 4
+vox_err$="???."
+DEFAULT
+vox_err$="Unknown error."
+ENDSELECT
+RETURN verr%
+ELSE
+RETURN -1
+ENDIF
+ENDFUNC
+> PROCEDURE vox_struct ! D‚finition des structures.
+' D‚finition de la structure du bloc de paramŠtres.
+vox_pb_fgs&=0
+vox_pb_txt_addr&=4
+vox_pb_phon_txt_addr&=8
+vox_pb_phon_dat_addr&=12
+vox_pb_snd_addr&=16
+vox_pb_spl_addr&=20
+vox_pb_dat_size&=24
+vox_pb_frq&=28
+vox_pb_voice_frq&=30
+vox_pb_rate&=32
+vox_pb_tone&=34
+vox_pb_form1&=36
+vox_pb_form2&=40
+vox_pb_form3&=44
+vox_pb_sizeof&=48
+'
+'
+' D‚finition de la structure du bloc d'information.
+vox_inf_version&=0
+vox_inf_comp&=4
+vox_inf_fgs&=8
+vox_inf_call_addr&=12
+vox_inf_dat_lgt&=16
+vox_inf_snd_lgt&=20
+vox_inf_spl_lgt&=24
+vox_inf_dat_nb&=28
+vox_inf_snd_nb&=30
+'
+vox_inf_frq&=32
+vox_inf_voice_frq&=34
+vox_inf_rate&=36
+vox_inf_tone&=38
+'
+RETURN
+> PROCEDURE init_vox
+@vox_struct
+'
+vox_fg!=FALSE
+'
+' Recherche du cookie de VOX.
+vox_inf%=@get_cookie("VOX ")
+IF vox_inf%>0
+'
+' Verifie si l'on peut utiliser cette version.
+vox_ver$=MKL$(LONG{vox_inf%+vox_inf_version&})
+vox_ver$=LEFT$(vox_ver$,2)+"."+RIGHT$(vox_ver$,2)
+vox_comp$=MKL$(LONG{vox_inf%+vox_inf_comp&})
+vox_comp$=LEFT$(vox_comp$,2)+"."+RIGHT$(vox_comp$,2)
+IF VAL(vox_comp$)>1.2
+vox_err$="Cannot handle this version of VOX !"
+ELSE
+vox_call_addr%=LONG{vox_inf%+vox_inf_call_addr&} ! Adresse d'appel.
+'
+vox_buf%=MALLOC(100000)
+IF vox_buf%>0
+vox_pb%=vox_buf%
+vox_phon_txt_addr%=vox_buf%+vox_pb_sizeof&
+vox_dat_lgt%=2048*16
+vox_dat_addr%=vox_phon_txt_addr%+2048
+vox_snd_addr%=vox_dat_addr%+vox_dat_lgt%
+'
+LONG{vox_pb%+vox_pb_fgs&}=1 ! Flags: formants modifies.
+LONG{vox_pb%+vox_pb_phon_txt_addr&}=vox_phon_txt_addr% ! Adresse du texte des phonŠmes.
+LONG{vox_pb%+vox_pb_phon_dat_addr&}=vox_dat_addr% ! Adresse des donn‚es des phonŠmes.
+LONG{vox_pb%+vox_pb_dat_size&}=vox_dat_lgt% ! Longueur des donn‚es des phonŠmes.
+LONG{vox_pb%+vox_pb_snd_addr&}=vox_snd_addr%
+vox_fg!=TRUE
+vox_err$="None"
+ELSE
+vox_err$="Not enough memory !"
+ENDIF
+ENDIF
+'
+ELSE
+vox_err$="VOX not installed !"
+ENDIF
+'
+vox_c1=1
+vox_c2=1
+vox_c3=1
+vox_voice_frq%=22050
+vox_rate%=210
+vox_tone%=140
+vox_tone_lgt%=25
+vox_sentence$="Welcome to VOX"
+vox_phon_txt$=""
+vox_txt_cv!=FALSE
+@set_form_coef
+RETURN
+> PROCEDURE free_vox
+~MFREE(vox_buf%)
+RETURN
+'
+' *************************************************************
+'                       Section AUDIO.
+' *************************************************************
+> PROCEDURE play(frq%,start_addr%,lgt%,rept!)
+'
+@stop ! Stop.
+'
+IF start_addr%>0
+~@set_frq(frq%)
+'
+~@setbuffer(0,start_addr%,start_addr%+4*lgt%) ! Adresse de replay.
+IF rept!
+play_fg!=TRUE
+~@buffoper(3) ! Repeat play.
+ELSE
+play_fg!=FALSE
+~@buffoper(1) ! Play.
+ENDIF
+ENDIF
+RETURN
+> PROCEDURE record(frq%,start_addr%,lgt%,rept!)
+'
+@stop ! Stop.
+'
+IF start_addr%>0
+'    ~@set_frq(frq%)
+'
+~@setbuffer(1,start_addr%,start_addr%+4*lgt%) ! Adresse de record.
+~@buffoper(4) ! Record.
+ENDIF
+RETURN
+> PROCEDURE stop
+play_fg!=FALSE
+~@buffoper(0)
+RETURN
+> FUNCTION calc_frq(i&) ! Donne la frequence selon le prescale.
+RETURN sound_clock%/(256*(i&+1))
+ENDFUNC
+> FUNCTION set_frq(frq%)
+'
+SELECT frq%
+CASE 0 TO 9013 ! (8195+9834)/2-1=9013.
+i&=11 ! 8195 Hz.
+CASE 9014 TO 11062 ! (9834+12292)/2-1=11062.
+i&=9 ! 9834 Hz.
+CASE 11063 TO 14341 ! (12292+16390)/2-1=14341.
+i&=7 ! 12292 Hz.
+CASE 14342 TO 18028 ! (16390+19668)/2-1=18028.
+i&=5 ! 16390 Hz.
+CASE 18029 TO 22125 ! (19668+24585)/2-1=22125.
+i&=4 ! 19668 Hz.
+CASE 22126 TO 28731 ! (24585+32880)/2-1=28731.
+i&=3 ! 24585 Hz.
+CASE 28732 TO 41024 ! (32880+49170)/2-1=41024.
+i&=2 ! 32880 Hz.
+CASE 41025 TO 52000
+i&=1 ! 49170 Hz.
+DEFAULT
+i&=1
+ENDSELECT
+~@devconnect(0,&H8,0,i&,1) ! DMA_PLAY->DAC.
+~@devconnect(1,&H0,0,i&,1) ! DSP_XMIT->rien.
+~@devconnect(2,&H0,0,i&,1) ! EXT_INP->rien.
+~@devconnect(3,&H1,0,i&,1) ! ADC->DMA_Record.
+RETURN @calc_frq(i&)
+ENDFUNC
+> PROCEDURE set_atten
+~@soundcmd(0,SHL&(atten&,4))
+~@soundcmd(1,SHL&(atten&,4))
+RETURN
+> PROCEDURE set_gain
+~@soundcmd(2,SHL&(gain&,4))
+~@soundcmd(3,SHL&(gain&,4))
+RETURN
+> PROCEDURE set_speaker
+IF speaker_fg!=TRUE
+~XBIOS(29,W:&HBF) ! Offgibit().
+ELSE
+~XBIOS(30,W:&H40) ! Ongibit().
+ENDIF
+RETURN
+> PROCEDURE init_snd
+sound_clock%=25175000 ! Horloge interne de 25.175 MHz.
+~@locksnd
+~@sndstatus(1) ! Reset audio subsystem.
+~@setmode(1) ! 16 bits st‚r‚o.
+~@setbuffer(1,realt_buf%,realt_buf%+4*realt_buf_lgt%) ! Positionne record buffer.
+~@soundcmd(4,&H3) ! MATRIX+ADC->ADDER.
+~@soundcmd(5,&H0) ! MIC->ADC.
+~@set_frq(50000)
+@set_atten
+@set_gain
+@set_speaker
+RETURN
+> PROCEDURE free_snd
+'
+~@unlocksnd
+RETURN
+'
+' Audio subsystem.
+> FUNCTION locksnd
+RETURN XBIOS(128)
+ENDFUNC
+> FUNCTION unlocksnd
+RETURN XBIOS(129)
+ENDFUNC
+> FUNCTION soundcmd(mode%,data%)
+RETURN XBIOS(130,W:mode%,W:data%)
+ENDFUNC
+> FUNCTION setbuffer(mode%,begaddr%,endaddr%)
+RETURN XBIOS(131,W:mode%,L:begaddr%,L:endaddr%)
+ENDFUNC
+> FUNCTION setmode(mode%)
+RETURN XBIOS(132,W:mode%)
+ENDFUNC
+> FUNCTION settracks(playtrack%,rectracks%)
+RETURN XBIOS(133,W:playtracks%,W:rectracks%)
+ENDFUNC
+> FUNCTION setmontracks(track%)
+RETURN XBIOS(134,W:track%)
+ENDFUNC
+> FUNCTION setinterrupt(mode%,cause%)
+RETURN XBIOS(135,W:mode%,W:cause%)
+ENDFUNC
+> FUNCTION buffoper(mode%)
+RETURN XBIOS(136,W:mode%)
+ENDFUNC
+> FUNCTION gpio(mode%,data%)
+RETURN XBIOS(138,W:mode%,W:data%)
+ENDFUNC
+> FUNCTION devconnect(source%,dest%,clk%,prescale%,protocol%)
+RETURN XBIOS(139,W:source%,W:dest%,W:clk%,W:prescale%,W:protocol%)
+ENDFUNC
+> FUNCTION sndstatus(reset%)
+RETURN XBIOS(140,W:reset%)
+ENDFUNC
+> FUNCTION buffptr(pointer%)
+RETURN XBIOS(141,L:pointer%)
+ENDFUNC
+'
+' *************************************************************
+'                       Section DSP.
+' *************************************************************
+> PROCEDURE call_dsp(dsp_rout%)
+IF dsp_fg!
+~@dsp_blkunpacked(V:dsp_rout%,1,0,0)
+ENDIF
+RETURN
+> PROCEDURE wait_transmit_dsp
+DO
+LOOP UNTIL BTST(@dsp_hstat,1)=TRUE
+RETURN
+> PROCEDURE wait_receive_dsp
+DO
+LOOP UNTIL BTST(@dsp_hstat,0)=TRUE
+RETURN
+PROCEDURE init_dsp
+LOCAL xmem%,ymem%
+'
+dsp_filename$=prg_path$+"ANALYSIS.LOD"
+dsp_fg!=FALSE
+'
+IF NOT EXIST(dsp_filename$)
+@show_info("Cannot find DSP program ANALYSIS.LOD")
+~INP(2)
+ELSE
+'
+IF @dsp_lock
+@show_info("DSP is already in used.")
+~INP(2)
+ELSE
+'
+' R‚servation de la m‚moire.
+dsp_ability%=@dsp_requestuniqueability
+~@dsp_available(V:xmem%,V:ymem%)
+IF @dsp_reserve(xmem%,ymem%)
+@show_info("Can't reserve enough DSP RAM: DSP routine not available ")
+~INP(2)
+ELSE
+'
+dsp_buf%=MALLOC(16000)
+IF dsp_buf%=<0
+@show_info("Not enough memory: DSP routine not available.")
+~INP(2)
+ELSE
+@show_info("Loading "+dsp_filename$+"...")
+IF @dsp_loadprog(V:dsp_filename$,dsp_ability%,dsp_buf%)
+@show_info("Can't load "+dsp_filename$+": DSP routine not available.")
+~INP(2)
+ELSE
+dsp_fg!=TRUE
+@show_info("Sending sincos table to DSP...")
+@send_sincos_tbl ! Envoie la table des sinus/cosinus au DSP.
+ENDIF
+ENDIF
+'
+ENDIF
+'
+ENDIF
+ENDIF
+RETURN
+> PROCEDURE free_dsp
+'
+~MFREE(dsp_buf%)
+~@dsp_reserve(0,0)
+~@dsp_unlock
+RETURN
+'
+' DSP subsystem.
+> FUNCTION dsp_doblock(data_in%,size_in%,data_out%,size_out%)
+RETURN XBIOS(96,L:data_in%,L:size_in%,L:data_out%,L:size_out%)
+ENDFUNC
+> FUNCTION dsp_blkhandshake(data_in%,size_in%,data_out%,size_out%)
+RETURN XBIOS(97,L:data_in%,L:size_in%,L:data_out%,L:size_out%)
+ENDFUNC
+> FUNCTION dsp_blkunpacked(data_in%,size_in%,data_out%,size_out%)
+RETURN XBIOS(98,L:data_in%,L:size_in%,L:data_out%,L:size_out%)
+ENDFUNC
+> FUNCTION dsp_instream(data_in%,block_size%,num_blocks%,blocks_done%)
+RETURN XBIOS(99,L:data_in%,L:block_size%,L:num_blocks%,L:blocks_done%)
+ENDFUNC
+> FUNCTION dsp_outstream(data_out%,data_in%,num_blocks%,blocks_done%)
+RETURN XBIOS(100,L:data_out%,L:data_in%,L:num_blocks%,L:blocks_done%)
+ENDFUNC
+> FUNCTION dsp_iostream(data_in%,data_out%,block_insize%,block_outsize%,num_blocks%,blocks_done%)
+RETURN XBIOS(101,L:data_in%,L:data_out%,L:block_insize%,L:block_outsize%,L:num_blocks%,L:blocks_done%)
+ENDFUNC
+> FUNCTION dsp_removeinterrupts(mask&)
+RETURN XBIOS(102,W:mask&)
+ENDFUNC
+> FUNCTION dsp_getwordsize
+RETURN XBIOS(103)
+ENDFUNC
+> FUNCTION dsp_lock
+RETURN XBIOS(104)
+ENDFUNC
+> FUNCTION dsp_unlock
+RETURN XBIOS(105)
+ENDFUNC
+> FUNCTION dsp_available(xavail%,yavail%)
+RETURN XBIOS(106,L:xavail%,L:yavail%)
+ENDFUNC
+> FUNCTION dsp_reserve(xreserve%,yreserve%)
+RETURN XBIOS(107,L:xreserve%,L:yreserve%)
+ENDFUNC
+> FUNCTION dsp_loadprog(file%,ability%,buf%)
+RETURN XBIOS(108,L:file%,W:ability%,L:buf%)
+ENDFUNC
+> FUNCTION dsp_execprog(dsp_code%,dsp_code_size%,ability&)
+RETURN XBIOS(109,L:dsp_code%,L:dsp_code_size%,W:ability&)
+ENDFUNC
+> FUNCTION dsp_execboot(codeptr%,codesize%,ability&)
+RETURN XBIOS(110,L:codeptr%,L:codesize%,W:ability&)
+ENDFUNC
+> FUNCTION dsp_lodtobinary(file%,codeptr%)
+RETURN XBIOS(111,L:file%,L:codeptr%)
+ENDFUNC
+> FUNCTION dsp_triggerhc(vector&)
+RETURN XBIOS(112,W:vector&)
+ENDFUNC
+> FUNCTION dsp_requestuniqueability
+RETURN XBIOS(113)
+ENDFUNC
+> FUNCTION dsp_getprogability
+RETURN XBIOS(114)
+ENDFUNC
+> FUNCTION dsp_flushsubroutine
+RETURN XBIOS(115)
+ENDFUNC
+> FUNCTION dsp_loadsubroutine(ptr%,size%,ability&)
+RETURN XBIOS(116,L:ptr%,L:size%,W:ability&)
+ENDFUNC
+> FUNCTION dsp_inqsubrability(ability&)
+RETURN XBIOS(117,W:ability&)
+ENDFUNC
+> FUNCTION dsp_runsubroutine(handle&)
+RETURN XBIOS(118,W:handle&)
+ENDFUNC
+> FUNCTION dsp_hf0(flag&)
+RETURN XBIOS(119,W:flag&)
+ENDFUNC
+> FUNCTION dsp_hf1(flag&)
+RETURN XBIOS(120,W:flag&)
+ENDFUNC
+> FUNCTION dsp_hf2
+RETURN XBIOS(121)
+ENDFUNC
+> FUNCTION dsp_hf3
+RETURN XBIOS(122)
+ENDFUNC
+> FUNCTION dsp_blkwords(data_in%,size_in%,data_out%,size_out%)
+RETURN XBIOS(123,L:data_in%,L:size_in%,L:data_out%,L:size_out%)
+ENDFUNC
+> FUNCTION dsp_blkbytes(data_in%,size_in%,data_out%,size_out%)
+RETURN XBIOS(124,L:data_in%,L:size_in%,L:data_out%,L:size_out%)
+ENDFUNC
+> FUNCTION dsp_hstat
+RETURN XBIOS(125)
+ENDFUNC
+> FUNCTION dsp_setvectors(receiver%,transmitter%)
+RETURN XBIOS(126,L:receiver%,L:transmitter%)
+ENDFUNC
+> FUNCTION dsp_multblocks(numsend%,numreceive%,sendblks%,receiveblks%)
+RETURN XBIOS(127,L:numsend%,L:numreceive%,L:sendblks%,L:receiveblks%)
+ENDFUNC
+> FUNCTION dsptristate(dspxmit&,dsprec&)
+RETURN XBIOS(137,W:dspxmit&,W:dsprec&)
+ENDFUNC
+'
+' *************************************************************
+'                       Routines annexes.
+' *************************************************************
+> FUNCTION get_cookie(cookie$) ! Recherche d'un cookie.
+stack%=GEMDOS(32,L:0)
+cookie_jar%=LONG{&H5A0} ! Adresse du cookie jar.
+DO WHILE LONG{cookie_jar%}<>0 ! Si le nom n'est pas nul, ce n'est pas la fin du cookie jar.
+IF MKL$(LONG{cookie_jar%})=cookie$ ! Compare les noms.
+~GEMDOS(32,L:stack%)
+RETURN LONG{cookie_jar%+4} ! Renvoie le paramŠtre du cookie.
+ENDIF
+ADD cookie_jar%,8 ! Prochain cookie.
+LOOP
+~GEMDOS(32,L:stack%)
+RETURN -1
+ENDFUNC
