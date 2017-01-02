@@ -1,0 +1,147 @@
+<html>
+<head>
+<title>FixPix Homepage</title>
+</head>
+<body>
+<hr noshade>
+<table border=0 width="100%"><tr><td bgcolor="#ffff99" align=center>
+<font size=+3><b>Welcome to the Home of FixPix</font></b>
+</td></tr></table>
+<hr noshade>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+What is FixPix?
+</h2>
+FixPix is a general (portable) algorithm for displaying true-color
+(24-bit, usually) image data on direct-color graphics devices
+(16-bit high-color or 24/32-bit true-color).<p>
+Currently available implementations support the X Window System,
+the Virtual Device Interface (VDI) under GEM (Graphic Environment
+Manager), and the Windows GDI.<br>
+Contributions for other platforms would be greatly appreciated.<p>
+The main feature of the FixPix algorithm is the generic method of
+adaption to the particular bit-distribution of the output device
+combined with the efficient pixel rendering scheme.<p>
+A special feature of FixPix is the optional adapted dithering scheme
+providing smooth image display for less than 24-bit deep output devices.<p>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+Who needs FixPix?
+</h2>
+You may consider to use FixPix if you are interested in
+<ul>
+<li>A high degree of independence from particular hardware and
+driver software properties.
+<li>More performance in true-color image display.
+<li>Avoiding ugly color-banding artefacts when displaying
+true-color images on 16-bit displays.<br>
+(See for example
+<a href="../samples/monument.jpg">monument.jpg</a>
+(111K),
+<a href="../samples/glasses.jpeg">glasses.jpeg</a>
+(100K),
+<a href="../samples/vened005.jpg">vened005.jpg</a>
+(300K).)
+</ul>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+Download the current version (released 16 Aug 2008)
+</h2>
+<font size=+1>
+<dl>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="fixpix10jun2k.tar.gz">fixpix10jun2k.tar.gz</a> (78499 Bytes)</dd>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="fixpix.zip">fixpix.zip</a> (106236 Bytes)</dd>
+</dl>
+</font>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+FixPix for XV 3.10a
+</h2>
+You can immediately use FixPix with xv-3.10a from John Bradley
+if you work on a 15/16/24/32-bit X display.<p>
+Just replace your original 'xvimage.c' (rename it to
+'<a href="xvimage.c.orig">xvimage.c.orig</a>') with the adapted
+<a href="xvimage.c">xvimage.c</a> in the distribution and then
+recompile xv. That's all!<br>
+Please tell me if you encounter any problems on your platform.<p>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+FixPix for Berkeley mpeg_play 2.3
+</h2>
+Copy all files in the directory
+'<a href="mpeg_play-2.3/">mpeg_play-2.3</a>'
+into the original distribution and recompile.<br>
+Read <a href="mpeg_play-2.3/FIXPIX_CHANGES">FIXPIX_CHANGES</a>.<p>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+Sample code
+</h2>
+There is documented sample code which describes the FixPix
+algorithm:
+<font size=+1>
+<dl>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="fixpix.h">fixpix.h</a>:
+General declarations</dd>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="xfixpix.c">xfixpix.c</a>:
+Sample implementation for the X Window System</dd>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="vfixpix.c">vfixpix.c</a>:
+Sample implementation for the VDI under GEM</dd>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="winfixpix.cpp">winfixpix.cpp</a>:
+Sample implementation for the Windows GDI</dd>
+</dl>
+</font>
+Compare the <b>new</b> part
+<a href="xvimage.c.new.part">xvimage.c.new.part</a>
+of the xvimage.c code with the corresponding <b>old</b> part
+<a href="xvimage.c.orig.part">xvimage.c.orig.part</a>.
+<p>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+Sample applications
+</h2>
+<font size=+1>
+<dl>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="../jpegcrop/">Jpegcrop</a></dd>
+<dd><img src="../images/li_red.gif" width="10" height="10">
+<a href="../1stguide/">1stGuide</a></dd>
+</dl>
+</font>
+<p>
+<hr>
+<h2><img src="../images/greeball.gif" width="14" height="14">
+Tested environments
+</h2>
+<ul>
+<li>Atari ST/TT/Falcon under TOS with GEM with any VDI graphics
+adapter or under any emulation.
+<li>Linux-Pentium system with Accel-X-Server, Mach64 graphics
+card (2MB) with 15/16/24 screen depth used as display for
+xv-3.10a running remotely on a Sun-Sparcstation.
+<li>Same as above, but xv running locally on the Linux machine :-).
+<li>XFree86 3.1.2 and 3.1.2G in 16 bpp on a SPEA Mirage card<br>
+(reported by Klaus period Steinberger at physik period uni-muenchen period de).
+<li>Sun Ultra 1 creator with SOLARIS 2.5 and Openwin X-Server<br>
+(reported by M G Berberich &lt;berberic at forwiss period uni-passau period de&gt;).
+<li>Wintel systems running Jpegcrop in HighColor 16 bpp display modes.
+</ul>
+Comments, suggestions, enhancements, reports are welcome.
+Any contributions are greatly appreciated.<p>
+<hr>
+<table>
+<tr>
+<td>
+Contact: guido at jpegclub period org
+</td>
+<td>
+<img src="http://workaholics.net/cgi-bin/Count.cgi?dd=B|frgb=69;139;116&df=fixpix.dat">
+</td>
+</tr>
+</table>
+</body>
+</html>

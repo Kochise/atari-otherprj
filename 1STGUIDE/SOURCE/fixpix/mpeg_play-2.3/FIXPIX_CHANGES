@@ -1,0 +1,38 @@
+FixPix adaptions to the Berkeley mpeg_play-2.3 code and
+Erik Corry's multi-byte dither routines.
+
+NOTE: I've only made necessary adaptions to get it work.
+
+Works now in 15 bit mode (Yeah! The original version does not!)
+
+
+16bit.c:
+
+- Changed only InitColorDither() to make use of screen_rgb[]
+  (located and initialized in util32.c).
+  -> Code much simplified (removed all bit-check hassle...).
+
+gdith.c:
+
+- Minor clean-ups (remove bit/byte-order dependencies,
+  remove argument for InitColorDither()).
+
+main.c:
+proto.h:
+
+- Adaption in InitColorDither() prototype (no arguments).
+- Use screen_bpp (located and initialized in util32.c) as
+  'matched_depth' in VidStream instead of 'color depth' from XInfo!
+
+util32.c:
+
+- Added adapted screen_init() function, which is called by
+  CreateFullColorWindow().
+  Note: We arrange to fill in screen_rgb[] appropriately for Erik's
+	doubling tricks here (instead of InitColorDither()).
+- Removed check 'maxdepth < 16' in FindFullColorVisual()
+  to get it work in 15 bit mode.
+
+
+Guido Vollbeding <guivol@esc.de>
+http://www.esc.de/homes/guivol/fixpix/

@@ -1,0 +1,101 @@
+FixPix Release Notes				Halle, Aug 16 2008
+
+	Developed 1996-2008 by Guido Vollbeding <guido@jpegclub.org>
+
+
+		What is FixPix?
+
+
+FixPix is a general (portable) algorithm for displaying true-color
+(24-bit, usually) image data on direct-color graphics devices
+(16-bit high-color or 24/32-bit true-color).
+
+Currently available implementations support the X Window System,
+the Virtual Device Interface (VDI) under GEM (Graphic Environment
+Manager), and the Windows GDI.
+Contributions for other platforms would be greatly appreciated.
+
+The main feature of the FixPix algorithm is the generic method of
+adaption to the particular bit-distribution of the output device
+combined with the efficient pixel rendering scheme.
+
+A special feature of FixPix is the optional adapted dithering
+scheme providing smooth image display for less than 24-bit deep
+output devices.
+
+
+		Who needs FixPix?
+
+
+You may consider to use FixPix if you are interested in
+
+- A high degree of independence from particular hardware
+  and driver software properties.
+- More performance in true-color image display.
+- Avoiding ugly color-banding artefacts when displaying
+  true-color images on 16-bit displays. (See for example
+    http://sylvana.net/samples/monument.jpg,
+    http://sylvana.net/samples/glasses.jpeg,
+    http://sylvana.net/samples/vened005.jpg.)
+
+
+		FixPix for XV 3.10a
+
+
+You can immediately use FixPix with xv-3.10a from John Bradley
+if you work on a 15/16/24/32-bit X display.
+
+Just replace your original 'xvimage.c' (rename it to
+'xvimage.c.orig') with the adapted xvimage.c in this
+distribution and then recompile xv. That's all!
+Please tell me if you encounter any problems on your platform.
+
+
+		FixPix for Berkeley mpeg_play 2.3
+
+
+Copy all files in the directory 'mpeg_play-2.3' into the
+original distribution and recompile. Read FIXPIX_CHANGES.
+
+
+		Sample code
+
+
+There is documented sample code which describes the FixPix
+algorithm:
+
+- fixpix.h:  General declarations
+- xfixpix.c: Sample implementation for the X Window System
+- vfixpix.c: Sample implementation for the VDI under GEM
+- winfixpix.cpp: Sample implementation for the Windows GDI
+
+
+		Sample applications (without source code)
+
+
+- Jpegcrop: http://sylvana.net/jpegcrop/
+- 1stGuide: http://sylvana.net/1stguide/
+
+
+		Tested environments
+
+
+- Atari ST/TT/Falcon under TOS with GEM with any VDI graphics
+  adapter or under any emulation.
+- Linux-Pentium system with Accel-X-Server, Mach64 graphics
+  card (2MB) with 15/16/24 screen depth used as display for
+  xv-3.10a running remotely on a Sun-Sparcstation.
+- Same as above, but xv running locally on the Linux machine :-).
+- XFree86 3.1.2 and 3.1.2G in 16 bpp on a SPEA Mirage card
+  (reported by Klaus.Steinberger@physik.uni-muenchen.de).
+- Sun Ultra 1 creator with SOLARIS 2.5 and Openwin X-Server
+  (reported by M G Berberich <berberic@forwiss.uni-passau.de>).
+- Wintel systems running Jpegcrop in HighColor 16 bpp display modes.
+
+
+Check the FixPix Homepage at
+http://sylvana.net/fixpix/
+for the latest version.
+Comments, suggestions, enhancements, reports are welcome.
+Any contributions are greatly appreciated.
+Please contact me via Email: guido@jpegclub.org

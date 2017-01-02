@@ -1,0 +1,138 @@
+/* The following is an excerpt from xvimage.c with FixPix adaptions.
+ * Note the shorter and more efficient code using less variables and less
+ * assumptions. We can get away with any Bit-order/Byte-order hassle
+ * and associated shifting/masking. At the same time it is more general,
+ * since the bits associated with a primary color component can be
+ * arbitrarily distributed in the pixel, not necessary continuously.
+ */
+
+XImage *Pic24ToXImage(pic24, wide, high)
+     byte          *pic24;
+     unsigned int   wide, high;
+{
+
+  int     i,j;
+  XImage *xim;
+
+  ...
+
+  if (theVisual->class == TrueColor || theVisual->class == DirectColor) {
+
+    /************************************************************************/
+    /* Non-ColorMapped Visuals:  TrueColor, DirectColor                     */
+    /************************************************************************/
+
+    unsigned long xcol;
+    int           bperpix, bperline;
+    byte         *imagedata, *lip, *ip, *pp;
+
+
+    xim = XCreateImage(theDisp, theVisual, dispDEEP, ZPixmap, 0, NULL,
+		        wide,  high, 32, 0);
+    if (!xim) FatalError("couldn't create X image!");
+
+    bperline = xim->bytes_per_line;
+    bperpix  = xim->bits_per_pixel;
+
+    imagedata = (byte *) malloc((size_t) (high * bperline));
+    if (!imagedata) FatalError("couldn't malloc imagedata");
+
+    xim->data = (char *) imagedata;
+
+    if (bperpix != 8 && bperpix != 16 && bperpix != 24 && bperpix != 32) {
+      char buf[128];
+      sprintf(buf,"Sorry, no code written to handle %d-bit %s",
+	      bperpix, "TrueColor/DirectColor displays!");
+      FatalError(buf);
+    }
+
+    screen_init();
+
+#ifdef DO_FIXPIX_SMOOTH
+#if 0
+    /* If we wouldn't have to save the original pic24 image data,
+     * the following code would do the dither job by overwriting
+     * the image data, and the normal render code would then work
+     * without any change on that data.
+     * Unfortunately, this approach would hurt the xv assumptions...
+     */
+    if (bperpix < 24) {
+      FSBUF *fs = fs2_init(wide);
+      if (fs) {
+	fs2_dither(fs, pic24, 3, high, wide);
+	free(fs);
+      }
+    }
+#else
+    /* ...so we have to take a different approach with linewise
+     * dithering/rendering in a loop using a temporary line buffer.
+     */
+    if (bperpix < 24) {
+      FSBUF *fs = fs2_init(wide);
+      if (fs) {
+	byte *row_buf = malloc((size_t)wide * 3);
+	if (row_buf) {
+	  int nc = 3;
+	  byte *picp = pic24;  lip = imagedata;
+	  for (i=0; i<high; i++, lip+=bperline, picp+=(size_t)wide*3) {
+	    memcpy(row_buf, picp, (size_t)wide * 3);
+	    nc = fs2_dither(fs, row_buf, nc, 1, wide);
+	    for (j=0, ip=lip, pp=row_buf; j<wide; j++) {
+
+	      xcol  = screen_rgb[0][*pp++];
+	      xcol |= screen_rgb[1][*pp++];
+	      xcol |= screen_rgb[2][*pp++];
+
+	      switch (bperpix) {
+	      case 8:
+		*ip++ = xcol & 0xff;
+		break;
+	      case 16:
+		*((CARD16 *)ip)++ = (CARD16)xcol;
+		break;
+	      }
+	    }
+	  }
+	  free(row_buf);
+	  free(fs);
+
+	  return xim;
+	}
+	free(fs);
+      }
+    }
+#endif
+#endif
+
+    lip = imagedata;  pp = pic24;
+    for (i=0; i<high; i++, lip+=bperline) {
+      for (j=0, ip=lip; j<wide; j++) {
+
+	xcol  = screen_rgb[0][*pp++];
+	xcol |= screen_rgb[1][*pp++];
+	xcol |= screen_rgb[2][*pp++];
+
+	switch (bperpix) {
+	case 8:
+	  *ip++ = xcol & 0xff;
+	  break;
+	case 16:
+	  *((CARD16 *)ip)++ = (CARD16)xcol;
+	  break;
+	case 24:
+	  *ip++ = (xcol >> 16) & 0xff;
+	  *ip++ = (xcol >> 8)  & 0xff;
+	  *ip++ =  xcol        & 0xff;
+	  break;
+	case 32:
+	  *((CARD32 *)ip)++ = (CARD32)xcol;
+	  break;
+	}
+      }
+    }
+  }
+
+  ...
+
+  return xim;
+}

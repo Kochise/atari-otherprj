@@ -1,0 +1,58 @@
+imgtools portable software utilities for IMG format image files
+===============================================================
+
+Release of 21-Aug-2007 by Guido Vollbeding <guido@jpegclub.org>
+===============================================================
+
+Primary URLs:
+
+        http://sylvana.net/imgtools/
+        (directory containing the actual archive files:)
+
+        http://sylvana.net/imgtools/imgtools-21aug2007.tar.gz
+
+        http://sylvana.net/imgtools/imgtools.zip
+
+
+This is a collection of IMG supporting source codes and utilities.
+It is still not as complete as desired, but it already provides
+some useful examples and tools:
+
+
+ximgtool
+========
+
+This was the primary package for basic (X)IMG support.
+It provides functions for optimization of and conversion
+('transcoding') between different 'flavors' of IMG format
+image files, comparable in some respect to the 'jpegtran'
+tool from the Independent JPEG Group for JPEG files.
+
+
+img2png
+=======
+
+This is a first 'quick-and-dirty' approach to a general IMG to PNG
+conversion utility.
+Note that you will need a properly installed libpng (and therefore
+zlib) to get it run.  Adapt the Makefile accordingly where to find
+the libpng and zlib libraries and header files.  The example was
+successfully tested under standard SuSE 8.2 installation.
+Current limitations:
+- Grayscale TIMG files are not supported
+  (not yet needed - easy to add when required).
+- Alpha data is not retained.
+- XIMG support only for 2, 4, 16, 256 colors (1,2,4,8 bit depth).
+Please let me know of your problems or requirements for future
+enhancements.
+
+
+References
+==========
+
+- 1stGuide supports all mentioned formats for display in all
+  graphics modes.
+- Snapper generates appropriate IMG screen snapshots in all
+  graphics modes.
+- See http://sylvana.net/1stguide/snaps/
+  for examples and pointers.

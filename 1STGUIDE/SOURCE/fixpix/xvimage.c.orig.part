@@ -1,0 +1,177 @@
+XImage *Pic24ToXImage(pic24, wide, high)
+     byte          *pic24;
+     unsigned int   wide, high;
+{
+  /*
+   * this has to do the none-to-simple bit of converting the data in 'pic24'
+   * into something usable by X.
+   *
+   * There are two major approaches:  if we're displaying on a TrueColor
+   * or DirectColor display, we've got all the colors we're going to need,
+   * and 'all we have to do' is convert 24-bit RGB pixels into whatever
+   * variation of RGB the X device in question wants.  No color allocation
+   * is involved.
+   *
+   * Alternately, if we're on a PseudoColor, GrayScale, StaticColor or 
+   * StaticGray display, we're going to continue to operate in an 8-bit 
+   * mode.  (In that by this point, a 3/3/2 standard colormap has been
+   * created for our use (though all 256 colors may not be unique...), and
+   * we're just going to display the 24-bit picture by dithering with those
+   * colors
+   *
+   */
+
+  int     i,j;
+  XImage *xim;
+
+  xim     = (XImage *) NULL;
+
+  if (!pic24) return xim;  /* shouldn't happen */
+
+
+  /* special case: 1-bit display.  Doesn't much matter *what* the visual is */
+  if (dispDEEP == 1) {
+    byte  *imagedata;
+
+    xim = XCreateImage(theDisp, theVisual, dispDEEP, XYPixmap, 0, NULL, 
+		        wide,  high, 32, 0);
+    if (!xim) FatalError("couldn't create xim!");
+
+    imagedata = (byte *) malloc((size_t) (xim->bytes_per_line * high));
+    if (!imagedata) FatalError("couldn't malloc imagedata");
+
+    xim->data = (char *) imagedata;
+    floydDitherize1(xim, pic24,PIC24, (int) wide, (int) high, NULL,NULL,NULL);
+
+    return xim;
+  }
+
+
+
+
+  if (theVisual->class == TrueColor || theVisual->class == DirectColor) {
+
+    /************************************************************************/
+    /* Non-ColorMapped Visuals:  TrueColor, DirectColor                     */
+    /************************************************************************/
+
+    unsigned long r, g, b, rmask, gmask, bmask, xcol;
+    int           rshift, gshift, bshift, bperpix, bperline, border, cshift;
+    int           maplen;
+    byte         *imagedata, *lip, *ip, *pp;
+
+
+    /* compute various shifting constants that we'll need... */
+
+    rmask = theVisual->red_mask;
+    gmask = theVisual->green_mask;
+    bmask = theVisual->blue_mask;
+
+    rshift = 7 - highbit(rmask);
+    gshift = 7 - highbit(gmask);
+    bshift = 7 - highbit(bmask);
+
+    maplen = theVisual->map_entries;
+    if (maplen>256) maplen=256;
+    cshift = 7 - highbit((u_long) (maplen-1));
+
+    xim = XCreateImage(theDisp, theVisual, dispDEEP, ZPixmap, 0, NULL,
+		        wide,  high, 32, 0);
+    if (!xim) FatalError("couldn't create X image!");
+
+    bperline = xim->bytes_per_line;
+    bperpix  = xim->bits_per_pixel;
+    border   = xim->byte_order;
+
+    imagedata = (byte *) malloc((size_t) (high * bperline));
+    if (!imagedata) FatalError("couldn't malloc imagedata");
+
+    xim->data = (char *) imagedata;
+
+    if (bperpix != 8 && bperpix != 16 && bperpix != 24 && bperpix != 32) {
+      char buf[128];
+      sprintf(buf,"Sorry, no code written to handle %d-bit %s",
+	      bperpix, "TrueColor/DirectColor displays!");
+      FatalError(buf);
+    }
+
+
+    lip = imagedata;  pp = pic24;
+    for (i=0; i<high; i++, lip+=bperline) {
+      for (j=0, ip=lip; j<wide; j++) {
+	r = *pp++;  g = *pp++;  b = *pp++;
+
+	/* shift r,g,b so that high bit of 8-bit color specification is 
+	 * aligned with high bit of r,g,b-mask in visual, 
+	 * AND each component with its mask,
+	 * and OR the three components together
+	 */
+
+	if (theVisual->class == DirectColor) {
+	  r = (u_long) directConv[(r>>cshift) & 0xff] << cshift;
+	  g = (u_long) directConv[(g>>cshift) & 0xff] << cshift;
+	  b = (u_long) directConv[(b>>cshift) & 0xff] << cshift;
+	}
+
+
+	/* shift the bits around */
+	if (rshift<0) r = r << (-rshift);
+	         else r = r >> rshift;
+	
+	if (gshift<0) g = g << (-gshift);
+	         else g = g >> gshift;
+
+	if (bshift<0) b = b << (-bshift);
+	         else b = b >> bshift;
+
+	r = r & rmask;
+	g = g & gmask;
+	b = b & bmask;
+
+	xcol = r | g | b;
+
+	if (bperpix == 32) {
+	  if (border == MSBFirst) {
+	    *ip++ = (xcol>>24) & 0xff;
+	    *ip++ = (xcol>>16) & 0xff;
+	    *ip++ = (xcol>>8)  & 0xff;
+	    *ip++ =  xcol      & 0xff;
+	  }
+	  else {  /* LSBFirst */
+	    *ip++ =  xcol      & 0xff;
+	    *ip++ = (xcol>>8)  & 0xff;
+	    *ip++ = (xcol>>16) & 0xff;
+	    *ip++ = (xcol>>24) & 0xff;
+	  }
+	}
+
+	else if (bperpix == 24) {
+	  if (border == MSBFirst) {
+	    *ip++ = (xcol>>16) & 0xff;
+	    *ip++ = (xcol>>8)  & 0xff;
+	    *ip++ =  xcol      & 0xff;
+	  }
+	  else {  /* LSBFirst */
+	    *ip++ =  xcol      & 0xff;
+	    *ip++ = (xcol>>8)  & 0xff;
+	    *ip++ = (xcol>>16) & 0xff;
+	  }
+	}
+
+	else if (bperpix == 16) {
+	  if (border == MSBFirst) {
+	    *ip++ = (xcol>>8)  & 0xff;
+	    *ip++ =  xcol      & 0xff;
+	  }
+	  else {  /* LSBFirst */
+	    *ip++ =  xcol      & 0xff;
+	    *ip++ = (xcol>>8)  & 0xff;
+	  }
+	}
+
+	else if (bperpix == 8) {
+	  *ip++ =  xcol      & 0xff;
+	}
+      }
+    }
+  }
