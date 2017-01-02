@@ -1,0 +1,259 @@
+
+	fpcheck --- run floating point code and check results
+
+Input is a list of tests to run.  Each test consists of one or
+more input fields followed by zero or more output fields. Each test
+must fit on a single line.  Input fields are separated from output
+by an '='.  Upper or lower case is accepted on input.  If no '='
+is seen, then it is assumed that the user wants to see the result,
+and the results are printed.  If an '=' is seen, then the assumption
+is that the user only wants to see the result if there is an error.
+
+Blank lines and lines beginning with a '#' are ignored.
+
+
+The general form of a test is:
+	Test.Sz [keywords] [op1] [op2] [ = [keywords] [result1] [result2] ]
+
+	Test		Which instruction (with .size) to run. Size is
+			mandatory
+	op1		First input operand (monadic and dyadic)
+	op2		Second input operand (dyadic)
+	FPCR		Floating point control register keywords
+	FPSR		Floating point status register keywords (N,I,Z,NAN only)
+	K-factor	fmove.p(out) only
+	OUT		selects fmove-out instead of fmove-in
+	DN		select Data register destination (fmove.bwls out only)
+
+	result1		Expected Result 
+			Results must be specified in extended precision
+			for all tests EXCEPT fmove(out) in which
+			case the output is the size of the fmove.
+	result2		Second Expected result.  Only needed for FSINCOS
+	FPSR		Floating point status register keywords
+	Exceptions	Any generated exceptions
+	T/~T		True/False flag for FBcc tests
+
+The Monadic operations are:
+	FABS, FSABS, FDABS, FACOS, FASIN, FATAN, FATANH, FCOS, FCOSH, FETOX,
+	FETOXM1, FGETEXP, FGETMAN, FINT, FINTRZ, FLOG10, FLOG2,
+	FLOGN, FLOGNP1, FMOVE, FSMOVE, FDMOVE, FNEG, FSNEG, FDNEG, FSIN, 
+	FSINH, FSQRT, FSSQRT, FDSQRT, FTAN, FTANH, FTENTOX, FTST, FTWOTOX
+
+The Dyadic operations are:
+	FADD, FSADD, FDADD, FCMP, FDIV, FSDIV, FDDIV, FMOD, FMUL, FSMUL,
+	FDMUL, FREM, FSCALE, FSGLDIV, FSGLMUL, FSUB, FSSUB, FDSUB
+
+Special operations:
+	FMOVE(out)	Input is always Extended, output is 
+			checked in the precision specified.  For
+			packed move out a keyword of K#:nn or KD:nn
+			specifies the K-factor.
+	FSINCOS		Two Result values are expected.
+	FMOVECR		'Operand1' is 0-7f to specify constant to read:
+			example 'fmovecr.x 0b'.  Size must be 'x'.
+
+The Conditional branch operations are:
+	FBGE, FBOGE, FBGL, FBOGL, FBGLE, FBOR, FBGT, FBOGT,
+	FBLE, FBOLE, FBLT, FBOLT, FBNGE, FBUGE, FBNGL, FBUEQ,
+	FBNGLE, FBUN, FBNGT, FBUGT, FBNLE, FBULE, FBNLT, FBULT,
+	FBSEQ, FBEQ, FBSNE, FBNE, FBSF, FBF, FBST, FBT
+
+Constants:
+	Operand and Result values consist of up to 24 hex digits with
+	optional '_' characters added for readability.  A trailing
+	parenthesized string may be present and will be ignored.  This
+	is to allow a human readable value to be appended to 
+	the otherwise hard to interpret hex constants.  A leading
+	sequence of [S] on a constant causes it to be converted
+	from size S (S=bwlsdxp) to extended.  This should only
+	be necessary for the first operand of a dyadic instruction.
+
+	Using the [S] feature to convert a denormalized double to 
+	extended format may not work because fpcheck depends on
+	an fmove to convert formats.
+
+	A constant of less than 24 digits will be right justified in
+	a field of the size expected by the test.  For example:
+	'fasin.b 1' produces a result of pi/2 but 'fasin.x 1'
+	yields zero.
+
+	Use '0D' for a small constant value of 13, not 'D' because
+	it conflicts with a reserved keyword.
+
+FPCR keywords:
+	RN	Round Nearest
+	RZ	Round to Zero
+	RM	Round to Minus Infinity
+	RP	Round to Plus Infinity
+	X	Rounding Precision Extended
+	D	Rounding Precision Double
+	S	Rounding Precision Single
+	BSUN	Enable BSUN Exceptions
+	SNAN	Enable Signalling NaN Exceptions
+	OPERR	Enable Operand Error Exceptions
+	OVFL	Enable Overflow Exceptions
+	UNFL	Enable Underflow Exceptions
+	DZ	Enable Divide-by-zero Exceptions
+	INEX2	Enable Inexact Operation Exceptions
+	INEX1	Enable Inexact Decimal Input Exceptions
+
+	If no FPCR keywords are specified, the FPCR will be set to zero, which
+	is equivalent to 'RN X' with no exceptions enabled
+
+K-factor format: FMOVE.P(out)
+	K#:dd	Static K-factor (dd=-64 to 63)
+	KD:dd	Dynamic K-factor (dd=-64 to 63)
+
+	If no K-factor is specified, then the FMOVE.P test is 
+	for a fmove IN.  The default register used for Dynamic K-factors
+	is wired into the templates.  Currently D0 is used.
+
+FPSR keywords:
+	N	Negative
+	Z	Zero
+	I	Infinity
+	NAN	Not-a-Number or Unordered
+	Q:xx	Quotient byte (xx=00-FF, including sign bit)
+	BSUN	BSUN Exceptions
+	SNAN	Signalling NaN
+	OPERR	Operand Error
+	OVFL	Overflow
+	UNFL	Underflow
+	DZ	Divide-by-zero
+	INEX2	Inexact Operation
+	INEX1	Inexact Decimal Input
+	AIOP	Accrued Invalid Operation
+	AOVFL	Accrued Overflow
+	AUNFL	Accrued Underflow
+	ADZ	Accrued Divide-by-zero
+	AINEX	Accrued Inexact Decimal Input
+
+	The first 4 keywords are allowed on the left of the '='.  When
+	they appear there, it means that the FPSR before the test
+	will be set to the specified value.  This makes sense only for
+	an FBcc type test since all other tests will set the FPSR
+	as a result of the operation being performed.
+
+Exception keywords:
+	To verify that an exception was taken(or not taken), 
+	keywords of the form Txxx (and ~Txxx) are recognized.  
+	Valid keywords are TBSUN, TSNAN, TOPERR, TOVFL, TUNFL, TDZ,
+	TINEX, TUNIMP, TUNSUPP.  A keyword of SIGFPE(~SIGFPE) is
+	also allowed.  On SYSV systems (pre Release 4.0) the SIGFPE 
+	handler cannot distinguish which type of exception was 
+	generated so SIGFPE is the only useful keyword.  
+
+	The BSUN bit in the FPCR is always cleared on any SIGFPE
+	to prevent possible infinite SIGFPE's.
+
+Three special keywords: 'IN', 'OUT' and 'DN'  can be used on fmove tests.
+	If 'OUT' is seen then the test will be fmove(out).  'IN'
+	is allowed for completeness, but is the default and should
+	not be necessary.  If 'DN' is seen and the direction is 'OUT' and
+	the size is b,w,l or s then a template will be selected that
+	uses a data register as a destination (currently d0).
+	If the testname is not fmove then these keywords are ignored.
+	Additionally, the keywords 'D0','D1',...,'D7' are recognized
+	and will use the specific data register specified.  Note that
+	the value 'd0' is always recognized as a data register 0 keyword,
+	and not the constant $d0.  To specify such a constant, use 0D0.
+
+For Conditional branch tests, a keyword of 'T' is recognized on the
+	right of the '=' to specify that the branch should be taken.
+	'~T' is recognized as the specification that the branch should
+	not be taken.  'F' is an alias for '~T'.
+
+If an FPSR bit is not specified in the ouput, then it is not
+	checked.  To test that a bit is not set, precede the
+	name with '~'.  '~OPERR' means that the OPERR bit
+	should be zero.
+	
+For DYADIC operations, the first operand is expected to be specified
+	in extended precision so that it can be moved into a 
+	float register using fmovem (avoiding any possible exception).
+	If you have, say, two double constants and you want
+	to add them, use 'fadd.d [d]constant1 constant2'
+
+For every test, all 8 floating point registers are set to a known
+	value (a QNAN) at the beginning of each test.  This insures
+	that if the instruction fails to write to the intended
+	result register or writes to the wrong register then the
+	error will be detected at the end of the test.   The
+	general registers are also checked before and after each
+	test and an error will be reported if there is any 
+	unexpected change.
+
+The floating point register used for all tests is currently FP5.
+	FP6 is also used on sincos.
+
+Precision:
+	If an '=' is included in the test, the results are compared
+	against the specified values.  For single, double and 
+	extended precision test cases, the result is checked to the
+	precision specified UNLESS the test is one of the native
+	68040 instruction types in which case an exact match
+	is required or the test will report an error.  Byte, word
+	and long test cases are always compared for exact results.
+
+Special test names:
+	verbose		forces all further tests to show all result
+			bits.  Normally only set bits are printed.
+	~verbose	turns off verbose.
+	log		writes each test case to a file named LASTTEST
+			before it is executed.  If the test causes a
+			system crash, this file will contain the test
+			that caused it.  The logging function calls
+			sync() for each test to try and make sure
+			that the file survives a system crash.
+	~log		turns of test logging.
+	local		Causes STANDALONE version to echo chars
+			as they are typed.  This allows typing
+			characters directly at the standalone board
+			without having to use fprun.
+	remote		turns off local echo
+	quit		simulate end-of-file.  Mainly useful for
+			STANDALONE since there is no other way
+			to stop the program.
+
+Examples:
+	Some examples are included in the release directory.  The sample
+	file contains a random collection of test cases.  The sample.verify
+	file was created by running sample through fpcheck (in verbose mode).
+	The sample.verify file can then be run through fpcheck and there should
+	be no errors reported.  There is also an fmove test case file with
+	the fmove.verify created the same way as the sample file.
+
+STANDALONE mode:
+	A standalone version of fpcheck can be built.  The standalone
+	program recognizes exactly the same test cases as the native
+	version.  A companion program 'fprun' is available to allow
+	running the standalone version via a serial port.
+
+Porting considerations:
+	Templates are supplied to create fpcheck for SUN and SystemV
+	platforms.  To change between SUN and SYSV the only change
+	should be to the PLATFORM= variable in the makefile.  SystemV
+	systems lack the ability to accurately report SIGFPE conditions
+	and therefore the 'Txxx' keywords are ignored.  To make
+	fpcheck run on another system, copy the SUN.* or SYSV.* files
+	(whichever is closer to your system) and modify as needed.  Some
+	of the templates are a little wierd because the SUN and SYSV
+	assemblers refuse to assemble certain legal instructions.
+
+	Even though Motorola MCD UNIX is based on SystemV, it CAN
+	deliver the correct SIGFPE code.  On these platforms, you
+	should add a LOCAL define to the Makefile: -DR3V6.
+	
+	Two lists of templates are provided for SYSV: SYSV.LIST and
+	SYSV.LIST40.  Changing the Makefile LIST= variable to select
+	LIST40 will build a version of fpcheck that uses real 68040
+	opcodes for the '040 only floating point instructions.  If
+	a *.LIST file is specified, then the '040 opcodes
+	are detected in the isop() function and replaced with their
+	equivalent '881 opcode.  For example, 'fsadd.b' is turned
+	into 'fadd.b s' (any specified rounding precision is replaced).
+	This allows 'fsadd' tests to be generated on a non-68040 machine
+	and the results checked on a real 68040.  
+	
+						6/18/91 e.j.r.

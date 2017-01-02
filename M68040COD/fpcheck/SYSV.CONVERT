@@ -1,0 +1,100 @@
+
+#		Copyright (C) Motorola, Inc. 1990
+#			All Rights Reserved
+#
+#       For details on the license for this file, please see the
+#       file, README.lic, in this same directory.
+
+	text
+	global	xtod
+xtod:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmovm.x	(%a0),&0x80
+	fmov.d	%fp0,4(%a0)
+	mov.l	&0,(%a0)
+	rts
+
+	global	btox
+btox:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmov.b	11(%a0),%fp0
+	fmovm.x	&0x80,(%a0)
+	rts
+
+	global	wtox
+wtox:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmov.w	10(%a0),%fp0
+	fmovm.x	&0x80,(%a0)
+	rts
+
+	global	ltox
+ltox:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmov.l	8(%a0),%fp0
+	fmovm.x	&0x80,(%a0)
+	rts
+
+	global	stox
+stox:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmov.s	8(%a0),%fp0
+	fmovm.x	&0x80,(%a0)
+	rts
+
+	global	dtox
+dtox:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmov.d	4(%a0),%fp0
+	fmovm.x	&0x80,(%a0)
+	rts
+
+	global	ptox
+ptox:
+	fmov.l	&0,%control
+	mov.l	4(%sp),%a0
+	fmov.p	(%a0),%fp0
+	fmovm.x	&0x80,(%a0)
+	rts
+
+	global	clear_nan
+clear_nan:
+	fmov.l	%status,%d0
+	and.l	&0xFEFFFFFF,%d0
+	fmov.l	%d0,%status
+	rts
+
+	global	start_test
+start_test:
+	fmovm.x	Fp_reg,&0xff
+	fmovm	Fp_ctrl,%iaddr,%control,%status
+	movm.l	&0xffff,Gen_in
+	mov.w	%cc,Ccr_in
+	rts
+
+	global	finish_test
+finish_test:
+	mov.w	%cc,Ccr_out
+	movm.l	&0xffff,Gen_out
+	movm.l	Gen_in,&0xffff
+	fmovm	%iaddr,%control,%status,Fp_ctrl
+	fmovm.x	&0xff,Fp_reg
+	rts
+
+	global	sub64
+sub64:
+	mov.l	(20,%sp),%a0
+	mov.l	(8,%sp),%d0
+	sub.l	(16,%sp),%d0
+	mov.l	%d0,4(%a0)
+	mov.l	(4,%sp),%d0
+	mov.l	(12,%sp),%d1
+	subx.l	%d1,%d0
+	mov.l	%d0,(%a0)
+	rts

@@ -1,0 +1,32 @@
+
+
+			Release 2.3 Errata
+
+    As of this release, the following may be considered an
+errata of the 040 (Mask 20D43B  Mask 4D50D and Mask 5D98D) FPSP:
+
+
+    1. INEX1 reported by inexact conversion of packed source
+       operand for a dyadic instruction will not be reported
+       by the 040 upon completion of that instruction.  This 
+       errata corresponds to errata "F5" on the 68040 Errata Sheet.
+       Fixed in D98D.
+
+    2. FREM and FMOD with packed operands will occasionally
+       differ from the 881/2 results by one ulp in the conversion
+       of the packed source operand.  
+
+    3. INEX2/AINEX are not calculated in the same manner as in the 
+       881/882 for some cases in which the result is overflowed.
+       Currently, if the operation was an integer move-out, INEX2/AINEX
+       is not set for any case.
+       In some cases of fscale with integer input, the INEX2 bit will not
+       be set on inex calculation.
+       Under extended rounding precision, FSCALE results which underflow 
+       and are inexact may be incorrectly rounded.  Inaddition, INEX2
+       is not signaled in these cases.
+
+    4. If an Fmove FPn,FPM(this also applies to the FNEG and FABS), is preceded        by any floating point operation with a denorm source operand , the FMOVE
+       destination (FPm) is incorrectly tagged and may result in silent data
+       corruption. A software fix in release 2.2.
+

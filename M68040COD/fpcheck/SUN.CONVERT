@@ -1,0 +1,100 @@
+
+#		Copyright (C) Motorola, Inc. 1990
+#			All Rights Reserved
+#
+#	For details on the license for this file, please see the
+#	file, README.lic, in this same directory.
+
+	.text
+	.globl	_xtod
+_xtod:
+	fmovel	#0,fpcr
+	movl	sp@(4),a0
+	fmovemx	a0@,#0x80
+	fmoved	fp0,a0@(4)
+	movl	#0,a0@
+	rts
+
+	.globl	_btox
+_btox:
+	fmovel	#0,fpcr
+	movl	sp@(4),a0
+	fmoveb	a0@(11),fp0
+	fmovemx	#0x80,a0@
+	rts
+
+	.globl	_wtox
+_wtox:
+	fmovel	#0,fpcr
+	movl	sp@(4),a0
+	fmovew	a0@(10),fp0
+	fmovemx	#0x80,a0@
+	rts
+
+	.globl	_ltox
+_ltox:
+	fmovel	#0,fpcr
+	movl	sp@(4),a0
+	fmovel	a0@(8),fp0
+	fmovemx	#0x80,a0@
+	rts
+
+	.globl	_stox
+_stox:
+	movl	sp@(4),a0
+	fmovel	#0,fpcr
+	fmoves	a0@(8),fp0
+	fmovemx	#0x80,a0@
+	rts
+
+	.globl	_dtox
+_dtox:
+	fmovel	#0,fpcr
+	movl	sp@(4),a0
+	fmoved	a0@(4),fp0
+	fmovemx	#0x80,a0@
+	rts
+
+	.globl	_ptox
+_ptox:
+	fmovel	#0,fpcr
+	movl	sp@(4),a0
+	fmovep	a0@,fp0
+	fmovemx	#0x80,a0@
+	rts
+
+	.globl	_clear_nan
+_clear_nan:
+	fmovel	fpsr,d0
+	andl	#0xFEFFFFFF,d0
+	fmovel	d0,fpsr
+	rts
+
+	.globl	_start_test
+_start_test:
+	fmovemx	_Fp_reg,#0xff
+	fmovem	_Fp_ctrl,fpiar/fpcr/fpsr
+	moveml	#0xffff,_Gen_in
+	movw	cc,_Ccr_in
+	rts
+
+	.globl	_finish_test
+_finish_test:
+	movw	cc,_Ccr_out
+	moveml	#0xffff,_Gen_out
+	moveml	_Gen_in,#0xffff
+	fmovem	fpiar/fpcr/fpsr,_Fp_ctrl
+	fmovem	#0xff,_Fp_reg
+	rts
+
+	.globl	_sub64
+_sub64:
+	movl	sp@(20),a0
+	movl	sp@(8),d0
+	subl	sp@(16),d0
+	movl	d0,a0@(4)
+	movl	sp@(4),d0
+	movl	sp@(12),d1
+	subxl	d1,d0
+	movl	d0,a0@
+	rts

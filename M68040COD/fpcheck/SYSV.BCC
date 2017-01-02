@@ -1,0 +1,22 @@
+
+#		Copyright (C) Motorola, Inc. 1990
+#			All Rights Reserved
+#
+#       For details on the license for this file, please see the
+#       file, README.lic, in this same directory.
+
+	text
+	global	EN_SZ
+EN_SZ:
+	jsr	start_test
+	fnop
+	OP.SZ	EN_SZ_true
+	fnop
+	jsr	finish_test
+	mov.l	&0,Branch_taken
+	rts
+EN_SZ_true:
+	fnop
+	jsr	finish_test
+	mov.l	&1,Branch_taken
+	rts

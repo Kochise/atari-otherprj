@@ -1,0 +1,52 @@
+
+The library version of the FPSP can be built by running 'make libFPSP.a'
+from either the Makefile (for asm syntax) or fpsp.mk (for as syntax).
+The 'make convert' step in Makefile will build both kernel and library .s
+files from the .sa sources.  Change the SYS= and PREFIX= variables
+in Makefile BEFORE running 'make convert'.  Three templates are supplied
+for building the library version: GEN, CI5 and R3V6.  The GEN templates
+generate entry points for single, double and extended precision routines and
+provide the closest emulation of the kernel FPSP.  The CI5 and R3V6 
+templates are faster, but discard most of the condition code and control
+register handling, and only provide the double precision entry points.
+
+The entry point names are contained in L_LIST.  Change the first 3
+entries of each line to suit your system. 
+
+Differences in the library version:
+
+1.	Single and Double precision SNAN's will not generate an SNAN
+	exception because they are converted to extended precision
+	and doing so causes them to turn into non-signalling NAN's.
+
+	Example: facos.d 7ff7_ffff_ffff_ffff snan
+
+2.	An enabled Inexact exception may not be taken in all cases.
+
+	Example: facos.x 000000000000000000000001 d inex2
+	         fint.x 403d_0000_aaaa_aaaa_aaaa_ffff inex2
+
+3.	The return value in fp0 is undefined when an enabled OPERR or DZ
+	exception ocurrs.  In the kernel FPSP, the destination register
+	is unchanged.
+
+4.	fscale does not return the right result when an underflow ocurrs.
+	The problem is that the t_unfl code in the l_support.sa file
+	cannot exactly mimic the kernel FPSP version because the incoming
+	FPCR is not in the same place every time.
+
+Changes in the library version of FPSP rel 2.3:
+
+  A floating point exception occurs when a transcendentals called twice.
+      example: main()
+                   { double d;
+                     d= 0.0;
+                     x = facosd(0.0);
+                     y = facosd(d); 
+                    }
+        This is fixed in release 2.2 of FPSP.
+ A followup on the above bug was to restore the fpcr beforw it unlinks.
+        This is fixed in release 2.3 of FPSP.
+Overall, the library version is twice as fast as the kernel code.
+
+						5/1/91 E.J.R.

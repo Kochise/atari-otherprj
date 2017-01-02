@@ -1,0 +1,30 @@
+ 	Summary of changes to the FPSP from Release 2.2 to Release 2.3
+	--------------------------------------------------------------
+
+Test files added in Release 2.3:
+
+tests/source/Cpackdec.s
+tests/source/Cunimp.s
+---------------------------------------------------------------------------
+	File-by-file short summary of changes
+---------------------------------------------------------------------------
+================= src_asm/x_unimp.sa, do_func.sa
+ For all unimplemented instructions except for FMOD & FREM the quotient
+field should be left unaffected but gets cleared.
+ This release fixes this problem by clearing all but quotient/accrued exceptions.
+
+================ src_asm/get_op.s
+Binary (two-operand) operations which source a packed decimal entity and which
+have fp1 as the destination operand deliver spurious results.
+  An example of this code is
+    FMOVE.S   #:400000000,FP1                 ; FP1 <- 2.0
+    FADD.P    #:000000010000000000000000,FP1  ; FP1 <- 1.0 + 2.0
+
+Fix was to save the contents of FP1 prior to its use in "decbin" and to restore the contents to fp1 after its use.
+
+=================src_asm/l_entry.sa
+
+In the library version of FPSP the control register was not restored before it
+unlinks causes some erroneous results.
+
+added code to restore fpcr before it unlinks.

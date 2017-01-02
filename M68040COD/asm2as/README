@@ -1,0 +1,55 @@
+
+	asm2as --- convert Motorola assembler syntax to UNIX as
+
+This is a quick and dirty program to translate the FPSP into UNIX SystemV
+assembler syntax.  This eliminates the need to drag around an obsolete
+assembler (asm) and its silly conversion program (cvtu). Other problems:
+	symbols limited to 8 significant characters
+	asm is case INsensitive
+	cvtu is unable to handle some relocation types (e.g. 32 bit pc-rel)
+
+Operations performed by asm2as:
+
+	change instruction mnemonics
+	change operand field items (e.g. a0 -> %a0 and FPCR -> %control)
+	comment out useless pseudo-ops
+	change operand special characters (e.g. # -> &, and $ -> 0x)
+	reverse operands on cmp and fcmp
+	replace movem/fmovem register lists with register masks
+	change  'label equ value' to ' set label,value'
+	put all program labels on a separate line with : at end
+	regularize indenting and comment fields
+	remove .b or.l from bit set/clr/chg/tst instructions
+	map section directives to text/data
+
+For instructions with register lists, the original list is placed
+in the comment field.
+
+The first whitespace character in the operand field
+causes the remainder of the line to be treated as a comment.  If
+your program does have spaces in the operand field, it MAY be caught
+when the program is assembled since most instructions require a specific
+number of operands.  Watch out for dc.l though.
+
+Register names are recognized in either upper or lower case, but not
+a mixture.  FPCR and fpcr are okay, but FpCR is not.
+
+Things that won't convert:
+	ds.anything-except-b
+	any floating point constant specified in %f format
+	dc.anything-except-b, w or l
+
+Dubious conversions:
+	fequ is converted to set
+
+Portability considerations:
+	The mnemonic replacements are listed in mnemonics.h, and the operand
+	replacements are in operands.h.  The assembler for 680x0's
+	is not the same on all 68K platforms due to years of separate
+	development.  For example HP/UX is mostly the same, but doesn't
+	recognize %control as a name for the floating point control
+	register.   The Sun 68k assembler doesn't need the % at the
+	front of register names, but has a radically different syntax
+	for commonly used addressing modes.
+
+						9/26/90 e.j.r.

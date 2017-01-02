@@ -1,0 +1,100 @@
+
+#		Copyright (C) Motorola, Inc. 1990
+#			All Rights Reserved
+#
+#       For details on the license for this file, please see the
+#       file, README.lic, in this same directory.
+
+	text
+	global	EN_SZ
+EN_SZ:
+	cmp.l	8(%sp),&0
+	beq	EN_SZ_0
+	cmp.l	8(%sp),&1
+	beq	EN_SZ_1
+	cmp.l	8(%sp),&2
+	beq	EN_SZ_2
+	cmp.l	8(%sp),&3
+	beq	EN_SZ_3
+	cmp.l	8(%sp),&4
+	beq	EN_SZ_4
+	cmp.l	8(%sp),&5
+	beq	EN_SZ_5
+	cmp.l	8(%sp),&6
+	beq	EN_SZ_6
+	cmp.l	8(%sp),&7
+	beq	EN_SZ_7
+	rts
+
+	global	EN_SZ_0
+EN_SZ_0:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d0
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_1
+EN_SZ_1:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d1
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_2
+EN_SZ_2:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d2
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_3
+EN_SZ_3:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d3
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_4
+EN_SZ_4:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d4
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_5
+EN_SZ_5:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d5
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_6
+EN_SZ_6:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d6
+	fnop
+	jsr	finish_test
+	rts
+
+	global	EN_SZ_7
+EN_SZ_7:
+	mov.l	4(%sp),%a0
+	jsr	start_test
+	OP.SZ	%fp5,%d7
+	fnop
+	jsr	finish_test
+	rts
+

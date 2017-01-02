@@ -1,0 +1,142 @@
+			BUG TEMPLATE
+		        ************
+
+
+Use the template below when reporting bugs.  
+
+Any fields designated with an asterick (*) can be left blank.
+When complete, please email the report to the following 
+report address :
+	
+	oakhill!m68kbugs@cs.utexas.edu
+
+To assist you in filling out this form, a description of each field follows 
+the template.
+Should you have any questions, please contact us through the High End Software 
+Support Number: (512) 891-2999
+
+----------------------------------------------------------------------------
+
+Problem# (0-0000)
+
+Key Words
+
+Severity (1,2,3)
+
+Part Number(M68040FPSP_)
+
+Serial Number(0000-000)
+
+Customer Description
+
+Long Description
+
+System Description
+
+Date Reported
+
+Reported By
+
+*Customer Code
+
+Phone
+
+*Resolved?
+
+*Date Resolved
+
+*Who fixed
+
+*Correction Description
+
+*Modules Affected
+
+Problem Release/Load
+
+*Test suite passed
+
+*sccs version control
+
+---------------------------------------------------------------------------
+
+The following is a brief description of how to use the bug report template.
+
+---------------------------------------------------------------------------
+
+Problem# (0-0000) 	You may include a number that you will use internally
+			to track this bug.  We will log it but assign our own
+			# to track your bug repair.  Please choose one person
+			as the individual to send in all bug reports for your
+			firm.  This should help avoid confusion and ensure a 
+			smooth working relationship.
+
+Key Words 		Indicate the key terms associated with this bug 
+			report.  For example: fpcr, denorm
+
+Severity (1,2,3,4,5) 	This indicates the severity of the bug.
+			The following descriptions are taken from AT&T test
+			document:
+			1:  an error that causes the FPSP to crash and no
+			further work can be done.  An error that causes gross
+			deviations of results.  Non-waiverable compliance
+			violations are also severity 1. 
+			2:  an error that represents a substantial deviation in
+			the functionality of the FPSP or deviation from 
+			IEEE 754 standard.
+			3:  an error that represents a deviation in the 
+			functionality.  However, the customer is able to 
+			implement a workaround to this problem.
+			4:  an error that represents a minor deviation or 
+			incorrect documentation.
+			5:  a request for product enhancement.
+
+Part Number(MC68040FPSP__) This number is on the label of the tape sent to you.  
+
+Serial Number(0000-000)	This is the serial number written on the tape 
+			that was sent to you.
+
+Customer Description 	This is a brief description of the problem. 
+
+Long Description 	This is a more detailed description of the problem. 
+			This could contain a short code fragment, a 
+			suggested fix for the bug or reference a longer 
+			file with this type of information in it.              
+
+System Description 	This is a brief description of your system.
+
+Date Reported 		MM/DD/YY                     
+
+Reported By 		Your name                      
+
+*Customer Code() 	This is the unique code we use to identify 
+			your organization. You do not need to fill 
+			in this field. 
+
+Phone 			Enter your telephone number including the 
+			area code. 
+
+*Resolved? 		Enter "yes" or "no" only.                          
+
+*Date Resolved 		When the bug is fixed the date it was fixed 
+			will be entered by us in this field.
+
+*Who fixed              Name of the person who fixed the bug.
+
+*Correction Description	When the bug is fixed we will enter a 
+			description of the fix in this field.
+
+*Modules Affected 	When the bug is fixed we will enter the
+			module name. 
+
+
+Problem Release/Load 	Enter the release or load information in this 
+			field. This information should be on the label 
+			for the tape that was sent to you. 
+
+*Test suite passed      You do not need to fill out this field.  This is
+                        the test suite file that we use to verify bugs
+                        and/or fixes.
+
+*sccs version control   You do not need to fill out this field.  This is
+                        the sccs version that contains the fix.
+                        
