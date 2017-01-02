@@ -1,0 +1,19 @@
+#nrm_set check
+fint.x 401e_0000_8fff_ffff_0000_0000
+fint.x 401e_0000_8000_0000_8000_0000 
+fint.x 3fff_0000_8000_0000_0000_0000
+fint.x 3fff_0000_c000_0000_0000_0000
+fint.x 401e_0000_8fff_ffff_0000_0000 INEX2
+fint.x 401e_0000_8000_0000_8000_0000 INEX2
+fint.x 3fff_0000_8000_0000_0000_0000 INEX2
+fint.x 3fff_0000_c000_0000_0000_0000 INEX2
+
+#same as above, check negative numbers
+fint.x c01e_0000_8fff_ffff_0000_0000
+fint.x c01e_0000_8000_0000_8000_0000 
+fint.x bfff_0000_8000_0000_0000_0000
+fint.x bfff_0000_c000_0000_0000_0000
+fint.x c01e_0000_8fff_ffff_0000_0000 INEX2
+fint.x c01e_0000_8000_0000_8000_0000 INEX2
+fint.x bfff_0000_8000_0000_0000_0000 INEX2
+fint.x bfff_0000_c000_0000_0000_0000 INEX2

@@ -1,0 +1,57 @@
+verbose
+#monadic instructions
+fneg.x	c0ff0000_80000000_00000001
+fneg.x	00000000_00000000_00000001
+fneg.x	80000000_00000000_00000001
+fneg.x	00000000_00000000_00000001 unfl
+fneg.x	80000000_00000000_00000001 unfl
+fneg.x	3fff0000_00000000_00000001
+fneg.x	bfff0000_00000000_00000001
+#dyadic instructions
+fadd.x  40050000_00000000_00000001 40050000_00000000_00000010
+fadd.x  00000000_00000000_00000001 80000000_00000000_00010010
+fadd.x  80000000_00000000_00010001 80000000_00000000_00100010
+fadd.x  00000000_00000000_00000001 80000000_00000000_00010010 unfl
+fadd.x  80000000_00000000_00010001 80000000_00000000_00100010 unfl
+fadd.x  80000000_00000000_00001001 00000000_00000000_00001010
+#packed move out
+fmove.p out 80000000_00000000_00000001 KD:17
+fmove.p out 00000000_80000000_00000001 KD:17
+fmove.p out 80000000_00000000_00000001 KD:17 operr
+fmove.p out 00000000_80000000_00000001 KD:17 operr
+fmove.p out 4cf80000_f38db1f9_dd3dabac KD:17
+fmove.p out 4cf80000_f38db1f9_dd3dabac KD:17 inex2
+fmove.p out 4cf80000_f38db1f9_dd3dabac KD:17 operr
+fmove.p out 4cf80000_f38db1f9_dd3dabad KD:17
+fmove.p out 4cf80000_f38db1f9_dd3dabad KD:17 operr
+fmove.p out 3fff0000_00000000_00000001 KD:17
+fmove.p out 00000000_00000000_00000000 KD:17
+fmove.p out 80000000_00000000_00000000 KD:17
+fmove.p out 7fff0000_00000000_00000000 KD:17
+fmove.p out ffff0000_00000000_00000000 KD:17
+fmove.p out 7fff0000_ffffffff_ffffffff KD:17
+fmove.p out ffff0000_ffffffff_ffffffff KD:17
+fmove.p out 7fff0000_0fffffff_ffffffff KD:17
+fmove.p out ffff0000_0fffffff_ffffffff KD:17
+fmove.p out 7fff0000_0fffffff_ffffffff KD:17 snan
+fmove.p out ffff0000_0fffffff_ffffffff KD:17 snan
+fmove.p out 80000000_00000000_00000001 K#:17
+fmove.p out 00000000_80000000_00000001 K#:17
+fmove.p out 80000000_00000000_00000001 K#:17 operr
+fmove.p out 00000000_80000000_00000001 K#:17 operr
+fmove.p out 4cf80000_f38db1f9_dd3dabac K#:17
+fmove.p out 4cf80000_f38db1f9_dd3dabac K#:17 inex2
+fmove.p out 4cf80000_f38db1f9_dd3dabac K#:17 operr
+fmove.p out 4cf80000_f38db1f9_dd3dabad K#:17
+fmove.p out 4cf80000_f38db1f9_dd3dabad K#:17 operr
+fmove.p out 3fff0000_00000000_00000001 K#:17
+fmove.p out 00000000_00000000_00000000 K#:17
+fmove.p out 80000000_00000000_00000000 K#:17
+fmove.p out 7fff0000_00000000_00000000 K#:17
+fmove.p out ffff0000_00000000_00000000 K#:17
+fmove.p out 7fff0000_ffffffff_ffffffff K#:17
+fmove.p out ffff0000_ffffffff_ffffffff K#:17
+fmove.p out 7fff0000_0fffffff_ffffffff K#:17
+fmove.p out ffff0000_0fffffff_ffffffff K#:17
+fmove.p out 7fff0000_0fffffff_ffffffff K#:17 snan
+fmove.p out ffff0000_0fffffff_ffffffff K#:17 snan

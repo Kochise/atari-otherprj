@@ -1,0 +1,73 @@
+verbose
+#FINTRZ tests
+
+#Norms 
+#  boundary test case, not in_range 
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff S RN
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff S RZ
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff S RM
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff S RP
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff D RN
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff D RZ
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff D RM
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff D RP
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff X RN
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff X RZ
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff X RM
+fintrz.x	403e_0000_aaaa_aaaa_aaaa_ffff X RP
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff S RN
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff S RZ
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff S RM
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff S RP
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff D RN
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff D RZ
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff D RM
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff D RP
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff X RN
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff X RZ
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff X RM
+fintrz.x	c03e_0000_aaaa_aaaa_aaaa_ffff X RP
+#
+##  boundary test case, in_range
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff S RN
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff S RZ
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff S RM
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff S RP
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff D RN
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff D RZ
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff D RM
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff D RP
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff X RN
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff X RZ
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff X RM
+fintrz.x	403d_0000_aaaa_aaaa_aaaa_ffff X RP
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff S RN
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff S RZ
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff S RM
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff S RP
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff D RN
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff D RZ
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff D RM
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff D RP
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff X RN
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff X RZ
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff X RM
+fintrz.x	c03d_0000_aaaa_aaaa_aaaa_ffff X RP
+
+#test case to exercise Denormalized input case
+fintrz.x 	0000_0000_0000_0000_0000_0001 rn
+fintrz.x 	8000_0000_4000_0000_0000_0000 rn
+fintrz.x 	0000_0000_0000_0000_0000_0001 rm
+fintrz.x 	8000_0000_4000_0000_0000_0000 rm
+fintrz.x 	0000_0000_0000_0000_0000_0001 rz
+fintrz.x 	8000_0000_4000_0000_0000_0000 rz
+fintrz.x 	0000_0000_0000_0000_0000_0001 rp
+fintrz.x 	8000_0000_4000_0000_0000_0000 rp
+fintrz.x 	0000_0000_0000_0000_0000_0001 rn s
+fintrz.x 	8000_0000_4000_0000_0000_0000 rn s
+fintrz.x 	0000_0000_0000_0000_0000_0001 rm s
+fintrz.x 	8000_0000_4000_0000_0000_0000 rm s
+fintrz.x 	0000_0000_0000_0000_0000_0001 rz s
+fintrz.x 	8000_0000_4000_0000_0000_0000 rz s
+fintrz.x 	0000_0000_0000_0000_0000_0001 rp s
+fintrz.x 	8000_0000_4000_0000_0000_0000 rp s

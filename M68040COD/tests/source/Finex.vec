@@ -1,0 +1,8 @@
+verbose
+# Inex exception white box tests
+fmove.p out 400c0000_c0e6b731_8fc50481 k#:-5 
+fdiv.p 40000000_c90fdad3_f68cb9b7 00050001_23456789_12345678 
+fdiv.p 40000000_c90fdad3_f68cb9b7 00050001_23456789_12345678 RN D INEX2 INEX1
+fdiv.x 40000000_c90fdad3_f68cb9b7 40000000_80000000_00000000 RN D INEX2 
+fmove.d 40000000_c90fdad3_f68cb9b7 D 
+fmove.d out 40000000_c90fdad3_f68cb9b7 D INEX2 

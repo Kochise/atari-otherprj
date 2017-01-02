@@ -1,0 +1,316 @@
+verbose
+# fmovecr tests
+# vectors commented out are victims of errata #35, Rev 1.6
+fmovecr.x 01
+fmovecr.x 02
+fmovecr.x 03
+fmovecr.x 04
+fmovecr.x 05
+fmovecr.x 06
+fmovecr.x 07
+fmovecr.x 08
+fmovecr.x 09
+fmovecr.x 0a
+fmovecr.x 10
+fmovecr.x 11
+fmovecr.x 12
+fmovecr.x 13
+fmovecr.x 14
+fmovecr.x 15
+fmovecr.x 16
+fmovecr.x 17
+fmovecr.x 18
+fmovecr.x 19
+fmovecr.x 1a
+fmovecr.x 1b
+fmovecr.x 1c
+fmovecr.x 1d
+fmovecr.x 1e
+fmovecr.x 1f
+fmovecr.x 20
+fmovecr.x 21
+fmovecr.x 22
+fmovecr.x 23
+fmovecr.x 24
+fmovecr.x 25
+fmovecr.x 26
+fmovecr.x 27
+fmovecr.x 28
+fmovecr.x 29
+fmovecr.x 2a
+fmovecr.x 2b
+fmovecr.x 2c
+fmovecr.x 2d
+fmovecr.x 2e
+fmovecr.x 2f
+# Real numbers
+fmovecr.x 00
+fmovecr.x 0c
+fmovecr.x 0d
+fmovecr.x 0e
+fmovecr.x 0f
+fmovecr.x 30
+fmovecr.x 31
+fmovecr.x 32
+fmovecr.x 33
+fmovecr.x 34
+fmovecr.x 35
+fmovecr.x 36
+fmovecr.x 37
+fmovecr.x 38
+fmovecr.x 3a
+fmovecr.x 3c
+fmovecr.x 3e
+# set rounding mode to rz
+fmovecr.x 00 RZ
+fmovecr.x 0b RZ
+fmovecr.x 0c RZ
+fmovecr.x 0d RZ
+fmovecr.x 0e RZ
+fmovecr.x 0f RZ
+fmovecr.x 30 RZ
+fmovecr.x 31 RZ
+fmovecr.x 32 RZ
+fmovecr.x 33 RZ
+fmovecr.x 34 RZ
+fmovecr.x 35 RZ
+fmovecr.x 36 RZ
+fmovecr.x 37 RZ
+fmovecr.x 38 RZ
+fmovecr.x 39 RZ
+fmovecr.x 3a RZ
+fmovecr.x 3b RZ
+fmovecr.x 3c RZ
+fmovecr.x 3d RZ
+fmovecr.x 3e RZ
+fmovecr.x 3f RZ
+# set rounding mode to rp
+fmovecr.x 00 RP
+fmovecr.x 0b RP
+fmovecr.x 0c RP
+fmovecr.x 0d RP
+fmovecr.x 0e RP
+fmovecr.x 0f RP
+fmovecr.x 30 RP
+fmovecr.x 31 RP
+fmovecr.x 32 RP
+fmovecr.x 33 RP
+fmovecr.x 34 RP
+fmovecr.x 35 RP
+fmovecr.x 36 RP
+fmovecr.x 37 RP
+fmovecr.x 38 RP
+fmovecr.x 39 RP
+fmovecr.x 3a RP
+fmovecr.x 3b RP
+fmovecr.x 3c RP
+fmovecr.x 3d RP
+fmovecr.x 3e RP
+fmovecr.x 3f RP
+# set rounding mode to rm
+fmovecr.x 00 RM
+fmovecr.x 0b RM
+fmovecr.x 0c RM
+fmovecr.x 0d RM
+fmovecr.x 0e RM
+fmovecr.x 0f RM
+fmovecr.x 30 RM
+fmovecr.x 31 RM
+fmovecr.x 32 RM
+fmovecr.x 33 RM
+fmovecr.x 34 RM
+fmovecr.x 35 RM
+fmovecr.x 36 RM
+fmovecr.x 37 RM
+fmovecr.x 38 RM
+fmovecr.x 39 RM
+fmovecr.x 3a RM
+fmovecr.x 3b RM
+fmovecr.x 3c RM
+fmovecr.x 3d RM
+fmovecr.x 3e RM
+fmovecr.x 3f RM
+# Set rounding precision to double
+fmovecr.x 00 D
+fmovecr.x 0b D
+fmovecr.x 0c D
+fmovecr.x 0d D
+fmovecr.x 0e D
+fmovecr.x 0f D
+fmovecr.x 30 D
+fmovecr.x 31 D
+fmovecr.x 32 D
+fmovecr.x 33 D
+fmovecr.x 34 D
+fmovecr.x 35 D
+fmovecr.x 36 D
+fmovecr.x 37 D
+fmovecr.x 38 D
+fmovecr.x 39 D
+fmovecr.x 3a D
+fmovecr.x 3b D
+fmovecr.x 3c D
+fmovecr.x 3d D
+fmovecr.x 3e D
+fmovecr.x 3f D
+# set rounding mode to rz
+fmovecr.x 00 RZ D
+fmovecr.x 0b RZ D
+fmovecr.x 0c RZ D
+fmovecr.x 0d RZ D
+fmovecr.x 0e RZ D
+fmovecr.x 0f RZ D
+fmovecr.x 30 RZ D
+fmovecr.x 31 RZ D
+fmovecr.x 32 RZ D
+fmovecr.x 33 RZ D
+fmovecr.x 34 RZ D
+fmovecr.x 35 RZ D
+fmovecr.x 36 RZ D
+fmovecr.x 37 RZ D
+fmovecr.x 38 RZ D
+fmovecr.x 39 RZ D
+fmovecr.x 3a RZ D
+fmovecr.x 3b RZ D
+fmovecr.x 3c RZ D
+fmovecr.x 3d RZ D
+fmovecr.x 3e RZ D
+fmovecr.x 3f RZ D
+# set rounding mode to rp
+fmovecr.x 00 RP D
+fmovecr.x 0b RP D
+fmovecr.x 0c RP D
+fmovecr.x 0d RP D
+fmovecr.x 0e RP D
+fmovecr.x 0f RP D
+fmovecr.x 30 RP D
+fmovecr.x 31 RP D
+fmovecr.x 32 RP D
+fmovecr.x 33 RP D
+fmovecr.x 34 RP D
+fmovecr.x 35 RP D
+fmovecr.x 36 RP D
+fmovecr.x 37 RP D
+fmovecr.x 38 RP D
+fmovecr.x 39 RP D
+fmovecr.x 3a RP D
+fmovecr.x 3b RP D
+fmovecr.x 3c RP D
+fmovecr.x 3d RP D
+fmovecr.x 3e RP D
+fmovecr.x 3f RP D
+# set rounding mode to rm
+fmovecr.x 00 RM D
+fmovecr.x 0b RM D
+fmovecr.x 0c RM D
+fmovecr.x 0d RM D
+fmovecr.x 0e RM D
+fmovecr.x 0f RM D
+fmovecr.x 30 RM D
+fmovecr.x 31 RM D
+fmovecr.x 32 RM D
+fmovecr.x 33 RM D
+fmovecr.x 34 RM D
+fmovecr.x 35 RM D
+fmovecr.x 36 RM D
+fmovecr.x 37 RM D
+fmovecr.x 38 RM D
+fmovecr.x 39 RM D
+fmovecr.x 3a RM D
+fmovecr.x 3b RM D
+fmovecr.x 3c RM D
+fmovecr.x 3d RM D
+fmovecr.x 3e RM D
+fmovecr.x 3f RM D
+# Set rounding precision to single
+fmovecr.x 00 S
+fmovecr.x 0b S
+fmovecr.x 0c S
+fmovecr.x 0d S
+fmovecr.x 0e S
+fmovecr.x 0f S
+fmovecr.x 30 S
+fmovecr.x 31 S
+fmovecr.x 32 S
+fmovecr.x 33 S
+fmovecr.x 34 S
+fmovecr.x 35 S
+fmovecr.x 36 S
+fmovecr.x 37 S
+fmovecr.x 38 S
+fmovecr.x 39 S
+fmovecr.x 3a S
+fmovecr.x 3b S
+fmovecr.x 3c S
+fmovecr.x 3d S
+fmovecr.x 3e S
+fmovecr.x 3f S
+# set rounding mode to rz
+fmovecr.x 00 RZ S
+fmovecr.x 0b RZ S
+fmovecr.x 0c RZ S
+fmovecr.x 0d RZ S
+fmovecr.x 0e RZ S
+fmovecr.x 0f RZ S
+fmovecr.x 30 RZ S
+fmovecr.x 31 RZ S
+fmovecr.x 32 RZ S
+fmovecr.x 33 RZ S
+fmovecr.x 34 RZ S
+fmovecr.x 35 RZ S
+fmovecr.x 36 RZ S
+fmovecr.x 37 RZ S
+fmovecr.x 38 RZ S
+fmovecr.x 39 RZ S
+fmovecr.x 3a RZ S
+fmovecr.x 3b RZ S
+fmovecr.x 3c RZ S
+fmovecr.x 3d RZ S
+fmovecr.x 3e RZ S
+fmovecr.x 3f RZ S
+# set rounding mode to rp
+fmovecr.x 00 RP S
+fmovecr.x 0b RP S
+fmovecr.x 0c RP S
+fmovecr.x 0d RP S
+fmovecr.x 0e RP S
+fmovecr.x 0f RP S
+fmovecr.x 30 RP S
+fmovecr.x 31 RP S
+fmovecr.x 32 RP S
+fmovecr.x 33 RP S
+fmovecr.x 34 RP S
+fmovecr.x 35 RP S
+fmovecr.x 36 RP S
+fmovecr.x 37 RP S
+fmovecr.x 38 RP S
+fmovecr.x 39 RP S
+fmovecr.x 3a RP S
+fmovecr.x 3b RP S
+fmovecr.x 3c RP S
+fmovecr.x 3d RP S
+fmovecr.x 3e RP S
+fmovecr.x 3f RP S
+# set rounding mod to rm
+fmovecr.x 00 RM S
+fmovecr.x 0b RM S
+fmovecr.x 0c RM S
+fmovecr.x 0d RM S
+fmovecr.x 0e RM S
+fmovecr.x 0f RM S
+fmovecr.x 30 RM S
+fmovecr.x 31 RM S
+fmovecr.x 32 RM S
+fmovecr.x 33 RM S
+fmovecr.x 34 RM S
+fmovecr.x 35 RM S
+fmovecr.x 36 RM S
+fmovecr.x 37 RM S
+fmovecr.x 38 RM S
+fmovecr.x 39 RM S
+fmovecr.x 3a RM S
+fmovecr.x 3b RM S
+fmovecr.x 3c RM S
+fmovecr.x 3d RM S
+fmovecr.x 3e RM S
+fmovecr.x 3f RM S

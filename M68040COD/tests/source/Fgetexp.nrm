@@ -1,0 +1,55 @@
+verbose
+#norm inputs
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rn
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rz
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rm
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rp
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rn
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rz
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rm
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rp
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rn d
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rz d
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rm d
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rp d
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rn d
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rz d
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rm d
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rp d
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rn s
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rz s
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rm s
+fgetexp.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rp s
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rn s
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rz s
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rm s
+fgetexp.x fffe_0000_aaaa_aaaa_aaaa_aaaf rp s
+# denorm inputs
+fgetexp.x 8000_0000_0000_0000_0000_0001
+fgetexp.x 0000_0000_0000_0000_0000_0001
+fgetexp.x 8000_0000_0000_0001_0000_0001
+fgetexp.x 0000_0000_0000_0001_0000_0001
+fgetexp.x 0000_0000_0000_0000_0000_0001 rn
+fgetexp.x 0000_0000_0000_0000_0000_0001 rz
+fgetexp.x 0000_0000_0000_0000_0000_0001 rm
+fgetexp.x 0000_0000_0000_0000_0000_0001 rp
+fgetexp.x 8000_0000_0000_0000_0000_0001 rn
+fgetexp.x 8000_0000_0000_0000_0000_0001 rz
+fgetexp.x 8000_0000_0000_0000_0000_0001 rm
+fgetexp.x 8000_0000_0000_0000_0000_0001 rp
+fgetexp.x 0000_0000_0000_0000_0000_0001 rn d
+fgetexp.x 0000_0000_0000_0000_0000_0001 rz d
+fgetexp.x 0000_0000_0000_0000_0000_0001 rm d
+fgetexp.x 0000_0000_0000_0000_0000_0001 rp d
+fgetexp.x 8000_0000_0000_0000_0000_0001 rn d
+fgetexp.x 8000_0000_0000_0000_0000_0001 rz d
+fgetexp.x 8000_0000_0000_0000_0000_0001 rm d
+fgetexp.x 8000_0000_0000_0000_0000_0001 rp d
+fgetexp.x 0000_0000_0000_0000_0000_0001 rn s
+fgetexp.x 0000_0000_0000_0000_0000_0001 rz s
+fgetexp.x 0000_0000_0000_0000_0000_0001 rm s
+fgetexp.x 0000_0000_0000_0000_0000_0001 rp s
+fgetexp.x 8000_0000_0000_0000_0000_0001 rn s
+fgetexp.x 8000_0000_0000_0000_0000_0001 rz s
+fgetexp.x 8000_0000_0000_0000_0000_0001 rm s
+fgetexp.x 8000_0000_0000_0000_0000_0001 rp s

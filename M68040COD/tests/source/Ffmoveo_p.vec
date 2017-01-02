@@ -1,0 +1,49 @@
+verbose
+fmove.p  out K#:17  40000000_8abcd000_00000000
+fmove.p  out K#:-64 40000000_8abcd000_00000000
+fmove.p  out K#:5   40000000_8abcd000_00000000
+fmove.p  out K#:-5  40000000_8abcd000_00000000
+fmove.p  out KD:17  40000000_8abcd000_00000000
+fmove.p  out KD:-64 40000000_8abcd000_00000000
+fmove.p  out KD:5   40000000_8abcd000_00000000
+fmove.p  out KD:-5  40000000_8abcd000_00000000
+fmove.p  out K#:17  c0000000_8abcd000_00000000
+fmove.p  out K#:-64 c0000000_8abcd000_00000000
+fmove.p  out K#:5   c0000000_8abcd000_00000000
+fmove.p  out K#:-5  c0000000_8abcd000_00000000
+fmove.p  out KD:17  c0000000_8abcd000_00000000
+fmove.p  out KD:-64 c0000000_8abcd000_00000000
+fmove.p  out KD:5   c0000000_8abcd000_00000000
+fmove.p  out KD:-5  c0000000_8abcd000_00000000
+fmove.p  out K#:-64 7fff0000_ffffffff_ffffffff
+fmove.p  out K#:-64 ffff0000_ffffffff_ffffffff
+fmove.p  out K#:-64 7fff0000_ffffffff_ffffffff snan
+fmove.p  out K#:-64 ffff0000_ffffffff_ffffffff snan
+fmove.p  out K#:-64 7fff0000_bfffffff_ffffffff
+fmove.p  out K#:-64 ffff0000_bfffffff_ffffffff
+fmove.p  out K#:-64 7fff0000_bfffffff_ffffffff snan
+fmove.p  out K#:-64 ffff0000_bfffffff_ffffffff snan
+fmove.p  out K#:17  7fff0000_ffffffff_ffffffff
+fmove.p  out K#:17  ffff0000_ffffffff_ffffffff
+fmove.p  out K#:17  7fff0000_ffffffff_ffffffff snan
+fmove.p  out K#:17  ffff0000_ffffffff_ffffffff snan
+fmove.p  out K#:17  7fff0000_bfffffff_ffffffff
+fmove.p  out K#:17  ffff0000_bfffffff_ffffffff
+fmove.p  out K#:17  7fff0000_bfffffff_ffffffff snan
+fmove.p  out K#:17  ffff0000_bfffffff_ffffffff snan
+fmove.p  out K#:-64 7fff0000_00000000_00000000
+fmove.p  out K#:-64 ffff0000_00000000_00000000
+fmove.p  out K#:-64 7fff0000_00000000_00000000 snan
+fmove.p  out K#:-64 ffff0000_00000000_00000000 snan
+fmove.p  out K#:17  00000000_00000000_00000000
+fmove.p  out K#:17  80000000_00000000_00000000
+fmove.p  out K#:17  00000000_00000000_00000000 unfl
+fmove.p  out K#:17  80000000_00000000_00000000 unfl
+fmove.p  out K#:17  7fff0000_00000000_00000000
+fmove.p  out K#:17  ffff0000_00000000_00000000
+fmove.p  out K#:17  7fff0000_00000000_00000000 snan
+fmove.p  out K#:17  ffff0000_00000000_00000000 snan
+fmove.p  out K#:-64 00000000_00000000_00000000
+fmove.p  out K#:-64 80000000_00000000_00000000
+fmove.p  out K#:-64 00000000_00000000_00000000 unfl
+fmove.p  out K#:-64 80000000_00000000_00000000 unfl

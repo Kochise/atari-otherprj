@@ -1,0 +1,54 @@
+verbose
+# snans
+fmove.s 7fbfffff
+fmove.s 7fbfffff snan
+fmove.s ffbfffff
+fmove.s ffbfffff snan
+fmove.s 7f800001
+fmove.s 7f800001 snan
+fmove.s ff800001
+fmove.s ff800001 snan
+fmove.d 7ff7ffffffffffff
+fmove.d 7ff7ffffffffffff snan
+fmove.d fff7ffffffffffff
+fmove.d fff7ffffffffffff snan
+fmove.d	7ff0000000000001
+fmove.d	7ff0000000000001 snan
+fmove.d	fff0000000000001
+fmove.d	fff0000000000001 snan
+fmove.x 7fff0000bfffffffffffffff
+fmove.x 7fff0000bfffffffffffffff snan
+fmove.x ffff0000bfffffffffffffff
+fmove.x ffff0000bfffffffffffffff snan
+fmove.x	7fff00000000000000000001
+fmove.x	7fff00000000000000000001 snan
+fmove.x	ffff00000000000000000001
+fmove.x	ffff00000000000000000001 snan
+# denorms
+fmove.s 007fffff s
+fmove.s 007fffff s unfl
+fmove.s 807fffff s
+fmove.s 807fffff s unfl
+fmove.s 00000001 s
+fmove.s 00000001 s unfl
+fmove.s 80000001 s
+fmove.s 80000001 s unfl
+fmove.d 0007ffffffffffff d
+fmove.d 0007ffffffffffff d unfl
+fmove.d 8007ffffffffffff d
+fmove.d 8007ffffffffffff d unfl
+fmove.d	0000000000000001 d
+fmove.d	0000000000000001 d unfl
+fmove.d	8000000000000001 d
+fmove.d	8000000000000001 d unfl
+fmove.x 000000007fffffffffffffff
+fmove.x 000000007fffffffffffffff unfl
+fmove.x 800000007fffffffffffffff
+fmove.x 800000007fffffffffffffff unfl
+fmove.x	000000000000000000000001
+fmove.x	000000000000000000000001 unfl
+fmove.x	800000000000000000000001
+fmove.x	800000000000000000000001 unfl
+
+
+

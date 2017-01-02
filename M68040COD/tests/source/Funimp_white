@@ -1,0 +1,22 @@
+verbose
+# Unimp.sa white box tests for decode logic
+# dealing with the d2 stack flag and get_op/
+# decbin exception reporting
+# Path 1
+fmove.p 00010005_00000000_00000000
+# Path 3
+fmove.p 7fff0000_30000000_00000000
+# Path 4
+fmove.p 7fff0000_30000000_00000000 SNAN
+# Path 5
+fmove.p 00040001_23456789_00000000
+# Path 6
+fmove.p 00040001_23456789_00000000 INEX1
+# Path 7
+fsin.p  00000002_00000000_00000000
+# Path 8
+fsin.p  00000002_00000000_00000000 INEX2
+# Path 9
+fsin.p  00040001_23456789_00000000 
+# Path 10
+fsin.p  00040001_23456789_00000000 INEX1

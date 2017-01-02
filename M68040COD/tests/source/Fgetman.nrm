@@ -1,0 +1,55 @@
+verbose
+#norm inputs
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rn
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rz
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rm
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rp
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rn
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rz
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rm
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rp
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rn d
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rz d
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rm d
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rp d
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rn d
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rz d
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rm d
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rp d
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rn s
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rz s
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rm s
+fgetman.x 7ffe_0000_aaaa_aaaa_aaaa_aaaf rp s
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rn s
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rz s
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rm s
+fgetman.x fffe_0000_aaaa_aaaa_aaaa_aaaf rp s
+# denorm inputs
+fgetman.x 8000_0000_0000_0000_0000_0001
+fgetman.x 0000_0000_0000_0000_0000_0001
+fgetman.x 8000_0000_0000_0001_0000_0001
+fgetman.x 0000_0000_0000_0001_0000_0001
+fgetman.x 0000_0000_0000_0000_0000_0001 rn
+fgetman.x 0000_0000_0000_0000_0000_0001 rz
+fgetman.x 0000_0000_0000_0000_0000_0001 rm
+fgetman.x 0000_0000_0000_0000_0000_0001 rp
+fgetman.x 8000_0000_0000_0000_0000_0001 rn
+fgetman.x 8000_0000_0000_0000_0000_0001 rz
+fgetman.x 8000_0000_0000_0000_0000_0001 rm
+fgetman.x 8000_0000_0000_0000_0000_0001 rp
+fgetman.x 0000_0000_0000_0000_0000_0001 rn d
+fgetman.x 0000_0000_0000_0000_0000_0001 rz d
+fgetman.x 0000_0000_0000_0000_0000_0001 rm d
+fgetman.x 0000_0000_0000_0000_0000_0001 rp d
+fgetman.x 8000_0000_0000_0000_0000_0001 rn d
+fgetman.x 8000_0000_0000_0000_0000_0001 rz d
+fgetman.x 8000_0000_0000_0000_0000_0001 rm d
+fgetman.x 8000_0000_0000_0000_0000_0001 rp d
+fgetman.x 0000_0000_0000_0000_0000_0001 rn s
+fgetman.x 0000_0000_0000_0000_0000_0001 rz s
+fgetman.x 0000_0000_0000_0000_0000_0001 rm s
+fgetman.x 0000_0000_0000_0000_0000_0001 rp s
+fgetman.x 8000_0000_0000_0000_0000_0001 rn s
+fgetman.x 8000_0000_0000_0000_0000_0001 rz s
+fgetman.x 8000_0000_0000_0000_0000_0001 rm s
+fgetman.x 8000_0000_0000_0000_0000_0001 rp s

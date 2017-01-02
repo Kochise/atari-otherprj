@@ -1,0 +1,1000 @@
+#CREATING TEST CASES FROM FILE Fbugs.fixed
+fsmove.x 00050008_00000000_00000001
+fdmove.x 00050008_00000000_00000001
+fsmove.x 80050008_00000000_00000001
+fdmove.x 80050008_00000000_00000001
+fsadd.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fdadd.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fsdiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fddiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fssub.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fdsub.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fsmul.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fdmul.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_1000_0000_0000
+fsadd.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fdadd.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fsdiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fddiv.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fssub.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fdsub.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fsmul.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fdmul.x 0000_0000_0000_1000_0000_0000 7fff_0000_8000_0000_0000_0000
+fsadd.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fdadd.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fsdiv.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fddiv.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fssub.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fdsub.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fsmul.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fdmul.x 0000_0000_0000_1000_0000_0000 0000_0000_0000_0000_0000_0000
+fsdiv.x 0000_0000_4000_0000_0000_0000 7ffe_0000_ffff_ffff_ffff_ffff
+fddiv.x 0000_0000_4000_0000_0000_0000 7ffe_0000_ffff_ffff_ffff_ffff
+fsmul.x 7ffe_0000_ffff_ffff_ffff_ffff [b]2 inex2
+fdmul.x 7ffe_0000_ffff_ffff_ffff_ffff [b]2 inex2
+fsmul.x 0000_0000_7fff_ffff_ffff_fffe 3fff_0000_8000_0000_0000_0001
+fdmul.x 0000_0000_7fff_ffff_ffff_fffe 3fff_0000_8000_0000_0000_0001
+fsmul.x 0000_0000_0000_0000_0000_0003 3ffc_0000_8000_0000_0000_0000
+fdmul.x 0000_0000_0000_0000_0000_0003 3ffc_0000_8000_0000_0000_0000
+fsmul.x 4040_0000_8000_0000_0000_0000 4040_0000_8000_0000_0000_0000 s rz
+fdmul.x 4040_0000_8000_0000_0000_0000 4040_0000_8000_0000_0000_0000 s rz
+fsmul.x [s]00b33333 3ffc_0000_8000_0000_0000_0000 s rn
+fdmul.x [s]00b33333 3ffc_0000_8000_0000_0000_0000 s rn
+#CREATING TEST CASES FROM FILE Fcos.nrm
+#CREATING TEST CASES FROM FILE Fcos.spc
+#CREATING TEST CASES FROM FILE Fcosh.nrm
+#CREATING TEST CASES FROM FILE Fcosh.spc
+#CREATING TEST CASES FROM FILE Fcuonly.vec
+fsmove.x in 1 rn
+fdmove.x in 1 rn
+fsmove.x in 1 rz
+fdmove.x in 1 rz
+fsmove.x in 1 rm
+fdmove.x in 1 rm
+fsmove.x in 1 rp
+fdmove.x in 1 rp
+fsmove.x in 1 rn d
+fdmove.x in 1 rn d
+fsmove.x in 1 rz d
+fdmove.x in 1 rz d
+fsmove.x in 1 rm d
+fdmove.x in 1 rm d
+fsmove.x in 1 rp d
+fdmove.x in 1 rp d
+fsmove.x in 1 rn s
+fdmove.x in 1 rn s
+fsmove.x in 1 rz s
+fdmove.x in 1 rz s
+fsmove.x in 1 rm s
+fdmove.x in 1 rm s
+fsmove.x in 1 rp s
+fdmove.x in 1 rp s
+fsmove.x in 800000000000000000000001 rn
+fdmove.x in 800000000000000000000001 rn
+fsmove.x in 800000000000000000000001 rz
+fdmove.x in 800000000000000000000001 rz
+fsmove.x in 800000000000000000000001 rm
+fdmove.x in 800000000000000000000001 rm
+fsmove.x in 800000000000000000000001 rp
+fdmove.x in 800000000000000000000001 rp
+fsmove.x in 800000000000000000000001 rn d
+fdmove.x in 800000000000000000000001 rn d
+fsmove.x in 800000000000000000000001 rz d
+fdmove.x in 800000000000000000000001 rz d
+fsmove.x in 800000000000000000000001 rm d
+fdmove.x in 800000000000000000000001 rm d
+fsmove.x in 800000000000000000000001 rp d
+fdmove.x in 800000000000000000000001 rp d
+fsmove.x in 800000000000000000000001 rn s
+fdmove.x in 800000000000000000000001 rn s
+fsmove.x in 800000000000000000000001 rz s
+fdmove.x in 800000000000000000000001 rz s
+fsmove.x in 800000000000000000000001 rm s
+fdmove.x in 800000000000000000000001 rm s
+fsmove.x in 800000000000000000000001 rp s
+fdmove.x in 800000000000000000000001 rp s
+fsabs.x in 1 rn
+fdabs.x in 1 rn
+fsabs.x in 1 rz
+fdabs.x in 1 rz
+fsabs.x in 1 rm
+fdabs.x in 1 rm
+fsabs.x in 1 rp
+fdabs.x in 1 rp
+fsabs.x in 1 rn d
+fdabs.x in 1 rn d
+fsabs.x in 1 rz d
+fdabs.x in 1 rz d
+fsabs.x in 1 rm d
+fdabs.x in 1 rm d
+fsabs.x in 1 rp d
+fdabs.x in 1 rp d
+fsabs.x in 1 rn s
+fdabs.x in 1 rn s
+fsabs.x in 1 rz s
+fdabs.x in 1 rz s
+fsabs.x in 1 rm s
+fdabs.x in 1 rm s
+fsabs.x in 1 rp s
+fdabs.x in 1 rp s
+fsabs.x in 800000000000000000000001 rn
+fdabs.x in 800000000000000000000001 rn
+fsabs.x in 800000000000000000000001 rz
+fdabs.x in 800000000000000000000001 rz
+fsabs.x in 800000000000000000000001 rm
+fdabs.x in 800000000000000000000001 rm
+fsabs.x in 800000000000000000000001 rp
+fdabs.x in 800000000000000000000001 rp
+fsabs.x in 800000000000000000000001 rn d
+fdabs.x in 800000000000000000000001 rn d
+fsabs.x in 800000000000000000000001 rz d
+fdabs.x in 800000000000000000000001 rz d
+fsabs.x in 800000000000000000000001 rm d
+fdabs.x in 800000000000000000000001 rm d
+fsabs.x in 800000000000000000000001 rp d
+fdabs.x in 800000000000000000000001 rp d
+fsabs.x in 800000000000000000000001 rn s
+fdabs.x in 800000000000000000000001 rn s
+fsabs.x in 800000000000000000000001 rz s
+fdabs.x in 800000000000000000000001 rz s
+fsabs.x in 800000000000000000000001 rm s
+fdabs.x in 800000000000000000000001 rm s
+fsabs.x in 800000000000000000000001 rp s
+fdabs.x in 800000000000000000000001 rp s
+fsneg.x in 1 rn
+fdneg.x in 1 rn
+fsneg.x in 1 rz
+fdneg.x in 1 rz
+fsneg.x in 1 rm
+fdneg.x in 1 rm
+fsneg.x in 1 rp
+fdneg.x in 1 rp
+fsneg.x in 1 rn d
+fdneg.x in 1 rn d
+fsneg.x in 1 rz d
+fdneg.x in 1 rz d
+fsneg.x in 1 rm d
+fdneg.x in 1 rm d
+fsneg.x in 1 rp d
+fdneg.x in 1 rp d
+fsneg.x in 1 rn s
+fdneg.x in 1 rn s
+fsneg.x in 1 rz s
+fdneg.x in 1 rz s
+fsneg.x in 1 rm s
+fdneg.x in 1 rm s
+fsneg.x in 1 rp s
+fdneg.x in 1 rp s
+fsneg.x in 800000000000000000000001 rn
+fdneg.x in 800000000000000000000001 rn
+fsneg.x in 800000000000000000000001 rz
+fdneg.x in 800000000000000000000001 rz
+fsneg.x in 800000000000000000000001 rm
+fdneg.x in 800000000000000000000001 rm
+fsneg.x in 800000000000000000000001 rp
+fdneg.x in 800000000000000000000001 rp
+fsneg.x in 800000000000000000000001 rn d
+fdneg.x in 800000000000000000000001 rn d
+fsneg.x in 800000000000000000000001 rz d
+fdneg.x in 800000000000000000000001 rz d
+fsneg.x in 800000000000000000000001 rm d
+fdneg.x in 800000000000000000000001 rm d
+fsneg.x in 800000000000000000000001 rp d
+fdneg.x in 800000000000000000000001 rp d
+fsneg.x in 800000000000000000000001 rn s
+fdneg.x in 800000000000000000000001 rn s
+fsneg.x in 800000000000000000000001 rz s
+fdneg.x in 800000000000000000000001 rz s
+fsneg.x in 800000000000000000000001 rm s
+fdneg.x in 800000000000000000000001 rm s
+fsneg.x in 800000000000000000000001 rp s
+fdneg.x in 800000000000000000000001 rp s
+fsmove.d in 1 rn
+fdmove.d in 1 rn
+fsmove.d in 1 rz
+fdmove.d in 1 rz
+fsmove.d in 1 rm
+fdmove.d in 1 rm
+fsmove.d in 1 rp
+fdmove.d in 1 rp
+fsmove.d in 1 rn d
+fdmove.d in 1 rn d
+fsmove.d in 1 rz d
+fdmove.d in 1 rz d
+fsmove.d in 1 rm d
+fdmove.d in 1 rm d
+fsmove.d in 1 rp d
+fdmove.d in 1 rp d
+fsmove.d in 1 rn s
+fdmove.d in 1 rn s
+fsmove.d in 1 rz s
+fdmove.d in 1 rz s
+fsmove.d in 1 rm s
+fdmove.d in 1 rm s
+fsmove.d in 1 rp s
+fdmove.d in 1 rp s
+fsmove.d in 8000000000000001 rn
+fdmove.d in 8000000000000001 rn
+fsmove.d in 8000000000000001 rz
+fdmove.d in 8000000000000001 rz
+fsmove.d in 8000000000000001 rm
+fdmove.d in 8000000000000001 rm
+fsmove.d in 8000000000000001 rp
+fdmove.d in 8000000000000001 rp
+fsmove.d in 8000000000000001 rn d
+fdmove.d in 8000000000000001 rn d
+fsmove.d in 8000000000000001 rz d
+fdmove.d in 8000000000000001 rz d
+fsmove.d in 8000000000000001 rm d
+fdmove.d in 8000000000000001 rm d
+fsmove.d in 8000000000000001 rp d
+fdmove.d in 8000000000000001 rp d
+fsmove.d in 8000000000000001 rn s
+fdmove.d in 8000000000000001 rn s
+fsmove.d in 8000000000000001 rz s
+fdmove.d in 8000000000000001 rz s
+fsmove.d in 8000000000000001 rm s
+fdmove.d in 8000000000000001 rm s
+fsmove.d in 8000000000000001 rp s
+fdmove.d in 8000000000000001 rp s
+fsabs.d in 1 rn
+fdabs.d in 1 rn
+fsabs.d in 1 rz
+fdabs.d in 1 rz
+fsabs.d in 1 rm
+fdabs.d in 1 rm
+fsabs.d in 1 rp
+fdabs.d in 1 rp
+fsabs.d in 1 rn d
+fdabs.d in 1 rn d
+fsabs.d in 1 rz d
+fdabs.d in 1 rz d
+fsabs.d in 1 rm d
+fdabs.d in 1 rm d
+fsabs.d in 1 rp d
+fdabs.d in 1 rp d
+fsabs.d in 1 rn s
+fdabs.d in 1 rn s
+fsabs.d in 1 rz s
+fdabs.d in 1 rz s
+fsabs.d in 1 rm s
+fdabs.d in 1 rm s
+fsabs.d in 1 rp s
+fdabs.d in 1 rp s
+fsabs.d in 8000000000000001 rn
+fdabs.d in 8000000000000001 rn
+fsabs.d in 8000000000000001 rz
+fdabs.d in 8000000000000001 rz
+fsabs.d in 8000000000000001 rm
+fdabs.d in 8000000000000001 rm
+fsabs.d in 8000000000000001 rp
+fdabs.d in 8000000000000001 rp
+fsabs.d in 8000000000000001 rn d
+fdabs.d in 8000000000000001 rn d
+fsabs.d in 8000000000000001 rz d
+fdabs.d in 8000000000000001 rz d
+fsabs.d in 8000000000000001 rm d
+fdabs.d in 8000000000000001 rm d
+fsabs.d in 8000000000000001 rp d
+fdabs.d in 8000000000000001 rp d
+fsabs.d in 8000000000000001 rn s
+fdabs.d in 8000000000000001 rn s
+fsabs.d in 8000000000000001 rz s
+fdabs.d in 8000000000000001 rz s
+fsabs.d in 8000000000000001 rm s
+fdabs.d in 8000000000000001 rm s
+fsabs.d in 8000000000000001 rp s
+fdabs.d in 8000000000000001 rp s
+fsneg.d in 1 rn
+fdneg.d in 1 rn
+fsneg.d in 1 rz
+fdneg.d in 1 rz
+fsneg.d in 1 rm
+fdneg.d in 1 rm
+fsneg.d in 1 rp
+fdneg.d in 1 rp
+fsneg.d in 1 rn d
+fdneg.d in 1 rn d
+fsneg.d in 1 rz d
+fdneg.d in 1 rz d
+fsneg.d in 1 rm d
+fdneg.d in 1 rm d
+fsneg.d in 1 rp d
+fdneg.d in 1 rp d
+fsneg.d in 1 rn s
+fdneg.d in 1 rn s
+fsneg.d in 1 rz s
+fdneg.d in 1 rz s
+fsneg.d in 1 rm s
+fdneg.d in 1 rm s
+fsneg.d in 1 rp s
+fdneg.d in 1 rp s
+fsneg.d in 8000000000000001 rn
+fdneg.d in 8000000000000001 rn
+fsneg.d in 8000000000000001 rz
+fdneg.d in 8000000000000001 rz
+fsneg.d in 8000000000000001 rm
+fdneg.d in 8000000000000001 rm
+fsneg.d in 8000000000000001 rp
+fdneg.d in 8000000000000001 rp
+fsneg.d in 8000000000000001 rn d
+fdneg.d in 8000000000000001 rn d
+fsneg.d in 8000000000000001 rz d
+fdneg.d in 8000000000000001 rz d
+fsneg.d in 8000000000000001 rm d
+fdneg.d in 8000000000000001 rm d
+fsneg.d in 8000000000000001 rp d
+fdneg.d in 8000000000000001 rp d
+fsneg.d in 8000000000000001 rn s
+fdneg.d in 8000000000000001 rn s
+fsneg.d in 8000000000000001 rz s
+fdneg.d in 8000000000000001 rz s
+fsneg.d in 8000000000000001 rm s
+fdneg.d in 8000000000000001 rm s
+fsneg.d in 8000000000000001 rp s
+fdneg.d in 8000000000000001 rp s
+fsmove.s in 1 rn
+fdmove.s in 1 rn
+fsmove.s in 1 rz
+fdmove.s in 1 rz
+fsmove.s in 1 rm
+fdmove.s in 1 rm
+fsmove.s in 1 rp
+fdmove.s in 1 rp
+fsmove.s in 1 rn d
+fdmove.s in 1 rn d
+fsmove.s in 1 rz d
+fdmove.s in 1 rz d
+fsmove.s in 1 rm d
+fdmove.s in 1 rm d
+fsmove.s in 1 rp d
+fdmove.s in 1 rp d
+fsmove.s in 1 rn s
+fdmove.s in 1 rn s
+fsmove.s in 1 rz s
+fdmove.s in 1 rz s
+fsmove.s in 1 rm s
+fdmove.s in 1 rm s
+fsmove.s in 1 rp s
+fdmove.s in 1 rp s
+fsmove.s in 80000001 rn
+fdmove.s in 80000001 rn
+fsmove.s in 80000001 rz
+fdmove.s in 80000001 rz
+fsmove.s in 80000001 rm
+fdmove.s in 80000001 rm
+fsmove.s in 80000001 rp
+fdmove.s in 80000001 rp
+fsmove.s in 80000001 rn d
+fdmove.s in 80000001 rn d
+fsmove.s in 80000001 rz d
+fdmove.s in 80000001 rz d
+fsmove.s in 80000001 rm d
+fdmove.s in 80000001 rm d
+fsmove.s in 80000001 rp d
+fdmove.s in 80000001 rp d
+fsmove.s in 80000001 rn s
+fdmove.s in 80000001 rn s
+fsmove.s in 80000001 rz s
+fdmove.s in 80000001 rz s
+fsmove.s in 80000001 rm s
+fdmove.s in 80000001 rm s
+fsmove.s in 80000001 rp s
+fdmove.s in 80000001 rp s
+fsabs.s in 1 rn
+fdabs.s in 1 rn
+fsabs.s in 1 rz
+fdabs.s in 1 rz
+fsabs.s in 1 rm
+fdabs.s in 1 rm
+fsabs.s in 1 rp
+fdabs.s in 1 rp
+fsabs.s in 1 rn d
+fdabs.s in 1 rn d
+fsabs.s in 1 rz d
+fdabs.s in 1 rz d
+fsabs.s in 1 rm d
+fdabs.s in 1 rm d
+fsabs.s in 1 rp d
+fdabs.s in 1 rp d
+fsabs.s in 1 rn s
+fdabs.s in 1 rn s
+fsabs.s in 1 rz s
+fdabs.s in 1 rz s
+fsabs.s in 1 rm s
+fdabs.s in 1 rm s
+fsabs.s in 1 rp s
+fdabs.s in 1 rp s
+fsabs.s in 80000001 rn
+fdabs.s in 80000001 rn
+fsabs.s in 80000001 rz
+fdabs.s in 80000001 rz
+fsabs.s in 80000001 rm
+fdabs.s in 80000001 rm
+fsabs.s in 80000001 rp
+fdabs.s in 80000001 rp
+fsabs.s in 80000001 rn d
+fdabs.s in 80000001 rn d
+fsabs.s in 80000001 rz d
+fdabs.s in 80000001 rz d
+fsabs.s in 80000001 rm d
+fdabs.s in 80000001 rm d
+fsabs.s in 80000001 rp d
+fdabs.s in 80000001 rp d
+fsabs.s in 80000001 rn s
+fdabs.s in 80000001 rn s
+fsabs.s in 80000001 rz s
+fdabs.s in 80000001 rz s
+fsabs.s in 80000001 rm s
+fdabs.s in 80000001 rm s
+fsabs.s in 80000001 rp s
+fdabs.s in 80000001 rp s
+fsneg.s in 1 rn
+fdneg.s in 1 rn
+fsneg.s in 1 rz
+fdneg.s in 1 rz
+fsneg.s in 1 rm
+fdneg.s in 1 rm
+fsneg.s in 1 rp
+fdneg.s in 1 rp
+fsneg.s in 1 rn d
+fdneg.s in 1 rn d
+fsneg.s in 1 rz d
+fdneg.s in 1 rz d
+fsneg.s in 1 rm d
+fdneg.s in 1 rm d
+fsneg.s in 1 rp d
+fdneg.s in 1 rp d
+fsneg.s in 1 rn s
+fdneg.s in 1 rn s
+fsneg.s in 1 rz s
+fdneg.s in 1 rz s
+fsneg.s in 1 rm s
+fdneg.s in 1 rm s
+fsneg.s in 1 rp s
+fdneg.s in 1 rp s
+fsneg.s in 80000001 rn
+fdneg.s in 80000001 rn
+fsneg.s in 80000001 rz
+fdneg.s in 80000001 rz
+fsneg.s in 80000001 rm
+fdneg.s in 80000001 rm
+fsneg.s in 80000001 rp
+fdneg.s in 80000001 rp
+fsneg.s in 80000001 rn d
+fdneg.s in 80000001 rn d
+fsneg.s in 80000001 rz d
+fdneg.s in 80000001 rz d
+fsneg.s in 80000001 rm d
+fdneg.s in 80000001 rm d
+fsneg.s in 80000001 rp d
+fdneg.s in 80000001 rp d
+fsneg.s in 80000001 rn s
+fdneg.s in 80000001 rn s
+fsneg.s in 80000001 rz s
+fdneg.s in 80000001 rz s
+fsneg.s in 80000001 rm s
+fdneg.s in 80000001 rm s
+fsneg.s in 80000001 rp s
+fdneg.s in 80000001 rp s
+fsmove.x in 1 rn unfl
+fdmove.x in 1 rn unfl
+fsmove.x in 1 rn d unfl
+fdmove.x in 1 rn d unfl
+fsmove.x in 1 rn s unfl
+fdmove.x in 1 rn s unfl
+fsmove.x in 800000000000000000000001 rn unfl
+fdmove.x in 800000000000000000000001 rn unfl
+fsmove.x in 800000000000000000000001 rn d unfl
+fdmove.x in 800000000000000000000001 rn d unfl
+fsmove.x in 800000000000000000000001 rn s unfl
+fdmove.x in 800000000000000000000001 rn s unfl
+fsabs.x in 1 rn unfl
+fdabs.x in 1 rn unfl
+fsabs.x in 1 rn d unfl
+fdabs.x in 1 rn d unfl
+fsabs.x in 1 rn s unfl
+fdabs.x in 1 rn s unfl
+fsabs.x in 800000000000000000000001 rn unfl
+fdabs.x in 800000000000000000000001 rn unfl
+fsabs.x in 800000000000000000000001 rn d unfl
+fdabs.x in 800000000000000000000001 rn d unfl
+fsabs.x in 800000000000000000000001 rn s unfl
+fdabs.x in 800000000000000000000001 rn s unfl
+fsneg.x in 1 rn unfl
+fdneg.x in 1 rn unfl
+fsneg.x in 1 rn d unfl
+fdneg.x in 1 rn d unfl
+fsneg.x in 1 rn s unfl
+fdneg.x in 1 rn s unfl
+fsneg.x in 800000000000000000000001 rn unfl
+fdneg.x in 800000000000000000000001 rn unfl
+fsneg.x in 800000000000000000000001 rn d unfl
+fdneg.x in 800000000000000000000001 rn d unfl
+fsneg.x in 800000000000000000000001 rn s unfl
+fdneg.x in 800000000000000000000001 rn s unfl
+fsmove.d in 1 rn unfl
+fdmove.d in 1 rn unfl
+fsmove.d in 1 rn d unfl
+fdmove.d in 1 rn d unfl
+fsmove.d in 1 rn s unfl
+fdmove.d in 1 rn s unfl
+fsmove.d in 8000000000000001 rn unfl
+fdmove.d in 8000000000000001 rn unfl
+fsmove.d in 8000000000000001 rn d unfl
+fdmove.d in 8000000000000001 rn d unfl
+fsmove.d in 8000000000000001 rn s unfl
+fdmove.d in 8000000000000001 rn s unfl
+fsabs.d in 1 rn unfl
+fdabs.d in 1 rn unfl
+fsabs.d in 1 rn d unfl
+fdabs.d in 1 rn d unfl
+fsabs.d in 1 rn s unfl
+fdabs.d in 1 rn s unfl
+fsabs.d in 8000000000000001 rn unfl
+fdabs.d in 8000000000000001 rn unfl
+fsabs.d in 8000000000000001 rn d unfl
+fdabs.d in 8000000000000001 rn d unfl
+fsabs.d in 8000000000000001 rn s unfl
+fdabs.d in 8000000000000001 rn s unfl
+fsneg.d in 1 rn unfl
+fdneg.d in 1 rn unfl
+fsneg.d in 1 rn d unfl
+fdneg.d in 1 rn d unfl
+fsneg.d in 1 rn s unfl
+fdneg.d in 1 rn s unfl
+fsneg.d in 8000000000000001 rn unfl
+fdneg.d in 8000000000000001 rn unfl
+fsneg.d in 8000000000000001 rn d unfl
+fdneg.d in 8000000000000001 rn d unfl
+fsneg.d in 8000000000000001 rn s unfl
+fdneg.d in 8000000000000001 rn s unfl
+fsmove.s in 1 rn unfl
+fdmove.s in 1 rn unfl
+fsmove.s in 1 rn d unfl
+fdmove.s in 1 rn d unfl
+fsmove.s in 1 rn s unfl
+fdmove.s in 1 rn s unfl
+fsmove.s in 80000001 rn unfl
+fdmove.s in 80000001 rn unfl
+fsmove.s in 80000001 rn d unfl
+fdmove.s in 80000001 rn d unfl
+fsmove.s in 80000001 rn s unfl
+fdmove.s in 80000001 rn s unfl
+fsabs.s in 1 rn unfl
+fdabs.s in 1 rn unfl
+fsabs.s in 1 rn d unfl
+fdabs.s in 1 rn d unfl
+fsabs.s in 1 rn s unfl
+fdabs.s in 1 rn s unfl
+fsabs.s in 80000001 rn unfl
+fdabs.s in 80000001 rn unfl
+fsabs.s in 80000001 rn d unfl
+fdabs.s in 80000001 rn d unfl
+fsabs.s in 80000001 rn s unfl
+fdabs.s in 80000001 rn s unfl
+fsneg.s in 1 rn unfl
+fdneg.s in 1 rn unfl
+fsneg.s in 1 rn d unfl
+fdneg.s in 1 rn d unfl
+fsneg.s in 1 rn s unfl
+fdneg.s in 1 rn s unfl
+fsneg.s in 80000001 rn unfl
+fdneg.s in 80000001 rn unfl
+fsneg.s in 80000001 rn d unfl
+fdneg.s in 80000001 rn d unfl
+fsneg.s in 80000001 rn s unfl
+fdneg.s in 80000001 rn s unfl
+fsmove.x in 1 rn inex2
+fdmove.x in 1 rn inex2
+fsmove.x in 1 rn d inex2
+fdmove.x in 1 rn d inex2
+fsmove.x in 1 rn s inex2
+fdmove.x in 1 rn s inex2
+fsmove.x in 800000000000000000000001 rn inex2
+fdmove.x in 800000000000000000000001 rn inex2
+fsmove.x in 800000000000000000000001 rn d inex2
+fdmove.x in 800000000000000000000001 rn d inex2
+fsmove.x in 800000000000000000000001 rn s inex2
+fdmove.x in 800000000000000000000001 rn s inex2
+fsabs.x in 1 rn inex2
+fdabs.x in 1 rn inex2
+fsabs.x in 1 rn d inex2
+fdabs.x in 1 rn d inex2
+fsabs.x in 1 rn s inex2
+fdabs.x in 1 rn s inex2
+fsabs.x in 800000000000000000000001 rn inex2
+fdabs.x in 800000000000000000000001 rn inex2
+fsabs.x in 800000000000000000000001 rn d inex2
+fdabs.x in 800000000000000000000001 rn d inex2
+fsabs.x in 800000000000000000000001 rn s inex2
+fdabs.x in 800000000000000000000001 rn s inex2
+fsneg.x in 1 rn inex2
+fdneg.x in 1 rn inex2
+fsneg.x in 1 rn d inex2
+fdneg.x in 1 rn d inex2
+fsneg.x in 1 rn s inex2
+fdneg.x in 1 rn s inex2
+fsneg.x in 800000000000000000000001 rn inex2
+fdneg.x in 800000000000000000000001 rn inex2
+fsneg.x in 800000000000000000000001 rn d inex2
+fdneg.x in 800000000000000000000001 rn d inex2
+fsneg.x in 800000000000000000000001 rn s inex2
+fdneg.x in 800000000000000000000001 rn s inex2
+fsmove.d in 1 rn inex2
+fdmove.d in 1 rn inex2
+fsmove.d in 1 rn d inex2
+fdmove.d in 1 rn d inex2
+fsmove.d in 1 rn s inex2
+fdmove.d in 1 rn s inex2
+fsmove.d in 8000000000000001 rn inex2
+fdmove.d in 8000000000000001 rn inex2
+fsmove.d in 8000000000000001 rn d inex2
+fdmove.d in 8000000000000001 rn d inex2
+fsmove.d in 8000000000000001 rn s inex2
+fdmove.d in 8000000000000001 rn s inex2
+fsabs.d in 1 rn inex2
+fdabs.d in 1 rn inex2
+fsabs.d in 1 rn d inex2
+fdabs.d in 1 rn d inex2
+fsabs.d in 1 rn s inex2
+fdabs.d in 1 rn s inex2
+fsabs.d in 8000000000000001 rn inex2
+fdabs.d in 8000000000000001 rn inex2
+fsabs.d in 8000000000000001 rn d inex2
+fdabs.d in 8000000000000001 rn d inex2
+fsabs.d in 8000000000000001 rn s inex2
+fdabs.d in 8000000000000001 rn s inex2
+fsneg.d in 1 rn inex2
+fdneg.d in 1 rn inex2
+fsneg.d in 1 rn d inex2
+fdneg.d in 1 rn d inex2
+fsneg.d in 1 rn s inex2
+fdneg.d in 1 rn s inex2
+fsneg.d in 8000000000000001 rn inex2
+fdneg.d in 8000000000000001 rn inex2
+fsneg.d in 8000000000000001 rn d inex2
+fdneg.d in 8000000000000001 rn d inex2
+fsneg.d in 8000000000000001 rn s inex2
+fdneg.d in 8000000000000001 rn s inex2
+fsmove.s in 1 rn inex2
+fdmove.s in 1 rn inex2
+fsmove.s in 1 rn d inex2
+fdmove.s in 1 rn d inex2
+fsmove.s in 1 rn s inex2
+fdmove.s in 1 rn s inex2
+fsmove.s in 80000001 rn inex2
+fdmove.s in 80000001 rn inex2
+fsmove.s in 80000001 rn d inex2
+fdmove.s in 80000001 rn d inex2
+fsmove.s in 80000001 rn s inex2
+fdmove.s in 80000001 rn s inex2
+fsabs.s in 1 rn inex2
+fdabs.s in 1 rn inex2
+fsabs.s in 1 rn d inex2
+fdabs.s in 1 rn d inex2
+fsabs.s in 1 rn s inex2
+fdabs.s in 1 rn s inex2
+fsabs.s in 80000001 rn inex2
+fdabs.s in 80000001 rn inex2
+fsabs.s in 80000001 rn d inex2
+fdabs.s in 80000001 rn d inex2
+fsabs.s in 80000001 rn s inex2
+fdabs.s in 80000001 rn s inex2
+fsneg.s in 1 rn inex2
+fdneg.s in 1 rn inex2
+fsneg.s in 1 rn d inex2
+fdneg.s in 1 rn d inex2
+fsneg.s in 1 rn s inex2
+fdneg.s in 1 rn s inex2
+fsneg.s in 80000001 rn inex2
+fdneg.s in 80000001 rn inex2
+fsneg.s in 80000001 rn d inex2
+fdneg.s in 80000001 rn d inex2
+fsneg.s in 80000001 rn s inex2
+fdneg.s in 80000001 rn s inex2
+fsmove.x in 1 rn unfl inex2
+fdmove.x in 1 rn unfl inex2
+fsmove.x in 1 rn d unfl inex2
+fdmove.x in 1 rn d unfl inex2
+fsmove.x in 1 rn s unfl inex2
+fdmove.x in 1 rn s unfl inex2
+fsmove.x in 800000000000000000000001 rn unfl inex2
+fdmove.x in 800000000000000000000001 rn unfl inex2
+fsmove.x in 800000000000000000000001 rn d unfl inex2
+fdmove.x in 800000000000000000000001 rn d unfl inex2
+fsmove.x in 800000000000000000000001 rn s unfl inex2
+fdmove.x in 800000000000000000000001 rn s unfl inex2
+fsabs.x in 1 rn unfl inex2
+fdabs.x in 1 rn unfl inex2
+fsabs.x in 1 rn d unfl inex2
+fdabs.x in 1 rn d unfl inex2
+fsabs.x in 1 rn s unfl inex2
+fdabs.x in 1 rn s unfl inex2
+fsabs.x in 800000000000000000000001 rn unfl inex2
+fdabs.x in 800000000000000000000001 rn unfl inex2
+fsabs.x in 800000000000000000000001 rn d unfl inex2
+fdabs.x in 800000000000000000000001 rn d unfl inex2
+fsabs.x in 800000000000000000000001 rn s unfl inex2
+fdabs.x in 800000000000000000000001 rn s unfl inex2
+fsneg.x in 1 rn unfl inex2
+fdneg.x in 1 rn unfl inex2
+fsneg.x in 1 rn d unfl inex2
+fdneg.x in 1 rn d unfl inex2
+fsneg.x in 1 rn s unfl inex2
+fdneg.x in 1 rn s unfl inex2
+fsneg.x in 800000000000000000000001 rn unfl inex2
+fdneg.x in 800000000000000000000001 rn unfl inex2
+fsneg.x in 800000000000000000000001 rn d unfl inex2
+fdneg.x in 800000000000000000000001 rn d unfl inex2
+fsneg.x in 800000000000000000000001 rn s unfl inex2
+fdneg.x in 800000000000000000000001 rn s unfl inex2
+fsmove.d in 1 rn unfl inex2
+fdmove.d in 1 rn unfl inex2
+fsmove.d in 1 rn d unfl inex2
+fdmove.d in 1 rn d unfl inex2
+fsmove.d in 1 rn s unfl inex2
+fdmove.d in 1 rn s unfl inex2
+fsmove.d in 8000000000000001 rn unfl inex2
+fdmove.d in 8000000000000001 rn unfl inex2
+fsmove.d in 8000000000000001 rn d unfl inex2
+fdmove.d in 8000000000000001 rn d unfl inex2
+fsmove.d in 8000000000000001 rn s unfl inex2
+fdmove.d in 8000000000000001 rn s unfl inex2
+fsabs.d in 1 rn unfl inex2
+fdabs.d in 1 rn unfl inex2
+fsabs.d in 1 rn d unfl inex2
+fdabs.d in 1 rn d unfl inex2
+fsabs.d in 1 rn s unfl inex2
+fdabs.d in 1 rn s unfl inex2
+fsabs.d in 8000000000000001 rn unfl inex2
+fdabs.d in 8000000000000001 rn unfl inex2
+fsabs.d in 8000000000000001 rn d unfl inex2
+fdabs.d in 8000000000000001 rn d unfl inex2
+fsabs.d in 8000000000000001 rn s unfl inex2
+fdabs.d in 8000000000000001 rn s unfl inex2
+fsneg.d in 1 rn unfl inex2
+fdneg.d in 1 rn unfl inex2
+fsneg.d in 1 rn d unfl inex2
+fdneg.d in 1 rn d unfl inex2
+fsneg.d in 1 rn s unfl inex2
+fdneg.d in 1 rn s unfl inex2
+fsneg.d in 8000000000000001 rn unfl inex2
+fdneg.d in 8000000000000001 rn unfl inex2
+fsneg.d in 8000000000000001 rn d unfl inex2
+fdneg.d in 8000000000000001 rn d unfl inex2
+fsneg.d in 8000000000000001 rn s unfl inex2
+fdneg.d in 8000000000000001 rn s unfl inex2
+fsmove.s in 1 rn unfl inex2
+fdmove.s in 1 rn unfl inex2
+fsmove.s in 1 rn d unfl inex2
+fdmove.s in 1 rn d unfl inex2
+fsmove.s in 1 rn s unfl inex2
+fdmove.s in 1 rn s unfl inex2
+fsmove.s in 80000001 rn unfl inex2
+fdmove.s in 80000001 rn unfl inex2
+fsmove.s in 80000001 rn d unfl inex2
+fdmove.s in 80000001 rn d unfl inex2
+fsmove.s in 80000001 rn s unfl inex2
+fdmove.s in 80000001 rn s unfl inex2
+fsabs.s in 1 rn unfl inex2
+fdabs.s in 1 rn unfl inex2
+fsabs.s in 1 rn d unfl inex2
+fdabs.s in 1 rn d unfl inex2
+fsabs.s in 1 rn s unfl inex2
+fdabs.s in 1 rn s unfl inex2
+fsabs.s in 80000001 rn unfl inex2
+fdabs.s in 80000001 rn unfl inex2
+fsabs.s in 80000001 rn d unfl inex2
+fdabs.s in 80000001 rn d unfl inex2
+fsabs.s in 80000001 rn s unfl inex2
+fdabs.s in 80000001 rn s unfl inex2
+fsneg.s in 1 rn unfl inex2
+fdneg.s in 1 rn unfl inex2
+fsneg.s in 1 rn d unfl inex2
+fdneg.s in 1 rn d unfl inex2
+fsneg.s in 1 rn s unfl inex2
+fdneg.s in 1 rn s unfl inex2
+fsneg.s in 80000001 rn unfl inex2
+fdneg.s in 80000001 rn unfl inex2
+fsneg.s in 80000001 rn d unfl inex2
+fdneg.s in 80000001 rn d unfl inex2
+fsneg.s in 80000001 rn s unfl inex2
+fdneg.s in 80000001 rn s unfl inex2
+#CREATING TEST CASES FROM FILE Fcuwrap.vec
+fsadd.x 000000004000000000000000 7ffe00008000000000000000
+fdadd.x 000000004000000000000000 7ffe00008000000000000000
+fsadd.x 800000004000000000000000 7ffe00008000000000000000
+fdadd.x 800000004000000000000000 7ffe00008000000000000000
+fsadd.x 000000004000000000000000 fffe00008000000000000000
+fdadd.x 000000004000000000000000 fffe00008000000000000000
+fsadd.x 800000004000000000000000 fffe00008000000000000000
+fdadd.x 800000004000000000000000 fffe00008000000000000000
+fsadd.x 000000008000000000000000 7ffe00008000000000000000
+fdadd.x 000000008000000000000000 7ffe00008000000000000000
+fsadd.x 800000008000000000000000 7ffe00008000000000000000
+fdadd.x 800000008000000000000000 7ffe00008000000000000000
+fsadd.x 000000008000000000000000 fffe00008000000000000000
+fdadd.x 000000008000000000000000 fffe00008000000000000000
+fsadd.x 800000008000000000000000 fffe00008000000000000000
+fdadd.x 800000008000000000000000 fffe00008000000000000000
+fsadd.x 000000002000000000000000 7ffe00008000000000000000
+fdadd.x 000000002000000000000000 7ffe00008000000000000000
+fsadd.x 800000002000000000000000 7ffe00008000000000000000
+fdadd.x 800000002000000000000000 7ffe00008000000000000000
+fsadd.x 000000002000000000000000 fffe00008000000000000000
+fdadd.x 000000002000000000000000 fffe00008000000000000000
+fsadd.x 800000002000000000000000 fffe00008000000000000000
+fdadd.x 800000002000000000000000 fffe00008000000000000000
+fsadd.x 000000000000000000000001 7ffe00008000000000000000
+fdadd.x 000000000000000000000001 7ffe00008000000000000000
+fsadd.x 800000000000000000000001 7ffe00008000000000000000
+fdadd.x 800000000000000000000001 7ffe00008000000000000000
+fsadd.x 000000000000000000000001 fffe00008000000000000000
+fdadd.x 000000000000000000000001 fffe00008000000000000000
+fsadd.x 800000000000000000000001 fffe00008000000000000000
+fdadd.x 800000000000000000000001 fffe00008000000000000000
+fsadd.x 000000002000000000000000 7ffe0000ffffffffffffffff
+fdadd.x 000000002000000000000000 7ffe0000ffffffffffffffff
+fsadd.x 800000002000000000000000 7ffe0000ffffffffffffffff
+fdadd.x 800000002000000000000000 7ffe0000ffffffffffffffff
+fsadd.x 000000002000000000000000 fffe0000ffffffffffffffff
+fdadd.x 000000002000000000000000 fffe0000ffffffffffffffff
+fsadd.x 800000002000000000000000 fffe0000ffffffffffffffff
+fdadd.x 800000002000000000000000 fffe0000ffffffffffffffff
+fsadd.x 000000000000000000000001 7ffe0000ffffffffffffffff
+fdadd.x 000000000000000000000001 7ffe0000ffffffffffffffff
+fsadd.x 800000000000000000000001 7ffe0000ffffffffffffffff
+fdadd.x 800000000000000000000001 7ffe0000ffffffffffffffff
+fsadd.x 000000000000000000000001 fffe0000ffffffffffffffff
+fdadd.x 000000000000000000000001 fffe0000ffffffffffffffff
+fsadd.x 800000000000000000000001 fffe0000ffffffffffffffff
+fdadd.x 800000000000000000000001 fffe0000ffffffffffffffff
+fsadd.x 000000002000000000000000 7ffe00008000000000000000 rz
+fdadd.x 000000002000000000000000 7ffe00008000000000000000 rz
+fsadd.x 800000002000000000000000 7ffe00008000000000000000 rz
+fdadd.x 800000002000000000000000 7ffe00008000000000000000 rz
+fsadd.x 000000002000000000000000 fffe00008000000000000000 rz
+fdadd.x 000000002000000000000000 fffe00008000000000000000 rz
+fsadd.x 800000002000000000000000 fffe00008000000000000000 rz
+fdadd.x 800000002000000000000000 fffe00008000000000000000 rz
+fsadd.x 000000000000000000000001 7ffe00008000000000000000 rz
+fdadd.x 000000000000000000000001 7ffe00008000000000000000 rz
+fsadd.x 800000000000000000000001 7ffe00008000000000000000 rz
+fdadd.x 800000000000000000000001 7ffe00008000000000000000 rz
+fsadd.x 000000000000000000000001 fffe00008000000000000000 rz
+fdadd.x 000000000000000000000001 fffe00008000000000000000 rz
+fsadd.x 800000000000000000000001 fffe00008000000000000000 rz
+fdadd.x 800000000000000000000001 fffe00008000000000000000 rz
+fsadd.x 000000002000000000000000 7ffe0000ffffffffffffffff rz
+fdadd.x 000000002000000000000000 7ffe0000ffffffffffffffff rz
+fsadd.x 800000002000000000000000 7ffe0000ffffffffffffffff rz
+fdadd.x 800000002000000000000000 7ffe0000ffffffffffffffff rz
+fsadd.x 000000002000000000000000 fffe0000ffffffffffffffff rz
+fdadd.x 000000002000000000000000 fffe0000ffffffffffffffff rz
+fsadd.x 800000002000000000000000 fffe0000ffffffffffffffff rz
+fdadd.x 800000002000000000000000 fffe0000ffffffffffffffff rz
+fsadd.x 000000000000000000000001 7ffe0000ffffffffffffffff rz
+fdadd.x 000000000000000000000001 7ffe0000ffffffffffffffff rz
+fsadd.x 800000000000000000000001 7ffe0000ffffffffffffffff rz
+fdadd.x 800000000000000000000001 7ffe0000ffffffffffffffff rz
+fsadd.x 000000000000000000000001 fffe0000ffffffffffffffff rz
+fdadd.x 000000000000000000000001 fffe0000ffffffffffffffff rz
+fsadd.x 800000000000000000000001 fffe0000ffffffffffffffff rz
+fdadd.x 800000000000000000000001 fffe0000ffffffffffffffff rz
+fsadd.x 000000002000000000000000 7ffe00008000000000000000 rm
+fdadd.x 000000002000000000000000 7ffe00008000000000000000 rm
+fsadd.x 800000002000000000000000 7ffe00008000000000000000 rm
+fdadd.x 800000002000000000000000 7ffe00008000000000000000 rm
+fsadd.x 000000002000000000000000 fffe00008000000000000000 rm
+fdadd.x 000000002000000000000000 fffe00008000000000000000 rm
+fsadd.x 800000002000000000000000 fffe00008000000000000000 rm
+fdadd.x 800000002000000000000000 fffe00008000000000000000 rm
+fsadd.x 000000000000000000000001 7ffe00008000000000000000 rm
+fdadd.x 000000000000000000000001 7ffe00008000000000000000 rm
+fsadd.x 800000000000000000000001 7ffe00008000000000000000 rm
+fdadd.x 800000000000000000000001 7ffe00008000000000000000 rm
+fsadd.x 000000000000000000000001 fffe00008000000000000000 rm
+fdadd.x 000000000000000000000001 fffe00008000000000000000 rm
+fsadd.x 800000000000000000000001 fffe00008000000000000000 rm
+fdadd.x 800000000000000000000001 fffe00008000000000000000 rm
+fsadd.x 000000002000000000000000 7ffe0000ffffffffffffffff rm
+fdadd.x 000000002000000000000000 7ffe0000ffffffffffffffff rm
+fsadd.x 800000002000000000000000 7ffe0000ffffffffffffffff rm
+fdadd.x 800000002000000000000000 7ffe0000ffffffffffffffff rm
+fsadd.x 000000002000000000000000 fffe0000ffffffffffffffff rm
+fdadd.x 000000002000000000000000 fffe0000ffffffffffffffff rm
+fsadd.x 800000002000000000000000 fffe0000ffffffffffffffff rm
+fdadd.x 800000002000000000000000 fffe0000ffffffffffffffff rm
+fsadd.x 000000000000000000000001 7ffe0000ffffffffffffffff rm
+fdadd.x 000000000000000000000001 7ffe0000ffffffffffffffff rm
+fsadd.x 800000000000000000000001 7ffe0000ffffffffffffffff rm
+fdadd.x 800000000000000000000001 7ffe0000ffffffffffffffff rm
+fsadd.x 000000000000000000000001 fffe0000ffffffffffffffff rm
+fdadd.x 000000000000000000000001 fffe0000ffffffffffffffff rm
+fsadd.x 800000000000000000000001 fffe0000ffffffffffffffff rm
+fdadd.x 800000000000000000000001 fffe0000ffffffffffffffff rm
+fsadd.x 000000002000000000000000 7ffe00008000000000000000 rp
+fdadd.x 000000002000000000000000 7ffe00008000000000000000 rp
+fsadd.x 800000002000000000000000 7ffe00008000000000000000 rp
+fdadd.x 800000002000000000000000 7ffe00008000000000000000 rp
+fsadd.x 000000002000000000000000 fffe00008000000000000000 rp
+fdadd.x 000000002000000000000000 fffe00008000000000000000 rp
+fsadd.x 800000002000000000000000 fffe00008000000000000000 rp
+fdadd.x 800000002000000000000000 fffe00008000000000000000 rp
+fsadd.x 000000000000000000000001 7ffe00008000000000000000 rp
+fdadd.x 000000000000000000000001 7ffe00008000000000000000 rp
+fsadd.x 800000000000000000000001 7ffe00008000000000000000 rp
+fdadd.x 800000000000000000000001 7ffe00008000000000000000 rp
+fsadd.x 000000000000000000000001 fffe00008000000000000000 rp
+fdadd.x 000000000000000000000001 fffe00008000000000000000 rp
+fsadd.x 800000000000000000000001 fffe00008000000000000000 rp
+fdadd.x 800000000000000000000001 fffe00008000000000000000 rp
+fsadd.x 000000002000000000000000 7ffe0000ffffffffffffffff rp
+fdadd.x 000000002000000000000000 7ffe0000ffffffffffffffff rp
+fsadd.x 800000002000000000000000 7ffe0000ffffffffffffffff rp
+fdadd.x 800000002000000000000000 7ffe0000ffffffffffffffff rp
+fsadd.x 000000002000000000000000 fffe0000ffffffffffffffff rp
+fdadd.x 000000002000000000000000 fffe0000ffffffffffffffff rp
+fsadd.x 800000002000000000000000 fffe0000ffffffffffffffff rp
+fdadd.x 800000002000000000000000 fffe0000ffffffffffffffff rp
+fsadd.x 000000000000000000000001 7ffe0000ffffffffffffffff rp
+fdadd.x 000000000000000000000001 7ffe0000ffffffffffffffff rp
+fsadd.x 800000000000000000000001 7ffe0000ffffffffffffffff rp
+fdadd.x 800000000000000000000001 7ffe0000ffffffffffffffff rp
+fsadd.x 000000000000000000000001 fffe0000ffffffffffffffff rp
+fdadd.x 000000000000000000000001 fffe0000ffffffffffffffff rp
+fsadd.x 800000000000000000000001 fffe0000ffffffffffffffff rp
+fdadd.x 800000000000000000000001 fffe0000ffffffffffffffff rp
+fsadd.x 000000002000000000000000 7ffe00008000000000000000 d
+fdadd.x 000000002000000000000000 7ffe00008000000000000000 d
+fsadd.x 800000002000000000000000 7ffe0000ffffffffffffffff d
+fdadd.x 800000002000000000000000 7ffe0000ffffffffffffffff d
+fsadd.x 800000000000000000000001 fffe00008000000000000000 d rz
+fdadd.x 800000000000000000000001 fffe00008000000000000000 d rz
+fsadd.x 800000000000000000000001 fffe0000ffffffffffffffff d rz
+fdadd.x 800000000000000000000001 fffe0000ffffffffffffffff d rz
+fsadd.x 800000002000000000000000 fffe00008000000000000000 d rm
+fdadd.x 800000002000000000000000 fffe00008000000000000000 d rm
+fsadd.x 800000002000000000000000 fffe0000ffffffffffffffff d rm
+fdadd.x 800000002000000000000000 fffe0000ffffffffffffffff d rm
+fsadd.x 000000000000000000000001 7ffe00008000000000000000 d rp
+fdadd.x 000000000000000000000001 7ffe00008000000000000000 d rp
+fsadd.x 000000002000000000000000 7ffe0000ffffffffffffffff d rp
+fdadd.x 000000002000000000000000 7ffe0000ffffffffffffffff d rp
+fsadd.x 000000002000000000000000 7ffe00008000000000000000 s
+fdadd.x 000000002000000000000000 7ffe00008000000000000000 s
+fsadd.x 800000002000000000000000 7ffe0000ffffffffffffffff s
+fdadd.x 800000002000000000000000 7ffe0000ffffffffffffffff s
+fsadd.x 800000000000000000000001 fffe00008000000000000000 s rz
+fdadd.x 800000000000000000000001 fffe00008000000000000000 s rz
+fsadd.x 800000000000000000000001 fffe0000ffffffffffffffff s rz
+fdadd.x 800000000000000000000001 fffe0000ffffffffffffffff s rz
+fsadd.x 800000002000000000000000 fffe00008000000000000000 s rm
+fdadd.x 800000002000000000000000 fffe00008000000000000000 s rm
+fsadd.x 800000002000000000000000 fffe0000ffffffffffffffff s rm
+fdadd.x 800000002000000000000000 fffe0000ffffffffffffffff s rm
+fsadd.x 000000000000000000000001 7ffe00008000000000000000 s rp
+fdadd.x 000000000000000000000001 7ffe00008000000000000000 s rp
+fsadd.x 000000002000000000000000 7ffe0000ffffffffffffffff s rp
+fdadd.x 000000002000000000000000 7ffe0000ffffffffffffffff s rp
+fsadd.x 7ffe00008000000000000000 000000004000000000000000
+fdadd.x 7ffe00008000000000000000 000000004000000000000000
+fsadd.x 7ffe00008000000000000000 800000004000000000000000
+fdadd.x 7ffe00008000000000000000 800000004000000000000000
+fsadd.x fffe00008000000000000000 000000004000000000000000
+fdadd.x fffe00008000000000000000 000000004000000000000000
+fsadd.x fffe00008000000000000000 800000004000000000000000
+fdadd.x fffe00008000000000000000 800000004000000000000000
+fsadd.x 7ffe00008000000000000000 000000008000000000000000
+fdadd.x 7ffe00008000000000000000 000000008000000000000000
+fsadd.x 7ffe00008000000000000000 800000008000000000000000
+fdadd.x 7ffe00008000000000000000 800000008000000000000000
+fsadd.x fffe00008000000000000000 000000008000000000000000
+fdadd.x fffe00008000000000000000 000000008000000000000000
+fsadd.x fffe00008000000000000000 800000008000000000000000
+fdadd.x fffe00008000000000000000 800000008000000000000000
+fsadd.x 7ffe00008000000000000000 000000002000000000000000
+fdadd.x 7ffe00008000000000000000 000000002000000000000000
+fsadd.x 7ffe00008000000000000000 800000002000000000000000
+fdadd.x 7ffe00008000000000000000 800000002000000000000000
+fsadd.x fffe00008000000000000000 000000002000000000000000

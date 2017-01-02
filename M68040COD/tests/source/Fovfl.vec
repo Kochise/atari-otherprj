@@ -1,0 +1,478 @@
+verbose
+#	Overflow and Underflow tests
+#
+#	Start by using native instructions to just generate
+#	an overflow.  Later, try to generate exceptions for 
+#	specific trig and exponential functions.
+#
+#----------------------------------------------------------------------
+#
+#	fmul extended rounding
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000
+fmul.x effe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000
+fmul.x dffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000
+fmul.x cffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000
+fmul.x bffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000
+fmul.x 8ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000
+fmul.x 6ffe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000
+fmul.x 5ffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000
+fmul.x 4ffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000
+fmul.x 3ffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000
+fmul.x 2ffe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000
+fmul.x 1ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000
+fmul.x 0ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000
+#
+#	fmul double rounding
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 d
+fmul.x effe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 d
+fmul.x dffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 d
+fmul.x cffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 d
+fmul.x bffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 d
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 d
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 d
+fmul.x 8ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 d
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 d
+fmul.x 6ffe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 d
+fmul.x 5ffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 d
+fmul.x 4ffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 d
+fmul.x 3ffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 d
+fmul.x 2ffe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 d
+fmul.x 1ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 d
+fmul.x 0ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 d
+#
+#	fmul single rounding
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 s
+fmul.x effe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 s
+fmul.x dffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 s
+fmul.x cffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 s
+fmul.x bffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 s
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 s
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 s
+fmul.x 8ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 s
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 s
+fmul.x 6ffe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 s
+fmul.x 5ffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 s
+fmul.x 4ffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 s
+fmul.x 3ffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 s
+fmul.x 2ffe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 s
+fmul.x 1ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 s
+fmul.x 0ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 s
+#
+#	fmul different rounding modes
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rn
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rz
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rm
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rp
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rn
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rz
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rm
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rp
+#
+#	fmul extended rounding exceptions enabled
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x effe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x dffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x cffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x bffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 8ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 6ffe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 5ffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 4ffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 3ffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 2ffe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 1ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 ovfl unfl
+fmul.x 0ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 ovfl unfl
+#
+#	fmul double rounding exceptions enabled
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x effe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x dffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x cffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x bffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 8ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 6ffe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 5ffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 4ffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 3ffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 2ffe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 1ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 d ovfl unfl
+fmul.x 0ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 d ovfl unfl
+#
+#	fmul single rounding exceptions enabled
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x effe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x dffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x cffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x bffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 8ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 6ffe_0000_8000_0000_0000_0000 6ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 5ffe_0000_8000_0000_0000_0000 5ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 4ffe_0000_8000_0000_0000_0000 4ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 3ffe_0000_8000_0000_0000_0000 3ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 2ffe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 1ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 s ovfl unfl
+fmul.x 0ffe_0000_8000_0000_0000_0000 0ffe_0000_8000_0000_0000_0000 s ovfl unfl
+#
+#	fmul various rounding exceptions enabled
+#
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rn ovfl unfl
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rz ovfl unfl
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rm ovfl unfl
+fmul.x fffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rp ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rn ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rz ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rm ovfl unfl
+fmul.x 7ffe_0000_8000_0000_0000_0000 7ffe_0000_8000_0000_0000_0000 rp ovfl unfl
+#
+#	fmove out denormalized
+#
+fmove.b out 0000_0000_7fff_ffff_ffff_ffff
+fmove.w out 0000_0000_7fff_ffff_ffff_ffff
+fmove.l out 0000_0000_7fff_ffff_ffff_ffff
+fmove.s out 0000_0000_7fff_ffff_ffff_ffff
+fmove.b out 0000_0000_7fff_ffff_ffff_ffff Dn
+fmove.w out 0000_0000_7fff_ffff_ffff_ffff Dn
+fmove.l out 0000_0000_7fff_ffff_ffff_ffff Dn
+fmove.s out 0000_0000_7fff_ffff_ffff_ffff Dn
+fmove.d out 0000_0000_7fff_ffff_ffff_ffff
+fmove.x out 0000_0000_7fff_ffff_ffff_ffff
+fmove.p out 0000_0000_7fff_ffff_ffff_ffff K#:12
+#
+#----------------------------------------------------------------------------
+#
+#	e**x
+#
+fetox.w   2c5c x
+fetox.w   2c5d x
+fetox.w   d3a4 x
+fetox.w   d3a5 x
+fetox.w    2c5 d
+fetox.w    2c6 d
+fetox.w   fd3b d
+fetox.w   fd3c d
+fetox.w     58 s
+fetox.w     59 s
+fetox.w   ffa8 s
+fetox.w   ffa9 s
+fetox.w   2c5c x ovfl unfl
+fetox.w   2c5d x ovfl unfl
+fetox.w   d3a4 x ovfl unfl
+fetox.w   d3a5 x ovfl unfl
+fetox.w    2c5 d ovfl unfl
+fetox.w    2c6 d ovfl unfl
+fetox.w   fd3b d ovfl unfl
+fetox.w   fd3c d ovfl unfl
+fetox.w     58 s ovfl unfl
+fetox.w     59 s ovfl unfl
+fetox.w   ffa8 s ovfl unfl
+fetox.w   ffa9 s ovfl unfl
+#
+#	e**(x-1)
+#
+fetoxm1.w 2c5c x
+fetoxm1.w 2c5d x
+fetoxm1.w  2c5 d
+fetoxm1.w  2c6 d
+fetoxm1.w   58 s
+fetoxm1.w   59 s
+fetoxm1.x 00000000_8000_0000_0000_0000
+fetoxm1.x 00000000_7fff_ffff_ffff_ffff
+fetoxm1.w 2c5c x ovfl unfl
+fetoxm1.w 2c5d x ovfl unfl
+fetoxm1.w  2c5 d ovfl unfl
+fetoxm1.w  2c6 d ovfl unfl
+fetoxm1.w   58 s ovfl unfl
+fetoxm1.w   59 s ovfl unfl
+fetoxm1.x 00000000_8000_0000_0000_0000 ovfl unfl
+fetoxm1.x 00000000_7fff_ffff_ffff_ffff ovfl unfl
+#
+#	2**x
+#
+ftwotox.w 3fff x
+ftwotox.w 4000 x
+ftwotox.w c000 x
+ftwotox.w c001 x
+ftwotox.w  3ff d
+ftwotox.w  400 d
+ftwotox.w fc01 d
+ftwotox.w fc02 d
+ftwotox.w   7f s
+ftwotox.w   80 s
+ftwotox.w ff81 s
+ftwotox.w ff82 s
+ftwotox.w 3fff x ovfl unfl
+ftwotox.w 4000 x ovfl unfl
+ftwotox.w c000 x ovfl unfl
+ftwotox.w c001 x ovfl unfl
+ftwotox.w  3ff d ovfl unfl
+ftwotox.w  400 d ovfl unfl
+ftwotox.w fc01 d ovfl unfl
+ftwotox.w fc02 d ovfl unfl
+ftwotox.w   7f s ovfl unfl
+ftwotox.w   80 s ovfl unfl
+ftwotox.w ff81 s ovfl unfl
+ftwotox.w ff82 s ovfl unfl
+#
+#	10**x
+#
+ftentox.w 1344 x
+ftentox.w 1345 x
+ftentox.w ecbc x
+ftentox.w ecbd x
+ftentox.w  134 d
+ftentox.w  135 d
+ftentox.w fecc d
+ftentox.w fecd d
+ftentox.w   26 s
+ftentox.w   27 s
+ftentox.w ffda s
+ftentox.w ffdb s
+ftentox.w 1344 x ovfl unfl
+ftentox.w 1345 x ovfl unfl
+ftentox.w ecbc x ovfl unfl
+ftentox.w ecbd x ovfl unfl
+ftentox.w  134 d ovfl unfl
+ftentox.w  135 d ovfl unfl
+ftentox.w fecc d ovfl unfl
+ftentox.w fecd d ovfl unfl
+ftentox.w   26 s ovfl unfl
+ftentox.w   27 s ovfl unfl
+ftentox.w ffda s ovfl unfl
+ftentox.w ffdb s ovfl unfl
+#
+#	log2
+#
+flog2.x 3fff0000_8000_0000_0000_0001
+flog2.x 3fff0000_8000_0000_0000_0000
+flog2.x 3ffe0000_ffff_ffff_ffff_ffff
+flog2.x 3fff0000_8000_0000_0000_0001	ovfl unfl
+flog2.x 3fff0000_8000_0000_0000_0000	ovfl unfl
+flog2.x 3ffe0000_ffff_ffff_ffff_ffff	ovfl unfl
+#
+#	log10
+#
+flog10.x 3fff0000_8000_0000_0000_0001
+flog10.x 3fff0000_8000_0000_0000_0000
+flog10.x 3ffe0000_ffff_ffff_ffff_ffff
+flog10.x 3fff0000_8000_0000_0000_0001	ovfl unfl
+flog10.x 3fff0000_8000_0000_0000_0000	ovfl unfl
+flog10.x 3ffe0000_ffff_ffff_ffff_ffff	ovfl unfl
+#
+#	loge
+#
+flogn.x 3fff0000_8000_0000_0000_0001
+flogn.x 3fff0000_8000_0000_0000_0000
+flogn.x 3ffe0000_ffff_ffff_ffff_ffff
+flogn.x 3fff0000_8000_0000_0000_0001	ovfl unfl
+flogn.x 3fff0000_8000_0000_0000_0000	ovfl unfl
+flogn.x 3ffe0000_ffff_ffff_ffff_ffff	ovfl unfl
+#
+#	loge-1
+#
+flognp1.x 00000000_8000_0000_0000_0001
+flognp1.x 00000000_8000_0000_0000_0000
+flognp1.x 00000000_7fff_ffff_ffff_ffff
+flognp1.x 00000000_8000_0000_0000_0001	ovfl unfl
+flognp1.x 00000000_8000_0000_0000_0000	ovfl unfl
+flognp1.x 00000000_7fff_ffff_ffff_ffff	ovfl unfl
+#
+#	atan()
+#
+fatan.x 00000000_8000_0000_0000_0000
+fatan.x 00000000_7fff_ffff_ffff_ffff
+fatan.x 80000000_8000_0000_0000_0000
+fatan.x 80000000_7fff_ffff_ffff_ffff
+fatan.x 7ffe0000_ffff_ffff_ffff_ffff
+fatan.x fffe0000_ffff_ffff_ffff_ffff
+fatan.x 00000000_8000_0000_0000_0000 ovfl unfl
+fatan.x 00000000_7fff_ffff_ffff_ffff ovfl unfl
+fatan.x 80000000_8000_0000_0000_0000 ovfl unfl
+fatan.x 80000000_7fff_ffff_ffff_ffff ovfl unfl
+fatan.x 7ffe0000_ffff_ffff_ffff_ffff ovfl unfl
+fatan.x fffe0000_ffff_ffff_ffff_ffff ovfl unfl
+#
+#	tanh()
+#
+fatanh.x 00000000_8000_0000_0000_0000
+fatanh.x 00000000_7fff_ffff_ffff_ffff
+fatanh.x 80000000_8000_0000_0000_0000
+fatanh.x 80000000_7fff_ffff_ffff_ffff
+fatanh.x 7ffe0000_ffff_ffff_ffff_ffff
+fatanh.x fffe0000_ffff_ffff_ffff_ffff
+fatanh.x 00000000_8000_0000_0000_0000 ovfl unfl
+fatanh.x 00000000_7fff_ffff_ffff_ffff ovfl unfl
+fatanh.x 80000000_8000_0000_0000_0000 ovfl unfl
+fatanh.x 80000000_7fff_ffff_ffff_ffff ovfl unfl
+fatanh.x 7ffe0000_ffff_ffff_ffff_ffff ovfl unfl
+fatanh.x fffe0000_ffff_ffff_ffff_ffff ovfl unfl
+#
+#	cosh(huge)
+#
+fcosh.w 2c5d x
+fcosh.w 2c5e x
+fcosh.w	d3a2 x
+fcosh.w	d3a3 x
+fcosh.w  2c6 d
+fcosh.w  2c7 d
+fcosh.w	fd39 d
+fcosh.w	fd3a d
+fcosh.w   59 s
+fcosh.w   5a s
+fcosh.w	ffa6 s
+fcosh.w	ffa7 s
+fcosh.w 2c5d x ovfl unfl
+fcosh.w 2c5e x ovfl unfl
+fcosh.w	d3a2 x ovfl unfl
+fcosh.w	d3a3 x ovfl unfl
+fcosh.w  2c6 d ovfl unfl
+fcosh.w  2c7 d ovfl unfl
+fcosh.w	fd39 d ovfl unfl
+fcosh.w	fd3a d ovfl unfl
+fcosh.w   59 s ovfl unfl
+fcosh.w   5a s ovfl unfl
+fcosh.w	ffa6 s ovfl unfl
+fcosh.w	ffa7 s ovfl unfl
+#
+#	sinh(huge)
+#
+fsinh.w	2c5d x
+fsinh.w	2c5e x
+fsinh.w	d3a2 x
+fsinh.w	d3a3 x
+fsinh.w  2c6 d
+fsinh.w  2c7 d
+fsinh.w	fd39 d
+fsinh.w	fd3a d
+fsinh.w   59 s
+fsinh.w   5a s
+fsinh.w	ffa6 s
+fsinh.w	ffa7 s
+fsinh.w 2c5d x ovfl unfl
+fsinh.w 2c5e x ovfl unfl
+fsinh.w	d3a2 x ovfl unfl
+fsinh.w	d3a3 x ovfl unfl
+fsinh.w  2c6 d ovfl unfl
+fsinh.w  2c7 d ovfl unfl
+fsinh.w	fd39 d ovfl unfl
+fsinh.w	fd3a d ovfl unfl
+fsinh.w   59 s ovfl unfl
+fsinh.w   5a s ovfl unfl
+fsinh.w	ffa6 s ovfl unfl
+fsinh.w	ffa7 s ovfl unfl
+#
+#	sinh(0)
+#
+fsinh.x 00000000_8000_0000_0000_0001	ovfl unfl
+fsinh.x 00000000_8000_0000_0000_0000	ovfl unfl
+fsinh.x 80000000_8000_0000_0000_0000	ovfl unfl
+fsinh.x 00000000_7fff_ffff_ffff_ffff	ovfl unfl
+#
+#	cos(pi/2)
+#
+fcos.x 3fff0000_c90fdaa22168c234	ovfl unfl
+fcos.x 3fff0000_c90fdaa22168c235	ovfl unfl
+#
+#	sin(0)
+#
+fsin.x 00000000_8000_0000_0000_0001	ovfl unfl
+fsin.x 00000000_8000_0000_0000_0000	ovfl unfl
+fsin.x 80000000_8000_0000_0000_0000	ovfl unfl
+fsin.x 00000000_7fff_ffff_ffff_ffff	ovfl unfl
+#
+#	sincos(0)
+#
+fsincos.x 00000000_8000_0000_0000_0001	ovfl unfl
+fsincos.x 00000000_8000_0000_0000_0000	ovfl unfl
+fsincos.x 80000000_8000_0000_0000_0000	ovfl unfl
+fsincos.x 00000000_7fff_ffff_ffff_ffff	ovfl unfl
+#
+#	arcsin(0) Contrary to the manual, arcsin can underflow
+#
+fasin.x 00000000_8000_0000_0000_0001	ovfl unfl
+fasin.x 00000000_8000_0000_0000_0000	ovfl unfl
+fasin.x 80000000_8000_0000_0000_0000	ovfl unfl
+fasin.x 00000000_7fff_ffff_ffff_ffff	ovfl unfl
+#
+#	arccos(1), arccos(-1)
+#
+facos.x 3fff0000_8000_0000_0000_0001	ovfl unfl
+facos.x 3fff0000_8000_0000_0000_0000	ovfl unfl
+facos.x 3ffe0000_ffff_ffff_ffff_ffff	ovfl unfl
+facos.x bfff0000_8000_0000_0000_0001	ovfl unfl
+facos.x bfff0000_8000_0000_0000_0000	ovfl unfl
+facos.x bffe0000_ffff_ffff_ffff_ffff	ovfl unfl
+#
+#	tan(pi/2) Contrary to the manual, tan can never overflow
+#
+ftan.x 3fff0000_c90fdaa22168c235	ovfl unfl
+ftan.x 3fff0000_c90fdaa22168c234	ovfl unfl
+ftan.x 3fff0000_c90fdaa22168c235	ovfl unfl d
+ftan.x 3fff0000_c90fdaa22168c234	ovfl unfl d
+ftan.x 3fff0000_c90fdaa22168c235	ovfl unfl s
+ftan.x 3fff0000_c90fdaa22168c234	ovfl unfl s
+#
+#	tan(0)
+#
+ftan.x 00000000_8000_0000_0000_0001	ovfl unfl
+ftan.x 00000000_8000_0000_0000_0000	ovfl unfl
+ftan.x 80000000_8000_0000_0000_0000	ovfl unfl
+ftan.x 00000000_7fff_ffff_ffff_ffff	ovfl unfl
+#
+#Ovfl white box tests
+fadd.x 7ffe0000_ffffffff_ffffffff 7ffe0000_ffffffff_ffffffff 
+fadd.x 7ffe0000_ffffffff_ffffffff 7ffe0000_ffffffff_ffffffff OVFL 
+fabs.x 41000000_ffffffff_ffffffff S  
+fmove.d out 7ffe0000_ffffffff_ffffffff 
+fmove.s out 7ffe0000_ffffffff_ffffffff 
+fmove.s out 7ffe0000_ffffffff_ffffffff Dn
+fmove.d out fffe0000_ffffffff_ffffffff 
+fmove.s out fffe0000_ffffffff_ffffffff 
+fmove.s out fffe0000_ffffffff_ffffffff Dn
+#
+fmove.x 43fe0000fffffffffffff800 d
+fmove.x 43fe0000fffffffffffffbff d
+fmove.x 43fe0000fffffffffffffc00 d
+fmove.x c3fe0000fffffffffffff800 d
+fmove.x c3fe0000fffffffffffffbff d
+fmove.x c3fe0000fffffffffffffc00 d
+
+fmove.x 407e0000ffffff0000000000 s
+fmove.x 407e0000ffffff7fffffffff s
+fmove.x 407e0000ffffff8000000000 s
+fmove.x c07e0000ffffff0000000000 s
+fmove.x c07e0000ffffff7fffffffff s
+fmove.x c07e0000ffffff8000000000 s
+
+fmove.x 43fe0000fffffffffffff800 d ovfl
+fmove.x 43fe0000fffffffffffffbff d ovfl
+fmove.x 43fe0000fffffffffffffc00 d ovfl
+fmove.x c3fe0000fffffffffffff800 d ovfl
+fmove.x c3fe0000fffffffffffffbff d ovfl
+fmove.x c3fe0000fffffffffffffc00 d ovfl
+
+fmove.x 407e0000ffffff0000000000 s ovfl
+fmove.x 407e0000ffffff7fffffffff s ovfl
+fmove.x 407e0000ffffff8000000000 s ovfl
+fmove.x c07e0000ffffff0000000000 s ovfl
+fmove.x c07e0000ffffff7fffffffff s ovfl
+fmove.x c07e0000ffffff8000000000 s ovfl
+#End of file

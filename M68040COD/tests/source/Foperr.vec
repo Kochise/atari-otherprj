@@ -1,0 +1,204 @@
+verbose
+#********
+#PURPOSE: 
+#This test file consists of operations that causes possible operand
+#errors.  Refer to Table 6-2 in 881/882 manual (second edition).
+#EXPECTED RESULT:
+#Check for OPERR in FPSR.
+#********
+
+#ARC COSINE
+#facos of +infinity
+facos.x 7fff_0000_0000_0000_0000_0000
+
+#facos of -infinity
+facos.x 7fff_0000_0000_0000_0000_0000
+
+#facos of >+1
+facos.x 4000_0000_8000_0000_0000_0000
+
+#facos of < -1 (-1.00781)
+facos.x bfff_0000_8100_0000_0000_0000
+
+#ARC SINE
+#fasin of +infinity
+fasin.x 7fff_0000_0000_0000_0000_0000
+
+#fasin of -infinity
+fasin.x 7fff_0000_0000_0000_0000_0000
+
+#fasin of >+1
+fasin.x 4000_0000_8000_0000_0000_0000
+
+#fasin of < -1 (-1.00781)
+fasin.x bfff_0000_8100_0000_0000_0000
+
+#HYPERBOLIC ARC TAN
+#fatanh of > +1(+2)
+fatanh.x 4000_0000_8000_0000_0000_0000 
+#fatanh of < -1(-2)
+fatanh.x c000_0000_8000_0000_0000_0000
+#fatanh of +inf
+fatanh.x 7fff_0000_0000_0000_0000_0000
+#fatanh of -inf
+fatanh.x ffff_0000_0000_0000_0000_0000
+
+#FCOS
+#fcos of +inf
+fcos.x 7fff_0000_0000_0000_0000_0000
+#fcos of -inf
+fcos.x ffff_0000_0000_0000_0000_0000
+
+#FGETEXP
+#fgetexp of +inf
+fgetexp.x 7fff_0000_0000_0000_0000_0000
+#fgetexp of -inf
+fgetexp.x ffff_0000_0000_0000_0000_0000
+
+#FGETMAN
+#fgetman of +inf
+fgetman.x 7fff_0000_0000_0000_0000_0000
+#fgetman of -inf
+fgetman.x ffff_0000_0000_0000_0000_0000
+
+#FLOG10
+#flog10 of <0 (-1)
+flog10.x bfff_0000_8000_0000_0000_0000
+#flog10 of -inf
+flog10.x ffff_0000_0000_0000_0000_0000
+
+#FLOG2
+#flog2 of <0 (-1)
+flog2.x bfff_0000_8000_0000_0000_0000
+#flog2.x of -inf
+flog2.x ffff_0000_0000_0000_0000_0000
+
+#FLOGN
+#flogn of <0 (-1)
+flogn.x bfff_0000_8000_0000_0000_0000
+#flogn.x of -inf
+flogn.x ffff_0000_0000_0000_0000_0000
+
+#FLOGNP1
+#flognp1 of < -1 (-2)
+flognp1.x c000_0000_8000_0000_0000_0000
+#flognp1 of -inf
+flognp1.x ffff_0000_0000_0000_0000_0000
+
+#FMOD
+#fmod of +inf and norm (+1)
+fmod.x 7fff_0000_0000_0000_0000_0000 3fff_0000_8000_0000_0000_0000
+#fmod of -inf and norm (+1)
+fmod.x ffff_0000_0000_0000_0000_0000 3fff_0000_8000_0000_0000_0000
+#fmod of norm (+1) and 0
+fmod.x 3fff_0000_8000_0000_0000_0000 0000_0000_0000_0000_0000_0000
+
+#FMOV 
+#fmove of extended +qnan to a byte destination
+fmove.b out 7fff_0000_ffff_ffff_ffff_ffff
+fmove.b out 7fff_0000_ffff_ffff_ffff_ffff Dn
+#fmove of extended -qnan to a byte destination
+fmove.b out ffff_0000_ffff_ffff_ffff_ffff
+fmove.b out ffff_0000_ffff_ffff_ffff_ffff Dn
+#fmove of extended +inf to a byte destination
+fmove.b out 7fff_0000_0000_0000_0000_0000
+fmove.b out 7fff_0000_0000_0000_0000_0000 Dn
+#fmove of extended -inf to a byte destination
+fmove.b out ffff_0000_0000_0000_0000_0000
+fmove.b out ffff_0000_0000_0000_0000_0000 Dn
+#fmove of extended with k factor > +17   
+fmove.p out 3fff_0000_8000_0000_0000_0000 K#:19
+
+#FREM
+#frem of +inf and norm (+1)
+frem.x 7fff_0000_0000_0000_0000_0000 3fff_0000_8000_0000_0000_0000
+#frem of -inf and norm (+1)
+frem.x ffff_0000_0000_0000_0000_0000 3fff_0000_8000_0000_0000_0000
+#frem of norm (+1) and 0
+frem.x 3fff_0000_8000_0000_0000_0000 0000_0000_0000_0000_0000_0000
+
+#FSCALE
+#fscale of  dest:norm (+1) src:+inf
+fscale.x 3fff_0000_8000_0000_0000_0000 7fff_0000_0000_0000_0000_0000
+#fscale of dest:norm (+1) src:-inf
+fscale.x 3fff_0000_8000_0000_0000_0000 ffff_0000_0000_0000_0000_0000
+
+#FSIN
+#fsin of +inf
+fsin.x 7fff_0000_0000_0000_0000_0000
+#fsin of -inf
+fsin.x ffff_0000_0000_0000_0000_0000
+
+#FSINCOS
+#fsincos of +inf
+fsincos.x 7fff_0000_0000_0000_0000_0000
+#fsincos of -inf
+fsincos.x ffff_0000_0000_0000_0000_0000
+
+#FTAN
+#ftan of +inf
+ftan.x 7fff_0000_0000_0000_0000_0000
+ftan.x ffff_0000_0000_0000_0000_0000
+#
+# Operr white box tests
+fmove.b out 7ffe0000_ffffffff_ffffffff       
+fmove.w out 7ffe0000_ffffffff_ffffffff      
+fmove.l out 7ffe0000_ffffffff_ffffffff     
+fmove.b out 7fff0000_caffeedd_00000000    
+fmove.w out 7fff0000_caffeedd_00000000   
+fmove.l out 7fff0000_caffeedd_00000000  
+fmove.b out c0060000_80000000_00000000 
+fmove.w out c00e0000_80000000_00000000
+fmove.l out c01e0000_80000000_00000000       
+fmove.b out 7ffe0000_ffffffff_ffffffff OPERR 
+fmove.w out 7ffe0000_ffffffff_ffffffff OPERR 
+fmove.l out 7ffe0000_ffffffff_ffffffff OPERR 
+fmove.b out 7fff0000_caffeedd_00000000 OPERR 
+fmove.w out 7fff0000_caffeedd_00000000 OPERR 
+fmove.l out 7fff0000_caffeedd_00000000 OPERR 
+fmove.b out c0060000_80000000_00000000 OPERR 
+fmove.w out c00e0000_80000000_00000000 OPERR 
+fmove.l out c01e0000_80000000_00000000 OPERR 
+fmove.b out fffe0000_ffffffff_ffffffff       
+fmove.w out fffe0000_ffffffff_ffffffff       
+fmove.l out fffe0000_ffffffff_ffffffff       
+fmove.b out ffff0000_caffeedd_00000000       
+fmove.w out ffff0000_caffeedd_00000000       
+fmove.l out ffff0000_caffeedd_00000000       
+fmove.b out fffe0000_ffffffff_ffffffff OPERR 
+fmove.w out fffe0000_ffffffff_ffffffff OPERR 
+fmove.l out fffe0000_ffffffff_ffffffff OPERR 
+fmove.b out ffff0000_caffeedd_00000000 OPERR 
+fmove.w out ffff0000_caffeedd_00000000 OPERR 
+fmove.l out ffff0000_caffeedd_00000000 OPERR 
+# Operr white box tests Dest Dn
+fmove.b out 7ffe0000_ffffffff_ffffffff Dn
+fmove.w out 7ffe0000_ffffffff_ffffffff Dn   
+fmove.l out 7ffe0000_ffffffff_ffffffff Dn
+fmove.b out 7fff0000_caffeedd_00000000 Dn
+fmove.w out 7fff0000_caffeedd_00000000 Dn
+fmove.l out 7fff0000_caffeedd_00000000 Dn
+fmove.b out c0060000_80000000_00000000 Dn
+fmove.w out c00e0000_80000000_00000000 Dn
+fmove.l out c01e0000_80000000_00000000 Dn   
+fmove.b out 7ffe0000_ffffffff_ffffffff OPERR  Dn
+fmove.w out 7ffe0000_ffffffff_ffffffff OPERR  Dn
+fmove.l out 7ffe0000_ffffffff_ffffffff OPERR  Dn
+fmove.b out 7fff0000_caffeedd_00000000 OPERR  Dn
+fmove.w out 7fff0000_caffeedd_00000000 OPERR  Dn
+fmove.l out 7fff0000_caffeedd_00000000 OPERR  Dn
+fmove.b out c0060000_80000000_00000000 OPERR  Dn
+fmove.w out c00e0000_80000000_00000000 OPERR  Dn
+fmove.l out c01e0000_80000000_00000000 OPERR  Dn
+fmove.b out fffe0000_ffffffff_ffffffff Dn
+fmove.w out fffe0000_ffffffff_ffffffff Dn
+fmove.l out fffe0000_ffffffff_ffffffff Dn
+fmove.b out ffff0000_caffeedd_00000000 Dn
+fmove.w out ffff0000_caffeedd_00000000 Dn
+fmove.l out ffff0000_caffeedd_00000000 Dn
+fmove.b out fffe0000_ffffffff_ffffffff OPERR  Dn
+fmove.w out fffe0000_ffffffff_ffffffff OPERR  Dn
+fmove.l out fffe0000_ffffffff_ffffffff OPERR  Dn
+fmove.b out ffff0000_caffeedd_00000000 OPERR  Dn
+fmove.w out ffff0000_caffeedd_00000000 OPERR  Dn
+fmove.l out ffff0000_caffeedd_00000000 OPERR  Dn

@@ -1,0 +1,87 @@
+	README	1.2	9/9/91
+*******************************************************************
+Testsuite coverage listing.
+*******************************************************************
+
+File		Coverage
+----		--------
+Facos.nrm	facos numeric accuracy testing
+Facos.spl	facos of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm 
+Fasin.nrm	fasin numeric accuracy testing
+Fasin.spl	fasin of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm 
+Fatan.nrm	fatan numeric accuracy testing
+Fatan.spl	fatan of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm 
+Fatanh.nrm	fatanh numeric accuracy testing
+Fatanh.spl	fatanh of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+FbindecD.nrm	binary to decimal denorm accuracy tests
+FbindecU.nrm	binary to decimal unnorm accuracy tests
+Fbindec[].nrm	binary to decimal norm accuracy tests
+Fbs.vec		bsun white box tests
+Fcos.nrm	fcos numeric accuracy testing
+Fcos.spl	fcos of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fcosh.nrm	fcosh numeric accuracy testing
+Fcosh.spl	fcosh of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fdecbin.nrm	decimal to binary accuracy tests
+Fdz.vec		dz exception vectors
+Fetox.nrm	fetox numeric accuracy testing
+Fetox.spl	fetox of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fetoxm1.nrm	fetoxm1 numeric accuracy testing
+Fetoxm1.spl	fetoxm1 of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Ffmoveo_d.vec	overflow and underflow tests of fmove to double
+Ffmoveo_p.vec	binary to decimal norm tests (Special?)
+Ffmoveo_s.vec	overflow and underflow tests of fmove to single
+Ffmoveo_x.vec	overflow and underflow tests of fmove to extended
+Fget_op.vec	get_op tests
+Fgetexp.nrm missing!
+Fgetexp.spl	fgetexp of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fgetman.nrm	fgetman accuracy tests
+Fgetman.spl	fgetman of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Finex.vec	inex1 and inex2 exception vectors using fmove and fdiv
+Fint.nrm	fint accuracy tests
+Fint.nrm	see Ffint.vec below
+Fint.spl	fint of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fintrz.nrm	fintrz accuracy tests
+Fintrz.nrm	see Ffintrz.vec below
+Fintrz.spl	fintrz of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fkernel_ex.vec	t_xxx and snan vectors for kernel_ex routines
+Flog10.nrm missing!
+Flog10.spl	flog10 of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Flog2.nrm missing!
+Flog2.spl	flog2 of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Flogn.nrm	flogn numeric accuracy testing
+Flogn.spl	flogn of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Flognp1.nrm	flognp1 numeric accuracy testing
+Flognp1.spl	flognp1 of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fmod.spl	fmod of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fmove.spl	fmove of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fmovecr.vec	short version of Fmovecr_white in testsuite.88x
+Foperr.vec	operr exception vectors
+Fovfl.vec	overflow exception vectors
+Frem.spl	frem of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Frem_mod.spl	frem and fmod of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Frem_mod[].nrm	frem and fmod numeric accuracy testing
+Fs_d_denorm.vec	denorm tests with rmode of s & d using several instructions
+Fscale.nrm	fscale numeric accuracy tests
+Fscale.nrm	see Ffscale.vec below
+Fscale.spl	fscale of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fsd_dnrmout.vec	denorm tests with rmode of s & d using fmove
+Fsin.nrm	fsin numeric accuracy testing
+Fsin.spl	fsin of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fsincos.nrm	fetoxm1 numeric accuracy testing FEATUREs commented out
+Fsincos.spl	fsincos of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fsinh.nrm	fsinh numeric accuracy testing
+Fsinh.spl	fsinh of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Fsnan.vec	x_snan white box tests
+Fsnrm_rnd.vec	nrm_rnd test vectors using fint instructions
+Fsres_func.vec	res_func test vectors using fneg, fadd,  and fmove.p
+Fsround.vec	round test vectors using fint and fdiv instructions
+Ftan.nrm	ftan numeric accuracy testing
+Ftan.spl	ftan of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Ftanh.nrm	ftanh numeric accuracy testing
+Ftanh.spl	ftanh of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Ftentox.nrm	ftentox numeric accuracy testing
+Ftentox.spl	ftentox of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Ftwotox.nrm	ftwotox numeric accuracy testing
+Ftwotox.spl	ftwotox of +/- 0, +/- Inf, +/- QNaN/SNaN, +/- denorm
+Funf.vec	unfl exception vectors using fmove out instructions
+Funimp_white	x_unimp white box tests - horribly out of date

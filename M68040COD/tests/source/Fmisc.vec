@@ -1,0 +1,99 @@
+verbose
+#These vectors are miscellaneous tests which check
+#boundary cases and also contains tests written to
+#verify fixes in the code.
+#
+fmove.b out 7fff_0000_3fff_0000_0000_0000 snan
+fmove.w out 7fff_0000_3fff_0000_0000_0000 snan
+fmove.l out 7fff_0000_3fff_0000_0000_0000 snan
+fmove.s out 7fff_0000_3fff_0000_0000_0000 snan
+fmove.b out 7fff_0000_3fff_0000_0000_0000 snan Dn
+fmove.w out 7fff_0000_3fff_0000_0000_0000 snan Dn
+fmove.l out 7fff_0000_3fff_0000_0000_0000 snan Dn
+fmove.s out 7fff_0000_3fff_0000_0000_0000 snan Dn
+fmove.d out 7fff_0000_3fff_0000_0000_0000 snan
+fmove.x out 7fff_0000_3fff_0000_0000_0000 snan
+# 
+fmove.b out 7fff_0000_bfff_0000_0000_0000 snan
+fmove.w out 7fff_0000_bfff_0000_0000_0000 snan
+fmove.l out 7fff_0000_bfff_0000_0000_0000 snan
+fmove.s out 7fff_0000_bfff_0000_0000_0000 snan
+fmove.b out 7fff_0000_bfff_0000_0000_0000 snan Dn
+fmove.w out 7fff_0000_bfff_0000_0000_0000 snan Dn
+fmove.l out 7fff_0000_bfff_0000_0000_0000 snan Dn
+fmove.s out 7fff_0000_bfff_0000_0000_0000 snan Dn
+fmove.d out 7fff_0000_bfff_0000_0000_0000 snan
+fmove.x out 7fff_0000_bfff_0000_0000_0000 snan
+#
+fmove.b out ffff_0000_3fff_0000_0000_0000 snan
+fmove.w out ffff_0000_3fff_0000_0000_0000 snan
+fmove.l out ffff_0000_3fff_0000_0000_0000 snan
+fmove.s out ffff_0000_3fff_0000_0000_0000 snan
+fmove.b out ffff_0000_3fff_0000_0000_0000 snan Dn
+fmove.w out ffff_0000_3fff_0000_0000_0000 snan Dn
+fmove.l out ffff_0000_3fff_0000_0000_0000 snan Dn
+fmove.s out ffff_0000_3fff_0000_0000_0000 snan Dn
+fmove.d out ffff_0000_3fff_0000_0000_0000 snan
+fmove.x out ffff_0000_3fff_0000_0000_0000 snan
+#
+fmove.b out ffff_0000_bfff_0000_0000_0000 snan
+fmove.w out ffff_0000_bfff_0000_0000_0000 snan
+fmove.l out ffff_0000_bfff_0000_0000_0000 snan
+fmove.s out ffff_0000_bfff_0000_0000_0000 snan
+fmove.b out ffff_0000_bfff_0000_0000_0000 snan Dn
+fmove.w out ffff_0000_bfff_0000_0000_0000 snan Dn
+fmove.l out ffff_0000_bfff_0000_0000_0000 snan Dn
+fmove.s out ffff_0000_bfff_0000_0000_0000 snan Dn
+fmove.d out ffff_0000_bfff_0000_0000_0000 snan
+fmove.x out ffff_0000_bfff_0000_0000_0000 snan
+fatanh.x bfff0000_8000000000000000  
+fmove.p out 0000_0000_0000_0000_0000_0000 k#:-64 
+fsincos.d 7ff7_ffff_ffff_ffff rn x snan 
+ftanh.x c0020000_a000000000000000  
+fscale.w  40010000_c0000000_00000000 bfff s rn 
+fdiv.p 40000000_c90fdad3_f68cb9b7 00050001_23456789_12345678 
+fdiv.p 40000000_c90fdad3_f68cb9b7 00050001_23456789_12345678 rn d inex2 inex1 
+flognp1.x c000_0000_8000_0000_0000_0000 
+fmove.b out c0060000_80000000_00000000 
+fmove.w out c00e0000_80000000_00000000 
+fmove.l out c01e0000_80000000_00000000       
+fmove.b out c0060000_80000000_00000000 Dn
+fmove.w out c00e0000_80000000_00000000 Dn
+fmove.l out c01e0000_80000000_00000000 Dn   
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 d 
+fmul.x 9ffe_0000_8000_0000_0000_0000 1ffe_0000_8000_0000_0000_0000 d 
+fmul.x affe_0000_8000_0000_0000_0000 2ffe_0000_8000_0000_0000_0000 d ovfl unfl 
+ftwotox.w c000 x 
+flognp1.x 00000000_8000_0000_0000_0001 
+fatanh.x 80000000_8000_0000_0000_0000 
+ftan.x 3fff0000_c90fdaa22168c235	ovfl unfl 
+ftan.x 3fff0000_c90fdaa22168c234	ovfl unfl 
+fadd.s 7fff0000_30000000_00000008 c0000000 snan 
+fdiv.x 3fff0000_40000000_00000000 407d0000_80000000_00000000 s rn 
+flognp1.b fe operr 
+fsincos.x 7fff0000_00000000_00000000 operr 
+fscale.x ffff0000_3fffffff_ffffffff 3fff0000_80000000_00000000 snan 
+fmove.p 7fff0000_30000000_00000000 snan 
+fsin.p  00040001_23456789_00000000 
+fsin.p  00040001_23456789_00000000 inex1 
+fmove.x ffff_0000_3fff_ffff_ffff_ffff rn x snan 
+fmove.p 7fff_0000_0000_0000_0000_0000 
+fmove.p 7fff_0000_4000_0000_0000_0001 
+fsincos.d 7ff7_ffff_ffff_ffff rn x snan 
+fsincos.d fff7_ffff_ffff_ffff rn x snan 
+ftanh.x c0020000_a000000000000000  
+ftanh.x c0020000_8c687d6343eb2000  
+ftanh.x bfff0000_e5ce9df5c6435800  
+ftanh.x bfff0000_e523f34b1b98b000  
+ftentox.x 3ffd0000_9a209a84fbcff800  
+ftwotox.x 3ff90000_8000000000000000  
+fatanh.x 3fff_0000_8000_0000_0000_0000 
+fint.x 	0000_0000_0000_0000_0000_0001 
+fscale.w  3fff0000_c0000000_00000000 4001 x rp 
+flognp1.x 00000000_8000_0000_0000_0001 
+ftan.x 3fff0000_c90fdaa22168c235	ovfl unfl 
+ftan.x 3fff0000_c90fdaa22168c234	ovfl unfl 
+fint.x 401e_0000_8000_0001_8000_0000 
+fint.x 401e_0000_8000_0001_8000_0000 inex2
+fint.x c01e_0000_8000_0001_8000_0000 
+fint.x c01e_0000_8000_0001_8000_0000 inex2

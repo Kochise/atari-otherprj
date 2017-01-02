@@ -1,0 +1,168 @@
+verbose
+fmove.s out 3f8000008abcd10000000000
+fmove.s out 3f8000008abcd14000000000
+fmove.s out 3f8000008abcd18000000000
+fmove.s out 3f8000008abcd1c000000000
+fmove.s out 3f8000008abcd20000000000
+fmove.s out 3f8000008abcd24000000000
+fmove.s out 3f8000008abcd28000000000
+fmove.s out 3f8000008abcd2c000000000
+fmove.s out bf8000008abcd10000000000
+fmove.s out bf8000008abcd14000000000
+fmove.s out bf8000008abcd18000000000
+fmove.s out bf8000008abcd1c000000000
+fmove.s out bf8000008abcd20000000000
+fmove.s out bf8000008abcd24000000000
+fmove.s out bf8000008abcd28000000000
+fmove.s out bf8000008abcd2c000000000
+fmove.s out bbbb00008abcdefabcdefabc
+fmove.s out 3f8000008abcd10000000000 unfl
+fmove.s out 3f8000008abcd14000000000 unfl
+fmove.s out 3f8000008abcd18000000000 unfl
+fmove.s out 3f8000008abcd1c000000000 unfl
+fmove.s out 3f8000008abcd20000000000 unfl
+fmove.s out 3f8000008abcd24000000000 unfl
+fmove.s out 3f8000008abcd28000000000 unfl
+fmove.s out 3f8000008abcd2c000000000 unfl
+fmove.s out bf8000008abcd10000000000 unfl
+fmove.s out bf8000008abcd14000000000 unfl
+fmove.s out bf8000008abcd18000000000 unfl
+fmove.s out bf8000008abcd1c000000000 unfl
+fmove.s out bf8000008abcd20000000000 unfl
+fmove.s out bf8000008abcd24000000000 unfl
+fmove.s out bf8000008abcd28000000000 unfl
+fmove.s out bf8000008abcd2c000000000 unfl
+fmove.s out bbbb00008abcdefabcdefabc unfl
+fmove.s out 3f8000008abcd10000000000 Dn
+fmove.s out 3f8000008abcd14000000000 Dn
+fmove.s out 3f8000008abcd18000000000 Dn
+fmove.s out 3f8000008abcd1c000000000 Dn
+fmove.s out 3f8000008abcd20000000000 Dn
+fmove.s out 3f8000008abcd24000000000 Dn
+fmove.s out 3f8000008abcd28000000000 Dn
+fmove.s out 3f8000008abcd2c000000000 Dn
+fmove.s out bf8000008abcd10000000000 Dn
+fmove.s out bf8000008abcd14000000000 Dn
+fmove.s out bf8000008abcd18000000000 Dn
+fmove.s out bf8000008abcd1c000000000 Dn
+fmove.s out bf8000008abcd20000000000 Dn
+fmove.s out bf8000008abcd24000000000 Dn
+fmove.s out bf8000008abcd28000000000 Dn
+fmove.s out bf8000008abcd2c000000000 Dn
+fmove.s out bbbb00008abcdefabcdefabc Dn
+fmove.s out 3f8000008abcd10000000000 unfl Dn
+fmove.s out 3f8000008abcd14000000000 unfl Dn
+fmove.s out 3f8000008abcd18000000000 unfl Dn
+fmove.s out 3f8000008abcd1c000000000 unfl Dn
+fmove.s out 3f8000008abcd20000000000 unfl Dn
+fmove.s out 3f8000008abcd24000000000 unfl Dn
+fmove.s out 3f8000008abcd28000000000 unfl Dn
+fmove.s out 3f8000008abcd2c000000000 unfl Dn
+fmove.s out bf8000008abcd10000000000 unfl Dn
+fmove.s out bf8000008abcd14000000000 unfl Dn
+fmove.s out bf8000008abcd18000000000 unfl Dn
+fmove.s out bf8000008abcd1c000000000 unfl Dn
+fmove.s out bf8000008abcd20000000000 unfl Dn
+fmove.s out bf8000008abcd24000000000 unfl Dn
+fmove.s out bf8000008abcd28000000000 unfl Dn
+fmove.s out bf8000008abcd2c000000000 unfl Dn
+fmove.s out bbbb00008abcdefabcdefabc unfl Dn
+fmove.d out 3c0000008aaaaaaaaaaa0400
+fmove.d out 3c0000008555555555550800
+fmove.d out 3c0000008aaaaaaaaaaa0c00
+fmove.d out 3c0000008555555555551000
+fmove.d out 3c0000008aaaaaaaaaaa1400
+fmove.d out 3c0000008555555555551800
+fmove.d out 3c0000008aaaaaaaaaaa1c00
+fmove.d out 3c0000008555555555552000
+fmove.d out bc0000008aaaaaaaaaaa0400
+fmove.d out bc0000008555555555550800
+fmove.d out bc0000008aaaaaaaaaaa0c00
+fmove.d out bc0000008555555555551000
+fmove.d out bc0000008aaaaaaaaaaa1400
+fmove.d out bc0000008555555555551800
+fmove.d out bc0000008aaaaaaaaaaa1c00
+fmove.d out bc0000008555555555552000
+fmove.d out bbf80000a6a00000a6a00000
+fmove.d out 3c0000008aaaaaaaaaaa0400 unfl
+fmove.d out 3c0000008555555555550800 unfl
+fmove.d out 3c0000008aaaaaaaaaaa0c00 unfl
+fmove.d out 3c0000008555555555551000 unfl
+fmove.d out 3c0000008aaaaaaaaaaa1400 unfl
+fmove.d out 3c0000008555555555551800 unfl
+fmove.d out 3c0000008aaaaaaaaaaa1c00 unfl
+fmove.d out 3c0000008555555555552000 unfl
+fmove.d out bc0000008aaaaaaaaaaa0400 unfl
+fmove.d out bc0000008555555555550800 unfl
+fmove.d out bc0000008aaaaaaaaaaa0c00 unfl
+fmove.d out bc0000008555555555551000 unfl
+fmove.d out bc0000008aaaaaaaaaaa1400 unfl
+fmove.d out bc0000008555555555551800 unfl
+fmove.d out bc0000008aaaaaaaaaaa1c00 unfl
+fmove.d out bc0000008555555555552000 unfl
+fmove.d out bbf80000a6a00000a6a00000 unfl
+fdiv.x [s]00855551 [b]2 s
+fdiv.x [s]01055551 [b]2 s
+fdiv.x [s]00855552 [b]2 s
+fdiv.x [s]01055552 [b]2 s
+fdiv.x [s]80855551 [b]2 s
+fdiv.x [s]81055551 [b]2 s
+fdiv.x [s]80855552 [b]2 s
+fdiv.x [s]81055552 [b]2 s
+fdiv.x [s]00855551 [b]2 s unfl
+fdiv.x [s]01055551 [b]2 s unfl
+fdiv.x [s]00855552 [b]2 s unfl
+fdiv.x [s]01055552 [b]2 s unfl
+fdiv.x [s]80855551 [b]2 s unfl
+fdiv.x [s]81055551 [b]2 s unfl
+fdiv.x [s]80855552 [b]2 s unfl
+fdiv.x [s]81055552 [b]2 s unfl
+
+fdiv.x [d]001aaaaaaaaaaaa1 [b]2 d
+fdiv.x [d]002aaaaaaaaaaaa1 [b]2 d
+fdiv.x [d]001aaaaaaaaaaaa2 [b]2 d
+fdiv.x [d]002aaaaaaaaaaaa2 [b]2 d
+fdiv.x [d]801aaaaaaaaaaaa1 [b]2 d
+fdiv.x [d]802aaaaaaaaaaaa1 [b]2 d
+fdiv.x [d]801aaaaaaaaaaaa2 [b]2 d
+fdiv.x [d]802aaaaaaaaaaaa2 [b]2 d
+fdiv.x [d]001aaaaaaaaaaaa1 [b]2 d unfl
+fdiv.x [d]002aaaaaaaaaaaa1 [b]2 d unfl
+fdiv.x [d]001aaaaaaaaaaaa2 [b]2 d unfl
+fdiv.x [d]002aaaaaaaaaaaa2 [b]2 d unfl
+fdiv.x [d]801aaaaaaaaaaaa1 [b]2 d unfl
+fdiv.x [d]802aaaaaaaaaaaa1 [b]2 d unfl
+fdiv.x [d]801aaaaaaaaaaaa2 [b]2 d unfl
+fdiv.x [d]802aaaaaaaaaaaa2 [b]2 d unfl
+fmove.d 0010000000000000 s rn
+fmove.d 0010000000000000 s rm
+fmove.d 0010000000000000 s rp
+fmove.d 0010000000000000 s rz
+fmove.d 8010000000000000 s rn
+fmove.d 8010000000000000 s rm
+fmove.d 8010000000000000 s rp
+fmove.d 8010000000000000 s rz
+fmove.x 000100008000000000000000 d rn
+fmove.x 000100008000000000000000 d rm
+fmove.x 000100008000000000000000 d rp
+fmove.x 000100008000000000000000 d rz
+fmove.x 800100008000000000000000 d rn
+fmove.x 800100008000000000000000 d rm
+fmove.x 800100008000000000000000 d rp
+fmove.x 800100008000000000000000 d rz
+fmove.d 0010000000000000 s rn unfl
+fmove.d 0010000000000000 s rm unfl
+fmove.d 0010000000000000 s rp unfl
+fmove.d 0010000000000000 s rz unfl
+fmove.d 8010000000000000 s rn unfl
+fmove.d 8010000000000000 s rm unfl
+fmove.d 8010000000000000 s rp unfl
+fmove.d 8010000000000000 s rz unfl
+fmove.x 000100008000000000000000 d rn unfl
+fmove.x 000100008000000000000000 d rm unfl
+fmove.x 000100008000000000000000 d rp unfl
+fmove.x 000100008000000000000000 d rz unfl
+fmove.x 800100008000000000000000 d rn unfl
+fmove.x 800100008000000000000000 d rm unfl
+fmove.x 800100008000000000000000 d rp unfl
+fmove.x 800100008000000000000000 d rz unfl

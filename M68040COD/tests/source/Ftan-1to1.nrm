@@ -1,0 +1,400 @@
+#Input is -0.990000
+ftan.x bffe0000_fd70a3d7_0a3d7000
+#Input is -0.980000
+ftan.x bffe0000_fae147ae_147ae000
+#Input is -0.970000
+ftan.x bffe0000_f851eb85_1eb85000
+#Input is -0.960000
+ftan.x bffe0000_f5c28f5c_28f5c000
+#Input is -0.950000
+ftan.x bffe0000_f3333333_33333000
+#Input is -0.940000
+ftan.x bffe0000_f0a3d70a_3d70a000
+#Input is -0.930000
+ftan.x bffe0000_ee147ae1_47ae1000
+#Input is -0.920000
+ftan.x bffe0000_eb851eb8_51eb8000
+#Input is -0.910000
+ftan.x bffe0000_e8f5c28f_5c28f000
+#Input is -0.900000
+ftan.x bffe0000_e6666666_66666000
+#Input is -0.890000
+ftan.x bffe0000_e3d70a3d_70a3d000
+#Input is -0.880000
+ftan.x bffe0000_e147ae14_7ae14000
+#Input is -0.870000
+ftan.x bffe0000_deb851eb_851eb000
+#Input is -0.860000
+ftan.x bffe0000_dc28f5c2_8f5c2000
+#Input is -0.850000
+ftan.x bffe0000_d9999999_99999000
+#Input is -0.840000
+ftan.x bffe0000_d70a3d70_a3d70000
+#Input is -0.830000
+ftan.x bffe0000_d47ae147_ae147000
+#Input is -0.820000
+ftan.x bffe0000_d1eb851e_b851e000
+#Input is -0.810000
+ftan.x bffe0000_cf5c28f5_c28f5000
+#Input is -0.800000
+ftan.x bffe0000_cccccccc_ccccc000
+#Input is -0.790000
+ftan.x bffe0000_ca3d70a3_d70a3000
+#Input is -0.780000
+ftan.x bffe0000_c7ae147a_e147a000
+#Input is -0.770000
+ftan.x bffe0000_c51eb851_eb851000
+#Input is -0.760000
+ftan.x bffe0000_c28f5c28_f5c28000
+#Input is -0.750000
+ftan.x bffe0000_bfffffff_fffff000
+#Input is -0.740000
+ftan.x bffe0000_bd70a3d7_0a3d6000
+#Input is -0.730000
+ftan.x bffe0000_bae147ae_147ad000
+#Input is -0.720000
+ftan.x bffe0000_b851eb85_1eb84000
+#Input is -0.710000
+ftan.x bffe0000_b5c28f5c_28f5b000
+#Input is -0.700000
+ftan.x bffe0000_b3333333_33332000
+#Input is -0.690000
+ftan.x bffe0000_b0a3d70a_3d709000
+#Input is -0.680000
+ftan.x bffe0000_ae147ae1_47ae0000
+#Input is -0.670000
+ftan.x bffe0000_ab851eb8_51eb7000
+#Input is -0.660000
+ftan.x bffe0000_a8f5c28f_5c28e000
+#Input is -0.650000
+ftan.x bffe0000_a6666666_66665000
+#Input is -0.640000
+ftan.x bffe0000_a3d70a3d_70a3c000
+#Input is -0.630000
+ftan.x bffe0000_a147ae14_7ae13000
+#Input is -0.620000
+ftan.x bffe0000_9eb851eb_851ea000
+#Input is -0.610000
+ftan.x bffe0000_9c28f5c2_8f5c1000
+#Input is -0.600000
+ftan.x bffe0000_99999999_99998000
+#Input is -0.590000
+ftan.x bffe0000_970a3d70_a3d6f000
+#Input is -0.580000
+ftan.x bffe0000_947ae147_ae146000
+#Input is -0.570000
+ftan.x bffe0000_91eb851e_b851d000
+#Input is -0.560000
+ftan.x bffe0000_8f5c28f5_c28f4000
+#Input is -0.550000
+ftan.x bffe0000_8ccccccc_ccccb000
+#Input is -0.540000
+ftan.x bffe0000_8a3d70a3_d70a2000
+#Input is -0.530000
+ftan.x bffe0000_87ae147a_e1479000
+#Input is -0.520000
+ftan.x bffe0000_851eb851_eb850000
+#Input is -0.510000
+ftan.x bffe0000_828f5c28_f5c27000
+#Input is -0.500000
+ftan.x bffd0000_ffffffff_ffffc000
+#Input is -0.490000
+ftan.x bffd0000_fae147ae_147aa000
+#Input is -0.480000
+ftan.x bffd0000_f5c28f5c_28f58000
+#Input is -0.470000
+ftan.x bffd0000_f0a3d70a_3d706000
+#Input is -0.460000
+ftan.x bffd0000_eb851eb8_51eb4000
+#Input is -0.450000
+ftan.x bffd0000_e6666666_66662000
+#Input is -0.440000
+ftan.x bffd0000_e147ae14_7ae10000
+#Input is -0.430000
+ftan.x bffd0000_dc28f5c2_8f5be000
+#Input is -0.420000
+ftan.x bffd0000_d70a3d70_a3d6c000
+#Input is -0.410000
+ftan.x bffd0000_d1eb851e_b851a000
+#Input is -0.400000
+ftan.x bffd0000_cccccccc_cccc8000
+#Input is -0.390000
+ftan.x bffd0000_c7ae147a_e1476000
+#Input is -0.380000
+ftan.x bffd0000_c28f5c28_f5c24000
+#Input is -0.370000
+ftan.x bffd0000_bd70a3d7_0a3d2000
+#Input is -0.360000
+ftan.x bffd0000_b851eb85_1eb80000
+#Input is -0.350000
+ftan.x bffd0000_b3333333_3332e000
+#Input is -0.340000
+ftan.x bffd0000_ae147ae1_47adc000
+#Input is -0.330000
+ftan.x bffd0000_a8f5c28f_5c28a000
+#Input is -0.320000
+ftan.x bffd0000_a3d70a3d_70a38000
+#Input is -0.310000
+ftan.x bffd0000_9eb851eb_851e6000
+#Input is -0.300000
+ftan.x bffd0000_99999999_99994000
+#Input is -0.290000
+ftan.x bffd0000_947ae147_ae142000
+#Input is -0.280000
+ftan.x bffd0000_8f5c28f5_c28f0000
+#Input is -0.270000
+ftan.x bffd0000_8a3d70a3_d709e000
+#Input is -0.260000
+ftan.x bffd0000_851eb851_eb84c000
+#Input is -0.250000
+ftan.x bffc0000_ffffffff_ffff4000
+#Input is -0.240000
+ftan.x bffc0000_f5c28f5c_28f50000
+#Input is -0.230000
+ftan.x bffc0000_eb851eb8_51eac000
+#Input is -0.220000
+ftan.x bffc0000_e147ae14_7ae08000
+#Input is -0.210000
+ftan.x bffc0000_d70a3d70_a3d64000
+#Input is -0.200000
+ftan.x bffc0000_cccccccc_cccc0000
+#Input is -0.190000
+ftan.x bffc0000_c28f5c28_f5c1c000
+#Input is -0.180000
+ftan.x bffc0000_b851eb85_1eb78000
+#Input is -0.170000
+ftan.x bffc0000_ae147ae1_47ad4000
+#Input is -0.160000
+ftan.x bffc0000_a3d70a3d_70a30000
+#Input is -0.150000
+ftan.x bffc0000_99999999_9998c000
+#Input is -0.140000
+ftan.x bffc0000_8f5c28f5_c28e8000
+#Input is -0.130000
+ftan.x bffc0000_851eb851_eb844000
+#Input is -0.120000
+ftan.x bffb0000_f5c28f5c_28f40800
+#Input is -0.110000
+ftan.x bffb0000_e147ae14_7adf9000
+#Input is -0.100000
+ftan.x bffb0000_cccccccc_cccb1800
+#Input is -0.090000
+ftan.x bffb0000_b851eb85_1eb6a000
+#Input is -0.080000
+ftan.x bffb0000_a3d70a3d_70a22800
+#Input is -0.070000
+ftan.x bffb0000_8f5c28f5_c28db000
+#Input is -0.060000
+ftan.x bffa0000_f5c28f5c_28f26800
+#Input is -0.050000
+ftan.x bffa0000_cccccccc_ccc97000
+#Input is -0.040000
+ftan.x bffa0000_a3d70a3d_70a07800
+#Input is -0.030000
+ftan.x bff90000_f5c28f5c_28ef0000
+#Input is -0.020000
+ftan.x bff90000_a3d70a3d_709d1000
+#Input is -0.010000
+ftan.x bff80000_a3d70a3d_70964800
+#Input is 0.000000
+ftan.x 3fcc0000_d9000000_00000000
+#Input is 0.010000
+ftan.x 3ff80000_a3d70a3d_70b16800
+#Input is 0.020000
+ftan.x 3ff90000_a3d70a3d_70aaa000
+#Input is 0.030000
+ftan.x 3ff90000_f5c28f5c_28fc9000
+#Input is 0.040000
+ftan.x 3ffa0000_a3d70a3d_70a74000
+#Input is 0.050000
+ftan.x 3ffa0000_cccccccc_ccd03800
+#Input is 0.060000
+ftan.x 3ffa0000_f5c28f5c_28f93000
+#Input is 0.070000
+ftan.x 3ffb0000_8f5c28f5_c2911000
+#Input is 0.080000
+ftan.x 3ffb0000_a3d70a3d_70a58800
+#Input is 0.090000
+ftan.x 3ffb0000_b851eb85_1eba0000
+#Input is 0.100000
+ftan.x 3ffb0000_cccccccc_ccce7800
+#Input is 0.110000
+ftan.x 3ffb0000_e147ae14_7ae2f000
+#Input is 0.120000
+ftan.x 3ffb0000_f5c28f5c_28f76800
+#Input is 0.130000
+ftan.x 3ffc0000_851eb851_eb85f000
+#Input is 0.140000
+ftan.x 3ffc0000_8f5c28f5_c2903000
+#Input is 0.150000
+ftan.x 3ffc0000_99999999_999a7000
+#Input is 0.160000
+ftan.x 3ffc0000_a3d70a3d_70a4b000
+#Input is 0.170000
+ftan.x 3ffc0000_ae147ae1_47aef000
+#Input is 0.180000
+ftan.x 3ffc0000_b851eb85_1eb93000
+#Input is 0.190000
+ftan.x 3ffc0000_c28f5c28_f5c37000
+#Input is 0.200000
+ftan.x 3ffc0000_cccccccc_cccdb000
+#Input is 0.210000
+ftan.x 3ffc0000_d70a3d70_a3d7f000
+#Input is 0.220000
+ftan.x 3ffc0000_e147ae14_7ae23000
+#Input is 0.230000
+ftan.x 3ffc0000_eb851eb8_51ec7000
+#Input is 0.240000
+ftan.x 3ffc0000_f5c28f5c_28f6b000
+#Input is 0.250000
+ftan.x 3ffd0000_80000000_00007800
+#Input is 0.260000
+ftan.x 3ffd0000_851eb851_eb859800
+#Input is 0.270000
+ftan.x 3ffd0000_8a3d70a3_d70ab800
+#Input is 0.280000
+ftan.x 3ffd0000_8f5c28f5_c28fd800
+#Input is 0.290000
+ftan.x 3ffd0000_947ae147_ae14f800
+#Input is 0.300000
+ftan.x 3ffd0000_99999999_999a1800
+#Input is 0.310000
+ftan.x 3ffd0000_9eb851eb_851f3800
+#Input is 0.320000
+ftan.x 3ffd0000_a3d70a3d_70a45800
+#Input is 0.330000
+ftan.x 3ffd0000_a8f5c28f_5c297800
+#Input is 0.340000
+ftan.x 3ffd0000_ae147ae1_47ae9800
+#Input is 0.350000
+ftan.x 3ffd0000_b3333333_3333b800
+#Input is 0.360000
+ftan.x 3ffd0000_b851eb85_1eb8d800
+#Input is 0.370000
+ftan.x 3ffd0000_bd70a3d7_0a3df800
+#Input is 0.380000
+ftan.x 3ffd0000_c28f5c28_f5c31800
+#Input is 0.390000
+ftan.x 3ffd0000_c7ae147a_e1483800
+#Input is 0.400000
+ftan.x 3ffd0000_cccccccc_cccd5800
+#Input is 0.410000
+ftan.x 3ffd0000_d1eb851e_b8527800
+#Input is 0.420000
+ftan.x 3ffd0000_d70a3d70_a3d79800
+#Input is 0.430000
+ftan.x 3ffd0000_dc28f5c2_8f5cb800
+#Input is 0.440000
+ftan.x 3ffd0000_e147ae14_7ae1d800
+#Input is 0.450000
+ftan.x 3ffd0000_e6666666_6666f800
+#Input is 0.460000
+ftan.x 3ffd0000_eb851eb8_51ec1800
+#Input is 0.470000
+ftan.x 3ffd0000_f0a3d70a_3d713800
+#Input is 0.480000
+ftan.x 3ffd0000_f5c28f5c_28f65800
+#Input is 0.490000
+ftan.x 3ffd0000_fae147ae_147b7800
+#Input is 0.500000
+ftan.x 3ffe0000_80000000_00004800
+#Input is 0.510000
+ftan.x 3ffe0000_828f5c28_f5c2d800
+#Input is 0.520000
+ftan.x 3ffe0000_851eb851_eb856800
+#Input is 0.530000
+ftan.x 3ffe0000_87ae147a_e147f800
+#Input is 0.540000
+ftan.x 3ffe0000_8a3d70a3_d70a8800
+#Input is 0.550000
+ftan.x 3ffe0000_8ccccccc_cccd1800
+#Input is 0.560000
+ftan.x 3ffe0000_8f5c28f5_c28fa800
+#Input is 0.570000
+ftan.x 3ffe0000_91eb851e_b8523800
+#Input is 0.580000
+ftan.x 3ffe0000_947ae147_ae14c800
+#Input is 0.590000
+ftan.x 3ffe0000_970a3d70_a3d75800
+#Input is 0.600000
+ftan.x 3ffe0000_99999999_9999e800
+#Input is 0.610000
+ftan.x 3ffe0000_9c28f5c2_8f5c7800
+#Input is 0.620000
+ftan.x 3ffe0000_9eb851eb_851f0800
+#Input is 0.630000
+ftan.x 3ffe0000_a147ae14_7ae19800
+#Input is 0.640000
+ftan.x 3ffe0000_a3d70a3d_70a42800
+#Input is 0.650000
+ftan.x 3ffe0000_a6666666_6666b800
+#Input is 0.660000
+ftan.x 3ffe0000_a8f5c28f_5c294800
+#Input is 0.670000
+ftan.x 3ffe0000_ab851eb8_51ebd800
+#Input is 0.680000
+ftan.x 3ffe0000_ae147ae1_47ae6800
+#Input is 0.690000
+ftan.x 3ffe0000_b0a3d70a_3d70f800
+#Input is 0.700000
+ftan.x 3ffe0000_b3333333_33338800
+#Input is 0.710000
+ftan.x 3ffe0000_b5c28f5c_28f61800
+#Input is 0.720000
+ftan.x 3ffe0000_b851eb85_1eb8a800
+#Input is 0.730000
+ftan.x 3ffe0000_bae147ae_147b3800
+#Input is 0.740000
+ftan.x 3ffe0000_bd70a3d7_0a3dc800
+#Input is 0.750000
+ftan.x 3ffe0000_c0000000_00005800
+#Input is 0.760000
+ftan.x 3ffe0000_c28f5c28_f5c2e800
+#Input is 0.770000
+ftan.x 3ffe0000_c51eb851_eb857800
+#Input is 0.780000
+ftan.x 3ffe0000_c7ae147a_e1480800
+#Input is 0.790000
+ftan.x 3ffe0000_ca3d70a3_d70a9800
+#Input is 0.800000
+ftan.x 3ffe0000_cccccccc_cccd2800
+#Input is 0.810000
+ftan.x 3ffe0000_cf5c28f5_c28fb800
+#Input is 0.820000
+ftan.x 3ffe0000_d1eb851e_b8524800
+#Input is 0.830000
+ftan.x 3ffe0000_d47ae147_ae14d800
+#Input is 0.840000
+ftan.x 3ffe0000_d70a3d70_a3d76800
+#Input is 0.850000
+ftan.x 3ffe0000_d9999999_9999f800
+#Input is 0.860000
+ftan.x 3ffe0000_dc28f5c2_8f5c8800
+#Input is 0.870000
+ftan.x 3ffe0000_deb851eb_851f1800
+#Input is 0.880000
+ftan.x 3ffe0000_e147ae14_7ae1a800
+#Input is 0.890000
+ftan.x 3ffe0000_e3d70a3d_70a43800
+#Input is 0.900000
+ftan.x 3ffe0000_e6666666_6666c800
+#Input is 0.910000
+ftan.x 3ffe0000_e8f5c28f_5c295800
+#Input is 0.920000
+ftan.x 3ffe0000_eb851eb8_51ebe800
+#Input is 0.930000
+ftan.x 3ffe0000_ee147ae1_47ae7800
+#Input is 0.940000
+ftan.x 3ffe0000_f0a3d70a_3d710800
+#Input is 0.950000
+ftan.x 3ffe0000_f3333333_33339800
+#Input is 0.960000
+ftan.x 3ffe0000_f5c28f5c_28f62800
+#Input is 0.970000
+ftan.x 3ffe0000_f851eb85_1eb8b800
+#Input is 0.980000
+ftan.x 3ffe0000_fae147ae_147b4800
+#Input is 0.990000
+ftan.x 3ffe0000_fd70a3d7_0a3dd800
+#Input is 1.000000
+ftan.x 3fff0000_80000000_00003000

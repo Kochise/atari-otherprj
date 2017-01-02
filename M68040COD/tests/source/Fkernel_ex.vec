@@ -1,0 +1,353 @@
+verbose
+# Vectors to check exception handling routines in kernel_ex.
+# These routines are used when exceptional situations are
+# detected within transcendental code.
+#
+#t_dz2 check
+flogn.s  80000000
+flogn.s  00000000
+flog2.s  80000000
+flog2.s  00000000
+flog10.s 80000000
+flog10.s 00000000
+flognp1.d bff0_0000_0000_0000 
+#t_dz check
+fatanh.d 3ff0_0000_0000_0000
+fatanh.d bff0_0000_0000_0000
+#same as above, turn on dz
+flogn.s  80000000 dz
+flogn.s  00000000 dz
+flog2.s  80000000 dz
+flog2.s  00000000 dz
+flog10.s 80000000 dz
+flog10.s 00000000 dz
+flognp1.d bff0_0000_0000_0000 dz
+fatanh.d 3ff0_0000_0000_0000 dz
+fatanh.d bff0_0000_0000_0000 dz
+#
+#t_inx2 check
+fint.x   403d_0000_aaaa_aaaa_aaaa_ffff inex2
+fintrz.x 403d_0000_aaaa_aaaa_aaaa_ffff inex2
+facos.x  0000_0000_0000_0000_0000_0001 inex2
+facos.x  8000_0000_0000_0000_0000_0001 inex2
+#
+#t_operr check
+facos.x 7fff0000_00000000_00000000 operr
+facos.x ffff0000_00000000_00000000 operr
+facos.x 3fff0000_80000000_00000001 operr
+facos.x bfff0000_80000000_00000001 operr
+
+fasin.x 7fff0000_00000000_00000000 operr
+fasin.x ffff0000_00000000_00000000 operr
+fasin.x 3fff0000_80000000_00000001 operr
+fasin.x bfff0000_80000000_00000001 operr
+
+fatanh.x 7fff0000_00000000_00000000 operr
+fatanh.x ffff0000_00000000_00000000 operr
+fatanh.x 3fff0000_80000000_00000001 operr
+fatanh.x bfff0000_80000000_00000001 operr
+
+fcos.x 7fff0000_00000000_00000000 operr
+fcos.x ffff0000_00000000_00000000 operr
+fsin.x 7fff0000_00000000_00000000 operr
+fsin.x ffff0000_00000000_00000000 operr
+ftan.x 7fff0000_00000000_00000000 operr
+ftan.x ffff0000_00000000_00000000 operr
+
+fgetexp.x 7fff0000_00000000_00000000 operr
+fgetexp.x ffff0000_00000000_00000000 operr
+
+fgetman.x 7fff0000_00000000_00000000 operr
+fgetman.x ffff0000_00000000_00000000 operr
+
+flog10.b ff operr
+flog10.x ffff0000_00000000_00000000 operr
+flog2.b ff operr
+flog2.x ffff0000_00000000_00000000 operr
+flogn.b ff operr
+flogn.x ffff0000_00000000_00000000 operr
+flognp1.b fe operr
+flognp1.x ffff0000_00000000_00000000 operr
+
+fsincos.x 7fff0000_00000000_00000000 operr
+fsincos.x ffff0000_00000000_00000000 operr
+
+fmod.x ffff0000_00000000_00000000  40000000_80000000_00000000 operr
+fmod.x 7fff0000_00000000_00000000  40000000_80000000_00000000 operr
+fmod.b 40010000_c0000000_00000000 00 operr
+
+frem.x ffff0000_00000000_00000000  40000000_80000000_00000000 operr
+frem.x 7fff0000_00000000_00000000  40000000_80000000_00000000 operr
+frem.b 40010000_c0000000_00000000 00 operr
+
+fscale.x 40000000_80000aaa_000bbbbb 7fff0000_00000000_00000000 operr
+fscale.x 40000000_80000aaa_000bbbbb ffff0000_00000000_00000000 operr
+#
+#t_ovfl check
+fcosh.x	400c0000_b2b40000_00000000 x rn ovfl
+fcosh.x	c00c0000_b2b40000_00000000 x rn ovfl
+fsinh.x	400c0000_b2b40000_00000000 x rn ovfl
+fsinh.x	c00c0000_b2b40000_00000000 x rn ovfl
+ftwotox.x 400d0000_80c00000_00000000 x rn ovfl
+fscale.w 3fff0000_80000000_00000000 4001 x rn ovfl
+fscale.w bfff0000_80000000_00000000 4001 x rn ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 s rn ovfl
+fcosh.x	c00c0000_b2b40000_00000000 s rn ovfl
+fsinh.x	400c0000_b2b40000_00000000 s rn ovfl
+fsinh.x	c00c0000_b2b40000_00000000 s rn ovfl
+ftwotox.x 400d0000_80c00000_00000000 s rn ovfl
+fscale.w 3fff0000_80000000_00000000 4001 s rn ovfl
+fscale.w bfff0000_80000000_00000000 4001 s rn ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 d rn ovfl
+fcosh.x	c00c0000_b2b40000_00000000 d rn ovfl
+fsinh.x	400c0000_b2b40000_00000000 d rn ovfl
+fsinh.x	c00c0000_b2b40000_00000000 d rn ovfl
+ftwotox.x 400d0000_80c00000_00000000 d rn ovfl
+fscale.w 3fff0000_80000000_00000000 4001 d rn ovfl
+fscale.w bfff0000_80000000_00000000 4001 d rn ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 x rz ovfl
+fcosh.x	c00c0000_b2b40000_00000000 x rz ovfl
+fsinh.x	400c0000_b2b40000_00000000 x rz ovfl
+fsinh.x	c00c0000_b2b40000_00000000 x rz ovfl
+ftwotox.x 400d0000_80c00000_00000000 x rz ovfl
+fscale.w 3fff0000_80000000_00000000 4001 x rz ovfl
+fscale.w bfff0000_80000000_00000000 4001 x rz ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 s rz ovfl
+fcosh.x	c00c0000_b2b40000_00000000 s rz ovfl
+fsinh.x	400c0000_b2b40000_00000000 s rz ovfl
+fsinh.x	c00c0000_b2b40000_00000000 s rz ovfl
+ftwotox.x 400d0000_80c00000_00000000 s rz ovfl
+fscale.w 3fff0000_80000000_00000000 4001 s rz ovfl
+fscale.w bfff0000_80000000_00000000 4001 s rz ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 d rz ovfl
+fcosh.x	c00c0000_b2b40000_00000000 d rz ovfl
+fsinh.x	400c0000_b2b40000_00000000 d rz ovfl
+fsinh.x	c00c0000_b2b40000_00000000 d rz ovfl
+ftwotox.x 400d0000_80c00000_00000000 d rz ovfl
+fscale.w 3fff0000_80000000_00000000 4001 d rz ovfl
+fscale.w bfff0000_80000000_00000000 4001 d rz ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 x rm ovfl
+fcosh.x	c00c0000_b2b40000_00000000 x rm ovfl
+fsinh.x	400c0000_b2b40000_00000000 x rm ovfl
+fsinh.x	c00c0000_b2b40000_00000000 x rm ovfl
+ftwotox.x 400d0000_80c00000_00000000 x rm ovfl
+fscale.w 3fff0000_80000000_00000000 4001 x rm ovfl
+fscale.w bfff0000_80000000_00000000 4001 x rm ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 s rm ovfl
+fcosh.x	c00c0000_b2b40000_00000000 s rm ovfl
+fsinh.x	400c0000_b2b40000_00000000 s rm ovfl
+fsinh.x	c00c0000_b2b40000_00000000 s rm ovfl
+ftwotox.x 400d0000_80c00000_00000000 s rm ovfl
+fscale.w 3fff0000_80000000_00000000 4001 s rm ovfl
+fscale.w bfff0000_80000000_00000000 4001 s rm ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 d rm ovfl
+fcosh.x	c00c0000_b2b40000_00000000 d rm ovfl
+fsinh.x	400c0000_b2b40000_00000000 d rm ovfl
+fsinh.x	c00c0000_b2b40000_00000000 d rm ovfl
+ftwotox.x 400d0000_80c00000_00000000 d rm ovfl
+fscale.w 3fff0000_80000000_00000000 4001 d rm ovfl
+fscale.w bfff0000_80000000_00000000 4001 d rm ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 x rp ovfl
+fcosh.x	c00c0000_b2b40000_00000000 x rp ovfl
+fsinh.x	400c0000_b2b40000_00000000 x rp ovfl
+fsinh.x	c00c0000_b2b40000_00000000 x rp ovfl
+ftwotox.x 400d0000_80c00000_00000000 x rp ovfl
+fscale.w 3fff0000_80000000_00000000 4001 d rm ovfl
+fscale.w bfff0000_80000000_00000000 4001 d rm ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 s rp ovfl
+fcosh.x	c00c0000_b2b40000_00000000 s rp ovfl
+fsinh.x	400c0000_b2b40000_00000000 s rp ovfl
+fsinh.x	c00c0000_b2b40000_00000000 s rp ovfl
+ftwotox.x 400d0000_80c00000_00000000 s rp ovfl
+fscale.w 3fff0000_80000000_00000000 4001 s rp ovfl
+fscale.w bfff0000_80000000_00000000 4001 s rp ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 d rp ovfl
+fcosh.x	c00c0000_b2b40000_00000000 d rp ovfl
+fsinh.x	400c0000_b2b40000_00000000 d rp ovfl
+fsinh.x	c00c0000_b2b40000_00000000 d rp ovfl
+ftwotox.x 400d0000_80c00000_00000000 d rp ovfl
+fscale.w 3fff0000_80000000_00000000 4001 d rp ovfl
+fscale.w bfff0000_80000000_00000000 4001 d rp ovfl
+
+fcosh.x	400c0000_b2b40000_00000000 x rn 
+fcosh.x	c00c0000_b2b40000_00000000 x rn 
+fsinh.x	400c0000_b2b40000_00000000 x rn 
+fsinh.x	c00c0000_b2b40000_00000000 x rn 
+ftwotox.x 400d0000_80c00000_00000000 x rn 
+fscale.w 3fff0000_80000000_00000000 4001 x rn
+fscale.w bfff0000_80000000_00000000 4001 x rn
+
+fcosh.x	400c0000_b2b40000_00000000 s rn 
+fcosh.x	c00c0000_b2b40000_00000000 s rn 
+fsinh.x	400c0000_b2b40000_00000000 s rn 
+fsinh.x	c00c0000_b2b40000_00000000 s rn 
+ftwotox.x 400d0000_80c00000_00000000 s rn 
+fscale.w 3fff0000_80000000_00000000 4001 s rn
+fscale.w bfff0000_80000000_00000000 4001 s rn
+
+fcosh.x	400c0000_b2b40000_00000000 d rn 
+fcosh.x	c00c0000_b2b40000_00000000 d rn 
+fsinh.x	400c0000_b2b40000_00000000 d rn 
+fsinh.x	c00c0000_b2b40000_00000000 d rn 
+ftwotox.x 400d0000_80c00000_00000000 d rn 
+fscale.w 3fff0000_80000000_00000000 4001 d rn
+fscale.w bfff0000_80000000_00000000 4001 d rn
+
+fcosh.x	400c0000_b2b40000_00000000 x rz 
+fcosh.x	c00c0000_b2b40000_00000000 x rz 
+fsinh.x	400c0000_b2b40000_00000000 x rz 
+fsinh.x	c00c0000_b2b40000_00000000 x rz 
+ftwotox.x 400d0000_80c00000_00000000 x rz 
+fscale.w 3fff0000_80000000_00000000 4001 x rz
+fscale.w bfff0000_80000000_00000000 4001 x rz
+
+fcosh.x	400c0000_b2b40000_00000000 s rz 
+fcosh.x	c00c0000_b2b40000_00000000 s rz 
+fsinh.x	400c0000_b2b40000_00000000 s rz 
+fsinh.x	c00c0000_b2b40000_00000000 s rz 
+ftwotox.x 400d0000_80c00000_00000000 s rz 
+fscale.w 3fff0000_80000000_00000000 4001 s rz
+fscale.w bfff0000_80000000_00000000 4001 s rz
+
+fcosh.x	400c0000_b2b40000_00000000 d rz 
+fcosh.x	c00c0000_b2b40000_00000000 d rz 
+fsinh.x	400c0000_b2b40000_00000000 d rz 
+fsinh.x	c00c0000_b2b40000_00000000 d rz 
+ftwotox.x 400d0000_80c00000_00000000 d rz 
+fscale.w 3fff0000_80000000_00000000 4001 d rz
+fscale.w bfff0000_80000000_00000000 4001 d rz
+
+fcosh.x	400c0000_b2b40000_00000000 x rm 
+fcosh.x	c00c0000_b2b40000_00000000 x rm 
+fsinh.x	400c0000_b2b40000_00000000 x rm 
+fsinh.x	c00c0000_b2b40000_00000000 x rm 
+ftwotox.x 400d0000_80c00000_00000000 x rm 
+fscale.w 3fff0000_80000000_00000000 4001 x rm
+fscale.w bfff0000_80000000_00000000 4001 x rm
+
+fcosh.x	400c0000_b2b40000_00000000 s rm 
+fcosh.x	c00c0000_b2b40000_00000000 s rm 
+fsinh.x	400c0000_b2b40000_00000000 s rm 
+fsinh.x	c00c0000_b2b40000_00000000 s rm 
+ftwotox.x 400d0000_80c00000_00000000 s rm 
+fscale.w 3fff0000_80000000_00000000 4001 s rm
+fscale.w bfff0000_80000000_00000000 4001 s rm
+
+fcosh.x	400c0000_b2b40000_00000000 d rm 
+fcosh.x	c00c0000_b2b40000_00000000 d rm 
+fsinh.x	400c0000_b2b40000_00000000 d rm 
+fsinh.x	c00c0000_b2b40000_00000000 d rm 
+ftwotox.x 400d0000_80c00000_00000000 d rm 
+fscale.w 3fff0000_80000000_00000000 4001 d rm
+fscale.w bfff0000_80000000_00000000 4001 d rm
+
+fcosh.x	400c0000_b2b40000_00000000 x rp 
+fcosh.x	c00c0000_b2b40000_00000000 x rp 
+fsinh.x	400c0000_b2b40000_00000000 x rp 
+fsinh.x	c00c0000_b2b40000_00000000 x rp 
+ftwotox.x 400d0000_80c00000_00000000 x rp 
+fscale.w 3fff0000_80000000_00000000 4001 x rp
+fscale.w bfff0000_80000000_00000000 4001 x rp
+
+fcosh.x	400c0000_b2b40000_00000000 s rp 
+fcosh.x	c00c0000_b2b40000_00000000 s rp 
+fsinh.x	400c0000_b2b40000_00000000 s rp 
+fsinh.x	c00c0000_b2b40000_00000000 s rp 
+ftwotox.x 400d0000_80c00000_00000000 s rp 
+fscale.w 3fff0000_80000000_00000000 4001 s rp
+fscale.w bfff0000_80000000_00000000 4001 s rp
+
+fcosh.x	400c0000_b2b40000_00000000 d rp 
+fcosh.x	c00c0000_b2b40000_00000000 d rp 
+fsinh.x	400c0000_b2b40000_00000000 d rp 
+fsinh.x	c00c0000_b2b40000_00000000 d rp 
+ftwotox.x 400d0000_80c00000_00000000 d rp 
+fscale.w 3fff0000_80000000_00000000 4001 d rp
+fscale.w bfff0000_80000000_00000000 4001 d rp
+#
+#t_unfl check
+ftwotox.x c00d0000_80c00000_00000000 unfl x rp
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl x rp
+ftwotox.x c00d0000_80c00000_00000000 x rp 
+fscale.l 40010000_a0000000_00000000 ffffbfff x rn
+
+ftwotox.x c00d0000_80c00000_00000000 unfl s rp
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl s rp
+ftwotox.x c00d0000_80c00000_00000000 s rp 
+fscale.l 40010000_a0000000_00000000 ffffbfff s rp
+
+ftwotox.x c00d0000_80c00000_00000000 unfl d rp
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl d rp
+ftwotox.x c00d0000_80c00000_00000000 d rp 
+fscale.l 40010000_a0000000_00000000 ffffbfff  d rp
+
+ftwotox.x c00d0000_80c00000_00000000 unfl x rz
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl x rz
+ftwotox.x c00d0000_80c00000_00000000 x rz 
+fscale.l 40010000_a0000000_00000000 ffffbfff  x rz
+
+ftwotox.x c00d0000_80c00000_00000000 unfl s rz
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl s rz
+ftwotox.x c00d0000_80c00000_00000000 s rz 
+fscale.l 40010000_a0000000_00000000 ffffbfff  s rz
+
+ftwotox.x c00d0000_80c00000_00000000 unfl d rz
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl d rz
+ftwotox.x c00d0000_80c00000_00000000 d rz 
+fscale.l 40010000_a0000000_00000000 ffffbfff  d rz
+
+ftwotox.x c00d0000_80c00000_00000000 unfl x rm
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl x rm
+ftwotox.x c00d0000_80c00000_00000000 x rm 
+fscale.l 40010000_a0000000_00000000 ffffbfff  x rm
+
+ftwotox.x c00d0000_80c00000_00000000 unfl s rm
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl s rm
+ftwotox.x c00d0000_80c00000_00000000 s rm 
+fscale.l 40010000_a0000000_00000000 ffffbfff  s rm
+
+ftwotox.x c00d0000_80c00000_00000000 unfl d rm
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl d rm
+ftwotox.x c00d0000_80c00000_00000000 d rm 
+fscale.l 40010000_a0000000_00000000 ffffbfff  d rm
+
+ftwotox.x c00d0000_80c00000_00000000 unfl x rn
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl x rn
+ftwotox.x c00d0000_80c00000_00000000 x rn 
+fscale.l 40010000_a0000000_00000000 ffffbfff  x rn
+
+ftwotox.x c00d0000_80c00000_00000000 unfl s rn
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl s rn
+ftwotox.x c00d0000_80c00000_00000000 s rn 
+fscale.l 40010000_a0000000_00000000 ffffbfff  s rn
+
+ftwotox.x c00d0000_80c00000_00000000 unfl d rn
+fscale.l 40010000_a0000000_00000000 ffffbfff unfl d rn
+ftwotox.x c00d0000_80c00000_00000000 d rn 
+fscale.l 40010000_a0000000_00000000 ffffbfff  d rn
+#
+#test src_nan
+fsin.x 7fff0000_7fffffff_ffffffff
+fsin.x 7fff0000_3fffffff_ffffffff
+fsin.x 7fff0000_3fffffff_ffffffff snan
+fsin.x ffff0000_7fffffff_ffffffff
+fsin.x ffff0000_3fffffff_ffffffff
+fsin.x ffff0000_3fffffff_ffffffff snan
+#test dst_nan
+fscale.x 7fff0000_7fffffff_ffffffff 3fff0000_80000000_00000000
+fscale.x 7fff0000_3fffffff_ffffffff 3fff0000_80000000_00000000
+fscale.x 7fff0000_3fffffff_ffffffff 3fff0000_80000000_00000000 snan
+fscale.x ffff0000_7fffffff_ffffffff 3fff0000_80000000_00000000
+fscale.x ffff0000_3fffffff_ffffffff 3fff0000_80000000_00000000
+fscale.x ffff0000_3fffffff_ffffffff 3fff0000_80000000_00000000 snan

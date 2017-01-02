@@ -1,0 +1,1000 @@
+fsmove.p c5120001_00000000_00000000 RM
+fdmove.p c5120001_00000000_00000000 RM
+fsmove.p 02390001_00000000_00000000 RM
+fdmove.p 02390001_00000000_00000000 RM
+fsmove.p 82390001_00000000_00000000 RM
+fdmove.p 82390001_00000000_00000000 RM
+fsmove.p 42550001_00000000_00000000 RM
+fdmove.p 42550001_00000000_00000000 RM
+fsmove.p c2550001_00000000_00000000 RM
+fdmove.p c2550001_00000000_00000000 RM
+fsmove.p 02380000_90000000_00000000 RM
+fdmove.p 02380000_90000000_00000000 RM
+fsmove.p 82380000_90000000_00000000 RM
+fdmove.p 82380000_90000000_00000000 RM
+fsmove.p 42400000_00000000_00000090 RM
+fdmove.p 42400000_00000000_00000090 RM
+fsmove.p c2400000_00000000_00000090 RM
+fdmove.p c2400000_00000000_00000090 RM
+fsmove.p 02370000_09000000_00000000 RM
+fdmove.p 02370000_09000000_00000000 RM
+fsmove.p 82370000_09000000_00000000 RM
+fdmove.p 82370000_09000000_00000000 RM
+fsmove.p 42410000_00000000_00000900 RM
+fdmove.p 42410000_00000000_00000900 RM
+fsmove.p c2410000_00000000_00000900 RM
+fdmove.p c2410000_00000000_00000900 RM
+fsmove.p 02360000_00900000_00000000 RM
+fdmove.p 02360000_00900000_00000000 RM
+fsmove.p 82360000_00900000_00000000 RM
+fdmove.p 82360000_00900000_00000000 RM
+fsmove.p 42420000_00000000_00009000 RM
+fdmove.p 42420000_00000000_00009000 RM
+fsmove.p c2420000_00000000_00009000 RM
+fdmove.p c2420000_00000000_00009000 RM
+fsmove.p 02480001_00000000_00000000 RM
+fdmove.p 02480001_00000000_00000000 RM
+fsmove.p 82480001_00000000_00000000 RM
+fdmove.p 82480001_00000000_00000000 RM
+fsmove.p 42640001_00000000_00000000 RM
+fdmove.p 42640001_00000000_00000000 RM
+fsmove.p c2640001_00000000_00000000 RM
+fdmove.p c2640001_00000000_00000000 RM
+fsmove.p 02470000_90000000_00000000 RM
+fdmove.p 02470000_90000000_00000000 RM
+fsmove.p 82470000_90000000_00000000 RM
+fdmove.p 82470000_90000000_00000000 RM
+fsmove.p 42490000_00000000_00000090 RM
+fdmove.p 42490000_00000000_00000090 RM
+fsmove.p c2490000_00000000_00000090 RM
+fdmove.p c2490000_00000000_00000090 RM
+fsmove.p 02460000_09000000_00000000 RM
+fdmove.p 02460000_09000000_00000000 RM
+fsmove.p 82460000_09000000_00000000 RM
+fdmove.p 82460000_09000000_00000000 RM
+fsmove.p 42500000_00000000_00000900 RM
+fdmove.p 42500000_00000000_00000900 RM
+fsmove.p c2500000_00000000_00000900 RM
+fdmove.p c2500000_00000000_00000900 RM
+fsmove.p 02450000_00900000_00000000 RM
+fdmove.p 02450000_00900000_00000000 RM
+fsmove.p 82450000_00900000_00000000 RM
+fdmove.p 82450000_00900000_00000000 RM
+fsmove.p 42510000_00000000_00009000 RM
+fdmove.p 42510000_00000000_00009000 RM
+fsmove.p c2510000_00000000_00009000 RM
+fdmove.p c2510000_00000000_00009000 RM
+fsmove.p 02550001_00000000_00000000 RM
+fdmove.p 02550001_00000000_00000000 RM
+fsmove.p 82550001_00000000_00000000 RM
+fdmove.p 82550001_00000000_00000000 RM
+fsmove.p 42710001_00000000_00000000 RM
+fdmove.p 42710001_00000000_00000000 RM
+fsmove.p c2710001_00000000_00000000 RM
+fdmove.p c2710001_00000000_00000000 RM
+fsmove.p 02540000_90000000_00000000 RM
+fdmove.p 02540000_90000000_00000000 RM
+fsmove.p 82540000_90000000_00000000 RM
+fdmove.p 82540000_90000000_00000000 RM
+fsmove.p 42560000_00000000_00000090 RM
+fdmove.p 42560000_00000000_00000090 RM
+fsmove.p c2560000_00000000_00000090 RM
+fdmove.p c2560000_00000000_00000090 RM
+fsmove.p c07feb78_808001a4_00000091 RM
+fdmove.p c07feb78_808001a4_00000091 RM
+fsmove.p 00010001_00000000_00000000 RP
+fdmove.p 00010001_00000000_00000000 RP
+fsmove.p 00000000_00000000_00000000 RP
+fdmove.p 00000000_00000000_00000000 RP
+fsmove.p 09990000_00000000_00000000 RP
+fdmove.p 09990000_00000000_00000000 RP
+fsmove.p 80000000_00000000_00000000 RP
+fdmove.p 80000000_00000000_00000000 RP
+fsmove.p 89990000_00000000_00000000 RP
+fdmove.p 89990000_00000000_00000000 RP
+fsmove.p 40000000_00000000_00000000 RP
+fdmove.p 40000000_00000000_00000000 RP
+fsmove.p 49990000_00000000_00000000 RP
+fdmove.p 49990000_00000000_00000000 RP
+fsmove.p c0000000_00000000_00000000 RP
+fdmove.p c0000000_00000000_00000000 RP
+fsmove.p c9990000_00000000_00000000 RP
+fdmove.p c9990000_00000000_00000000 RP
+fsmove.p 80010001_00000000_00000000 RP
+fdmove.p 80010001_00000000_00000000 RP
+fsmove.p 40010001_00000000_00000000 RP
+fdmove.p 40010001_00000000_00000000 RP
+fsmove.p c0010001_00000000_00000000 RP
+fdmove.p c0010001_00000000_00000000 RP
+fsmove.p 09990001_00000000_00000000 RP
+fdmove.p 09990001_00000000_00000000 RP
+fsmove.p 89990001_00000000_00000000 RP
+fdmove.p 89990001_00000000_00000000 RP
+fsmove.p 49990001_00000000_00000000 RP
+fdmove.p 49990001_00000000_00000000 RP
+fsmove.p c9990001_00000000_00000000 RP
+fdmove.p c9990001_00000000_00000000 RP
+fsmove.p 01000009_87654321_12345678 RP
+fdmove.p 01000009_87654321_12345678 RP
+fsmove.p 81000009_87654321_12345678 RP
+fdmove.p 81000009_87654321_12345678 RP
+fsmove.p 41000009_87654321_12345678 RP
+fdmove.p 41000009_87654321_12345678 RP
+fsmove.p c1000009_87654321_12345678 RP
+fdmove.p c1000009_87654321_12345678 RP
+fsmove.p 00170000_00000009_00000000 RP
+fdmove.p 00170000_00000009_00000000 RP
+fsmove.p 80170000_00000009_00000000 RP
+fdmove.p 80170000_00000009_00000000 RP
+fsmove.p 40170000_00000009_00000000 RP
+fdmove.p 40170000_00000009_00000000 RP
+fsmove.p c0170000_00000009_00000000 RP
+fdmove.p c0170000_00000009_00000000 RP
+fsmove.p 00160000_00000009_00000000 RP
+fdmove.p 00160000_00000009_00000000 RP
+fsmove.p 80160000_00000009_00000000 RP
+fdmove.p 80160000_00000009_00000000 RP
+fsmove.p 40160000_00000009_00000000 RP
+fdmove.p 40160000_00000009_00000000 RP
+fsmove.p c0160000_00000009_00000000 RP
+fdmove.p c0160000_00000009_00000000 RP
+fsmove.p 00150000_00000009_00000000 RP
+fdmove.p 00150000_00000009_00000000 RP
+fsmove.p 80150000_00000009_00000000 RP
+fdmove.p 80150000_00000009_00000000 RP
+fsmove.p 40150000_00000009_00000000 RP
+fdmove.p 40150000_00000009_00000000 RP
+fsmove.p c0150000_00000009_00000000 RP
+fdmove.p c0150000_00000009_00000000 RP
+fsmove.p 00000000_00000009_00000000 RP
+fdmove.p 00000000_00000009_00000000 RP
+fsmove.p 80000000_00000009_00000000 RP
+fdmove.p 80000000_00000009_00000000 RP
+fsmove.p 40000000_00000009_00000000 RP
+fdmove.p 40000000_00000009_00000000 RP
+fsmove.p c0000000_00000009_00000000 RP
+fdmove.p c0000000_00000009_00000000 RP
+fsmove.p 00170000_00000000_00895440 RP
+fdmove.p 00170000_00000000_00895440 RP
+fsmove.p 80170000_00000000_00895440 RP
+fdmove.p 80170000_00000000_00895440 RP
+fsmove.p 40170000_00000000_00895440 RP
+fdmove.p 40170000_00000000_00895440 RP
+fsmove.p c0170000_00000000_00895440 RP
+fdmove.p c0170000_00000000_00895440 RP
+fsmove.p 00160000_00000000_00895440 RP
+fdmove.p 00160000_00000000_00895440 RP
+fsmove.p 80160000_00000000_00895440 RP
+fdmove.p 80160000_00000000_00895440 RP
+fsmove.p 40160000_00000000_00895440 RP
+fdmove.p 40160000_00000000_00895440 RP
+fsmove.p c0160000_00000000_00895440 RP
+fdmove.p c0160000_00000000_00895440 RP
+fsmove.p 00150000_00000000_00895440 RP
+fdmove.p 00150000_00000000_00895440 RP
+fsmove.p 80150000_00000000_00895440 RP
+fdmove.p 80150000_00000000_00895440 RP
+fsmove.p 40150000_00000000_00895440 RP
+fdmove.p 40150000_00000000_00895440 RP
+fsmove.p c0150000_00000000_00895440 RP
+fdmove.p c0150000_00000000_00895440 RP
+fsmove.p 00000000_00000000_00895440 RP
+fdmove.p 00000000_00000000_00895440 RP
+fsmove.p 80000000_00000000_00895440 RP
+fdmove.p 80000000_00000000_00895440 RP
+fsmove.p 40000000_00000000_00895440 RP
+fdmove.p 40000000_00000000_00895440 RP
+fsmove.p c0000000_00000000_00895440 RP
+fdmove.p c0000000_00000000_00895440 RP
+fsmove.p 00000000_00000000_00000001 RP
+fdmove.p 00000000_00000000_00000001 RP
+fsmove.p 80000000_00000000_00000001 RP
+fdmove.p 80000000_00000000_00000001 RP
+fsmove.p 40000000_00000000_00000001 RP
+fdmove.p 40000000_00000000_00000001 RP
+fsmove.p c0000000_00000000_00000001 RP
+fdmove.p c0000000_00000000_00000001 RP
+fsmove.p 09990009_99999999_99999999 RP
+fdmove.p 09990009_99999999_99999999 RP
+fsmove.p 89990009_99999999_99999999 RP
+fdmove.p 89990009_99999999_99999999 RP
+fsmove.p 49990009_99999999_99999999 RP
+fdmove.p 49990009_99999999_99999999 RP
+fsmove.p c9990009_99999999_99999999 RP
+fdmove.p c9990009_99999999_99999999 RP
+fsmove.p 09990000_00000000_00000001 RP
+fdmove.p 09990000_00000000_00000001 RP
+fsmove.p 89990000_00000000_00000001 RP
+fdmove.p 89990000_00000000_00000001 RP
+fsmove.p 49990000_00000000_00000001 RP
+fdmove.p 49990000_00000000_00000001 RP
+fsmove.p c9990000_00000000_00000001 RP
+fdmove.p c9990000_00000000_00000001 RP
+fsmove.p 00010001_00000000_00000000 RP
+fdmove.p 00010001_00000000_00000000 RP
+fsmove.p 80010001_00000000_00000000 RP
+fdmove.p 80010001_00000000_00000000 RP
+fsmove.p 40010001_00000000_00000000 RP
+fdmove.p 40010001_00000000_00000000 RP
+fsmove.p c0010001_00000000_00000000 RP
+fdmove.p c0010001_00000000_00000000 RP
+fsmove.p 00020001_00000000_00000000 RP
+fdmove.p 00020001_00000000_00000000 RP
+fsmove.p 80020001_00000000_00000000 RP
+fdmove.p 80020001_00000000_00000000 RP
+fsmove.p 40020001_00000000_00000000 RP
+fdmove.p 40020001_00000000_00000000 RP
+fsmove.p c0020001_00000000_00000000 RP
+fdmove.p c0020001_00000000_00000000 RP
+fsmove.p 00040001_00000000_00000000 RP
+fdmove.p 00040001_00000000_00000000 RP
+fsmove.p 80040001_00000000_00000000 RP
+fdmove.p 80040001_00000000_00000000 RP
+fsmove.p 40040001_00000000_00000000 RP
+fdmove.p 40040001_00000000_00000000 RP
+fsmove.p c0040001_00000000_00000000 RP
+fdmove.p c0040001_00000000_00000000 RP
+fsmove.p 00080001_00000000_00000000 RP
+fdmove.p 00080001_00000000_00000000 RP
+fsmove.p 80080001_00000000_00000000 RP
+fdmove.p 80080001_00000000_00000000 RP
+fsmove.p 40080001_00000000_00000000 RP
+fdmove.p 40080001_00000000_00000000 RP
+fsmove.p c0080001_00000000_00000000 RP
+fdmove.p c0080001_00000000_00000000 RP
+fsmove.p 00160001_00000000_00000000 RP
+fdmove.p 00160001_00000000_00000000 RP
+fsmove.p 80160001_00000000_00000000 RP
+fdmove.p 80160001_00000000_00000000 RP
+fsmove.p 40160001_00000000_00000000 RP
+fdmove.p 40160001_00000000_00000000 RP
+fsmove.p c0160001_00000000_00000000 RP
+fdmove.p c0160001_00000000_00000000 RP
+fsmove.p 00320001_00000000_00000000 RP
+fdmove.p 00320001_00000000_00000000 RP
+fsmove.p 80320001_00000000_00000000 RP
+fdmove.p 80320001_00000000_00000000 RP
+fsmove.p 40320001_00000000_00000000 RP
+fdmove.p 40320001_00000000_00000000 RP
+fsmove.p c0320001_00000000_00000000 RP
+fdmove.p c0320001_00000000_00000000 RP
+fsmove.p 00640001_00000000_00000000 RP
+fdmove.p 00640001_00000000_00000000 RP
+fsmove.p 80640001_00000000_00000000 RP
+fdmove.p 80640001_00000000_00000000 RP
+fsmove.p 40640001_00000000_00000000 RP
+fdmove.p 40640001_00000000_00000000 RP
+fsmove.p c0640001_00000000_00000000 RP
+fdmove.p c0640001_00000000_00000000 RP
+fsmove.p 01280001_00000000_00000000 RP
+fdmove.p 01280001_00000000_00000000 RP
+fsmove.p 81280001_00000000_00000000 RP
+fdmove.p 81280001_00000000_00000000 RP
+fsmove.p 41280001_00000000_00000000 RP
+fdmove.p 41280001_00000000_00000000 RP
+fsmove.p c1280001_00000000_00000000 RP
+fdmove.p c1280001_00000000_00000000 RP
+fsmove.p 02560001_00000000_00000000 RP
+fdmove.p 02560001_00000000_00000000 RP
+fsmove.p 82560001_00000000_00000000 RP
+fdmove.p 82560001_00000000_00000000 RP
+fsmove.p 42560001_00000000_00000000 RP
+fdmove.p 42560001_00000000_00000000 RP
+fsmove.p c2560001_00000000_00000000 RP
+fdmove.p c2560001_00000000_00000000 RP
+fsmove.p 05120001_00000000_00000000 RP
+fdmove.p 05120001_00000000_00000000 RP
+fsmove.p 85120001_00000000_00000000 RP
+fdmove.p 85120001_00000000_00000000 RP
+fsmove.p 45120001_00000000_00000000 RP
+fdmove.p 45120001_00000000_00000000 RP
+fsmove.p c5120001_00000000_00000000 RP
+fdmove.p c5120001_00000000_00000000 RP
+fsmove.p 02390001_00000000_00000000 RP
+fdmove.p 02390001_00000000_00000000 RP
+fsmove.p 82390001_00000000_00000000 RP
+fdmove.p 82390001_00000000_00000000 RP
+fsmove.p 42550001_00000000_00000000 RP
+fdmove.p 42550001_00000000_00000000 RP
+fsmove.p c2550001_00000000_00000000 RP
+fdmove.p c2550001_00000000_00000000 RP
+fsmove.p 02380000_90000000_00000000 RP
+fdmove.p 02380000_90000000_00000000 RP
+fsmove.p 82380000_90000000_00000000 RP
+fdmove.p 82380000_90000000_00000000 RP
+fsmove.p 42400000_00000000_00000090 RP
+fdmove.p 42400000_00000000_00000090 RP
+fsmove.p c2400000_00000000_00000090 RP
+fdmove.p c2400000_00000000_00000090 RP
+fsmove.p 02370000_09000000_00000000 RP
+fdmove.p 02370000_09000000_00000000 RP
+fsmove.p 82370000_09000000_00000000 RP
+fdmove.p 82370000_09000000_00000000 RP
+fsmove.p 42410000_00000000_00000900 RP
+fdmove.p 42410000_00000000_00000900 RP
+fsmove.p c2410000_00000000_00000900 RP
+fdmove.p c2410000_00000000_00000900 RP
+fsmove.p 02360000_00900000_00000000 RP
+fdmove.p 02360000_00900000_00000000 RP
+fsmove.p 82360000_00900000_00000000 RP
+fdmove.p 82360000_00900000_00000000 RP
+fsmove.p 42420000_00000000_00009000 RP
+fdmove.p 42420000_00000000_00009000 RP
+fsmove.p c2420000_00000000_00009000 RP
+fdmove.p c2420000_00000000_00009000 RP
+fsmove.p 02480001_00000000_00000000 RP
+fdmove.p 02480001_00000000_00000000 RP
+fsmove.p 82480001_00000000_00000000 RP
+fdmove.p 82480001_00000000_00000000 RP
+fsmove.p 42640001_00000000_00000000 RP
+fdmove.p 42640001_00000000_00000000 RP
+fsmove.p c2640001_00000000_00000000 RP
+fdmove.p c2640001_00000000_00000000 RP
+fsmove.p 02470000_90000000_00000000 RP
+fdmove.p 02470000_90000000_00000000 RP
+fsmove.p 82470000_90000000_00000000 RP
+fdmove.p 82470000_90000000_00000000 RP
+fsmove.p 42490000_00000000_00000090 RP
+fdmove.p 42490000_00000000_00000090 RP
+fsmove.p c2490000_00000000_00000090 RP
+fdmove.p c2490000_00000000_00000090 RP
+fsmove.p 02460000_09000000_00000000 RP
+fdmove.p 02460000_09000000_00000000 RP
+fsmove.p 82460000_09000000_00000000 RP
+fdmove.p 82460000_09000000_00000000 RP
+fsmove.p 42500000_00000000_00000900 RP
+fdmove.p 42500000_00000000_00000900 RP
+fsmove.p c2500000_00000000_00000900 RP
+fdmove.p c2500000_00000000_00000900 RP
+fsmove.p 02450000_00900000_00000000 RP
+fdmove.p 02450000_00900000_00000000 RP
+fsmove.p 82450000_00900000_00000000 RP
+fdmove.p 82450000_00900000_00000000 RP
+fsmove.p 42510000_00000000_00009000 RP
+fdmove.p 42510000_00000000_00009000 RP
+fsmove.p c2510000_00000000_00009000 RP
+fdmove.p c2510000_00000000_00009000 RP
+fsmove.p 02550001_00000000_00000000 RP
+fdmove.p 02550001_00000000_00000000 RP
+fsmove.p 82550001_00000000_00000000 RP
+fdmove.p 82550001_00000000_00000000 RP
+fsmove.p 42710001_00000000_00000000 RP
+fdmove.p 42710001_00000000_00000000 RP
+fsmove.p c2710001_00000000_00000000 RP
+fdmove.p c2710001_00000000_00000000 RP
+fsmove.p 02540000_90000000_00000000 RP
+fdmove.p 02540000_90000000_00000000 RP
+fsmove.p 82540000_90000000_00000000 RP
+fdmove.p 82540000_90000000_00000000 RP
+fsmove.p 42560000_00000000_00000090 RP
+fdmove.p 42560000_00000000_00000090 RP
+fsmove.p c2560000_00000000_00000090 RP
+fdmove.p c2560000_00000000_00000090 RP
+fsmove.p c07feb78_808001a4_00000091 RP
+fdmove.p c07feb78_808001a4_00000091 RP
+#CREATING TEST CASES FROM FILE Fdenorm1.vec
+fsabs.x 000000000000000000000001 d rm
+fdabs.x 000000000000000000000001 d rm
+fsabs.x 000000000000000000000001 d rm inex2
+fdabs.x 000000000000000000000001 d rm inex2
+fsabs.x 000000000000000000000001 d rm unfl
+fdabs.x 000000000000000000000001 d rm unfl
+fsabs.x 000000000000000000000001 d rn
+fdabs.x 000000000000000000000001 d rn
+fsabs.x 000000000000000000000001 d rn inex2
+fdabs.x 000000000000000000000001 d rn inex2
+fsabs.x 000000000000000000000001 d rn unfl
+fdabs.x 000000000000000000000001 d rn unfl
+fsabs.x 000000000000000000000001 d rp
+fdabs.x 000000000000000000000001 d rp
+fsabs.x 000000000000000000000001 d rp inex2
+fdabs.x 000000000000000000000001 d rp inex2
+fsabs.x 000000000000000000000001 d rp unfl
+fdabs.x 000000000000000000000001 d rp unfl
+fsabs.x 000000000000000000000001 d rz
+fdabs.x 000000000000000000000001 d rz
+fsabs.x 000000000000000000000001 d rz inex2
+fdabs.x 000000000000000000000001 d rz inex2
+fsabs.x 000000000000000000000001 d rz unfl
+fdabs.x 000000000000000000000001 d rz unfl
+fsabs.x 000000000000000000000001 s rm
+fdabs.x 000000000000000000000001 s rm
+fsabs.x 000000000000000000000001 s rm inex2
+fdabs.x 000000000000000000000001 s rm inex2
+fsabs.x 000000000000000000000001 s rm unfl
+fdabs.x 000000000000000000000001 s rm unfl
+fsabs.x 000000000000000000000001 s rn
+fdabs.x 000000000000000000000001 s rn
+fsabs.x 000000000000000000000001 s rn inex2
+fdabs.x 000000000000000000000001 s rn inex2
+fsabs.x 000000000000000000000001 s rn unfl
+fdabs.x 000000000000000000000001 s rn unfl
+fsabs.x 000000000000000000000001 s rp
+fdabs.x 000000000000000000000001 s rp
+fsabs.x 000000000000000000000001 s rp inex2
+fdabs.x 000000000000000000000001 s rp inex2
+fsabs.x 000000000000000000000001 s rp unfl
+fdabs.x 000000000000000000000001 s rp unfl
+fsabs.x 000000000000000000000001 s rz
+fdabs.x 000000000000000000000001 s rz
+fsabs.x 000000000000000000000001 s rz inex2
+fdabs.x 000000000000000000000001 s rz inex2
+fsabs.x 000000000000000000000001 s rz unfl
+fdabs.x 000000000000000000000001 s rz unfl
+fsabs.x 000000000000000000000001 x rm
+fdabs.x 000000000000000000000001 x rm
+fsabs.x 000000000000000000000001 x rm inex2
+fdabs.x 000000000000000000000001 x rm inex2
+fsabs.x 000000000000000000000001 x rm unfl
+fdabs.x 000000000000000000000001 x rm unfl
+fsabs.x 000000000000000000000001 x rn
+fdabs.x 000000000000000000000001 x rn
+fsabs.x 000000000000000000000001 x rn inex2
+fdabs.x 000000000000000000000001 x rn inex2
+fsabs.x 000000000000000000000001 x rn unfl
+fdabs.x 000000000000000000000001 x rn unfl
+fsabs.x 000000000000000000000001 x rp
+fdabs.x 000000000000000000000001 x rp
+fsabs.x 000000000000000000000001 x rp inex2
+fdabs.x 000000000000000000000001 x rp inex2
+fsabs.x 000000000000000000000001 x rp unfl
+fdabs.x 000000000000000000000001 x rp unfl
+fsabs.x 000000000000000000000001 x rz
+fdabs.x 000000000000000000000001 x rz
+fsabs.x 000000000000000000000001 x rz inex2
+fdabs.x 000000000000000000000001 x rz inex2
+fsabs.x 000000000000000000000001 x rz unfl
+fdabs.x 000000000000000000000001 x rz unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa d rm
+fdabs.x 000000000aaaaaaaaaaaaaaa d rm
+fsabs.x 000000000aaaaaaaaaaaaaaa d rm inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa d rm inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa d rm unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa d rm unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa d rn
+fdabs.x 000000000aaaaaaaaaaaaaaa d rn
+fsabs.x 000000000aaaaaaaaaaaaaaa d rn inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa d rn inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa d rn unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa d rn unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa d rp
+fdabs.x 000000000aaaaaaaaaaaaaaa d rp
+fsabs.x 000000000aaaaaaaaaaaaaaa d rp inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa d rp inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa d rp unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa d rp unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa d rz
+fdabs.x 000000000aaaaaaaaaaaaaaa d rz
+fsabs.x 000000000aaaaaaaaaaaaaaa d rz inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa d rz inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa d rz unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa d rz unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa s rm
+fdabs.x 000000000aaaaaaaaaaaaaaa s rm
+fsabs.x 000000000aaaaaaaaaaaaaaa s rm inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa s rm inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa s rm unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa s rm unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa s rn
+fdabs.x 000000000aaaaaaaaaaaaaaa s rn
+fsabs.x 000000000aaaaaaaaaaaaaaa s rn inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa s rn inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa s rn unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa s rn unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa s rp
+fdabs.x 000000000aaaaaaaaaaaaaaa s rp
+fsabs.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa s rz
+fdabs.x 000000000aaaaaaaaaaaaaaa s rz
+fsabs.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa x rm
+fdabs.x 000000000aaaaaaaaaaaaaaa x rm
+fsabs.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa x rn
+fdabs.x 000000000aaaaaaaaaaaaaaa x rn
+fsabs.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa x rp
+fdabs.x 000000000aaaaaaaaaaaaaaa x rp
+fsabs.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fsabs.x 000000000aaaaaaaaaaaaaaa x rz
+fdabs.x 000000000aaaaaaaaaaaaaaa x rz
+fsabs.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fdabs.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fsabs.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fdabs.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fsabs.x 000000000fffffffffffffff d rm
+fdabs.x 000000000fffffffffffffff d rm
+fsabs.x 000000000fffffffffffffff d rm inex2
+fdabs.x 000000000fffffffffffffff d rm inex2
+fsabs.x 000000000fffffffffffffff d rm unfl
+fdabs.x 000000000fffffffffffffff d rm unfl
+fsabs.x 000000000fffffffffffffff d rn
+fdabs.x 000000000fffffffffffffff d rn
+fsabs.x 000000000fffffffffffffff d rn inex2
+fdabs.x 000000000fffffffffffffff d rn inex2
+fsabs.x 000000000fffffffffffffff d rn unfl
+fdabs.x 000000000fffffffffffffff d rn unfl
+fsabs.x 000000000fffffffffffffff d rp
+fdabs.x 000000000fffffffffffffff d rp
+fsabs.x 000000000fffffffffffffff d rp inex2
+fdabs.x 000000000fffffffffffffff d rp inex2
+fsabs.x 000000000fffffffffffffff d rp unfl
+fdabs.x 000000000fffffffffffffff d rp unfl
+fsabs.x 000000000fffffffffffffff d rz
+fdabs.x 000000000fffffffffffffff d rz
+fsabs.x 000000000fffffffffffffff d rz inex2
+fdabs.x 000000000fffffffffffffff d rz inex2
+fsabs.x 000000000fffffffffffffff d rz unfl
+fdabs.x 000000000fffffffffffffff d rz unfl
+fsabs.x 000000000fffffffffffffff s rm
+fdabs.x 000000000fffffffffffffff s rm
+fsabs.x 000000000fffffffffffffff s rm inex2
+fdabs.x 000000000fffffffffffffff s rm inex2
+fsabs.x 000000000fffffffffffffff s rm unfl
+fdabs.x 000000000fffffffffffffff s rm unfl
+fsabs.x 000000000fffffffffffffff s rn
+fdabs.x 000000000fffffffffffffff s rn
+fsabs.x 000000000fffffffffffffff s rn inex2
+fdabs.x 000000000fffffffffffffff s rn inex2
+fsabs.x 000000000fffffffffffffff s rn unfl
+fdabs.x 000000000fffffffffffffff s rn unfl
+fsabs.x 000000000fffffffffffffff s rp
+fdabs.x 000000000fffffffffffffff s rp
+fsabs.x 000000000fffffffffffffff s rp inex2
+fdabs.x 000000000fffffffffffffff s rp inex2
+fsabs.x 000000000fffffffffffffff s rp unfl
+fdabs.x 000000000fffffffffffffff s rp unfl
+fsabs.x 000000000fffffffffffffff s rz
+fdabs.x 000000000fffffffffffffff s rz
+fsabs.x 000000000fffffffffffffff s rz inex2
+fdabs.x 000000000fffffffffffffff s rz inex2
+fsabs.x 000000000fffffffffffffff s rz unfl
+fdabs.x 000000000fffffffffffffff s rz unfl
+fsabs.x 000000000fffffffffffffff x rm
+fdabs.x 000000000fffffffffffffff x rm
+fsabs.x 000000000fffffffffffffff x rm inex2
+fdabs.x 000000000fffffffffffffff x rm inex2
+fsabs.x 000000000fffffffffffffff x rm unfl
+fdabs.x 000000000fffffffffffffff x rm unfl
+fsabs.x 000000000fffffffffffffff x rn
+fdabs.x 000000000fffffffffffffff x rn
+fsabs.x 000000000fffffffffffffff x rn inex2
+fdabs.x 000000000fffffffffffffff x rn inex2
+fsabs.x 000000000fffffffffffffff x rn unfl
+fdabs.x 000000000fffffffffffffff x rn unfl
+fsabs.x 000000000fffffffffffffff x rp
+fdabs.x 000000000fffffffffffffff x rp
+fsabs.x 000000000fffffffffffffff x rp inex2
+fdabs.x 000000000fffffffffffffff x rp inex2
+fsabs.x 000000000fffffffffffffff x rp unfl
+fdabs.x 000000000fffffffffffffff x rp unfl
+fsabs.x 000000000fffffffffffffff x rz
+fdabs.x 000000000fffffffffffffff x rz
+fsabs.x 000000000fffffffffffffff x rz inex2
+fdabs.x 000000000fffffffffffffff x rz inex2
+fsabs.x 000000000fffffffffffffff x rz unfl
+fdabs.x 000000000fffffffffffffff x rz unfl
+fsabs.x 800000000000000000000001 d rm
+fdabs.x 800000000000000000000001 d rm
+fsabs.x 800000000000000000000001 d rm inex2
+fdabs.x 800000000000000000000001 d rm inex2
+fsabs.x 800000000000000000000001 d rm unfl
+fdabs.x 800000000000000000000001 d rm unfl
+fsabs.x 800000000000000000000001 d rn
+fdabs.x 800000000000000000000001 d rn
+fsabs.x 800000000000000000000001 d rn inex2
+fdabs.x 800000000000000000000001 d rn inex2
+fsabs.x 800000000000000000000001 d rn unfl
+fdabs.x 800000000000000000000001 d rn unfl
+fsabs.x 800000000000000000000001 d rp
+fdabs.x 800000000000000000000001 d rp
+fsabs.x 800000000000000000000001 d rp inex2
+fdabs.x 800000000000000000000001 d rp inex2
+fsabs.x 800000000000000000000001 d rp unfl
+fdabs.x 800000000000000000000001 d rp unfl
+fsabs.x 800000000000000000000001 d rz
+fdabs.x 800000000000000000000001 d rz
+fsabs.x 800000000000000000000001 d rz inex2
+fdabs.x 800000000000000000000001 d rz inex2
+fsabs.x 800000000000000000000001 d rz unfl
+fdabs.x 800000000000000000000001 d rz unfl
+fsabs.x 800000000000000000000001 s rm
+fdabs.x 800000000000000000000001 s rm
+fsabs.x 800000000000000000000001 s rm inex2
+fdabs.x 800000000000000000000001 s rm inex2
+fsabs.x 800000000000000000000001 s rm unfl
+fdabs.x 800000000000000000000001 s rm unfl
+fsabs.x 800000000000000000000001 s rn
+fdabs.x 800000000000000000000001 s rn
+fsabs.x 800000000000000000000001 s rn inex2
+fdabs.x 800000000000000000000001 s rn inex2
+fsabs.x 800000000000000000000001 s rn unfl
+fdabs.x 800000000000000000000001 s rn unfl
+fsabs.x 800000000000000000000001 s rp
+fdabs.x 800000000000000000000001 s rp
+fsabs.x 800000000000000000000001 s rp inex2
+fdabs.x 800000000000000000000001 s rp inex2
+fsabs.x 800000000000000000000001 s rp unfl
+fdabs.x 800000000000000000000001 s rp unfl
+fsabs.x 800000000000000000000001 s rz
+fdabs.x 800000000000000000000001 s rz
+fsabs.x 800000000000000000000001 s rz inex2
+fdabs.x 800000000000000000000001 s rz inex2
+fsabs.x 800000000000000000000001 s rz unfl
+fdabs.x 800000000000000000000001 s rz unfl
+fsabs.x 800000000000000000000001 x rm
+fdabs.x 800000000000000000000001 x rm
+fsabs.x 800000000000000000000001 x rm inex2
+fdabs.x 800000000000000000000001 x rm inex2
+fsabs.x 800000000000000000000001 x rm unfl
+fdabs.x 800000000000000000000001 x rm unfl
+fsabs.x 800000000000000000000001 x rn
+fdabs.x 800000000000000000000001 x rn
+fsabs.x 800000000000000000000001 x rn inex2
+fdabs.x 800000000000000000000001 x rn inex2
+fsabs.x 800000000000000000000001 x rn unfl
+fdabs.x 800000000000000000000001 x rn unfl
+fsabs.x 800000000000000000000001 x rp
+fdabs.x 800000000000000000000001 x rp
+fsabs.x 800000000000000000000001 x rp inex2
+fdabs.x 800000000000000000000001 x rp inex2
+fsabs.x 800000000000000000000001 x rp unfl
+fdabs.x 800000000000000000000001 x rp unfl
+fsabs.x 800000000000000000000001 x rz
+fdabs.x 800000000000000000000001 x rz
+fsabs.x 800000000000000000000001 x rz inex2
+fdabs.x 800000000000000000000001 x rz inex2
+fsabs.x 800000000000000000000001 x rz unfl
+fdabs.x 800000000000000000000001 x rz unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa d rm
+fdabs.x 800000000aaaaaaaaaaaaaaa d rm
+fsabs.x 800000000aaaaaaaaaaaaaaa d rm inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa d rm inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa d rm unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa d rm unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa d rn
+fdabs.x 800000000aaaaaaaaaaaaaaa d rn
+fsabs.x 800000000aaaaaaaaaaaaaaa d rn inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa d rn inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa d rn unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa d rn unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa d rp
+fdabs.x 800000000aaaaaaaaaaaaaaa d rp
+fsabs.x 800000000aaaaaaaaaaaaaaa d rp inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa d rp inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa d rp unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa d rp unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa d rz
+fdabs.x 800000000aaaaaaaaaaaaaaa d rz
+fsabs.x 800000000aaaaaaaaaaaaaaa d rz inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa d rz inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa d rz unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa d rz unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa s rm
+fdabs.x 800000000aaaaaaaaaaaaaaa s rm
+fsabs.x 800000000aaaaaaaaaaaaaaa s rm inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa s rm inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa s rm unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa s rm unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa s rn
+fdabs.x 800000000aaaaaaaaaaaaaaa s rn
+fsabs.x 800000000aaaaaaaaaaaaaaa s rn inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa s rn inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa s rn unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa s rn unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa s rp
+fdabs.x 800000000aaaaaaaaaaaaaaa s rp
+fsabs.x 800000000aaaaaaaaaaaaaaa s rp inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa s rp inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa s rp unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa s rp unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa s rz
+fdabs.x 800000000aaaaaaaaaaaaaaa s rz
+fsabs.x 800000000aaaaaaaaaaaaaaa s rz inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa s rz inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa s rz unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa s rz unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa x rm
+fdabs.x 800000000aaaaaaaaaaaaaaa x rm
+fsabs.x 800000000aaaaaaaaaaaaaaa x rm inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa x rm inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa x rm unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa x rm unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa x rn
+fdabs.x 800000000aaaaaaaaaaaaaaa x rn
+fsabs.x 800000000aaaaaaaaaaaaaaa x rn inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa x rn inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa x rn unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa x rn unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa x rp
+fdabs.x 800000000aaaaaaaaaaaaaaa x rp
+fsabs.x 800000000aaaaaaaaaaaaaaa x rp inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa x rp inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa x rp unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa x rp unfl
+fsabs.x 800000000aaaaaaaaaaaaaaa x rz
+fdabs.x 800000000aaaaaaaaaaaaaaa x rz
+fsabs.x 800000000aaaaaaaaaaaaaaa x rz inex2
+fdabs.x 800000000aaaaaaaaaaaaaaa x rz inex2
+fsabs.x 800000000aaaaaaaaaaaaaaa x rz unfl
+fdabs.x 800000000aaaaaaaaaaaaaaa x rz unfl
+fsabs.x 800000000fffffffffffffff d rm
+fdabs.x 800000000fffffffffffffff d rm
+fsabs.x 800000000fffffffffffffff d rm inex2
+fdabs.x 800000000fffffffffffffff d rm inex2
+fsabs.x 800000000fffffffffffffff d rm unfl
+fdabs.x 800000000fffffffffffffff d rm unfl
+fsabs.x 800000000fffffffffffffff d rn
+fdabs.x 800000000fffffffffffffff d rn
+fsabs.x 800000000fffffffffffffff d rn inex2
+fdabs.x 800000000fffffffffffffff d rn inex2
+fsabs.x 800000000fffffffffffffff d rn unfl
+fdabs.x 800000000fffffffffffffff d rn unfl
+fsabs.x 800000000fffffffffffffff d rp
+fdabs.x 800000000fffffffffffffff d rp
+fsabs.x 800000000fffffffffffffff d rp inex2
+fdabs.x 800000000fffffffffffffff d rp inex2
+fsabs.x 800000000fffffffffffffff d rp unfl
+fdabs.x 800000000fffffffffffffff d rp unfl
+fsabs.x 800000000fffffffffffffff d rz
+fdabs.x 800000000fffffffffffffff d rz
+fsabs.x 800000000fffffffffffffff d rz inex2
+fdabs.x 800000000fffffffffffffff d rz inex2
+fsabs.x 800000000fffffffffffffff d rz unfl
+fdabs.x 800000000fffffffffffffff d rz unfl
+fsabs.x 800000000fffffffffffffff s rm
+fdabs.x 800000000fffffffffffffff s rm
+fsabs.x 800000000fffffffffffffff s rm inex2
+fdabs.x 800000000fffffffffffffff s rm inex2
+fsabs.x 800000000fffffffffffffff s rm unfl
+fdabs.x 800000000fffffffffffffff s rm unfl
+fsabs.x 800000000fffffffffffffff s rn
+fdabs.x 800000000fffffffffffffff s rn
+fsabs.x 800000000fffffffffffffff s rn inex2
+fdabs.x 800000000fffffffffffffff s rn inex2
+fsabs.x 800000000fffffffffffffff s rn unfl
+fdabs.x 800000000fffffffffffffff s rn unfl
+fsabs.x 800000000fffffffffffffff s rp
+fdabs.x 800000000fffffffffffffff s rp
+fsabs.x 800000000fffffffffffffff s rp inex2
+fdabs.x 800000000fffffffffffffff s rp inex2
+fsabs.x 800000000fffffffffffffff s rp unfl
+fdabs.x 800000000fffffffffffffff s rp unfl
+fsabs.x 800000000fffffffffffffff s rz
+fdabs.x 800000000fffffffffffffff s rz
+fsabs.x 800000000fffffffffffffff s rz inex2
+fdabs.x 800000000fffffffffffffff s rz inex2
+fsabs.x 800000000fffffffffffffff s rz unfl
+fdabs.x 800000000fffffffffffffff s rz unfl
+fsabs.x 800000000fffffffffffffff x rm
+fdabs.x 800000000fffffffffffffff x rm
+fsabs.x 800000000fffffffffffffff x rm inex2
+fdabs.x 800000000fffffffffffffff x rm inex2
+fsabs.x 800000000fffffffffffffff x rm unfl
+fdabs.x 800000000fffffffffffffff x rm unfl
+fsabs.x 800000000fffffffffffffff x rn
+fdabs.x 800000000fffffffffffffff x rn
+fsabs.x 800000000fffffffffffffff x rn inex2
+fdabs.x 800000000fffffffffffffff x rn inex2
+fsabs.x 800000000fffffffffffffff x rn unfl
+fdabs.x 800000000fffffffffffffff x rn unfl
+fsabs.x 800000000fffffffffffffff x rp
+fdabs.x 800000000fffffffffffffff x rp
+fsabs.x 800000000fffffffffffffff x rp inex2
+fdabs.x 800000000fffffffffffffff x rp inex2
+fsabs.x 800000000fffffffffffffff x rp unfl
+fdabs.x 800000000fffffffffffffff x rp unfl
+fsabs.x 800000000fffffffffffffff x rz
+fdabs.x 800000000fffffffffffffff x rz
+fsabs.x 800000000fffffffffffffff x rz inex2
+fdabs.x 800000000fffffffffffffff x rz inex2
+fsabs.x 800000000fffffffffffffff x rz unfl
+fdabs.x 800000000fffffffffffffff x rz unfl
+#CREATING TEST CASES FROM FILE Fdenorm2.vec
+#CREATING TEST CASES FROM FILE Fdenorm3.vec
+#CREATING TEST CASES FROM FILE Fdenorm4.vec
+#CREATING TEST CASES FROM FILE Fdenorm5.vec
+fssqrt.x 000000000000000000000001 d rm
+fdsqrt.x 000000000000000000000001 d rm
+fssqrt.x 000000000000000000000001 d rm inex2
+fdsqrt.x 000000000000000000000001 d rm inex2
+fssqrt.x 000000000000000000000001 d rm unfl
+fdsqrt.x 000000000000000000000001 d rm unfl
+fssqrt.x 000000000000000000000001 d rn
+fdsqrt.x 000000000000000000000001 d rn
+fssqrt.x 000000000000000000000001 d rn inex2
+fdsqrt.x 000000000000000000000001 d rn inex2
+fssqrt.x 000000000000000000000001 d rn unfl
+fdsqrt.x 000000000000000000000001 d rn unfl
+fssqrt.x 000000000000000000000001 d rp
+fdsqrt.x 000000000000000000000001 d rp
+fssqrt.x 000000000000000000000001 d rp inex2
+fdsqrt.x 000000000000000000000001 d rp inex2
+fssqrt.x 000000000000000000000001 d rp unfl
+fdsqrt.x 000000000000000000000001 d rp unfl
+fssqrt.x 000000000000000000000001 d rz
+fdsqrt.x 000000000000000000000001 d rz
+fssqrt.x 000000000000000000000001 d rz inex2
+fdsqrt.x 000000000000000000000001 d rz inex2
+fssqrt.x 000000000000000000000001 d rz unfl
+fdsqrt.x 000000000000000000000001 d rz unfl
+fssqrt.x 000000000000000000000001 s rm
+fdsqrt.x 000000000000000000000001 s rm
+fssqrt.x 000000000000000000000001 s rm inex2
+fdsqrt.x 000000000000000000000001 s rm inex2
+fssqrt.x 000000000000000000000001 s rm unfl
+fdsqrt.x 000000000000000000000001 s rm unfl
+fssqrt.x 000000000000000000000001 s rn
+fdsqrt.x 000000000000000000000001 s rn
+fssqrt.x 000000000000000000000001 s rn inex2
+fdsqrt.x 000000000000000000000001 s rn inex2
+fssqrt.x 000000000000000000000001 s rn unfl
+fdsqrt.x 000000000000000000000001 s rn unfl
+fssqrt.x 000000000000000000000001 s rp
+fdsqrt.x 000000000000000000000001 s rp
+fssqrt.x 000000000000000000000001 s rp inex2
+fdsqrt.x 000000000000000000000001 s rp inex2
+fssqrt.x 000000000000000000000001 s rp unfl
+fdsqrt.x 000000000000000000000001 s rp unfl
+fssqrt.x 000000000000000000000001 s rz
+fdsqrt.x 000000000000000000000001 s rz
+fssqrt.x 000000000000000000000001 s rz inex2
+fdsqrt.x 000000000000000000000001 s rz inex2
+fssqrt.x 000000000000000000000001 s rz unfl
+fdsqrt.x 000000000000000000000001 s rz unfl
+fssqrt.x 000000000000000000000001 x rm
+fdsqrt.x 000000000000000000000001 x rm
+fssqrt.x 000000000000000000000001 x rm inex2
+fdsqrt.x 000000000000000000000001 x rm inex2
+fssqrt.x 000000000000000000000001 x rm unfl
+fdsqrt.x 000000000000000000000001 x rm unfl
+fssqrt.x 000000000000000000000001 x rn
+fdsqrt.x 000000000000000000000001 x rn
+fssqrt.x 000000000000000000000001 x rn inex2
+fdsqrt.x 000000000000000000000001 x rn inex2
+fssqrt.x 000000000000000000000001 x rn unfl
+fdsqrt.x 000000000000000000000001 x rn unfl
+fssqrt.x 000000000000000000000001 x rp
+fdsqrt.x 000000000000000000000001 x rp
+fssqrt.x 000000000000000000000001 x rp inex2
+fdsqrt.x 000000000000000000000001 x rp inex2
+fssqrt.x 000000000000000000000001 x rp unfl
+fdsqrt.x 000000000000000000000001 x rp unfl
+fssqrt.x 000000000000000000000001 x rz
+fdsqrt.x 000000000000000000000001 x rz
+fssqrt.x 000000000000000000000001 x rz inex2
+fdsqrt.x 000000000000000000000001 x rz inex2
+fssqrt.x 000000000000000000000001 x rz unfl
+fdsqrt.x 000000000000000000000001 x rz unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rm
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rm
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rm inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rm inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rm unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rm unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rn
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rn
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rn inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rn inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rn unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rn unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rp
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rp
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rp inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rp inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rp unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rp unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rz
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rz
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rz inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rz inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa d rz unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa d rz unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rm
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rm
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rm inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rm inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rm unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rm unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rn
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rn
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rn inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rn inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rn unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rn unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rp
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rp
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rp inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rp unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rz
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rz
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rz inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa s rz unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rm
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rm
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rm inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rm unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rn
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rn
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rn inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rn unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rp
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rp
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rp inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rp unfl
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rz
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rz
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rz inex2
+fssqrt.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fdsqrt.x 000000000aaaaaaaaaaaaaaa x rz unfl
+fssqrt.x 000000000fffffffffffffff d rm
+fdsqrt.x 000000000fffffffffffffff d rm
+fssqrt.x 000000000fffffffffffffff d rm inex2
+fdsqrt.x 000000000fffffffffffffff d rm inex2
+fssqrt.x 000000000fffffffffffffff d rm unfl
+fdsqrt.x 000000000fffffffffffffff d rm unfl
+fssqrt.x 000000000fffffffffffffff d rn
+fdsqrt.x 000000000fffffffffffffff d rn
+fssqrt.x 000000000fffffffffffffff d rn inex2
+fdsqrt.x 000000000fffffffffffffff d rn inex2
+fssqrt.x 000000000fffffffffffffff d rn unfl
+fdsqrt.x 000000000fffffffffffffff d rn unfl
+fssqrt.x 000000000fffffffffffffff d rp
+fdsqrt.x 000000000fffffffffffffff d rp
+fssqrt.x 000000000fffffffffffffff d rp inex2
+fdsqrt.x 000000000fffffffffffffff d rp inex2
+fssqrt.x 000000000fffffffffffffff d rp unfl
+fdsqrt.x 000000000fffffffffffffff d rp unfl
+fssqrt.x 000000000fffffffffffffff d rz
+fdsqrt.x 000000000fffffffffffffff d rz
+fssqrt.x 000000000fffffffffffffff d rz inex2
+fdsqrt.x 000000000fffffffffffffff d rz inex2
+fssqrt.x 000000000fffffffffffffff d rz unfl
+fdsqrt.x 000000000fffffffffffffff d rz unfl
+fssqrt.x 000000000fffffffffffffff s rm
+fdsqrt.x 000000000fffffffffffffff s rm
+fssqrt.x 000000000fffffffffffffff s rm inex2
+fdsqrt.x 000000000fffffffffffffff s rm inex2
+fssqrt.x 000000000fffffffffffffff s rm unfl
+fdsqrt.x 000000000fffffffffffffff s rm unfl
+fssqrt.x 000000000fffffffffffffff s rn
+fdsqrt.x 000000000fffffffffffffff s rn
+fssqrt.x 000000000fffffffffffffff s rn inex2
+fdsqrt.x 000000000fffffffffffffff s rn inex2
+fssqrt.x 000000000fffffffffffffff s rn unfl
+fdsqrt.x 000000000fffffffffffffff s rn unfl
+fssqrt.x 000000000fffffffffffffff s rp
+fdsqrt.x 000000000fffffffffffffff s rp
+fssqrt.x 000000000fffffffffffffff s rp inex2
+fdsqrt.x 000000000fffffffffffffff s rp inex2
+fssqrt.x 000000000fffffffffffffff s rp unfl
+fdsqrt.x 000000000fffffffffffffff s rp unfl
+fssqrt.x 000000000fffffffffffffff s rz
+fdsqrt.x 000000000fffffffffffffff s rz
+fssqrt.x 000000000fffffffffffffff s rz inex2
