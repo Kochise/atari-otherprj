@@ -1,0 +1,53 @@
+*
+*	FPSP.sa 3.1 12/10/90
+*
+*	Init file for testing FPSP software package.
+* 
+*	Takes over the exception vectors that the FPSP handles.
+*
+
+*		Copyright (C) Motorola, Inc. 1990
+*			All Rights Reserved
+*
+*	For details on the license for this file, please see the
+*	file, README, in this same directory.
+
+FPSP	IDNT	2,1 Motorola 040 Floating Point Software Package
+
+CODE_ST		equ	$10000	;address of test code start
+
+FLINE_VEC	equ	$2c
+BSUN_VEC	equ	$c0
+INEX2_VEC	equ	$c4
+DZ_VEC		equ	$c8
+UNFL_VEC	equ	$cc
+OPERR_VEC	equ	$d0
+OVFL_VEC	equ	$d4
+SNAN_VEC	equ	$d8
+UNSUP_VEC	equ	$dc
+
+	xref	fline,unsupp
+	xref	bsun,inex,dz,unfl 
+	xref	operr,ovfl,snan
+	
+	section	7
+
+* Load vector table with addresses of FPSP routines and
+* branch to CODE_ST, start address of test code.
+
+	xdef	start
+start:
+	movec.l	VBR,a0
+	move.l	#fline,FLINE_VEC(a0)
+	move.l	#bsun,BSUN_VEC(a0)
+	move.l	#inex,INEX2_VEC(a0)
+	move.l	#dz,DZ_VEC(a0)
+	move.l	#unfl,UNFL_VEC(a0)
+	move.l	#operr,OPERR_VEC(a0)
+	move.l	#ovfl,OVFL_VEC(a0)
+	move.l	#snan,SNAN_VEC(a0)
+	move.l	#unsupp,UNSUP_VEC(a0)
+
+	jmp	CODE_ST
+
+	end

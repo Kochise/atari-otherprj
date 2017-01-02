@@ -1,0 +1,46 @@
+*
+*	DYADIC.R3V6 1.2 4/30/91
+*
+*	DYADIC.R3V6 --- DYADIC template for MCD R3V6 native C compiler
+*
+*	The MCD compiler is old.  It returns float and double values
+*	as a double stored in d0/d1.  There is no support for single or extended
+*	precision operations.  It's not clear whether the float registers
+*	should be preserved, so for speed they're not.
+*
+
+*		Copyright (C) Motorola, Inc. 1991
+*			All Rights Reserved
+*
+*	For details on the license for this file, please see the
+*	file, README, in this same directory.
+
+	xref	_OPa_
+	xref	tag
+
+	xdef	_OPd_
+_OPd_:
+	link	a6,#-LOCAL_SIZE
+	fmovem.l fpsr/fpcr,USER_FPSR(a6) ; user's rounding mode/precision
+	fmove.l	#0,fpcr		; force rounding mode/prec to extended,rn
+*
+*	copy and convert arguments to ETEMP, FPTEMP. 
+*
+	fmove.d	8(a6),fp0
+	fmove.x	fp0,FPTEMP(a6)
+	lea	FPTEMP(a6),a0
+	bsr	tag
+	move.b	d0,DTAG(a6)
+
+	fmove.d	16(a6),fp0
+	fmove.x	fp0,ETEMP(a6)
+	lea	ETEMP(a6),a0
+	bsr	tag
+	move.b	d0,STAG(a6)
+
+	bsr	_OPa_
+
+	fmove.d	fp0,USER_D0(a6)	; result goes into d0/d1 pair
+	movem.l	USER_D0(a6),d0-d1
+	unlk	a6
+	rts

@@ -1,0 +1,67 @@
+*
+*	MONADIC.CI5 1.3 4/30/91
+*
+*	MONADIC.CI5 --- MONADIC template for CI5 compiler
+*
+
+*		Copyright (C) Motorola, Inc. 1991
+*			All Rights Reserved
+*
+*	For details on the license for this file, please see the
+*	file, README, in this same directory.
+
+	xref	tag
+	xref	_OPr_
+	xref	_OPz_
+	xref	_OPi_
+	xref	_OPn_
+	xref	_OPm_
+
+
+	xdef	_OPd_
+_OPd_:
+	link	a6,#-LOCAL_SIZE
+	fmovem.x fp2-fp3,USER_FP2(a6)
+	fmove.l	fpsr,USER_FPSR(a6)
+	fmove.l	fpcr,d1		; user's rounding mode/precision
+	fmove.l	#0,fpcr		; force rounding mode/prec to extended,rn
+*
+*	copy, convert and tag input argument
+*
+	fmove.d	8(a6),fp0
+	fmove.x	fp0,ETEMP(a6)
+	lea	ETEMP(a6),a0
+	bsr	tag
+	move.b	d0,STAG(a6)
+	tst.b	d0
+	bne.b	_TMP_2
+	bsr	_OPr_		; normalized (regular) number
+	bra.b	_TMP_6
+_TMP_2:
+	cmp.b	#$20,d0		; zero?
+	bne.b	_TMP_3
+	bsr	_OPz_
+	bra.b	_TMP_6
+_TMP_3:
+	cmp.b	#$40,d0		; infinity?
+	bne.b	_TMP_4
+	bsr	_OPi_
+	bra.b	_TMP_6
+_TMP_4:
+	cmp.b	#$60,d0		; NaN?
+	bne.b	_TMP_5
+	bsr	_OPn_
+	bra.b	_TMP_6
+_TMP_5:
+	bsr	_OPm_		; assuming a denorm...
+
+_TMP_6:
+	fmove.l	fpsr,d0		; update status register
+	or.b	USER_FPSR+3(a6),d0	;add previously accrued exceptions
+	move.l	d0,USER_FPSR(a6)
+*
+*	Result is now in FP0
+*
+	fmovem.x USER_FP2(a6),fp2-fp3	; note: FP1 not restored
+	unlk	a6
+	rts

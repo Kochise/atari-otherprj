@@ -1,0 +1,51 @@
+*
+*	DYADIC.CI5 1.2 4/30/91
+*
+*	DYADIC.CI5 --- DYADIC template for CI5 compiler
+*
+
+*		Copyright (C) Motorola, Inc. 1991
+*			All Rights Reserved
+*
+*	For details on the license for this file, please see the
+*	file, README, in this same directory.
+
+	xref	_OPa_
+	xref	tag
+
+	xdef	_OPd_
+_OPd_:
+	link	a6,#-LOCAL_SIZE
+	fmovem.x fp2-fp3,USER_FP2(a6)
+	fmovem.l fpsr/fpcr,USER_FPSR(a6) ; user's rounding mode/precision
+	fmove.l	#0,fpcr		; force rounding mode/prec to extended,rn
+*
+*	copy, convert and tag input arguments
+*
+	fmove.d	8(a6),fp0
+	fmove.x	fp0,FPTEMP(a6)
+	lea	FPTEMP(a6),a0
+	bsr	tag
+	move.b	d0,DTAG(a6)
+
+	fmove.d	16(a6),fp0
+	fmove.x	fp0,ETEMP(a6)
+	lea	ETEMP(a6),a0
+	bsr	tag
+	move.b	d0,STAG(a6)
+
+	bsr	_OPa_
+
+	fmove.l	fpsr,d0		; update status register
+	or.b	FPSR_AEXCEPT(a6),d0	;add previously accrued exceptions
+	swap.w	d0
+	or.b	FPSR_QBYTE(a6),d0	; pickup sign of quotient byte
+	swap.w	d0
+	fmove.l	d0,fpsr		
+*
+*	Result is now in FP0
+*
+	fmovem.x USER_FP2(a6),fp2-fp3	; note: FP0/FP1 not restored
+	unlk	a6
+	rts
+
