@@ -1,0 +1,13 @@
+mpegdlib.lib
+;
+; * * * COMPILER OPTIONS * * *
+.C[-P]        ; absolute calls
+.L[-J]
+=
+; * * * * List of modules * * * *
+video
+scale
+parseblo
+motionve
+decoders
+util

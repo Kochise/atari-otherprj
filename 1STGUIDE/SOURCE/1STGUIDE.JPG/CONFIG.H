@@ -1,0 +1,39 @@
+/* Resource Datei Indizes fÅr CONFIG */
+
+#define TREE1    0   /* Formular/Dialog */
+#define OUTPAR   3   /* BOX in Baum TREE1 */
+#define NUMBER   4   /* FBOXTEXT in Baum TREE1 */
+#define TOALLPAR 6   /* BUTTON in Baum TREE1 */
+#define RAND     9   /* FBOXTEXT in Baum TREE1 */
+#define FORMFEED 10  /* BUTTON in Baum TREE1 */
+#define QNORMAL  13  /* BUTTON in Baum TREE1 */
+#define PASSEND  20  /* BUTTON in Baum TREE1 */
+#define PIXEL    25  /* BUTTON in Baum TREE1 */
+#define XBRUCH   31  /* BUTTON in Baum TREE1 */
+#define YBRUCH   34  /* BUTTON in Baum TREE1 */
+#define LINKS    39  /* BUTTON in Baum TREE1 */
+#define OBEN     44  /* BUTTON in Baum TREE1 */
+#define ALLPAR   47  /* BOX in Baum TREE1 */
+#define OUTWIN   52  /* BUTTON in Baum TREE1 */
+#define FULLDEF  55  /* BUTTON in Baum TREE1 */
+#define FONTDEF  58  /* BUTTON in Baum TREE1 */
+#define EXTSPOOL 63  /* FTEXT in Baum TREE1 */
+#define OUTEXT   64  /* BUTTON in Baum TREE1 */
+#define DOVER    66  /* BUTTON in Baum TREE1 */
+#define USEDITH  72  /* BUTTON in Baum TREE1 */
+#define DITHMOD  76  /* BUTTON in Baum TREE1 */
+#define DITHCOL  79  /* BUTTON in Baum TREE1 */
+#define DITHTYP  84  /* BUTTON in Baum TREE1 */
+#define USEDSP   86  /* BUTTON in Baum TREE1 */
+#define IFSEL    87  /* BUTTON in Baum TREE1 */
+#define TOSNDPAR 88  /* BUTTON in Baum TREE1 */
+#define TOOUTPAR 89  /* BUTTON in Baum TREE1 */
+#define IFILE    90  /* FBOXTEXT in Baum TREE1 */
+#define RES1     93  /* TEXT in Baum TREE1 */
+#define RES2     94  /* TEXT in Baum TREE1 */
+#define LOAD     95  /* BUTTON in Baum TREE1 */
+#define SAVE     96  /* BUTTON in Baum TREE1 */
+#define OK       97  /* BUTTON in Baum TREE1 */
+#define ABBRUCH  98  /* BUTTON in Baum TREE1 */
+#define MEM      101 /* TEXT in Baum TREE1 */
+#define TOT      102 /* TEXT in Baum TREE1 */

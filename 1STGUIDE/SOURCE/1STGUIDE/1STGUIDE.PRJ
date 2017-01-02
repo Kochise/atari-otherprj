@@ -1,0 +1,15 @@
+1stguide.prg
+=
+ddstart.o
+image
+meta
+resource
+1stguide
+loader ( config.rsh )
+util
+ddextlib.lib
+pcstdlib.lib
+pcgemlib.lib
+pctoslib.lib
+text
+sound

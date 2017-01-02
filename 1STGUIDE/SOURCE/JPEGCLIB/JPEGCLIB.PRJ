@@ -1,0 +1,31 @@
+; Project file for Independent JPEG Group's software
+;
+; This project file is for Atari ST/STE/TT systems using Pure C or Turbo C.
+; Thanks to Frank Moehle (Frank.Moehle@arbi.informatik.uni-oldenburg.de)
+; and to Dr. B. Setzepfandt (bernd@gina.uni-muenster.de).
+;
+; To use this file, rename it to LIB_JPEG.PRJ.
+; Read SETUP instructions before trying to make the library!
+;
+;
+;      * * * Output file * * *
+jpegclib.lib
+;
+; * * * COMPILER OPTIONS * * *
+.C[-w-par]    ; no "parameter xxxx unused"
+.C[-wsig]     ; warn if significant digits may be lost
+.C[-w-cln]    ; no "constant is long" warnings
+.L[-J]
+=
+; * * * * List of modules * * * *
+jccolor.c	(jinclude.h,jconfig.h,jpegdata.h)
+jcdeflts.c	(jinclude.h,jconfig.h,jpegdata.h)
+jchuff.c	(jinclude.h,jconfig.h,jpegdata.h)
+jcmaster.c	(jinclude.h,jconfig.h,jpegdata.h)
+jcmcu.c		(jinclude.h,jconfig.h,jpegdata.h)
+jcpipe.c	(jinclude.h,jconfig.h,jpegdata.h)
+jcsample.c	(jinclude.h,jconfig.h,jpegdata.h)
+jfwddct.s	(jinclude.h,jconfig.h,jpegdata.h)
+jutils.c	(jinclude.h,jconfig.h,jpegdata.h)
+jmemmgr.c	(jinclude.h,jconfig.h,jpegdata.h,jmemsys.h)
+jwrjfif.c	(jinclude.h,jconfig.h,jpegdata.h)

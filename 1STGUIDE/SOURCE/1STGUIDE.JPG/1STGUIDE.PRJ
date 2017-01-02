@@ -1,0 +1,24 @@
+1stguide.prg
+=
+ddstart.o
+mpegdlib.lib
+zlib.lib
+pnglib.lib
+jpegdlib.lib
+videoopt.s
+video [-P -DVIDEOOPT]
+jpegddrv
+jpicture
+imageopt.s
+image [-DIMAGEOPT]
+meta
+ddextlib.lib
+pcstdlib.lib
+pcgemlib.lib
+pctoslib.lib
+loader ( config.rsh )
+util
+1stguide
+text
+sound
+resource
